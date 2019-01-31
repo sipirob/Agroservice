@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Agroservice
 {
-    public partial class Form1 : MetroFramework.Forms.MetroForm
+    public partial class FormWorker : MetroFramework.Forms.MetroForm
     {
-        public Form1()
+        public FormWorker()
         {
             InitializeComponent();
         }
