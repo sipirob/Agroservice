@@ -68,7 +68,7 @@
             this.metroTextBox1.SelectionStart = 0;
             this.metroTextBox1.ShortcutsEnabled = true;
             this.metroTextBox1.Size = new System.Drawing.Size(236, 30);
-            this.metroTextBox1.Style = MetroFramework.MetroColorStyle.Green;
+            this.metroTextBox1.Style = MetroFramework.MetroColorStyle.Brown;
             this.metroTextBox1.TabIndex = 6;
             this.metroTextBox1.UseSelectable = true;
             this.metroTextBox1.WaterMark = "Felhasználónév";
@@ -105,7 +105,7 @@
             this.metroTextBox2.SelectionStart = 0;
             this.metroTextBox2.ShortcutsEnabled = true;
             this.metroTextBox2.Size = new System.Drawing.Size(236, 30);
-            this.metroTextBox2.Style = MetroFramework.MetroColorStyle.Green;
+            this.metroTextBox2.Style = MetroFramework.MetroColorStyle.Brown;
             this.metroTextBox2.TabIndex = 7;
             this.metroTextBox2.UseSelectable = true;
             this.metroTextBox2.WaterMark = "Jelszó";
@@ -117,9 +117,10 @@
             this.metroButton1.Location = new System.Drawing.Point(114, 369);
             this.metroButton1.Name = "metroButton1";
             this.metroButton1.Size = new System.Drawing.Size(148, 51);
-            this.metroButton1.Style = MetroFramework.MetroColorStyle.Green;
+            this.metroButton1.Style = MetroFramework.MetroColorStyle.Brown;
             this.metroButton1.TabIndex = 8;
             this.metroButton1.Text = "Bejelentkezés";
+            this.metroButton1.Theme = MetroFramework.MetroThemeStyle.Light;
             this.metroButton1.UseCustomBackColor = true;
             this.metroButton1.UseCustomForeColor = true;
             this.metroButton1.UseSelectable = true;
@@ -134,7 +135,7 @@
             this.Controls.Add(this.metroTextBox2);
             this.Controls.Add(this.metroTextBox1);
             this.Name = "FormSignIn";
-            this.Style = MetroFramework.MetroColorStyle.Green;
+            this.Style = MetroFramework.MetroColorStyle.Brown;
             this.ResumeLayout(false);
 
         }
