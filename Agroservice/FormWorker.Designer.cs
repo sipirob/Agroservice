@@ -46,25 +46,25 @@
             this.TextBoxVetomag = new MetroFramework.Controls.MetroTextBox();
             this.dataGridViewNewWork = new System.Windows.Forms.DataGridView();
             this.buttonClient2 = new MetroFramework.Controls.MetroTabPage();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNewWork)).BeginInit();
             this.buttonClient2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // metroTabControl1
             // 
             this.metroTabControl1.Controls.Add(this.metroTabPage1);
             this.metroTabControl1.Controls.Add(this.buttonClient2);
-            this.metroTabControl1.Location = new System.Drawing.Point(-6, 116);
+            this.metroTabControl1.Location = new System.Drawing.Point(5, 116);
             this.metroTabControl1.Name = "metroTabControl1";
             this.metroTabControl1.SelectedIndex = 1;
-            this.metroTabControl1.Size = new System.Drawing.Size(1283, 645);
+            this.metroTabControl1.Size = new System.Drawing.Size(1272, 645);
             this.metroTabControl1.Style = MetroFramework.MetroColorStyle.Brown;
             this.metroTabControl1.TabIndex = 0;
             this.metroTabControl1.UseSelectable = true;
@@ -310,12 +310,29 @@
             this.buttonClient2.HorizontalScrollbarSize = 10;
             this.buttonClient2.Location = new System.Drawing.Point(4, 38);
             this.buttonClient2.Name = "buttonClient2";
-            this.buttonClient2.Size = new System.Drawing.Size(1275, 603);
+            this.buttonClient2.Size = new System.Drawing.Size(1264, 603);
             this.buttonClient2.TabIndex = 1;
             this.buttonClient2.Text = "Elvégzett munkálatok";
             this.buttonClient2.VerticalScrollbarBarColor = true;
             this.buttonClient2.VerticalScrollbarHighlightOnWheel = false;
             this.buttonClient2.VerticalScrollbarSize = 10;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(976, 18);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(125, 43);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Ügyfél adatai";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(14, 18);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(918, 540);
+            this.dataGridView1.TabIndex = 2;
             // 
             // pictureBox1
             // 
@@ -326,23 +343,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 18);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(929, 540);
-            this.dataGridView1.TabIndex = 2;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(976, 18);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(125, 43);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Ügyfél adatai";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // FormWorker
             // 
@@ -358,8 +358,8 @@
             this.metroTabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNewWork)).EndInit();
             this.buttonClient2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

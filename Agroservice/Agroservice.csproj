@@ -104,6 +104,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormLeader.resx">
+      <DependentUpon>FormLeader.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormSignIn.resx">
       <DependentUpon>FormSignIn.cs</DependentUpon>
     </EmbeddedResource>

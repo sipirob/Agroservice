@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Agroservice
 {
-    public partial class FormLeader : Form
+    public partial class FormLeader : MetroFramework.Forms.MetroForm
     {
         public FormLeader()
         {
             InitializeComponent();
+        }
+
+        private void TextBoxWorkerName_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
