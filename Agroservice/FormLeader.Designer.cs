@@ -57,6 +57,8 @@
             this.ListViewClient = new MetroFramework.Controls.MetroListView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.metroDateTime1 = new MetroFramework.Controls.MetroDateTime();
+            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
@@ -94,6 +96,8 @@
             // 
             // metroTabPage1
             // 
+            this.metroTabPage1.Controls.Add(this.monthCalendar1);
+            this.metroTabPage1.Controls.Add(this.metroDateTime1);
             this.metroTabPage1.Controls.Add(this.dataGridView2);
             this.metroTabPage1.HorizontalScrollbarBarColor = true;
             this.metroTabPage1.HorizontalScrollbarHighlightOnWheel = false;
@@ -530,6 +534,22 @@
             this.dataGridView2.Size = new System.Drawing.Size(693, 454);
             this.dataGridView2.TabIndex = 2;
             // 
+            // metroDateTime1
+            // 
+            this.metroDateTime1.Location = new System.Drawing.Point(787, 24);
+            this.metroDateTime1.MinimumSize = new System.Drawing.Size(0, 29);
+            this.metroDateTime1.Name = "metroDateTime1";
+            this.metroDateTime1.Size = new System.Drawing.Size(200, 29);
+            this.metroDateTime1.TabIndex = 3;
+            // 
+            // monthCalendar1
+            // 
+            this.monthCalendar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.monthCalendar1.Location = new System.Drawing.Point(801, 114);
+            this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.TabIndex = 4;
+            this.monthCalendar1.TitleBackColor = System.Drawing.Color.LightSalmon;
+            // 
             // FormLeader
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -585,5 +605,7 @@
         private MetroFramework.Controls.MetroTextBox metroTextBox4;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.MonthCalendar monthCalendar1;
+        private MetroFramework.Controls.MetroDateTime metroDateTime1;
     }
 }
