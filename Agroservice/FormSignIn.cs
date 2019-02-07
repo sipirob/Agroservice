@@ -15,8 +15,7 @@ namespace Agroservice
     {
        public static string username;
        public static string password;
-       
-       
+           
         public FormSignIn()
         {
            
@@ -28,13 +27,10 @@ namespace Agroservice
         {
             username = TextboxUsername.Text;
             password = TextboxPassword.Text;
-            // model.Connection connect = new model.Connection();
-            //connect.connectionToDatabase();
-           repository.LogIn log = new repository.LogIn();
+            repository.LogIn log = new repository.LogIn();
             log.Login();
-            //labelUsername.Text = TextboxUsername.Text;
-            
            
+         
         }
     }
 }
