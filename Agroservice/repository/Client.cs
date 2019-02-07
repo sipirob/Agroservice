@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Agroservice.repository
 {
-    class Client
+   public class Client
     {
         private int clientid;
         private string firstname;
@@ -22,6 +22,11 @@ namespace Agroservice.repository
             this.place = place;
             this.tel = tel;
         }
+
+        public Client()
+        {
+        }
+
         public void setClientid(int clientid)
         {
             this.clientid = clientid;
@@ -30,7 +35,7 @@ namespace Agroservice.repository
         {
             this.firstname = firstname;
         }
-        public void setLastnam(string lastname)
+        public void setLastname(string lastname)
         {
             this.lastname = lastname;
         }
