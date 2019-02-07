@@ -12,22 +12,14 @@ namespace Agroservice.repository
 {
    public class LogIn :FormSignIn
     {
-       //public FormSignIn fsign;
-       public FormSignIn si = new FormSignIn();
+        public FormSignIn si = new FormSignIn();
         public  void Login()
         {
-
-          //  this.fsign = si;
-
-            //FormSignIn si = new FormSignIn();
             MySqlConnection connection = new MySqlConnection(model.Connection.connectionString);
-            string passwordlog = password;
-            string usernamelog = username;
             int i = 0;
             connection.Open();
             MySqlCommand cmd = connection.CreateCommand();
             cmd.CommandType = CommandType.Text;
-           
             cmd.CommandText = "select * from user, category where categoryId = category.id and username = '" + username + "' and password='" + password + "'";
             cmd.ExecuteNonQuery();
             DataTable dt = new DataTable();
@@ -38,10 +30,8 @@ namespace Agroservice.repository
             if (i == 0)
             {
                 MessageBox.Show("Helytelen felhasználóinév vagy jelszó!");
-                labelUsername.Text = username;
                 connection.Close();
             }
-
             else if (i == 1)
             {
                 //jogosultság kiválasztása
@@ -49,20 +39,24 @@ namespace Agroservice.repository
                 {
                     case "worker":
                         {
-                           
+                            FormSignIn siin = new FormSignIn();
                             FormWorker fw = new FormWorker();
+                            siin.Hide();
                             fw.Show();
+                           
+                            connection.Close();
                             break;
                         }
                     case "leader":
                         {
                             FormLeader fl = new FormLeader();
                             fl.Show();
+                            connection.Close();
                             break;
                         }
 
                 }
             }
-    }
+      }
     }
 }
