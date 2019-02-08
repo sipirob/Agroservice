@@ -16,7 +16,7 @@ namespace Agroservice
     public partial class FormLeader : MetroFramework.Forms.MetroForm
     {
         public Client cl;
-       // AgroserviceController controller;
+      // AgroserviceController controller;
         private LogIn logIn;
 
         public FormLeader()
@@ -37,16 +37,14 @@ namespace Agroservice
 
         private void buttonAllClient_Click(object sender, EventArgs e)
         {
-           // repository.Client cl = new Client();
-            controller.AgroserviceController controller = new AgroserviceController();
+            Client cl = new Client();
+            AgroserviceController controller = new AgroserviceController();
             controller.loadClientData();
-            ListViewItem lv = new ListViewItem(Convert.ToString(cl.getClientid()));
-            lv.SubItems.Add("hello");
-            lv.SubItems.Add(cl.getLastname());
-            lv.SubItems.Add(cl.getPlace());
-            lv.SubItems.Add(Convert.ToString(cl.getTel()));
-            listView1.Items.Add(lv);
-            //MessageBox.Show(cl.getFirstname());
+
+          
+            
+            dataGridViewClient.DataSource = controller.loadClientData();
+
         }
     }
 }

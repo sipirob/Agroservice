@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 
 namespace Agroservice.controller
 {
@@ -15,9 +16,10 @@ namespace Agroservice.controller
             clientDataLoad = new model.ClientDataLoad();
         }
 
-        internal void loadClientData()
+        public DataTable loadClientData()
         {
-            clientDataLoad.clientDataLoad();
+            model.ClientDataLoad cl = new model.ClientDataLoad();
+           return cl.clientDataLoad();
         }
     }
 }
