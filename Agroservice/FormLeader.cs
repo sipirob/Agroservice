@@ -18,6 +18,7 @@ namespace Agroservice
         public Client cl;
       // AgroserviceController controller;
         private LogIn logIn;
+        internal object listViewClientData;
 
         public FormLeader()
         {
@@ -40,7 +41,9 @@ namespace Agroservice
             Client cl = new Client();
             AgroserviceController controller = new AgroserviceController();
             controller.loadClientData();
-
+            controller.loadClientDataList();
+            ListViewClientData.Items.Add(controller.loadClientDataList());
+            
           
             
             dataGridViewClient.DataSource = controller.loadClientData();

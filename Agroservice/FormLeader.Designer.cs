@@ -65,6 +65,11 @@
             this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.dataGridViewClient = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage2.SuspendLayout();
@@ -487,40 +492,40 @@
             this.columnHeader5});
             this.ListViewClientData.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.ListViewClientData.FullRowSelect = true;
-            this.ListViewClientData.GridLines = true;
-            this.ListViewClientData.Location = new System.Drawing.Point(20, 32);
+            this.ListViewClientData.Location = new System.Drawing.Point(686, 127);
             this.ListViewClientData.Name = "ListViewClientData";
             this.ListViewClientData.OwnerDraw = true;
-            this.ListViewClientData.Size = new System.Drawing.Size(248, 480);
+            this.ListViewClientData.Size = new System.Drawing.Size(568, 212);
             this.ListViewClientData.Style = MetroFramework.MetroColorStyle.Brown;
-            this.ListViewClientData.TabIndex = 8;
+            this.ListViewClientData.TabIndex = 10;
             this.ListViewClientData.UseCompatibleStateImageBehavior = false;
             this.ListViewClientData.UseSelectable = true;
+            this.ListViewClientData.UseStyleColors = true;
             this.ListViewClientData.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader1
             // 
-            this.columnHeader1.Text = "Id";
+            this.columnHeader1.Text = "id";
             // 
             // columnHeader2
             // 
-            this.columnHeader2.Text = "Vezetéknév";
-            this.columnHeader2.Width = 90;
+            this.columnHeader2.Text = "vezeteknev";
+            this.columnHeader2.Width = 100;
             // 
             // columnHeader3
             // 
-            this.columnHeader3.Text = "Keresztnév";
-            this.columnHeader3.Width = 90;
+            this.columnHeader3.Text = "keresztnev";
+            this.columnHeader3.Width = 100;
             // 
             // columnHeader4
             // 
-            this.columnHeader4.Text = "Lakhely";
-            this.columnHeader4.Width = 120;
+            this.columnHeader4.Text = "lakhely";
+            this.columnHeader4.Width = 150;
             // 
             // columnHeader5
             // 
-            this.columnHeader5.Text = "Telefonszám";
-            this.columnHeader5.Width = 100;
+            this.columnHeader5.Text = "telefonszam";
+            this.columnHeader5.Width = 120;
             // 
             // buttonAllClient
             // 
@@ -595,10 +600,42 @@
             // dataGridViewClient
             // 
             this.dataGridViewClient.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewClient.Location = new System.Drawing.Point(330, 90);
+            this.dataGridViewClient.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5});
+            this.dataGridViewClient.Location = new System.Drawing.Point(20, 95);
             this.dataGridViewClient.Name = "dataGridViewClient";
-            this.dataGridViewClient.Size = new System.Drawing.Size(410, 270);
-            this.dataGridViewClient.TabIndex = 9;
+            this.dataGridViewClient.Size = new System.Drawing.Size(596, 331);
+            this.dataGridViewClient.TabIndex = 11;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "id";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "vezetéknév";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "keresztnév";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "lakhely";
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 150;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "telefonszám";
+            this.Column5.Name = "Column5";
             // 
             // FormLeader
             // 
@@ -652,17 +689,22 @@
         private System.Windows.Forms.MonthCalendar monthCalendar1;
         private MetroFramework.Controls.MetroDateTime metroDateTime1;
         private MetroFramework.Controls.MetroTabPage metroTabPage4;
+        private System.Windows.Forms.Button buttonAllClient;
+        private MetroFramework.Controls.MetroLabel metroLabel2;
+        private System.Windows.Forms.Button buttonSearchClient;
+        private MetroFramework.Controls.MetroTextBox metroTextBox1;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
         public MetroFramework.Controls.MetroListView ListViewClientData;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
-        private System.Windows.Forms.Button buttonAllClient;
-        private MetroFramework.Controls.MetroLabel metroLabel2;
-        private System.Windows.Forms.Button buttonSearchClient;
-        private MetroFramework.Controls.MetroTextBox metroTextBox1;
-        private MetroFramework.Controls.MetroLabel metroLabel1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         public System.Windows.Forms.DataGridView dataGridViewClient;
     }
 }

@@ -10,7 +10,7 @@ using MysSqlDataGridViewHalak;
 
 namespace Agroservice.model
 {
-    public  class ClientDataLoad : FormLeader
+    public  class ClientDataLoad 
     {
         public FormLeader fl = new FormLeader();
         private MySQLDatabaseInterface mdi;
@@ -63,8 +63,49 @@ namespace Agroservice.model
             mdi.open();
             clientData = mdi.getToDataTable("SELECT `id`, `vezeteknev`, `kersztnev`, `lakhely`, `telefonszam` FROM `clientdata`");
             fl.dataGridViewClient.DataSource = clientData;
+
             return clientData;
+          
             
+        }
+
+        public ListViewItem getClientdataList()
+        {
+            fl.ListViewClientData.Items.Clear();
+            ListViewItem items = new ListViewItem();
+            MySqlConnection connection = new MySqlConnection(model.Connection.connectionString);
+            repository.Client cl = new repository.Client();
+
+            string query = "SELECT `id`, `vezeteknev`, `kersztnev`, `lakhely`, `telefonszam` FROM `clientdata`";
+            MySqlCommand cmd = new MySqlCommand(query, connection);
+
+            connection.Open();
+            MySqlDataReader dr;
+            dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                cl.setClientid(Convert.ToInt32(dr[0]));
+                cl.setFirstname(dr[1].ToString());
+                cl.setLastname(dr[2].ToString());
+                cl.setPlace(dr[3].ToString());
+                cl.setTel(Convert.ToInt32(dr[4]));
+                ListViewItem lv = new ListViewItem(Convert.ToString(cl.getClientid()));
+                lv.SubItems.Add(cl.getFirstname());
+                lv.SubItems.Add(cl.getLastname());
+                lv.SubItems.Add(cl.getPlace());
+                lv.SubItems.Add(Convert.ToString(cl.getTel()));
+                items=lv;
+                
+
+            }
+           
+            dr.Close();
+            connection.Close();
+            return items;
+
+
+
+
         }
     }
 }
