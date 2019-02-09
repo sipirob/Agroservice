@@ -82,10 +82,6 @@ namespace Agroservice.model
             mdi.open();
             dt = mdi.getToDataTable("SELECT `id`, `vezeteknev`, `kersztnev`, `lakhely`, `telefonszam` FROM `clientdata`");
 
-            //cl.setFirstname(dr[1].ToString());
-            //cl.setLastname(dr[2].ToString());
-            //cl.setPlace(dr[3].ToString());
-            //cl.setTel(Convert.ToInt32(dr[4]));
             
             dt.Rows. Add(lv).ToString();
             return lv;
