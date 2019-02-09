@@ -53,6 +53,7 @@
             this.TextBoxSearchWorkerName = new MetroFramework.Controls.MetroTextBox();
             this.metroListView1 = new MetroFramework.Controls.MetroListView();
             this.metroTabPage4 = new MetroFramework.Controls.MetroTabPage();
+            this.dataGridViewClient = new System.Windows.Forms.DataGridView();
             this.ListViewClientData = new MetroFramework.Controls.MetroListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -64,7 +65,7 @@
             this.buttonSearchClient = new System.Windows.Forms.Button();
             this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.dataGridViewClient = new System.Windows.Forms.DataGridView();
+            this.listView1 = new System.Windows.Forms.ListView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage2.SuspendLayout();
@@ -458,6 +459,7 @@
             // 
             // metroTabPage4
             // 
+            this.metroTabPage4.Controls.Add(this.listView1);
             this.metroTabPage4.Controls.Add(this.dataGridViewClient);
             this.metroTabPage4.Controls.Add(this.ListViewClientData);
             this.metroTabPage4.Controls.Add(this.buttonAllClient);
@@ -477,6 +479,14 @@
             this.metroTabPage4.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage4.VerticalScrollbarSize = 10;
             // 
+            // dataGridViewClient
+            // 
+            this.dataGridViewClient.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewClient.Location = new System.Drawing.Point(698, 77);
+            this.dataGridViewClient.Name = "dataGridViewClient";
+            this.dataGridViewClient.Size = new System.Drawing.Size(410, 270);
+            this.dataGridViewClient.TabIndex = 9;
+            // 
             // ListViewClientData
             // 
             this.ListViewClientData.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -491,7 +501,7 @@
             this.ListViewClientData.Location = new System.Drawing.Point(20, 32);
             this.ListViewClientData.Name = "ListViewClientData";
             this.ListViewClientData.OwnerDraw = true;
-            this.ListViewClientData.Size = new System.Drawing.Size(248, 480);
+            this.ListViewClientData.Size = new System.Drawing.Size(502, 480);
             this.ListViewClientData.Style = MetroFramework.MetroColorStyle.Brown;
             this.ListViewClientData.TabIndex = 8;
             this.ListViewClientData.UseCompatibleStateImageBehavior = false;
@@ -592,13 +602,13 @@
             this.metroLabel1.TabIndex = 3;
             this.metroLabel1.Text = "Ügyfél keresése:";
             // 
-            // dataGridViewClient
+            // listView1
             // 
-            this.dataGridViewClient.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewClient.Location = new System.Drawing.Point(330, 90);
-            this.dataGridViewClient.Name = "dataGridViewClient";
-            this.dataGridViewClient.Size = new System.Drawing.Size(410, 270);
-            this.dataGridViewClient.TabIndex = 9;
+            this.listView1.Location = new System.Drawing.Point(569, 225);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(121, 97);
+            this.listView1.TabIndex = 10;
+            this.listView1.UseCompatibleStateImageBehavior = false;
             // 
             // FormLeader
             // 
@@ -664,5 +674,6 @@
         private MetroFramework.Controls.MetroTextBox metroTextBox1;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         public System.Windows.Forms.DataGridView dataGridViewClient;
+        private System.Windows.Forms.ListView listView1;
     }
 }

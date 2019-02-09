@@ -10,7 +10,7 @@ using MysSqlDataGridViewHalak;
 
 namespace Agroservice.model
 {
-    public  class ClientDataLoad : FormLeader
+    public  class ClientDataLoad 
     {
         public FormLeader fl = new FormLeader();
         private MySQLDatabaseInterface mdi;
@@ -58,6 +58,9 @@ namespace Agroservice.model
             //}
             //dr.Close();
             //connection.Close();
+
+
+
             model.ConnectToDatabase a = new ConnectToDatabase();
             mdi = a.connect();
             mdi.open();
@@ -65,6 +68,27 @@ namespace Agroservice.model
             fl.dataGridViewClient.DataSource = clientData;
             return clientData;
             
+        }
+
+        public static ListViewItem getClientDataList()
+        {
+            FormLeader fl = new FormLeader();
+            DataTable dt = new DataTable();
+            MySQLDatabaseInterface mdi = new MySQLDatabaseInterface();
+            model.ConnectToDatabase a = new ConnectToDatabase();
+            repository.Client cl = new repository.Client();
+            ListViewItem lv = new ListViewItem();
+            mdi = a.connect();
+            mdi.open();
+            dt = mdi.getToDataTable("SELECT `id`, `vezeteknev`, `kersztnev`, `lakhely`, `telefonszam` FROM `clientdata`");
+
+            //cl.setFirstname(dr[1].ToString());
+            //cl.setLastname(dr[2].ToString());
+            //cl.setPlace(dr[3].ToString());
+            //cl.setTel(Convert.ToInt32(dr[4]));
+            
+            dt.Rows. Add(lv).ToString();
+            return lv;
         }
     }
 }

@@ -40,10 +40,10 @@ namespace Agroservice
             Client cl = new Client();
             AgroserviceController controller = new AgroserviceController();
             controller.loadClientData();
-
-          
-            
             dataGridViewClient.DataSource = controller.loadClientData();
+            controller.loadClientList();
+            ListViewClientData.Items.Add(controller.loadClientList());
+           
 
         }
     }
