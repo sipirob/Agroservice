@@ -42,7 +42,7 @@ namespace Agroservice
             controller.loadClientData();
             dataGridViewClient.DataSource = controller.loadClientData();
             controller.loadClientList();
-            ListViewClientData.Items.Add(controller.loadClientList());
+            ListViewClientData.Items.Add( controller.loadClientList());
            
 
         }
