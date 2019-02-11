@@ -76,6 +76,7 @@ namespace Agroservice.model
                 int tel = Convert.ToInt32(row[4]);
                 repository.Client c = new repository.Client(id, fname, lname, place, tel);
                 clients.Add(c);
+
             }
            
           
