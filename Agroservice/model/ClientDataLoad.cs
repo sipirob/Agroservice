@@ -77,6 +77,7 @@ namespace Agroservice.model
                 repository.Client c = new repository.Client(id, fname, lname, place, tel);
                 clients.Add(c);
 
+
             }
            
           
