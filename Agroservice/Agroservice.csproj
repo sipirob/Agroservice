@@ -105,9 +105,7 @@
     <Compile Include="FormWorker.Designer.cs">
       <DependentUpon>FormWorker.cs</DependentUpon>
     </Compile>
-    <Compile Include="model\ClientDataLoad.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="model\ClientDataLoad.cs" />
     <Compile Include="model\Connection.cs" />
     <Compile Include="model\ConnectToDatabase.cs" />
     <Compile Include="model\MySQLDatabaseInterface.cs" />

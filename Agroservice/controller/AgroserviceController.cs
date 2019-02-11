@@ -9,18 +9,24 @@ using System.Data;
 namespace Agroservice.controller
 {
    
-    class AgroserviceController
+   public class AgroserviceController
     {
-        model.ClientDataLoad clientDataLoad;
+        private model.ClientDataLoad clientDataLoad;
+       
         public AgroserviceController()
         {
             clientDataLoad = new model.ClientDataLoad();
         }
-
-        public DataTable loadClientData()
+       
+        internal DataTable getClientData()
         {
-            model.ClientDataLoad cl = new model.ClientDataLoad();
-           return cl.clientDataLoad();
+            DataTable clientDT = model.ClientDataLoad.getClientDataFromList();
+            return clientDT;
+          
+        }
+        public void loadClientData()
+        {
+            model.ClientDataLoad.clientDataLoad();
         }
     }
 }
