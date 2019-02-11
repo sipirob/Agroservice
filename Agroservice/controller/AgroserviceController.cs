@@ -22,10 +22,5 @@ namespace Agroservice.controller
             model.ClientDataLoad cl = new model.ClientDataLoad();
            return cl.clientDataLoad();
         }
-
-        public  ListViewItem loadClientList()
-        {
-            return model.ClientDataLoad.getClientDataList();
-        }
     }
 }
