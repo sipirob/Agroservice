@@ -6,30 +6,27 @@ using System.Threading.Tasks;
 
 namespace Agroservice.repository
 {
-   public class Client
+   public class Worker
     {
-        private int clientid;
+        private int workerid;
         private string firstname;
         private string lastname;
+        private DateTime birthday;
         private string place;
         private int tel;
 
-        public Client(int clientid, string firstname, string lastname, string place, int tel)
+        public Worker(int workerid, string firstname, string lastname, DateTime birthday, string place, int tel)
         {
-            this.clientid = clientid;
+            this.workerid = workerid;
             this.firstname = firstname;
             this.lastname = lastname;
+            this.birthday = birthday;
             this.place = place;
             this.tel = tel;
         }
-
-        //public Client()
-        //{
-        //}
-
-        public void setClientid(int clientid)
+        public void setWorkerid(int workerid)
         {
-            this.clientid = clientid;
+            this.workerid = workerid;
         }
         public void setFirstname(string firstname)
         {
@@ -38,6 +35,10 @@ namespace Agroservice.repository
         public void setLastname(string lastname)
         {
             this.lastname = lastname;
+        }
+        public void setBirthday(DateTime birthday)
+        {
+            this.birthday = birthday;
         }
         public void setPlace(string place)
         {
@@ -48,9 +49,10 @@ namespace Agroservice.repository
             this.tel = tel;
         }
 
-        public int getClientid()
+
+        public int getWorkerid()
         {
-            return clientid;
+            return workerid;
         }
         public string getFirstname()
         {
@@ -64,11 +66,15 @@ namespace Agroservice.repository
         {
             return place;
         }
+        public DateTime getBirtday()
+        {
+            return birthday;
+        }
         public int getTel()
         {
             return tel;
         }
-                
+
         
     }
 }

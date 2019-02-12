@@ -11,9 +11,9 @@ namespace Agroservice.model
 {
     class ClientDataLoad
     {
-        private static List<repository.Client> clients;
+        private static List<repository.Client> Clients;
 
-        public static List<Client> Clients { get => clients; set => clients = value; }
+       // public static List<Client> Clients { get => clients; set => clients = value; }
 
         public  ClientDataLoad()
         {

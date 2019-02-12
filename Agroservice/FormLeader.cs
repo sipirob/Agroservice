@@ -37,12 +37,24 @@ namespace Agroservice
 
         private void buttonAllClient_Click(object sender, EventArgs e)
         {
-            Client cl = new Client();
+           // Client cl = new Client();
             AgroserviceController controller = new AgroserviceController();
             controller.loadClientData();
             dataGridViewClient.DataSource = controller.getClientData();
             
            
+
+        }
+
+        private void FormLeader_Load(object sender, EventArgs e)
+        {
+            AgroserviceController controller = new AgroserviceController();
+
+            controller.loadWorkerData();
+            dataGridViewWorkers.DataSource = controller.getWorkerData();
+
+            controller.loadClientData();
+            dataGridViewClient.DataSource = controller.getClientData();
 
         }
     }

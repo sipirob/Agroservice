@@ -12,10 +12,12 @@ namespace Agroservice.controller
    public class AgroserviceController
     {
         private model.ClientDataLoad clientDataLoad;
+        private model.WorkerDataLoad workerDataLoad;
        
         public AgroserviceController()
         {
             clientDataLoad = new model.ClientDataLoad();
+            workerDataLoad = new model.WorkerDataLoad();
         }
        
         internal DataTable getClientData()
@@ -27,6 +29,15 @@ namespace Agroservice.controller
         public void loadClientData()
         {
             model.ClientDataLoad.clientDataLoad();
+        }
+        internal DataTable getWorkerData()
+        {
+            DataTable workerDT = model.WorkerDataLoad.getWorkerDataFromList();
+            return workerDT;
+        }
+        public void loadWorkerData()
+        {
+            model.WorkerDataLoad.workerDataLoad();
         }
     }
 }

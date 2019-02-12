@@ -38,6 +38,7 @@
             this.metroDateTime1 = new MetroFramework.Controls.MetroDateTime();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
+            this.dataGridViewWorkers = new System.Windows.Forms.DataGridView();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.metroTextBox4 = new MetroFramework.Controls.MetroTextBox();
             this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
@@ -51,15 +52,8 @@
             this.buttonNewWorker = new System.Windows.Forms.Button();
             this.buttonSearchWorker = new System.Windows.Forms.Button();
             this.TextBoxSearchWorkerName = new MetroFramework.Controls.MetroTextBox();
-            this.metroListView1 = new MetroFramework.Controls.MetroListView();
             this.metroTabPage4 = new MetroFramework.Controls.MetroTabPage();
             this.dataGridViewClient = new System.Windows.Forms.DataGridView();
-            this.ListViewClientData = new MetroFramework.Controls.MetroListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.buttonAllClient = new System.Windows.Forms.Button();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.buttonSearchClient = new System.Windows.Forms.Button();
@@ -72,6 +66,7 @@
             this.metroTabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.metroTabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewWorkers)).BeginInit();
             this.metroPanel1.SuspendLayout();
             this.metroTabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewClient)).BeginInit();
@@ -95,7 +90,7 @@
             this.metroTabControl1.Controls.Add(this.metroTabPage4);
             this.metroTabControl1.Location = new System.Drawing.Point(-1, 136);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 3;
+            this.metroTabControl1.SelectedIndex = 1;
             this.metroTabControl1.Size = new System.Drawing.Size(1279, 570);
             this.metroTabControl1.Style = MetroFramework.MetroColorStyle.Brown;
             this.metroTabControl1.TabIndex = 1;
@@ -144,7 +139,7 @@
             // monthCalendar1
             // 
             this.monthCalendar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.monthCalendar1.Location = new System.Drawing.Point(801, 114);
+            this.monthCalendar1.Location = new System.Drawing.Point(787, 82);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 4;
             this.monthCalendar1.TitleBackColor = System.Drawing.Color.LightSalmon;
@@ -167,6 +162,7 @@
             // 
             // metroTabPage3
             // 
+            this.metroTabPage3.Controls.Add(this.dataGridViewWorkers);
             this.metroTabPage3.Controls.Add(this.metroPanel1);
             this.metroTabPage3.Controls.Add(this.buttonSave);
             this.metroTabPage3.Controls.Add(this.buttonDeleteWorker);
@@ -174,7 +170,6 @@
             this.metroTabPage3.Controls.Add(this.buttonNewWorker);
             this.metroTabPage3.Controls.Add(this.buttonSearchWorker);
             this.metroTabPage3.Controls.Add(this.TextBoxSearchWorkerName);
-            this.metroTabPage3.Controls.Add(this.metroListView1);
             this.metroTabPage3.HorizontalScrollbarBarColor = true;
             this.metroTabPage3.HorizontalScrollbarHighlightOnWheel = false;
             this.metroTabPage3.HorizontalScrollbarSize = 10;
@@ -187,6 +182,14 @@
             this.metroTabPage3.VerticalScrollbarBarColor = true;
             this.metroTabPage3.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage3.VerticalScrollbarSize = 10;
+            // 
+            // dataGridViewWorkers
+            // 
+            this.dataGridViewWorkers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewWorkers.Location = new System.Drawing.Point(21, 87);
+            this.dataGridViewWorkers.Name = "dataGridViewWorkers";
+            this.dataGridViewWorkers.Size = new System.Drawing.Size(483, 436);
+            this.dataGridViewWorkers.TabIndex = 10;
             // 
             // metroPanel1
             // 
@@ -443,23 +446,9 @@
             this.TextBoxSearchWorkerName.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.TextBoxSearchWorkerName.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // metroListView1
-            // 
-            this.metroListView1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.metroListView1.FullRowSelect = true;
-            this.metroListView1.Location = new System.Drawing.Point(20, 36);
-            this.metroListView1.Name = "metroListView1";
-            this.metroListView1.OwnerDraw = true;
-            this.metroListView1.Size = new System.Drawing.Size(477, 487);
-            this.metroListView1.Style = MetroFramework.MetroColorStyle.Brown;
-            this.metroListView1.TabIndex = 2;
-            this.metroListView1.UseCompatibleStateImageBehavior = false;
-            this.metroListView1.UseSelectable = true;
-            // 
             // metroTabPage4
             // 
             this.metroTabPage4.Controls.Add(this.dataGridViewClient);
-            this.metroTabPage4.Controls.Add(this.ListViewClientData);
             this.metroTabPage4.Controls.Add(this.buttonAllClient);
             this.metroTabPage4.Controls.Add(this.metroLabel2);
             this.metroTabPage4.Controls.Add(this.buttonSearchClient);
@@ -480,59 +469,14 @@
             // dataGridViewClient
             // 
             this.dataGridViewClient.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewClient.Location = new System.Drawing.Point(698, 77);
+            this.dataGridViewClient.Location = new System.Drawing.Point(20, 63);
             this.dataGridViewClient.Name = "dataGridViewClient";
-            this.dataGridViewClient.Size = new System.Drawing.Size(410, 270);
+            this.dataGridViewClient.Size = new System.Drawing.Size(651, 348);
             this.dataGridViewClient.TabIndex = 9;
-            // 
-            // ListViewClientData
-            // 
-            this.ListViewClientData.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4,
-            this.columnHeader5});
-            this.ListViewClientData.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.ListViewClientData.FullRowSelect = true;
-            this.ListViewClientData.GridLines = true;
-            this.ListViewClientData.Location = new System.Drawing.Point(20, 32);
-            this.ListViewClientData.Name = "ListViewClientData";
-            this.ListViewClientData.OwnerDraw = true;
-            this.ListViewClientData.Size = new System.Drawing.Size(546, 480);
-            this.ListViewClientData.Style = MetroFramework.MetroColorStyle.Brown;
-            this.ListViewClientData.TabIndex = 8;
-            this.ListViewClientData.UseCompatibleStateImageBehavior = false;
-            this.ListViewClientData.UseSelectable = true;
-            this.ListViewClientData.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Id";
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Vezetéknév";
-            this.columnHeader2.Width = 90;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Keresztnév";
-            this.columnHeader3.Width = 90;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Lakhely";
-            this.columnHeader4.Width = 120;
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "Telefonszám";
-            this.columnHeader5.Width = 100;
             // 
             // buttonAllClient
             // 
-            this.buttonAllClient.Location = new System.Drawing.Point(1012, 24);
+            this.buttonAllClient.Location = new System.Drawing.Point(1141, 32);
             this.buttonAllClient.Name = "buttonAllClient";
             this.buttonAllClient.Size = new System.Drawing.Size(123, 36);
             this.buttonAllClient.TabIndex = 7;
@@ -543,7 +487,7 @@
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(20, 10);
+            this.metroLabel2.Location = new System.Drawing.Point(20, 32);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(95, 19);
             this.metroLabel2.TabIndex = 6;
@@ -551,7 +495,7 @@
             // 
             // buttonSearchClient
             // 
-            this.buttonSearchClient.Location = new System.Drawing.Point(872, 24);
+            this.buttonSearchClient.Location = new System.Drawing.Point(1001, 32);
             this.buttonSearchClient.Name = "buttonSearchClient";
             this.buttonSearchClient.Size = new System.Drawing.Size(123, 36);
             this.buttonSearchClient.TabIndex = 5;
@@ -573,7 +517,7 @@
             this.metroTextBox1.CustomButton.UseSelectable = true;
             this.metroTextBox1.CustomButton.Visible = false;
             this.metroTextBox1.Lines = new string[0];
-            this.metroTextBox1.Location = new System.Drawing.Point(698, 28);
+            this.metroTextBox1.Location = new System.Drawing.Point(827, 36);
             this.metroTextBox1.MaxLength = 32767;
             this.metroTextBox1.Name = "metroTextBox1";
             this.metroTextBox1.PasswordChar = '\0';
@@ -594,7 +538,7 @@
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(590, 32);
+            this.metroLabel1.Location = new System.Drawing.Point(719, 40);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(102, 19);
             this.metroLabel1.TabIndex = 3;
@@ -610,6 +554,7 @@
             this.Name = "FormLeader";
             this.Style = MetroFramework.MetroColorStyle.Brown;
             this.Text = "FormLeader";
+            this.Load += new System.EventHandler(this.FormLeader_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.metroTabControl1.ResumeLayout(false);
             this.metroTabPage2.ResumeLayout(false);
@@ -617,6 +562,7 @@
             this.metroTabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.metroTabPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewWorkers)).EndInit();
             this.metroPanel1.ResumeLayout(false);
             this.metroPanel1.PerformLayout();
             this.metroTabPage4.ResumeLayout(false);
@@ -633,7 +579,6 @@
         private MetroFramework.Controls.MetroTabPage metroTabPage1;
         private MetroFramework.Controls.MetroTabPage metroTabPage2;
         private MetroFramework.Controls.MetroTabPage metroTabPage3;
-        private MetroFramework.Controls.MetroListView metroListView1;
         private MetroFramework.Controls.MetroTextBox TextBoxSearchWorkerName;
         private System.Windows.Forms.Button buttonSearchWorker;
         private MetroFramework.Controls.MetroPanel metroPanel1;
@@ -652,17 +597,12 @@
         private System.Windows.Forms.MonthCalendar monthCalendar1;
         private MetroFramework.Controls.MetroDateTime metroDateTime1;
         private MetroFramework.Controls.MetroTabPage metroTabPage4;
-        public MetroFramework.Controls.MetroListView ListViewClientData;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.Button buttonAllClient;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private System.Windows.Forms.Button buttonSearchClient;
         private MetroFramework.Controls.MetroTextBox metroTextBox1;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         public System.Windows.Forms.DataGridView dataGridViewClient;
+        private System.Windows.Forms.DataGridView dataGridViewWorkers;
     }
 }
