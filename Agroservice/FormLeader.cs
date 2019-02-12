@@ -55,6 +55,24 @@ namespace Agroservice
 
             controller.loadClientData();
             dataGridViewClient.DataSource = controller.getClientData();
+            DataTable dt = new DataTable();
+            dt = controller.getClientData();
+            
+            ListViewItem lv = new ListViewItem();
+            foreach (DataRow dr in dt.Rows)
+            {
+                ListViewItem lvi = new ListViewItem(dr["id"].ToString());
+
+                lvi.SubItems.Add(dr["vezetéknév"].ToString());
+                lvi.SubItems.Add(dr["keresztnév"].ToString());
+                lvi.SubItems.Add(dr["lakhely"].ToString());
+                lvi.SubItems.Add(dr["telefonszám"].ToString());
+
+
+
+                listView1.Items.Add(lvi);
+            }
+
 
         }
     }

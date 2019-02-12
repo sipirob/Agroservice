@@ -6,6 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Agroservice.model
 {
@@ -62,18 +63,21 @@ namespace Agroservice.model
         }
         public static DataTable getClientDataFromList()
         {
+            
             DataTable clientDT = new DataTable();
             clientDT.Columns.Add("id", typeof(int));
             clientDT.Columns.Add("vezetéknév", typeof(string));
-            clientDT.Columns.Add("keresztnev", typeof(string));
+            clientDT.Columns.Add("keresztnév", typeof(string));
             clientDT.Columns.Add("lakhely", typeof(string));
-            clientDT.Columns.Add("tel", typeof(int));
+            clientDT.Columns.Add("telefonszám", typeof(int));
             foreach (repository.Client c in Clients)
             {
                 clientDT.Rows.Add(c.getClientid(), c.getFirstname(), c.getLastname(), c.getPlace(), c.getTel());
+                
             }
+            
             return clientDT;
-
+            
         }
     }
 }
