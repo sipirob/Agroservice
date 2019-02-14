@@ -9,17 +9,16 @@ namespace Agroservice.repository
    public class Worker
     {
         private int workerid;
-        private string firstname;
-        private string lastname;
+        private string name;
+       
         private DateTime birthday;
         private string place;
         private int tel;
 
-        public Worker(int workerid, string firstname, string lastname, DateTime birthday, string place, int tel)
+        public Worker(int workerid, string name, DateTime birthday, string place, int tel)
         {
             this.workerid = workerid;
-            this.firstname = firstname;
-            this.lastname = lastname;
+            this.name = name;
             this.birthday = birthday;
             this.place = place;
             this.tel = tel;
@@ -28,14 +27,11 @@ namespace Agroservice.repository
         {
             this.workerid = workerid;
         }
-        public void setFirstname(string firstname)
+        public void setName(string name)
         {
-            this.firstname = firstname;
+            this.name = name;
         }
-        public void setLastname(string lastname)
-        {
-            this.lastname = lastname;
-        }
+       
         public void setBirthday(DateTime birthday)
         {
             this.birthday = birthday;
@@ -54,14 +50,11 @@ namespace Agroservice.repository
         {
             return workerid;
         }
-        public string getFirstname()
+        public string getName()
         {
-            return firstname;
+            return name;
         }
-        public string getLastname()
-        {
-            return lastname;
-        }
+       
         public string getPlace()
         {
             return place;
