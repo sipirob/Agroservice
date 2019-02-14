@@ -40,7 +40,7 @@ namespace Agroservice
            // Client cl = new Client();
             AgroserviceController controller = new AgroserviceController();
             controller.loadClientData();
-            dataGridViewClient.DataSource = controller.getClientData();
+           // dataGridViewClient.DataSource = controller.getClientData();
             
            
 
@@ -54,7 +54,7 @@ namespace Agroservice
             dataGridViewWorkers.DataSource = controller.getWorkerData();
 
             controller.loadClientData();
-            dataGridViewClient.DataSource = controller.getClientData();
+           // dataGridViewClient.DataSource = controller.getClientData();
             DataTable dt = new DataTable();
             dt = controller.getClientData();
             
@@ -67,10 +67,13 @@ namespace Agroservice
                 lvi.SubItems.Add(dr["keresztnév"].ToString());
                 lvi.SubItems.Add(dr["lakhely"].ToString());
                 lvi.SubItems.Add(dr["telefonszám"].ToString());
+               
+                //ListViewClientsData.Columns[1].Width = 100;
+                //ListViewClientsData.Columns[2].Width = 100;
+               // ListViewClientsData.Columns[3].Width = 150;
+                //ListViewClientsData.Columns[4].Width = 150;
 
-
-
-                listView1.Items.Add(lvi);
+                ListViewClientsData.Items.Add(lvi);
             }
 
 

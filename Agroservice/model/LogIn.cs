@@ -20,7 +20,7 @@ namespace Agroservice.repository
             connection.Open();
             MySqlCommand cmd = connection.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select * from user, category where categoryId = category.id and username = '" + username + "' and password='" + password + "'";
+            cmd.CommandText = "select * from worker, category where categoryId = category.id and username = '" + username + "' and password='" + password + "'";
             cmd.ExecuteNonQuery();
             DataTable dt = new DataTable();
             MySqlDataAdapter da = new MySqlDataAdapter(cmd);

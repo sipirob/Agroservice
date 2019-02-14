@@ -36,7 +36,7 @@ namespace Agroservice.model
             MySQLDatabaseInterface mdi = new MySQLDatabaseInterface();
             mdi = a.connect();
             mdi.open();
-            string query = "SELECT `id`,`vezeteknev`,`keresztnev`,`szulido`,`lakhely`,`telefonszam` FROM `userdata`";
+            string query = "SELECT `id`,`vezeteknev`,`keresztnev`,`szulido`,`lakhely`,`telefonszam` FROM `workerdata`";
             DataTable workerdt = new DataTable();
             workerdt = mdi.getToDataTable(query);
             loadWorkerList(workerdt);

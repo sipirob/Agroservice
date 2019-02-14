@@ -116,6 +116,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="repository\Client.cs" />
+    <Compile Include="repository\Parcel.cs" />
     <Compile Include="repository\Worker.cs" />
     <EmbeddedResource Include="FormLeader.resx">
       <DependentUpon>FormLeader.cs</DependentUpon>
