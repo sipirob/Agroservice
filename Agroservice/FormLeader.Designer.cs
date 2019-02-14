@@ -36,7 +36,7 @@
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.metroDateTime1 = new MetroFramework.Controls.MetroDateTime();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewNewWorkData = new System.Windows.Forms.DataGridView();
             this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
             this.dataGridViewWorkers = new System.Windows.Forms.DataGridView();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
@@ -68,7 +68,7 @@
             this.metroTabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.metroTabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNewWorkData)).BeginInit();
             this.metroTabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewWorkers)).BeginInit();
             this.metroPanel1.SuspendLayout();
@@ -93,7 +93,7 @@
             this.metroTabControl1.Controls.Add(this.metroTabPage4);
             this.metroTabControl1.Location = new System.Drawing.Point(-1, 136);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 3;
+            this.metroTabControl1.SelectedIndex = 2;
             this.metroTabControl1.Size = new System.Drawing.Size(1279, 570);
             this.metroTabControl1.Style = MetroFramework.MetroColorStyle.Brown;
             this.metroTabControl1.TabIndex = 1;
@@ -126,7 +126,7 @@
             // 
             this.metroTabPage1.Controls.Add(this.monthCalendar1);
             this.metroTabPage1.Controls.Add(this.metroDateTime1);
-            this.metroTabPage1.Controls.Add(this.dataGridView2);
+            this.metroTabPage1.Controls.Add(this.dataGridViewNewWorkData);
             this.metroTabPage1.HorizontalScrollbarBarColor = true;
             this.metroTabPage1.HorizontalScrollbarHighlightOnWheel = false;
             this.metroTabPage1.HorizontalScrollbarSize = 10;
@@ -150,18 +150,18 @@
             // metroDateTime1
             // 
             this.metroDateTime1.Location = new System.Drawing.Point(787, 24);
-            this.metroDateTime1.MinimumSize = new System.Drawing.Size(4, 29);
+            this.metroDateTime1.MinimumSize = new System.Drawing.Size(0, 29);
             this.metroDateTime1.Name = "metroDateTime1";
             this.metroDateTime1.Size = new System.Drawing.Size(200, 29);
             this.metroDateTime1.TabIndex = 3;
             // 
-            // dataGridView2
+            // dataGridViewNewWorkData
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(20, 24);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(693, 454);
-            this.dataGridView2.TabIndex = 2;
+            this.dataGridViewNewWorkData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewNewWorkData.Location = new System.Drawing.Point(20, 24);
+            this.dataGridViewNewWorkData.Name = "dataGridViewNewWorkData";
+            this.dataGridViewNewWorkData.Size = new System.Drawing.Size(693, 454);
+            this.dataGridViewNewWorkData.TabIndex = 2;
             // 
             // metroTabPage3
             // 
@@ -595,7 +595,7 @@
             this.metroTabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.metroTabPage1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNewWorkData)).EndInit();
             this.metroTabPage3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewWorkers)).EndInit();
             this.metroPanel1.ResumeLayout(false);
@@ -610,7 +610,6 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private MetroFramework.Controls.MetroTabControl metroTabControl1;
-        private MetroFramework.Controls.MetroTabPage metroTabPage1;
         private MetroFramework.Controls.MetroTabPage metroTabPage2;
         private MetroFramework.Controls.MetroTabPage metroTabPage3;
         private MetroFramework.Controls.MetroTextBox TextBoxSearchWorkerName;
@@ -627,7 +626,6 @@
         private System.Windows.Forms.MaskedTextBox maskedTextBox2;
         private MetroFramework.Controls.MetroTextBox metroTextBox4;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.MonthCalendar monthCalendar1;
         private MetroFramework.Controls.MetroDateTime metroDateTime1;
         private MetroFramework.Controls.MetroTabPage metroTabPage4;
@@ -636,11 +634,13 @@
         private System.Windows.Forms.Button buttonSearchClient;
         private MetroFramework.Controls.MetroTextBox metroTextBox1;
         private MetroFramework.Controls.MetroLabel metroLabel1;
-        private System.Windows.Forms.DataGridView dataGridViewWorkers;
         public MetroFramework.Controls.MetroListView ListViewClientsData;
         public System.Windows.Forms.ColumnHeader columnHeader6;
         public System.Windows.Forms.ColumnHeader columnHeader7;
         public System.Windows.Forms.ColumnHeader columnHeader9;
         public System.Windows.Forms.ColumnHeader columnHeader10;
+        public System.Windows.Forms.DataGridView dataGridViewNewWorkData;
+        public MetroFramework.Controls.MetroTabPage metroTabPage1;
+        public System.Windows.Forms.DataGridView dataGridViewWorkers;
     }
 }

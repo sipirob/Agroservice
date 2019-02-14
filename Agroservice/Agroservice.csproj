@@ -109,6 +109,7 @@
     <Compile Include="model\Connection.cs" />
     <Compile Include="model\ConnectToDatabase.cs" />
     <Compile Include="model\MySQLDatabaseInterface.cs" />
+    <Compile Include="model\NewWorkDataLoad.cs" />
     <Compile Include="model\WorkerDataLoad.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

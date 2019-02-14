@@ -48,10 +48,16 @@ namespace Agroservice
 
         private void FormLeader_Load(object sender, EventArgs e)
         {
+            
             AgroserviceController controller = new AgroserviceController();
 
             controller.loadWorkerData();
             dataGridViewWorkers.DataSource = controller.getWorkerData();
+
+            controller.loadNewWorkData();
+            dataGridViewNewWorkData.DataSource = controller.getNewWorkData();
+
+
 
             controller.loadClientData();
            // dataGridViewClient.DataSource = controller.getClientData();
@@ -76,7 +82,7 @@ namespace Agroservice
                 ListViewClientsData.Items.Add(lvi);
             }
 
-
+            
         }
     }
 }

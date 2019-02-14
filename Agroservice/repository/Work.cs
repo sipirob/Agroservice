@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Agroservice.repository
 {
-    class Work
+    public class Work
     {
         private int id;
         private DateTime date;
@@ -83,7 +83,7 @@ namespace Agroservice.repository
         {
             return id;
         }
-        public DateTime GetDate()
+        public DateTime getDate()
         {
             return date;
         }
