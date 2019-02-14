@@ -118,6 +118,7 @@
     <Compile Include="repository\Client.cs" />
     <Compile Include="repository\Parcel.cs" />
     <Compile Include="repository\Worker.cs" />
+    <Compile Include="repository\Service.cs" />
     <EmbeddedResource Include="FormLeader.resx">
       <DependentUpon>FormLeader.cs</DependentUpon>
     </EmbeddedResource>
