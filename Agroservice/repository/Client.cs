@@ -9,16 +9,16 @@ namespace Agroservice.repository
    public class Client
     {
         private int clientid;
-        private string firstname;
-        private string lastname;
+        private string name;
+       
         private string place;
         private int tel;
 
-        public Client(int clientid, string firstname, string lastname, string place, int tel)
+        public Client(int clientid, string name, string place, int tel)
         {
             this.clientid = clientid;
-            this.firstname = firstname;
-            this.lastname = lastname;
+            this.name = name;
+           
             this.place = place;
             this.tel = tel;
         }
@@ -31,14 +31,11 @@ namespace Agroservice.repository
         {
             this.clientid = clientid;
         }
-        public void setFirstname(string firstname)
+        public void setName(string name)
         {
-            this.firstname = firstname;
+            this.name = name;
         }
-        public void setLastname(string lastname)
-        {
-            this.lastname = lastname;
-        }
+     
         public void setPlace(string place)
         {
             this.place = place;
@@ -52,14 +49,11 @@ namespace Agroservice.repository
         {
             return clientid;
         }
-        public string getFirstname()
+        public string getName()
         {
-            return firstname;
+            return name;
         }
-        public string getLastname()
-        {
-            return lastname;
-        }
+        
         public string getPlace()
         {
             return place;

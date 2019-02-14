@@ -53,17 +53,16 @@
             this.buttonSearchWorker = new System.Windows.Forms.Button();
             this.TextBoxSearchWorkerName = new MetroFramework.Controls.MetroTextBox();
             this.metroTabPage4 = new MetroFramework.Controls.MetroTabPage();
+            this.ListViewClientsData = new MetroFramework.Controls.MetroListView();
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.buttonAllClient = new System.Windows.Forms.Button();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.buttonSearchClient = new System.Windows.Forms.Button();
             this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.ListViewClientsData = new MetroFramework.Controls.MetroListView();
-            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage2.SuspendLayout();
@@ -470,6 +469,46 @@
             this.metroTabPage4.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage4.VerticalScrollbarSize = 10;
             // 
+            // ListViewClientsData
+            // 
+            this.ListViewClientsData.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader6,
+            this.columnHeader7,
+            this.columnHeader9,
+            this.columnHeader10});
+            this.ListViewClientsData.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.ListViewClientsData.FullRowSelect = true;
+            this.ListViewClientsData.Location = new System.Drawing.Point(20, 72);
+            this.ListViewClientsData.Name = "ListViewClientsData";
+            this.ListViewClientsData.OwnerDraw = true;
+            this.ListViewClientsData.Size = new System.Drawing.Size(715, 384);
+            this.ListViewClientsData.Style = MetroFramework.MetroColorStyle.Brown;
+            this.ListViewClientsData.TabIndex = 11;
+            this.ListViewClientsData.UseCompatibleStateImageBehavior = false;
+            this.ListViewClientsData.UseSelectable = true;
+            this.ListViewClientsData.UseStyleColors = true;
+            this.ListViewClientsData.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "id";
+            this.columnHeader6.Width = 100;
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "név";
+            this.columnHeader7.Width = 200;
+            // 
+            // columnHeader9
+            // 
+            this.columnHeader9.Text = "lakhely";
+            this.columnHeader9.Width = 200;
+            // 
+            // columnHeader10
+            // 
+            this.columnHeader10.Text = "telefonszám";
+            this.columnHeader10.Width = 100;
+            // 
             // buttonAllClient
             // 
             this.buttonAllClient.Location = new System.Drawing.Point(1141, 32);
@@ -540,52 +579,6 @@
             this.metroLabel1.TabIndex = 3;
             this.metroLabel1.Text = "Ügyfél keresése:";
             // 
-            // ListViewClientsData
-            // 
-            this.ListViewClientsData.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader6,
-            this.columnHeader7,
-            this.columnHeader8,
-            this.columnHeader9,
-            this.columnHeader10});
-            this.ListViewClientsData.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.ListViewClientsData.FullRowSelect = true;
-            this.ListViewClientsData.Location = new System.Drawing.Point(20, 72);
-            this.ListViewClientsData.Name = "ListViewClientsData";
-            this.ListViewClientsData.OwnerDraw = true;
-            this.ListViewClientsData.Size = new System.Drawing.Size(715, 384);
-            this.ListViewClientsData.Style = MetroFramework.MetroColorStyle.Brown;
-            this.ListViewClientsData.TabIndex = 11;
-            this.ListViewClientsData.UseCompatibleStateImageBehavior = false;
-            this.ListViewClientsData.UseSelectable = true;
-            this.ListViewClientsData.UseStyleColors = true;
-            this.ListViewClientsData.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader10
-            // 
-            this.columnHeader10.Text = "telefonszám";
-            this.columnHeader10.Width = 100;
-            // 
-            // columnHeader9
-            // 
-            this.columnHeader9.Text = "lakhely";
-            this.columnHeader9.Width = 200;
-            // 
-            // columnHeader8
-            // 
-            this.columnHeader8.Text = "keresztnév";
-            this.columnHeader8.Width = 120;
-            // 
-            // columnHeader7
-            // 
-            this.columnHeader7.Text = "vezetéknév";
-            this.columnHeader7.Width = 100;
-            // 
-            // columnHeader6
-            // 
-            this.columnHeader6.Text = "id";
-            this.columnHeader6.Width = 100;
-            // 
             // FormLeader
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -647,7 +640,6 @@
         public MetroFramework.Controls.MetroListView ListViewClientsData;
         public System.Windows.Forms.ColumnHeader columnHeader6;
         public System.Windows.Forms.ColumnHeader columnHeader7;
-        public System.Windows.Forms.ColumnHeader columnHeader8;
         public System.Windows.Forms.ColumnHeader columnHeader9;
         public System.Windows.Forms.ColumnHeader columnHeader10;
     }

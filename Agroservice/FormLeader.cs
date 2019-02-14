@@ -63,8 +63,8 @@ namespace Agroservice
             {
                 ListViewItem lvi = new ListViewItem(dr["id"].ToString());
 
-                lvi.SubItems.Add(dr["vezetéknév"].ToString());
-                lvi.SubItems.Add(dr["keresztnév"].ToString());
+                lvi.SubItems.Add(dr["név"].ToString());
+               
                 lvi.SubItems.Add(dr["lakhely"].ToString());
                 lvi.SubItems.Add(dr["telefonszám"].ToString());
                
