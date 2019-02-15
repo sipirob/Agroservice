@@ -63,6 +63,7 @@
             this.buttonSearchClient = new System.Windows.Forms.Button();
             this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.labelUsernamae = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage2.SuspendLayout();
@@ -150,7 +151,7 @@
             // metroDateTime1
             // 
             this.metroDateTime1.Location = new System.Drawing.Point(787, 24);
-            this.metroDateTime1.MinimumSize = new System.Drawing.Size(0, 29);
+            this.metroDateTime1.MinimumSize = new System.Drawing.Size(4, 29);
             this.metroDateTime1.Name = "metroDateTime1";
             this.metroDateTime1.Size = new System.Drawing.Size(200, 29);
             this.metroDateTime1.TabIndex = 3;
@@ -579,11 +580,21 @@
             this.metroLabel1.TabIndex = 3;
             this.metroLabel1.Text = "Ügyfél keresése:";
             // 
+            // labelUsernamae
+            // 
+            this.labelUsernamae.AutoSize = true;
+            this.labelUsernamae.Location = new System.Drawing.Point(637, 27);
+            this.labelUsernamae.Name = "labelUsernamae";
+            this.labelUsernamae.Size = new System.Drawing.Size(35, 13);
+            this.labelUsernamae.TabIndex = 2;
+            this.labelUsernamae.Text = "label1";
+            // 
             // FormLeader
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.labelUsernamae);
             this.Controls.Add(this.metroTabControl1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "FormLeader";
@@ -603,6 +614,7 @@
             this.metroTabPage4.ResumeLayout(false);
             this.metroTabPage4.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -642,5 +654,6 @@
         public System.Windows.Forms.DataGridView dataGridViewNewWorkData;
         public MetroFramework.Controls.MetroTabPage metroTabPage1;
         public System.Windows.Forms.DataGridView dataGridViewWorkers;
+        private System.Windows.Forms.Label labelUsernamae;
     }
 }

@@ -108,6 +108,7 @@
     <Compile Include="model\ClientDataLoad.cs" />
     <Compile Include="model\Connection.cs" />
     <Compile Include="model\ConnectToDatabase.cs" />
+    <Compile Include="model\LoadUsername.cs" />
     <Compile Include="model\MySQLDatabaseInterface.cs" />
     <Compile Include="model\NewWorkDataLoad.cs" />
     <Compile Include="model\WorkerDataLoad.cs" />

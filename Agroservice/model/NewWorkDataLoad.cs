@@ -34,11 +34,17 @@ namespace Agroservice.model
 
         private static void loadNewWork()
         {
+            FormSignIn si = new FormSignIn();
             ConnectToDatabase a = new ConnectToDatabase();
             MySQLDatabaseInterface mdi = new MySQLDatabaseInterface();
             mdi = a.connect();
             mdi.open();
-            string query = "SELECT work.id,`date`,`parcelnumber`,`workname`,`graincropname`,clientdata.name as clientname, workerdata.name as workername,`rating`,`comment`,`price`,`done` FROM worker,client,`work`,clientdata, workerdata where work.workerid=worker.id and work.clientid=client.id and worker.id=workerdata.id and client.id=clientdata.id and done=0";
+            string query = "";
+            if(si.leader== false)
+            {
+                 query = "SELECT work.id,`date`,`parcelnumber`,`workname`,`graincropname`,clientdata.name as clientname, workerdata.name as workername,`rating`,`comment`,`price`,`done` FROM worker,client,`work`,clientdata, workerdata where work.workerid=worker.id and work.clientid=client.id and worker.id=workerdata.id and client.id=clientdata.id and done=0";
+            }
+           
             DataTable newworkdt = new DataTable();
             newworkdt = mdi.getToDataTable(query);
             loadNewWorkList(newworkdt);
@@ -66,6 +72,7 @@ namespace Agroservice.model
                 Work.Add(w);
             }
         }
+
         public static DataTable getClientDataFromList()
         {
 

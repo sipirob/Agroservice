@@ -9,21 +9,21 @@ using System.Threading.Tasks;
 
 namespace Agroservice.model
 {
-    class WorkerDataLoad
+    class LoadUsername
     {
         private static List<Worker> Workers;
 
-        public WorkerDataLoad()
+        public LoadUsername()
         {
             Workers = new List<Worker>();
         }
-        
+
         public static void workerDataLoad()
         {
             try
             {
-                loadWorkers();
-               
+
+                loadUsername();
             }
             catch (Exception e)
             {
@@ -31,23 +31,35 @@ namespace Agroservice.model
             }
         }
 
-      
-        private static void loadWorkers()
+        private static void loadUsername()
         {
             ConnectToDatabase a = new ConnectToDatabase();
             MySQLDatabaseInterface mdi = new MySQLDatabaseInterface();
             mdi = a.connect();
             mdi.open();
-            string query = "SELECT `id`,`name`,`szulido`,`lakhely`,`telefonszam` FROM `workerdata`";
+            string query = "SELECT workerdata.id,`name`,`szulido`,`lakhely`,`telefonszam` FROM `workerdata`, worker where worker.id=workerdata.id and worker.username = '" + FormSignIn.username + "'";
             DataTable workerdt = new DataTable();
             workerdt = mdi.getToDataTable(query);
             loadWorkerList(workerdt);
             mdi.close();
         }
+        /// <summary>
+        /// A belépet felhasználó nevének lekérése
+        /// </summary>
+        /// <returns>Belépett felhasználó neve</returns>
+        internal static string getUsername()
+        {
+            string username = "";
+            foreach (Worker w in Workers)
+            {
+                username = w.getName();
+            }
+            Workers.Clear();
+            return username;
+        }
 
         private static void loadWorkerList(DataTable workerdt)
         {
-            
             foreach (DataRow row in workerdt.Rows)
             {
                 int id = Convert.ToInt32(row[0]);
@@ -58,21 +70,7 @@ namespace Agroservice.model
                 Worker w = new Worker(id, name, bday, place, tel);
                 Workers.Add(w);
             }
+
         }
-        internal static DataTable getWorkerDataFromList()
-        {
-            DataTable workerDT = new DataTable();
-            workerDT.Columns.Add("id", typeof(int));
-            workerDT.Columns.Add("név", typeof(string));
-            workerDT.Columns.Add("születési idő", typeof(DateTime));
-            workerDT.Columns.Add("lakhely", typeof(string));
-            workerDT.Columns.Add("telefonszám", typeof(int));
-            foreach(Worker w in Workers)
-            {
-                workerDT.Rows.Add(w.getWorkerid(), w.getName(), w.getBirtday(), w.getPlace(), w.getTel());
-            }
-            return workerDT;
-        }
-       
     }
 }

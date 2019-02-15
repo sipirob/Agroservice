@@ -57,6 +57,8 @@ namespace Agroservice
             controller.loadNewWorkData();
             dataGridViewNewWorkData.DataSource = controller.getNewWorkData();
 
+            controller.usernameLoad();
+            labelUsernamae.Text = controller.getloadUsername();
 
 
             controller.loadClientData();

@@ -43,7 +43,7 @@ namespace Agroservice.repository
                             FormWorker fw = new FormWorker();
                             siin.Hide();
                             fw.Show();
-                           
+                            worker = true;
                             connection.Close();
                             break;
                         }
@@ -51,6 +51,7 @@ namespace Agroservice.repository
                         {
                             FormLeader fl = new FormLeader();
                             fl.Show();
+                            leader = true;
                             connection.Close();
                             break;
                         }
