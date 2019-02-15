@@ -15,8 +15,8 @@ namespace Agroservice
     {
        public static string username;
        public static string password;
-        public  bool leader = false;
-        public static bool worker = false;
+        public static bool leader;
+        public static bool worker;
            
         public FormSignIn()
         {
@@ -27,6 +27,7 @@ namespace Agroservice
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
+            //leader = false;
             username = TextboxUsername.Text;
             password = TextboxPassword.Text;
             repository.LogIn log = new repository.LogIn();

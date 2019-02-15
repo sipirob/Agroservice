@@ -49,9 +49,10 @@ namespace Agroservice.repository
                         }
                     case "leader":
                         {
+                            FormSignIn siin = new FormSignIn();
                             FormLeader fl = new FormLeader();
                             fl.Show();
-                            leader = true;
+                           leader = true;
                             connection.Close();
                             break;
                         }

@@ -15,6 +15,7 @@ namespace Agroservice.controller
         private model.WorkerDataLoad workerDataLoad;
         private model.NewWorkDataLoad newWorkDataLoad;
         private model.LoadUsername loadUsername;
+        private model.CompleteWorkDataLoad completeWorkDataLoad;
        
         public AgroserviceController()
         {
@@ -22,6 +23,7 @@ namespace Agroservice.controller
             workerDataLoad = new model.WorkerDataLoad();
             newWorkDataLoad = new model.NewWorkDataLoad();
             loadUsername = new model.LoadUsername();
+            completeWorkDataLoad = new model.CompleteWorkDataLoad();
         }
        /// <summary>
        /// Ügyfelek adatainak lekérése listából
@@ -57,14 +59,25 @@ namespace Agroservice.controller
             model.WorkerDataLoad.workerDataLoad();
         }
 
-      
+        internal DataTable getCompleteWorksData()
+        {
+            DataTable compWorkData = model.CompleteWorkDataLoad.getCompleteWorkDataFromList();
+            return compWorkData;
+        }
+
+        public void loadCompleteData()
+        {
+            model.CompleteWorkDataLoad.completeWorkDataLoad();
+        }
+
+
         /// <summary>
         /// A még el nem végzett munkálatok listájának lekérése
         /// </summary>
         /// <returns>Az el nem végzett munkálatok listája</returns>
         internal DataTable getNewWorkData()
         {
-            DataTable newWorkDT = model.NewWorkDataLoad.getClientDataFromList();
+            DataTable newWorkDT = model.NewWorkDataLoad.getNewWorkDataFromList();
             return newWorkDT;
         }
         /// <summary>

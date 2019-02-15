@@ -60,6 +60,9 @@ namespace Agroservice
             controller.usernameLoad();
             labelUsernamae.Text = controller.getloadUsername();
 
+            controller.loadCompleteData();
+            dataGridViewCompleteWorks.DataSource = controller.getCompleteWorksData();
+
 
             controller.loadClientData();
            // dataGridViewClient.DataSource = controller.getClientData();
