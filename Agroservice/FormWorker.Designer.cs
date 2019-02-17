@@ -29,362 +29,264 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormWorker));
-            this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
-            this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
-            this.buttonCalc = new System.Windows.Forms.Button();
-            this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.LabelTotavolsag = new MetroFramework.Controls.MetroLabel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.buttonClient = new System.Windows.Forms.Button();
-            this.buttonElvegezve = new System.Windows.Forms.Button();
-            this.LabelTerkep = new MetroFramework.Controls.MetroLabel();
-            this.gMapControl1 = new GMap.NET.WindowsForms.GMapControl();
-            this.TextBoxPermetszer = new MetroFramework.Controls.MetroTextBox();
-            this.LabelPermetszer = new MetroFramework.Controls.MetroLabel();
-            this.LabelVetomag = new MetroFramework.Controls.MetroLabel();
-            this.TextBoxVetomag = new MetroFramework.Controls.MetroTextBox();
-            this.dataGridViewNewWork = new System.Windows.Forms.DataGridView();
-            this.buttonClient2 = new MetroFramework.Controls.MetroTabPage();
-            this.button1 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.labelUsername = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panelSign = new System.Windows.Forms.Panel();
+            this.buttonHome = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.buttonSettings = new System.Windows.Forms.Button();
+            this.buttonClientData = new System.Windows.Forms.Button();
+            this.buttonDoneWork = new System.Windows.Forms.Button();
+            this.buttonNewWork = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.metroTabControl1.SuspendLayout();
-            this.metroTabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNewWork)).BeginInit();
-            this.buttonClient2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.userControlCompleteWorks1 = new Agroservice.UserControlCompleteWorks();
+            this.userControlNewWorks1 = new Agroservice.UserControlNewWorks();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // metroTabControl1
+            // panel1
             // 
-            this.metroTabControl1.Controls.Add(this.metroTabPage1);
-            this.metroTabControl1.Controls.Add(this.buttonClient2);
-            this.metroTabControl1.Location = new System.Drawing.Point(5, 116);
-            this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 1;
-            this.metroTabControl1.Size = new System.Drawing.Size(1272, 645);
-            this.metroTabControl1.Style = MetroFramework.MetroColorStyle.Brown;
-            this.metroTabControl1.TabIndex = 0;
-            this.metroTabControl1.UseSelectable = true;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel1.Controls.Add(this.labelUsername);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1264, 80);
+            this.panel1.TabIndex = 1;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // metroTabPage1
+            // labelUsername
             // 
-            this.metroTabPage1.Controls.Add(this.buttonCalc);
-            this.metroTabPage1.Controls.Add(this.metroTextBox1);
-            this.metroTabPage1.Controls.Add(this.metroLabel1);
-            this.metroTabPage1.Controls.Add(this.LabelTotavolsag);
-            this.metroTabPage1.Controls.Add(this.comboBox1);
-            this.metroTabPage1.Controls.Add(this.buttonClient);
-            this.metroTabPage1.Controls.Add(this.buttonElvegezve);
-            this.metroTabPage1.Controls.Add(this.LabelTerkep);
-            this.metroTabPage1.Controls.Add(this.gMapControl1);
-            this.metroTabPage1.Controls.Add(this.TextBoxPermetszer);
-            this.metroTabPage1.Controls.Add(this.LabelPermetszer);
-            this.metroTabPage1.Controls.Add(this.LabelVetomag);
-            this.metroTabPage1.Controls.Add(this.TextBoxVetomag);
-            this.metroTabPage1.Controls.Add(this.dataGridViewNewWork);
-            this.metroTabPage1.HorizontalScrollbarBarColor = true;
-            this.metroTabPage1.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroTabPage1.HorizontalScrollbarSize = 10;
-            this.metroTabPage1.Location = new System.Drawing.Point(4, 38);
-            this.metroTabPage1.Name = "metroTabPage1";
-            this.metroTabPage1.Size = new System.Drawing.Size(1275, 603);
-            this.metroTabPage1.TabIndex = 0;
-            this.metroTabPage1.Text = "Új munkálatok";
-            this.metroTabPage1.VerticalScrollbarBarColor = true;
-            this.metroTabPage1.VerticalScrollbarHighlightOnWheel = false;
-            this.metroTabPage1.VerticalScrollbarSize = 10;
+            this.labelUsername.AutoSize = true;
+            this.labelUsername.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelUsername.ForeColor = System.Drawing.Color.White;
+            this.labelUsername.Location = new System.Drawing.Point(1089, 43);
+            this.labelUsername.Name = "labelUsername";
+            this.labelUsername.Size = new System.Drawing.Size(145, 21);
+            this.labelUsername.TabIndex = 0;
+            this.labelUsername.Text = "Felhasználó Neve";
             // 
-            // buttonCalc
+            // panel2
             // 
-            this.buttonCalc.Location = new System.Drawing.Point(721, 127);
-            this.buttonCalc.Name = "buttonCalc";
-            this.buttonCalc.Size = new System.Drawing.Size(105, 37);
-            this.buttonCalc.TabIndex = 15;
-            this.buttonCalc.Text = "Számol";
-            this.buttonCalc.UseVisualStyleBackColor = true;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel2.Controls.Add(this.panelSign);
+            this.panel2.Controls.Add(this.buttonHome);
+            this.panel2.Controls.Add(this.button5);
+            this.panel2.Controls.Add(this.buttonSettings);
+            this.panel2.Controls.Add(this.buttonClientData);
+            this.panel2.Controls.Add(this.buttonDoneWork);
+            this.panel2.Controls.Add(this.buttonNewWork);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(0, 80);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(202, 601);
+            this.panel2.TabIndex = 2;
             // 
-            // metroTextBox1
+            // panelSign
             // 
+            this.panelSign.BackColor = System.Drawing.Color.Chartreuse;
+            this.panelSign.Location = new System.Drawing.Point(3, -1);
+            this.panelSign.Name = "panelSign";
+            this.panelSign.Size = new System.Drawing.Size(12, 88);
+            this.panelSign.TabIndex = 7;
             // 
+            // buttonHome
             // 
+            this.buttonHome.FlatAppearance.BorderSize = 0;
+            this.buttonHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonHome.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonHome.ForeColor = System.Drawing.Color.White;
+            this.buttonHome.Location = new System.Drawing.Point(0, -1);
+            this.buttonHome.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonHome.Name = "buttonHome";
+            this.buttonHome.Size = new System.Drawing.Size(202, 86);
+            this.buttonHome.TabIndex = 8;
+            this.buttonHome.Text = "Főoldal";
+            this.buttonHome.UseVisualStyleBackColor = true;
+            this.buttonHome.Click += new System.EventHandler(this.buttonHome_Click);
             // 
-            this.metroTextBox1.CustomButton.Image = null;
-            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(83, 1);
-            this.metroTextBox1.CustomButton.Name = "";
-            this.metroTextBox1.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.metroTextBox1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox1.CustomButton.TabIndex = 1;
-            this.metroTextBox1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox1.CustomButton.UseSelectable = true;
-            this.metroTextBox1.CustomButton.Visible = false;
-            this.metroTextBox1.Lines = new string[0];
-            this.metroTextBox1.Location = new System.Drawing.Point(1092, 80);
-            this.metroTextBox1.MaxLength = 32767;
-            this.metroTextBox1.Name = "metroTextBox1";
-            this.metroTextBox1.PasswordChar = '\0';
-            this.metroTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox1.SelectedText = "";
-            this.metroTextBox1.SelectionLength = 0;
-            this.metroTextBox1.SelectionStart = 0;
-            this.metroTextBox1.ShortcutsEnabled = true;
-            this.metroTextBox1.Size = new System.Drawing.Size(105, 23);
-            this.metroTextBox1.TabIndex = 14;
-            this.metroTextBox1.UseSelectable = true;
-            this.metroTextBox1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // button5
             // 
-            // metroLabel1
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Location = new System.Drawing.Point(0, 460);
+            this.button5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(202, 86);
+            this.button5.TabIndex = 7;
+            this.button5.Text = "Névjegy";
+            this.button5.UseVisualStyleBackColor = true;
             // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(1005, 84);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(39, 19);
-            this.metroLabel1.TabIndex = 13;
-            this.metroLabel1.Text = "L/Ha:";
+            // buttonSettings
             // 
-            // LabelTotavolsag
+            this.buttonSettings.FlatAppearance.BorderSize = 0;
+            this.buttonSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSettings.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonSettings.ForeColor = System.Drawing.Color.White;
+            this.buttonSettings.Location = new System.Drawing.Point(0, 367);
+            this.buttonSettings.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonSettings.Name = "buttonSettings";
+            this.buttonSettings.Size = new System.Drawing.Size(202, 86);
+            this.buttonSettings.TabIndex = 6;
+            this.buttonSettings.Text = "Beállítások";
+            this.buttonSettings.UseVisualStyleBackColor = true;
             // 
-            this.LabelTotavolsag.AutoSize = true;
-            this.LabelTotavolsag.Location = new System.Drawing.Point(1005, 36);
-            this.LabelTotavolsag.Name = "LabelTotavolsag";
-            this.LabelTotavolsag.Size = new System.Drawing.Size(84, 19);
-            this.LabelTotavolsag.TabIndex = 12;
-            this.LabelTotavolsag.Text = "Tő távolsága:";
+            // buttonClientData
             // 
-            // comboBox1
+            this.buttonClientData.FlatAppearance.BorderSize = 0;
+            this.buttonClientData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonClientData.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonClientData.ForeColor = System.Drawing.Color.White;
+            this.buttonClientData.Location = new System.Drawing.Point(0, 273);
+            this.buttonClientData.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonClientData.Name = "buttonClientData";
+            this.buttonClientData.Size = new System.Drawing.Size(202, 86);
+            this.buttonClientData.TabIndex = 5;
+            this.buttonClientData.Text = "Ügyfelek adatai";
+            this.buttonClientData.UseVisualStyleBackColor = true;
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(1092, 36);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(105, 21);
-            this.comboBox1.TabIndex = 11;
+            // buttonDoneWork
             // 
-            // buttonClient
+            this.buttonDoneWork.FlatAppearance.BorderSize = 0;
+            this.buttonDoneWork.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonDoneWork.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonDoneWork.ForeColor = System.Drawing.Color.White;
+            this.buttonDoneWork.Location = new System.Drawing.Point(0, 180);
+            this.buttonDoneWork.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonDoneWork.Name = "buttonDoneWork";
+            this.buttonDoneWork.Size = new System.Drawing.Size(202, 86);
+            this.buttonDoneWork.TabIndex = 4;
+            this.buttonDoneWork.Text = "Elvégzett munkálatok";
+            this.buttonDoneWork.UseVisualStyleBackColor = true;
+            this.buttonDoneWork.Click += new System.EventHandler(this.buttonDoneWork_Click);
             // 
-            this.buttonClient.Location = new System.Drawing.Point(869, 127);
-            this.buttonClient.Name = "buttonClient";
-            this.buttonClient.Size = new System.Drawing.Size(105, 37);
-            this.buttonClient.TabIndex = 10;
-            this.buttonClient.Text = "Ügyfél adatai";
-            this.buttonClient.UseVisualStyleBackColor = true;
+            // buttonNewWork
             // 
-            // buttonElvegezve
+            this.buttonNewWork.FlatAppearance.BorderSize = 0;
+            this.buttonNewWork.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonNewWork.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonNewWork.ForeColor = System.Drawing.Color.White;
+            this.buttonNewWork.Location = new System.Drawing.Point(0, 86);
+            this.buttonNewWork.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonNewWork.Name = "buttonNewWork";
+            this.buttonNewWork.Size = new System.Drawing.Size(202, 86);
+            this.buttonNewWork.TabIndex = 3;
+            this.buttonNewWork.Text = "Új munkálatok";
+            this.buttonNewWork.UseVisualStyleBackColor = true;
+            this.buttonNewWork.Click += new System.EventHandler(this.buttonNewWork_Click);
             // 
-            this.buttonElvegezve.Location = new System.Drawing.Point(721, 505);
-            this.buttonElvegezve.Name = "buttonElvegezve";
-            this.buttonElvegezve.Size = new System.Drawing.Size(132, 38);
-            this.buttonElvegezve.TabIndex = 9;
-            this.buttonElvegezve.Text = "Munka elvégezve";
-            this.buttonElvegezve.UseVisualStyleBackColor = true;
+            // label1
             // 
-            // LabelTerkep
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.Location = new System.Drawing.Point(222, 96);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(66, 21);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Önnek ";
             // 
-            this.LabelTerkep.AutoSize = true;
-            this.LabelTerkep.Location = new System.Drawing.Point(721, 183);
-            this.LabelTerkep.Name = "LabelTerkep";
-            this.LabelTerkep.Size = new System.Drawing.Size(105, 19);
-            this.LabelTerkep.TabIndex = 8;
-            this.LabelTerkep.Text = "Parcella helyzete";
+            // label2
             // 
-            // gMapControl1
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label2.Location = new System.Drawing.Point(294, 96);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(49, 21);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "szam";
             // 
-            this.gMapControl1.Bearing = 0F;
-            this.gMapControl1.CanDragMap = true;
-            this.gMapControl1.EmptyTileColor = System.Drawing.Color.Navy;
-            this.gMapControl1.GrayScaleMode = false;
-            this.gMapControl1.HelperLineOption = GMap.NET.WindowsForms.HelperLineOptions.DontShow;
-            this.gMapControl1.LevelsKeepInMemmory = 5;
-            this.gMapControl1.Location = new System.Drawing.Point(721, 205);
-            this.gMapControl1.MarkersEnabled = true;
-            this.gMapControl1.MaxZoom = 2;
-            this.gMapControl1.MinZoom = 2;
-            this.gMapControl1.MouseWheelZoomEnabled = true;
-            this.gMapControl1.MouseWheelZoomType = GMap.NET.MouseWheelZoomType.MousePositionAndCenter;
-            this.gMapControl1.Name = "gMapControl1";
-            this.gMapControl1.NegativeMode = false;
-            this.gMapControl1.PolygonsEnabled = true;
-            this.gMapControl1.RetryLoadTile = 0;
-            this.gMapControl1.RoutesEnabled = true;
-            this.gMapControl1.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
-            this.gMapControl1.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
-            this.gMapControl1.ShowTileGridLines = false;
-            this.gMapControl1.Size = new System.Drawing.Size(538, 283);
-            this.gMapControl1.TabIndex = 7;
-            this.gMapControl1.Zoom = 0D;
+            // label3
             // 
-            // TextBoxPermetszer
-            // 
-            // 
-            // 
-            // 
-            this.TextBoxPermetszer.CustomButton.Image = null;
-            this.TextBoxPermetszer.CustomButton.Location = new System.Drawing.Point(83, 1);
-            this.TextBoxPermetszer.CustomButton.Name = "";
-            this.TextBoxPermetszer.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.TextBoxPermetszer.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.TextBoxPermetszer.CustomButton.TabIndex = 1;
-            this.TextBoxPermetszer.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.TextBoxPermetszer.CustomButton.UseSelectable = true;
-            this.TextBoxPermetszer.CustomButton.Visible = false;
-            this.TextBoxPermetszer.Lines = new string[0];
-            this.TextBoxPermetszer.Location = new System.Drawing.Point(869, 80);
-            this.TextBoxPermetszer.MaxLength = 32767;
-            this.TextBoxPermetszer.Name = "TextBoxPermetszer";
-            this.TextBoxPermetszer.PasswordChar = '\0';
-            this.TextBoxPermetszer.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.TextBoxPermetszer.SelectedText = "";
-            this.TextBoxPermetszer.SelectionLength = 0;
-            this.TextBoxPermetszer.SelectionStart = 0;
-            this.TextBoxPermetszer.ShortcutsEnabled = true;
-            this.TextBoxPermetszer.Size = new System.Drawing.Size(105, 23);
-            this.TextBoxPermetszer.TabIndex = 6;
-            this.TextBoxPermetszer.UseSelectable = true;
-            this.TextBoxPermetszer.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.TextBoxPermetszer.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // LabelPermetszer
-            // 
-            this.LabelPermetszer.AutoSize = true;
-            this.LabelPermetszer.Location = new System.Drawing.Point(718, 84);
-            this.LabelPermetszer.Name = "LabelPermetszer";
-            this.LabelPermetszer.Size = new System.Drawing.Size(147, 19);
-            this.LabelPermetszer.TabIndex = 5;
-            this.LabelPermetszer.Text = "Permetszer mennyisége";
-            // 
-            // LabelVetomag
-            // 
-            this.LabelVetomag.AutoSize = true;
-            this.LabelVetomag.Location = new System.Drawing.Point(718, 36);
-            this.LabelVetomag.Name = "LabelVetomag";
-            this.LabelVetomag.Size = new System.Drawing.Size(135, 19);
-            this.LabelVetomag.TabIndex = 4;
-            this.LabelVetomag.Text = "Vetőmag mennyisége";
-            // 
-            // TextBoxVetomag
-            // 
-            // 
-            // 
-            // 
-            this.TextBoxVetomag.CustomButton.Image = null;
-            this.TextBoxVetomag.CustomButton.Location = new System.Drawing.Point(83, 1);
-            this.TextBoxVetomag.CustomButton.Name = "";
-            this.TextBoxVetomag.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.TextBoxVetomag.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.TextBoxVetomag.CustomButton.TabIndex = 1;
-            this.TextBoxVetomag.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.TextBoxVetomag.CustomButton.UseSelectable = true;
-            this.TextBoxVetomag.CustomButton.Visible = false;
-            this.TextBoxVetomag.Lines = new string[0];
-            this.TextBoxVetomag.Location = new System.Drawing.Point(869, 32);
-            this.TextBoxVetomag.MaxLength = 32767;
-            this.TextBoxVetomag.Name = "TextBoxVetomag";
-            this.TextBoxVetomag.PasswordChar = '\0';
-            this.TextBoxVetomag.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.TextBoxVetomag.SelectedText = "";
-            this.TextBoxVetomag.SelectionLength = 0;
-            this.TextBoxVetomag.SelectionStart = 0;
-            this.TextBoxVetomag.ShortcutsEnabled = true;
-            this.TextBoxVetomag.Size = new System.Drawing.Size(105, 23);
-            this.TextBoxVetomag.TabIndex = 3;
-            this.TextBoxVetomag.UseSelectable = true;
-            this.TextBoxVetomag.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.TextBoxVetomag.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // dataGridViewNewWork
-            // 
-            this.dataGridViewNewWork.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewNewWork.Location = new System.Drawing.Point(3, 32);
-            this.dataGridViewNewWork.Name = "dataGridViewNewWork";
-            this.dataGridViewNewWork.Size = new System.Drawing.Size(675, 511);
-            this.dataGridViewNewWork.TabIndex = 2;
-            // 
-            // buttonClient2
-            // 
-            this.buttonClient2.Controls.Add(this.button1);
-            this.buttonClient2.Controls.Add(this.dataGridView1);
-            this.buttonClient2.HorizontalScrollbarBarColor = true;
-            this.buttonClient2.HorizontalScrollbarHighlightOnWheel = false;
-            this.buttonClient2.HorizontalScrollbarSize = 10;
-            this.buttonClient2.Location = new System.Drawing.Point(4, 38);
-            this.buttonClient2.Name = "buttonClient2";
-            this.buttonClient2.Size = new System.Drawing.Size(1264, 603);
-            this.buttonClient2.TabIndex = 1;
-            this.buttonClient2.Text = "Elvégzett munkálatok";
-            this.buttonClient2.VerticalScrollbarBarColor = true;
-            this.buttonClient2.VerticalScrollbarHighlightOnWheel = false;
-            this.buttonClient2.VerticalScrollbarSize = 10;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(976, 18);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(125, 43);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Ügyfél adatai";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(14, 18);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(918, 540);
-            this.dataGridView1.TabIndex = 2;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label3.Location = new System.Drawing.Point(360, 96);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(232, 21);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "függőben lévő munkája van";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-15, 53);
+            this.pictureBox1.Location = new System.Drawing.Point(202, 169);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1292, 57);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.Size = new System.Drawing.Size(1062, 524);
+            this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
+            // 
+            // userControlCompleteWorks1
+            // 
+            this.userControlCompleteWorks1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.userControlCompleteWorks1.Location = new System.Drawing.Point(202, 80);
+            this.userControlCompleteWorks1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.userControlCompleteWorks1.Name = "userControlCompleteWorks1";
+            this.userControlCompleteWorks1.Size = new System.Drawing.Size(1062, 602);
+            this.userControlCompleteWorks1.TabIndex = 8;
+            // 
+            // userControlNewWorks1
+            // 
+            this.userControlNewWorks1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.userControlNewWorks1.Location = new System.Drawing.Point(202, 80);
+            this.userControlNewWorks1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.userControlNewWorks1.Name = "userControlNewWorks1";
+            this.userControlNewWorks1.Size = new System.Drawing.Size(1062, 601);
+            this.userControlNewWorks1.TabIndex = 7;
+            this.userControlNewWorks1.Load += new System.EventHandler(this.userControlNewWorks1_Load);
             // 
             // FormWorker
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.userControlCompleteWorks1);
+            this.Controls.Add(this.userControlNewWorks1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.metroTabControl1);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
+            this.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FormWorker";
-            this.Style = MetroFramework.MetroColorStyle.Brown;
-            this.metroTabControl1.ResumeLayout(false);
-            this.metroTabPage1.ResumeLayout(false);
-            this.metroTabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNewWork)).EndInit();
-            this.buttonClient2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.FormWorker_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private MetroFramework.Controls.MetroTabControl metroTabControl1;
-        private MetroFramework.Controls.MetroTabPage metroTabPage1;
-        private MetroFramework.Controls.MetroTabPage buttonClient2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button buttonSettings;
+        private System.Windows.Forms.Button buttonClientData;
+        private System.Windows.Forms.Button buttonDoneWork;
+        private System.Windows.Forms.Button buttonNewWork;
+        private System.Windows.Forms.Label labelUsername;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button buttonClient;
-        private System.Windows.Forms.Button buttonElvegezve;
-        private MetroFramework.Controls.MetroLabel LabelTerkep;
-        private GMap.NET.WindowsForms.GMapControl gMapControl1;
-        private MetroFramework.Controls.MetroTextBox TextBoxPermetszer;
-        private MetroFramework.Controls.MetroLabel LabelPermetszer;
-        private MetroFramework.Controls.MetroLabel LabelVetomag;
-        private MetroFramework.Controls.MetroTextBox TextBoxVetomag;
-        private System.Windows.Forms.DataGridView dataGridViewNewWork;
-        private System.Windows.Forms.Button buttonCalc;
-        private MetroFramework.Controls.MetroTextBox metroTextBox1;
-        private MetroFramework.Controls.MetroLabel metroLabel1;
-        private MetroFramework.Controls.MetroLabel LabelTotavolsag;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button buttonHome;
+        private System.Windows.Forms.Panel panelSign;
+        private UserControlNewWorks userControlNewWorks1;
+        private UserControlCompleteWorks userControlCompleteWorks1;
     }
 }

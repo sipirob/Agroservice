@@ -39,21 +39,22 @@ namespace Agroservice.repository
                 {
                     case "worker":
                         {
+                            worker = true;
+                            leader = false;
                             FormSignIn siin = new FormSignIn();
                             FormWorker fw = new FormWorker();
                             siin.Hide();
                             fw.Show();
-                            worker = true;
                             connection.Close();
                             break;
                         }
                     case "leader":
                         {
                             leader = true;
+                            worker = false;
                             FormSignIn siin = new FormSignIn();
                             FormLeader fl = new FormLeader();
                             fl.Show();
-                           
                             connection.Close();
                             break;
                         }

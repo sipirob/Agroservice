@@ -123,6 +123,18 @@
     <Compile Include="repository\Work.cs" />
     <Compile Include="repository\Worker.cs" />
     <Compile Include="repository\Service.cs" />
+    <Compile Include="UserControlCompleteWorks.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlCompleteWorks.Designer.cs">
+      <DependentUpon>UserControlCompleteWorks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlNewWorks.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlNewWorks.Designer.cs">
+      <DependentUpon>UserControlNewWorks.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FormLeader.resx">
       <DependentUpon>FormLeader.cs</DependentUpon>
     </EmbeddedResource>
@@ -141,6 +153,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UserControlCompleteWorks.resx">
+      <DependentUpon>UserControlCompleteWorks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlNewWorks.resx">
+      <DependentUpon>UserControlNewWorks.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
