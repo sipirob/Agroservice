@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data;
+using GMap.NET;
 
 namespace Agroservice.controller
 {
@@ -16,6 +17,7 @@ namespace Agroservice.controller
         private model.NewWorkDataLoad newWorkDataLoad;
         private model.LoadUsername loadUsername;
         private model.CompleteWorkDataLoad completeWorkDataLoad;
+        private model.LoadParcelMap loadParcelMap;
        
         public AgroserviceController()
         {
@@ -24,6 +26,7 @@ namespace Agroservice.controller
             newWorkDataLoad = new model.NewWorkDataLoad();
             loadUsername = new model.LoadUsername();
             completeWorkDataLoad = new model.CompleteWorkDataLoad();
+            loadParcelMap = new model.LoadParcelMap();
         }
        /// <summary>
        /// Ügyfelek adatainak lekérése listából
@@ -80,6 +83,8 @@ namespace Agroservice.controller
             DataTable newWorkDT = model.NewWorkDataLoad.getNewWorkDataFromList();
             return newWorkDT;
         }
+
+      
         /// <summary>
         /// Az el nem végzett munkálatok lekérése adatbázisból
         /// </summary>
@@ -105,6 +110,21 @@ namespace Agroservice.controller
         public void usernameLoad()
         {
             model.LoadUsername.workerDataLoad();
+        }
+
+        //public void loadMap()
+        //{
+        //    model.LoadParcelMap.LoadParcelCoordinates();
+        //}
+        //internal List<PointLatLng> getLoadParcelMapCoordinates()
+        //{
+        //    List<PointLatLng> coordinates = model.LoadParcelMap.getParcelmapCoordinatesFromList();
+        //    return coordinates;
+        //}
+        internal string[] getLoadParcelMapCoordinates()
+        {
+            string[] coordinates = model.LoadParcelMap.LoadParcelCoordinates();
+            return coordinates;
         }
     }
 }

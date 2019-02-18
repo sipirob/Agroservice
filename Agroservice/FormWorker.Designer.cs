@@ -154,6 +154,7 @@
             this.buttonClientData.TabIndex = 5;
             this.buttonClientData.Text = "Ügyfelek adatai";
             this.buttonClientData.UseVisualStyleBackColor = true;
+            this.buttonClientData.Click += new System.EventHandler(this.buttonClientData_Click);
             // 
             // buttonDoneWork
             // 

@@ -80,6 +80,8 @@ namespace Agroservice
 
                 userControlNewWorks1.listViewNewWork.Items.Add(lvi);
             }
+
+            //controller.loadParcelMap();
         }
 
         private void buttonDoneWork_Click(object sender, EventArgs e)
@@ -89,6 +91,13 @@ namespace Agroservice
             userControlCompleteWorks1.Show();
 
 
+        }
+
+        private void buttonClientData_Click(object sender, EventArgs e)
+        {
+            panelSign.Height = buttonClientData.Height;
+            panelSign.Top = buttonClientData.Top;
+            userControlCompleteWorks1.Show();
         }
     }
 }

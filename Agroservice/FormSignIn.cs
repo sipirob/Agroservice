@@ -15,8 +15,8 @@ namespace Agroservice
     {
        public static string username;
        public static string password;
-        public static bool leader;
-        public static bool worker;
+       public static bool leader;
+       public static bool worker;
            
         public FormSignIn()
         {

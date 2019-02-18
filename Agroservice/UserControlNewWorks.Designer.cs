@@ -45,7 +45,7 @@
             this.labelPermetszer = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.gMapControl1 = new GMap.NET.WindowsForms.GMapControl();
+            this.gMapControlParcelMap = new GMap.NET.WindowsForms.GMapControl();
             this.listViewNewWork = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -228,32 +228,32 @@
             this.button1.Text = "Elvégezve";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // gMapControl1
+            // gMapControlParcelMap
             // 
-            this.gMapControl1.Bearing = 0F;
-            this.gMapControl1.CanDragMap = true;
-            this.gMapControl1.EmptyTileColor = System.Drawing.Color.Navy;
-            this.gMapControl1.GrayScaleMode = false;
-            this.gMapControl1.HelperLineOption = GMap.NET.WindowsForms.HelperLineOptions.DontShow;
-            this.gMapControl1.LevelsKeepInMemmory = 5;
-            this.gMapControl1.Location = new System.Drawing.Point(589, 310);
-            this.gMapControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.gMapControl1.MarkersEnabled = true;
-            this.gMapControl1.MaxZoom = 2;
-            this.gMapControl1.MinZoom = 2;
-            this.gMapControl1.MouseWheelZoomEnabled = true;
-            this.gMapControl1.MouseWheelZoomType = GMap.NET.MouseWheelZoomType.MousePositionAndCenter;
-            this.gMapControl1.Name = "gMapControl1";
-            this.gMapControl1.NegativeMode = false;
-            this.gMapControl1.PolygonsEnabled = true;
-            this.gMapControl1.RetryLoadTile = 0;
-            this.gMapControl1.RoutesEnabled = true;
-            this.gMapControl1.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
-            this.gMapControl1.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
-            this.gMapControl1.ShowTileGridLines = false;
-            this.gMapControl1.Size = new System.Drawing.Size(433, 224);
-            this.gMapControl1.TabIndex = 22;
-            this.gMapControl1.Zoom = 0D;
+            this.gMapControlParcelMap.Bearing = 0F;
+            this.gMapControlParcelMap.CanDragMap = true;
+            this.gMapControlParcelMap.EmptyTileColor = System.Drawing.Color.Navy;
+            this.gMapControlParcelMap.GrayScaleMode = false;
+            this.gMapControlParcelMap.HelperLineOption = GMap.NET.WindowsForms.HelperLineOptions.DontShow;
+            this.gMapControlParcelMap.LevelsKeepInMemmory = 5;
+            this.gMapControlParcelMap.Location = new System.Drawing.Point(589, 310);
+            this.gMapControlParcelMap.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gMapControlParcelMap.MarkersEnabled = true;
+            this.gMapControlParcelMap.MaxZoom = 2;
+            this.gMapControlParcelMap.MinZoom = 2;
+            this.gMapControlParcelMap.MouseWheelZoomEnabled = true;
+            this.gMapControlParcelMap.MouseWheelZoomType = GMap.NET.MouseWheelZoomType.MousePositionAndCenter;
+            this.gMapControlParcelMap.Name = "gMapControlParcelMap";
+            this.gMapControlParcelMap.NegativeMode = false;
+            this.gMapControlParcelMap.PolygonsEnabled = true;
+            this.gMapControlParcelMap.RetryLoadTile = 0;
+            this.gMapControlParcelMap.RoutesEnabled = true;
+            this.gMapControlParcelMap.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
+            this.gMapControlParcelMap.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
+            this.gMapControlParcelMap.ShowTileGridLines = false;
+            this.gMapControlParcelMap.Size = new System.Drawing.Size(433, 224);
+            this.gMapControlParcelMap.TabIndex = 22;
+            this.gMapControlParcelMap.Zoom = 0D;
             // 
             // listViewNewWork
             // 
@@ -272,6 +272,7 @@
             this.listViewNewWork.TabIndex = 23;
             this.listViewNewWork.UseCompatibleStateImageBehavior = false;
             this.listViewNewWork.View = System.Windows.Forms.View.Details;
+            this.listViewNewWork.SelectedIndexChanged += new System.EventHandler(this.listViewNewWork_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
@@ -298,7 +299,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.listViewNewWork);
-            this.Controls.Add(this.gMapControl1);
+            this.Controls.Add(this.gMapControlParcelMap);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.labelPermetszer);
@@ -343,11 +344,11 @@
         private System.Windows.Forms.Label labelPermetszer;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button button1;
-        private GMap.NET.WindowsForms.GMapControl gMapControl1;
         public System.Windows.Forms.ListView listViewNewWork;
         public System.Windows.Forms.ColumnHeader columnHeader1;
         public System.Windows.Forms.ColumnHeader columnHeader2;
         public System.Windows.Forms.ColumnHeader columnHeader3;
         public System.Windows.Forms.ColumnHeader columnHeader4;
+        public GMap.NET.WindowsForms.GMapControl gMapControlParcelMap;
     }
 }
