@@ -14,12 +14,13 @@ namespace Agroservice
     public partial class FormWorker : Form
     {
         AgroserviceController controller = new AgroserviceController();
+        UserControlNewWorks userControlNew;
         public static string workername="";
         public FormWorker()
         {
             InitializeComponent();
             panelSign.Height = buttonHome.Height;
-
+            userControlNew = new UserControlNewWorks();
             
             //userControlNewWorks1.BringToFront();
 
@@ -44,7 +45,8 @@ namespace Agroservice
             panelSign.Height = buttonNewWork.Height;
             panelSign.Top = buttonNewWork.Top;
             userControlNewWorks1.Show();
-
+            userControlNew.gMapControlParcelMap.Hide();
+            
             
         }
 
