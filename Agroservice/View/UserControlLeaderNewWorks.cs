@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Agroservice
+namespace Agroservice.View
 {
-    public partial class UserControlCompleteWorks : UserControl
+    public partial class UserControlLeaderNewWorks : UserControl
     {
-        public UserControlCompleteWorks()
+        public UserControlLeaderNewWorks()
         {
             InitializeComponent();
         }

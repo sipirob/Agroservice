@@ -1,6 +1,6 @@
 ﻿namespace Agroservice
 {
-    partial class UserControlCompleteWorks
+    partial class UserControlWorkerCompleteWorks
     {
         /// <summary> 
         /// Required designer variable.

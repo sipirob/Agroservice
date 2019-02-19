@@ -19,7 +19,8 @@ namespace Agroservice
     {
         public static string parcelnumber;
         AgroserviceController controller = new AgroserviceController();
-
+        GMapPolygon polygon;
+        int openlayer = 0;
         
         public UserControlNewWorks()
         {
@@ -34,9 +35,14 @@ namespace Agroservice
         private void listViewNewWork_SelectedIndexChanged(object sender, EventArgs e)
         {
             gMapControlParcelMap.Show();
+            if (openlayer > 0)
+            {
+                polygon.Clear();
+            }
            
             if (listViewNewWork.SelectedItems.Count > 0)
             {
+                
                  ListViewItem item = listViewNewWork.SelectedItems[0];
                  parcelnumber = item.SubItems[1].Text;
                
@@ -53,7 +59,7 @@ namespace Agroservice
                 points.Add(new PointLatLng(Convert.ToDouble(latlong[6]), Convert.ToDouble(latlong[7])));
                 
 
-                GMapPolygon polygon = new GMapPolygon(points, "mypolygon");
+                polygon = new GMapPolygon(points, "mypolygon");
                 polygon.Fill = new SolidBrush(Color.FromArgb(50, Color.Red));
                 polygon.Stroke = new Pen(Color.Red, 1);
                 polyOverlay.Polygons.Add(polygon);
@@ -62,9 +68,16 @@ namespace Agroservice
                 double lat = Convert.ToDouble(latlong[4]);
                 double longt = Convert.ToDouble(latlong[7]);
                 gMapControlParcelMap.Position = new PointLatLng(lat, longt);
+                openlayer += 1;
                 
             }
-
+            
+            //else if (listViewNewWork.SelectedItems.Count < 0)
+            //{
+            //    polygon.Clear();
+            //    return;
+            //}
+            
           
 
 

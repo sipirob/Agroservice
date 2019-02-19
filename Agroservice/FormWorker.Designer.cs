@@ -43,7 +43,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.userControlCompleteWorks1 = new Agroservice.UserControlCompleteWorks();
+            this.userControlCompleteWorks1 = new Agroservice.UserControlWorkerCompleteWorks();
             this.userControlNewWorks1 = new Agroservice.UserControlNewWorks();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -288,6 +288,6 @@
         private System.Windows.Forms.Button buttonHome;
         private System.Windows.Forms.Panel panelSign;
         private UserControlNewWorks userControlNewWorks1;
-        private UserControlCompleteWorks userControlCompleteWorks1;
+        private UserControlWorkerCompleteWorks userControlCompleteWorks1;
     }
 }
