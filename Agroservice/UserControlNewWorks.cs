@@ -42,11 +42,9 @@ namespace Agroservice
            
             if (listViewNewWork.SelectedItems.Count > 0)
             {
-                
                  ListViewItem item = listViewNewWork.SelectedItems[0];
                  parcelnumber = item.SubItems[1].Text;
                
-
                 GMapOverlay polyOverlay = new GMapOverlay("polygons");
                 controller.getLoadParcelMapCoordinates();
                 string[] latlong = controller.getLoadParcelMapCoordinates();
@@ -57,7 +55,6 @@ namespace Agroservice
                 points.Add(new PointLatLng(Convert.ToDouble(latlong[2]), Convert.ToDouble(latlong[3])));
                 points.Add(new PointLatLng(Convert.ToDouble(latlong[4]), Convert.ToDouble(latlong[5])));
                 points.Add(new PointLatLng(Convert.ToDouble(latlong[6]), Convert.ToDouble(latlong[7])));
-                
 
                 polygon = new GMapPolygon(points, "mypolygon");
                 polygon.Fill = new SolidBrush(Color.FromArgb(50, Color.Red));
@@ -72,12 +69,7 @@ namespace Agroservice
                 
             }
             
-            //else if (listViewNewWork.SelectedItems.Count < 0)
-            //{
-            //    polygon.Clear();
-            //    return;
-            //}
-            
+           
           
 
 

@@ -38,6 +38,7 @@
             this.buttonClientData = new System.Windows.Forms.Button();
             this.buttonDoneWork = new System.Windows.Forms.Button();
             this.buttonNewWork = new System.Windows.Forms.Button();
+           
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -173,15 +174,20 @@
             this.buttonNewWork.Text = "Új munkálatok";
             this.buttonNewWork.UseVisualStyleBackColor = true;
             // 
+            // userControlWorkerClientsData1
+            // 
+           
+            // 
             // FormLeader
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+           
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FormLeader";
             this.Text = "FormLeader";
             this.Load += new System.EventHandler(this.FormLeader_Load);
@@ -204,5 +210,6 @@
         private System.Windows.Forms.Button buttonClientData;
         private System.Windows.Forms.Button buttonDoneWork;
         private System.Windows.Forms.Button buttonNewWork;
+       
     }
 }

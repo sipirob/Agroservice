@@ -45,6 +45,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.userControlCompleteWorks1 = new Agroservice.UserControlWorkerCompleteWorks();
             this.userControlNewWorks1 = new Agroservice.UserControlNewWorks();
+            this.userControlWorkerClientData1 = new Agroservice.UserControlWorkerClientData();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -242,13 +243,23 @@
             this.userControlNewWorks1.Name = "userControlNewWorks1";
             this.userControlNewWorks1.Size = new System.Drawing.Size(1062, 601);
             this.userControlNewWorks1.TabIndex = 7;
-            this.userControlNewWorks1.Load += new System.EventHandler(this.userControlNewWorks1_Load);
+            
+            // 
+            // userControlWorkerClientData1
+            // 
+            this.userControlWorkerClientData1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.userControlWorkerClientData1.Location = new System.Drawing.Point(201, 80);
+            this.userControlWorkerClientData1.Margin = new System.Windows.Forms.Padding(5);
+            this.userControlWorkerClientData1.Name = "userControlWorkerClientData1";
+            this.userControlWorkerClientData1.Size = new System.Drawing.Size(1062, 601);
+            this.userControlWorkerClientData1.TabIndex = 9;
             // 
             // FormWorker
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.userControlWorkerClientData1);
             this.Controls.Add(this.userControlCompleteWorks1);
             this.Controls.Add(this.userControlNewWorks1);
             this.Controls.Add(this.pictureBox1);
@@ -289,5 +300,6 @@
         private System.Windows.Forms.Panel panelSign;
         private UserControlNewWorks userControlNewWorks1;
         private UserControlWorkerCompleteWorks userControlCompleteWorks1;
+        private UserControlWorkerClientData userControlWorkerClientData1;
     }
 }

@@ -15,12 +15,14 @@ namespace Agroservice
     {
         AgroserviceController controller = new AgroserviceController();
         UserControlNewWorks userControlNew;
+       
         public static string workername="";
         public FormWorker()
         {
             InitializeComponent();
             panelSign.Height = buttonHome.Height;
             userControlNew = new UserControlNewWorks();
+           
             
             //userControlNewWorks1.BringToFront();
 
@@ -37,6 +39,7 @@ namespace Agroservice
             panelSign.Top = buttonHome.Top;
             userControlNewWorks1.Hide();
             userControlCompleteWorks1.Hide();
+            userControlWorkerClientData1.Hide();
         }
 
         private void buttonNewWork_Click(object sender, EventArgs e)
@@ -45,19 +48,15 @@ namespace Agroservice
             panelSign.Height = buttonNewWork.Height;
             panelSign.Top = buttonNewWork.Top;
             userControlNewWorks1.Show();
-            userControlNew.gMapControlParcelMap.Hide();
+            userControlNewWorks1.gMapControlParcelMap.Hide();
+            userControlWorkerClientData1.Hide();
             
             
         }
-
-        private void userControlNewWorks1_Load(object sender, EventArgs e)
-        {
-           
-            
-        }
-
+        
         private void FormWorker_Load(object sender, EventArgs e)
         {
+            userControlWorkerClientData1.Hide();
             userControlNewWorks1.Hide();
             userControlCompleteWorks1.Hide();
             controller.usernameLoad();
@@ -72,7 +71,6 @@ namespace Agroservice
             controller.loadNewWorkData();
             DataTable dt = new DataTable();
             dt = controller.getNewWorkData();
-            ListViewItem lv = new ListViewItem();
             foreach (DataRow dr in dt.Rows)
             {
                 ListViewItem lvi = new ListViewItem(dr["dátum"].ToString());
@@ -82,8 +80,20 @@ namespace Agroservice
 
                 userControlNewWorks1.listViewNewWork.Items.Add(lvi);
             }
+            //Ügyfelek adatainak betöltése
+            controller.loadClientData();
+            DataTable cldt = new DataTable();
+            cldt = controller.getClientData();
+            foreach (DataRow dr in cldt.Rows)
+            {
+                ListViewItem clvi = new ListViewItem(dr["id"].ToString());
+                clvi.SubItems.Add(dr["név"].ToString());
+                clvi.SubItems.Add(dr["lakhely"].ToString());
+                clvi.SubItems.Add(dr["telefonszám"].ToString());
+                userControlWorkerClientData1.listViewClientData.Items.Add(clvi);
+            }
 
-            //controller.loadParcelMap();
+           
         }
 
         private void buttonDoneWork_Click(object sender, EventArgs e)
@@ -91,15 +101,24 @@ namespace Agroservice
             panelSign.Height = buttonDoneWork.Height;
             panelSign.Top = buttonDoneWork.Top;
             userControlCompleteWorks1.Show();
-
+            userControlWorkerClientData1.Hide();
+            userControlNewWorks1.Hide();
 
         }
 
         private void buttonClientData_Click(object sender, EventArgs e)
         {
+           
             panelSign.Height = buttonClientData.Height;
             panelSign.Top = buttonClientData.Top;
-            userControlCompleteWorks1.Show();
+            userControlCompleteWorks1.Hide();
+            userControlNewWorks1.Hide();
+            userControlWorkerClientData1.Show();
+
+
+            
+           
+            
         }
     }
 }

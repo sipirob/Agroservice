@@ -124,6 +124,12 @@
     <Compile Include="repository\Work.cs" />
     <Compile Include="repository\Worker.cs" />
     <Compile Include="repository\Service.cs" />
+    <Compile Include="UserControlWorkerClientData.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlWorkerClientData.Designer.cs">
+      <DependentUpon>UserControlWorkerClientData.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\UserControlWorkerCompleteWorks.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -160,6 +166,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UserControlWorkerClientData.resx">
+      <DependentUpon>UserControlWorkerClientData.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\UserControlWorkerCompleteWorks.resx">
       <DependentUpon>UserControlWorkerCompleteWorks.cs</DependentUpon>
     </EmbeddedResource>
