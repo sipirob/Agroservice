@@ -21,14 +21,19 @@ namespace Agroservice
         AgroserviceController controller = new AgroserviceController();
         GMapPolygon polygon;
         int openlayer = 0;
-        
+        PointLatLng endposition;
+        PointLatLng startposition;
+
+
         public UserControlNewWorks()
         {
             InitializeComponent();
-            gMapControlParcelMap.MapProvider = GMapProviders.GoogleSatelliteMap;
+             gMapControlParcelMap.MapProvider = GMapProviders.GoogleSatelliteMap;
+            //gMapControlParcelMap.MapProvider = GMapProviders.BingMap;
             gMapControlParcelMap.MinZoom = 1;
             gMapControlParcelMap.MaxZoom = 100;
             gMapControlParcelMap.Zoom = 16;
+            gMapControlParcelMap.DragButton = MouseButtons.Left;
             
         }
 
@@ -39,7 +44,7 @@ namespace Agroservice
             {
                 polygon.Clear();
             }
-           
+
             if (listViewNewWork.SelectedItems.Count > 0)
             {
                  ListViewItem item = listViewNewWork.SelectedItems[0];
@@ -62,10 +67,13 @@ namespace Agroservice
                 polyOverlay.Polygons.Add(polygon);
                 gMapControlParcelMap.Overlays.Add(polyOverlay);
 
-                double lat = Convert.ToDouble(latlong[4]);
+                double lat = Convert.ToDouble(latlong[6]);
                 double longt = Convert.ToDouble(latlong[7]);
                 gMapControlParcelMap.Position = new PointLatLng(lat, longt);
                 openlayer += 1;
+
+                endposition = points[3];
+                startposition = new PointLatLng(46.247612, 20.060842);
                 
             }
             
@@ -86,5 +94,41 @@ namespace Agroservice
             //gMapControlParcelMap.Overlays.Add(polyOverlay);
         }
 
+        private void buttonRoute_Click(object sender, EventArgs e)
+        {
+           PointLatLng start = new PointLatLng(46.258995, 20.14369);
+            PointLatLng end = new PointLatLng(46.259321, 20.152423);
+
+            //var route = GoogleMapProvider.Instance.GetRoute(startposition, endposition, false, false, 14);
+            //var r = new GMapRoute(route.Points, "My Route");
+            //var routes = new GMapOverlay("routes");
+            //routes.Routes.Add(r);
+            //gMapControlParcelMap.Overlays.Add(routes);
+            //r.Stroke.Width = 2;
+            //r.Stroke.Color = Color.SeaGreen;
+
+            //PointLatLng startp = new PointLatLng(-25.974134, 32.593042);
+            //PointLatLng endp = new PointLatLng(-25.959048, 32.592827);
+            //MapRoute route = BingMapProvider.Instance.GetRoute(startp, endp, false, false, 15);
+            //GMapRoute r = new GMapRoute(route.Points, "Myroutes");
+            //GMapOverlay routesOverlay = new GMapOverlay("Myroutes");
+            //routesOverlay.Routes.Add(r);
+            //gMapControlParcelMap.Overlays.Add(routesOverlay);
+            //r.Stroke.Width = 2;
+            //r.Stroke.Color = Color.SeaGreen;
+
+            MapRoute route = GMap.NET.MapProviders.OpenStreetMapProvider.Instance.GetRoute(startposition, endposition, true, false, 11);
+            GMapRoute r = new GMapRoute(route.Points, "My route");
+            GMapOverlay routesOverlay = new GMapOverlay("routes");
+            routesOverlay.Routes.Add(r);
+            r.Stroke.Width = 4;
+            r.Stroke.Color = Color.SkyBlue;
+            gMapControlParcelMap.Overlays.Add(routesOverlay);
+            
+            //gMapControlParcelMap.Refresh();
+
+
+
+        }
     }
 }

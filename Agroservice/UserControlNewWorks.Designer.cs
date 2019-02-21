@@ -51,6 +51,7 @@
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.buttonRoute = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -236,7 +237,7 @@
             this.gMapControlParcelMap.GrayScaleMode = false;
             this.gMapControlParcelMap.HelperLineOption = GMap.NET.WindowsForms.HelperLineOptions.DontShow;
             this.gMapControlParcelMap.LevelsKeepInMemmory = 5;
-            this.gMapControlParcelMap.Location = new System.Drawing.Point(589, 310);
+            this.gMapControlParcelMap.Location = new System.Drawing.Point(589, 297);
             this.gMapControlParcelMap.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gMapControlParcelMap.MarkersEnabled = true;
             this.gMapControlParcelMap.MaxZoom = 2;
@@ -251,7 +252,7 @@
             this.gMapControlParcelMap.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
             this.gMapControlParcelMap.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
             this.gMapControlParcelMap.ShowTileGridLines = false;
-            this.gMapControlParcelMap.Size = new System.Drawing.Size(433, 224);
+            this.gMapControlParcelMap.Size = new System.Drawing.Size(450, 237);
             this.gMapControlParcelMap.TabIndex = 22;
             this.gMapControlParcelMap.Zoom = 0D;
             // 
@@ -294,10 +295,24 @@
             this.columnHeader4.Text = "vetemény";
             this.columnHeader4.Width = 120;
             // 
+            // buttonRoute
+            // 
+            this.buttonRoute.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRoute.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonRoute.Location = new System.Drawing.Point(936, 544);
+            this.buttonRoute.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonRoute.Name = "buttonRoute";
+            this.buttonRoute.Size = new System.Drawing.Size(103, 40);
+            this.buttonRoute.TabIndex = 24;
+            this.buttonRoute.Text = "Útvonal";
+            this.buttonRoute.UseVisualStyleBackColor = true;
+            this.buttonRoute.Click += new System.EventHandler(this.buttonRoute_Click);
+            // 
             // UserControlNewWorks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.buttonRoute);
             this.Controls.Add(this.listViewNewWork);
             this.Controls.Add(this.gMapControlParcelMap);
             this.Controls.Add(this.button1);
@@ -350,5 +365,6 @@
         public System.Windows.Forms.ColumnHeader columnHeader3;
         public System.Windows.Forms.ColumnHeader columnHeader4;
         public GMap.NET.WindowsForms.GMapControl gMapControlParcelMap;
+        private System.Windows.Forms.Button buttonRoute;
     }
 }
