@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLeader));
             this.panel1 = new System.Windows.Forms.Panel();
             this.labelUsername = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -38,9 +39,10 @@
             this.buttonClientData = new System.Windows.Forms.Button();
             this.buttonDoneWork = new System.Windows.Forms.Button();
             this.buttonNewWork = new System.Windows.Forms.Button();
-           
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -174,16 +176,21 @@
             this.buttonNewWork.Text = "Új munkálatok";
             this.buttonNewWork.UseVisualStyleBackColor = true;
             // 
-            // userControlWorkerClientsData1
+            // pictureBox1
             // 
-           
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(202, 157);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1062, 524);
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
             // 
             // FormLeader
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
-           
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -194,6 +201,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -210,6 +218,6 @@
         private System.Windows.Forms.Button buttonClientData;
         private System.Windows.Forms.Button buttonDoneWork;
         private System.Windows.Forms.Button buttonNewWork;
-       
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -109,6 +109,7 @@
     <Compile Include="model\CompleteWorkDataLoad.cs" />
     <Compile Include="model\Connection.cs" />
     <Compile Include="model\ConnectToDatabase.cs" />
+    <Compile Include="model\LoadNewWorksNumber.cs" />
     <Compile Include="model\LoadParcelMap.cs" />
     <Compile Include="model\LoadUsername.cs" />
     <Compile Include="model\MySQLDatabaseInterface.cs" />
@@ -130,6 +131,12 @@
     <Compile Include="UserControlWorkerClientData.Designer.cs">
       <DependentUpon>UserControlWorkerClientData.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControlLeaderNewWorks.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlLeaderNewWorks.Designer.cs">
+      <DependentUpon>UserControlLeaderNewWorks.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\UserControlWorkerCompleteWorks.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -141,12 +148,6 @@
     </Compile>
     <Compile Include="UserControlNewWorks.Designer.cs">
       <DependentUpon>UserControlNewWorks.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\UserControlLeaderNewWorks.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="View\UserControlLeaderNewWorks.Designer.cs">
-      <DependentUpon>UserControlLeaderNewWorks.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="FormLeader.resx">
       <DependentUpon>FormLeader.cs</DependentUpon>
@@ -166,6 +167,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UserControlLeaderNewWorks.resx">
+      <DependentUpon>UserControlLeaderNewWorks.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControlWorkerClientData.resx">
       <DependentUpon>UserControlWorkerClientData.cs</DependentUpon>
     </EmbeddedResource>
@@ -174,9 +178,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlNewWorks.resx">
       <DependentUpon>UserControlNewWorks.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\UserControlLeaderNewWorks.resx">
-      <DependentUpon>UserControlLeaderNewWorks.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

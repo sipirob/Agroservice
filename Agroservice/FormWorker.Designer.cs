@@ -40,12 +40,12 @@
             this.buttonDoneWork = new System.Windows.Forms.Button();
             this.buttonNewWork = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.labelNewWorkNumber = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.userControlWorkerClientData1 = new Agroservice.UserControlWorkerClientData();
             this.userControlCompleteWorks1 = new Agroservice.UserControlWorkerCompleteWorks();
             this.userControlNewWorks1 = new Agroservice.UserControlNewWorks();
-            this.userControlWorkerClientData1 = new Agroservice.UserControlWorkerClientData();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -197,15 +197,15 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Önnek ";
             // 
-            // label2
+            // labelNewWorkNumber
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.Location = new System.Drawing.Point(294, 96);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 21);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "szam";
+            this.labelNewWorkNumber.AutoSize = true;
+            this.labelNewWorkNumber.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelNewWorkNumber.Location = new System.Drawing.Point(294, 96);
+            this.labelNewWorkNumber.Name = "labelNewWorkNumber";
+            this.labelNewWorkNumber.Size = new System.Drawing.Size(49, 21);
+            this.labelNewWorkNumber.TabIndex = 4;
+            this.labelNewWorkNumber.Text = "szam";
             // 
             // label3
             // 
@@ -226,33 +226,32 @@
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
+            // userControlWorkerClientData1
+            // 
+            this.userControlWorkerClientData1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.userControlWorkerClientData1.Location = new System.Drawing.Point(201, 79);
+            this.userControlWorkerClientData1.Margin = new System.Windows.Forms.Padding(5);
+            this.userControlWorkerClientData1.Name = "userControlWorkerClientData1";
+            this.userControlWorkerClientData1.Size = new System.Drawing.Size(1062, 602);
+            this.userControlWorkerClientData1.TabIndex = 9;
+            // 
             // userControlCompleteWorks1
             // 
             this.userControlCompleteWorks1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.userControlCompleteWorks1.Location = new System.Drawing.Point(202, 80);
+            this.userControlCompleteWorks1.Location = new System.Drawing.Point(202, 79);
             this.userControlCompleteWorks1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.userControlCompleteWorks1.Name = "userControlCompleteWorks1";
-            this.userControlCompleteWorks1.Size = new System.Drawing.Size(1062, 602);
+            this.userControlCompleteWorks1.Size = new System.Drawing.Size(1062, 603);
             this.userControlCompleteWorks1.TabIndex = 8;
             // 
             // userControlNewWorks1
             // 
             this.userControlNewWorks1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.userControlNewWorks1.Location = new System.Drawing.Point(202, 80);
+            this.userControlNewWorks1.Location = new System.Drawing.Point(202, 79);
             this.userControlNewWorks1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.userControlNewWorks1.Name = "userControlNewWorks1";
-            this.userControlNewWorks1.Size = new System.Drawing.Size(1062, 601);
+            this.userControlNewWorks1.Size = new System.Drawing.Size(1062, 602);
             this.userControlNewWorks1.TabIndex = 7;
-            
-            // 
-            // userControlWorkerClientData1
-            // 
-            this.userControlWorkerClientData1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.userControlWorkerClientData1.Location = new System.Drawing.Point(201, 80);
-            this.userControlWorkerClientData1.Margin = new System.Windows.Forms.Padding(5);
-            this.userControlWorkerClientData1.Name = "userControlWorkerClientData1";
-            this.userControlWorkerClientData1.Size = new System.Drawing.Size(1062, 601);
-            this.userControlWorkerClientData1.TabIndex = 9;
             // 
             // FormWorker
             // 
@@ -264,7 +263,7 @@
             this.Controls.Add(this.userControlNewWorks1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.labelNewWorkNumber);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -293,7 +292,7 @@
         private System.Windows.Forms.Button buttonNewWork;
         private System.Windows.Forms.Label labelUsername;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelNewWorkNumber;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button buttonHome;

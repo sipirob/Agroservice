@@ -22,9 +22,7 @@ namespace Agroservice
             InitializeComponent();
             panelSign.Height = buttonHome.Height;
             userControlNew = new UserControlNewWorks();
-           
             
-            //userControlNewWorks1.BringToFront();
 
         }
 
@@ -92,7 +90,8 @@ namespace Agroservice
                 clvi.SubItems.Add(dr["telefonszám"].ToString());
                 userControlWorkerClientData1.listViewClientData.Items.Add(clvi);
             }
-
+            //El nem végzett munkálatok számának kiírása
+           labelNewWorkNumber.Text= controller.loadNewWorksNumber();
            
         }
 

@@ -104,6 +104,8 @@ namespace Agroservice.controller
             return username;
                 
         }
+
+      
         /// <summary>
         /// A belépett felhasználó nevének lekérdezése adatbázisból
         /// </summary>
@@ -125,6 +127,12 @@ namespace Agroservice.controller
         {
             string[] coordinates = model.LoadParcelMap.LoadParcelCoordinates();
             return coordinates;
+        }
+
+        internal string loadNewWorksNumber()
+        {
+            string newWorksNumber= model.LoadNewWorksNumber.newWorksNumberLoad();
+            return newWorksNumber;
         }
     }
 }
