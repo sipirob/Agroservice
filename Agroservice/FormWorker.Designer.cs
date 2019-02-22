@@ -46,9 +46,14 @@
             this.userControlWorkerClientData1 = new Agroservice.UserControlWorkerClientData();
             this.userControlCompleteWorks1 = new Agroservice.UserControlWorkerCompleteWorks();
             this.userControlNewWorks1 = new Agroservice.UserControlNewWorks();
+            this.panelIsWork = new System.Windows.Forms.Panel();
+            this.panelNoWork = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panelIsWork.SuspendLayout();
+            this.panelNoWork.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -191,7 +196,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(222, 96);
+            this.label1.Location = new System.Drawing.Point(37, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(66, 21);
             this.label1.TabIndex = 3;
@@ -201,7 +206,8 @@
             // 
             this.labelNewWorkNumber.AutoSize = true;
             this.labelNewWorkNumber.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelNewWorkNumber.Location = new System.Drawing.Point(294, 96);
+            this.labelNewWorkNumber.ForeColor = System.Drawing.Color.Red;
+            this.labelNewWorkNumber.Location = new System.Drawing.Point(98, 15);
             this.labelNewWorkNumber.Name = "labelNewWorkNumber";
             this.labelNewWorkNumber.Size = new System.Drawing.Size(49, 21);
             this.labelNewWorkNumber.TabIndex = 4;
@@ -211,7 +217,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label3.Location = new System.Drawing.Point(360, 96);
+            this.label3.Location = new System.Drawing.Point(143, 15);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(232, 21);
             this.label3.TabIndex = 5;
@@ -220,38 +226,66 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(202, 169);
+            this.pictureBox1.Location = new System.Drawing.Point(202, 172);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1062, 524);
+            this.pictureBox1.Size = new System.Drawing.Size(1062, 521);
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
             // userControlWorkerClientData1
             // 
             this.userControlWorkerClientData1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.userControlWorkerClientData1.Location = new System.Drawing.Point(201, 79);
+            this.userControlWorkerClientData1.Location = new System.Drawing.Point(201, 80);
             this.userControlWorkerClientData1.Margin = new System.Windows.Forms.Padding(5);
             this.userControlWorkerClientData1.Name = "userControlWorkerClientData1";
-            this.userControlWorkerClientData1.Size = new System.Drawing.Size(1062, 602);
+            this.userControlWorkerClientData1.Size = new System.Drawing.Size(1062, 601);
             this.userControlWorkerClientData1.TabIndex = 9;
             // 
             // userControlCompleteWorks1
             // 
             this.userControlCompleteWorks1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.userControlCompleteWorks1.Location = new System.Drawing.Point(202, 79);
+            this.userControlCompleteWorks1.Location = new System.Drawing.Point(202, 80);
             this.userControlCompleteWorks1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.userControlCompleteWorks1.Name = "userControlCompleteWorks1";
-            this.userControlCompleteWorks1.Size = new System.Drawing.Size(1062, 603);
+            this.userControlCompleteWorks1.Size = new System.Drawing.Size(1062, 602);
             this.userControlCompleteWorks1.TabIndex = 8;
             // 
             // userControlNewWorks1
             // 
             this.userControlNewWorks1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.userControlNewWorks1.Location = new System.Drawing.Point(202, 79);
+            this.userControlNewWorks1.Location = new System.Drawing.Point(202, 80);
             this.userControlNewWorks1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.userControlNewWorks1.Name = "userControlNewWorks1";
-            this.userControlNewWorks1.Size = new System.Drawing.Size(1062, 602);
+            this.userControlNewWorks1.Size = new System.Drawing.Size(1062, 601);
             this.userControlNewWorks1.TabIndex = 7;
+            // 
+            // panelIsWork
+            // 
+            this.panelIsWork.Controls.Add(this.label3);
+            this.panelIsWork.Controls.Add(this.label1);
+            this.panelIsWork.Controls.Add(this.labelNewWorkNumber);
+            this.panelIsWork.Location = new System.Drawing.Point(220, 98);
+            this.panelIsWork.Name = "panelIsWork";
+            this.panelIsWork.Size = new System.Drawing.Size(445, 46);
+            this.panelIsWork.TabIndex = 10;
+            // 
+            // panelNoWork
+            // 
+            this.panelNoWork.Controls.Add(this.label2);
+            this.panelNoWork.Location = new System.Drawing.Point(723, 98);
+            this.panelNoWork.Name = "panelNoWork";
+            this.panelNoWork.Size = new System.Drawing.Size(367, 46);
+            this.panelNoWork.TabIndex = 11;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label2.Location = new System.Drawing.Point(28, 15);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(296, 21);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Önnek nincs függőben lévő munkája";
             // 
             // FormWorker
             // 
@@ -262,11 +296,10 @@
             this.Controls.Add(this.userControlCompleteWorks1);
             this.Controls.Add(this.userControlNewWorks1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.labelNewWorkNumber);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelIsWork);
+            this.Controls.Add(this.panelNoWork);
             this.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -276,8 +309,11 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panelIsWork.ResumeLayout(false);
+            this.panelIsWork.PerformLayout();
+            this.panelNoWork.ResumeLayout(false);
+            this.panelNoWork.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -300,5 +336,8 @@
         private UserControlNewWorks userControlNewWorks1;
         private UserControlWorkerCompleteWorks userControlCompleteWorks1;
         private UserControlWorkerClientData userControlWorkerClientData1;
+        private System.Windows.Forms.Panel panelIsWork;
+        private System.Windows.Forms.Panel panelNoWork;
+        private System.Windows.Forms.Label label2;
     }
 }

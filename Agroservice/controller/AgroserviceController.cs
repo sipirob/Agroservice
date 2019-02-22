@@ -129,6 +129,10 @@ namespace Agroservice.controller
             return coordinates;
         }
 
+        /// <summary>
+        /// A bejelentkezett dolgozó el nem végzett munkálatainak számának lekérése
+        /// </summary>
+        /// <returns>Bejelentkezett dolgozó nem végzett munkálatainak száma</returns>
         internal string loadNewWorksNumber()
         {
             string newWorksNumber= model.LoadNewWorksNumber.newWorksNumberLoad();

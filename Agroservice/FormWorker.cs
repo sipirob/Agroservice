@@ -91,7 +91,15 @@ namespace Agroservice
                 userControlWorkerClientData1.listViewClientData.Items.Add(clvi);
             }
             //El nem végzett munkálatok számának kiírása
-           labelNewWorkNumber.Text= controller.loadNewWorksNumber();
+            panelNoWork.Hide();
+            panelNoWork.Location = panelIsWork.Location;
+            labelNewWorkNumber.Text= controller.loadNewWorksNumber();
+            if (labelNewWorkNumber.Text =="0")
+            {
+                panelIsWork.Hide();
+                panelNoWork.Show();
+            }
+            
            
         }
 
