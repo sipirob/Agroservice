@@ -24,6 +24,8 @@ namespace Agroservice
         int openlayer = 0;
         PointLatLng endposition;
         PointLatLng startposition;
+        GMapRoute r;
+        bool existRoute = false;
 
 
         public UserControlNewWorks()
@@ -37,10 +39,15 @@ namespace Agroservice
             GMap.NET.GMaps.Instance.Mode = GMap.NET.AccessMode.ServerAndCache;
 
         }
-
+        
         private void listViewNewWork_SelectedIndexChanged(object sender, EventArgs e)
         {
+            gMapControlParcelMap.Zoom = 15;
             gMapControlParcelMap.Show();
+            if (existRoute==true)
+            {
+                r.Clear();
+            }
             if (openlayer > 0)
             {
                 polygon.Clear();
@@ -48,8 +55,8 @@ namespace Agroservice
 
             if (listViewNewWork.SelectedItems.Count > 0)
             {
-                 ListViewItem item = listViewNewWork.SelectedItems[0];
-                 parcelnumber = item.SubItems[1].Text;
+                ListViewItem item = listViewNewWork.SelectedItems[0];
+                parcelnumber = item.SubItems[1].Text;
                
                 GMapOverlay polyOverlay = new GMapOverlay("polygons");
                 controller.getLoadParcelMapCoordinates();
@@ -82,28 +89,9 @@ namespace Agroservice
 
         private void buttonRoute_Click(object sender, EventArgs e)
         {
-          
-
-            //var route = GoogleMapProvider.Instance.GetRoute(startposition, endposition, false, false, 14);
-            //var r = new GMapRoute(route.Points, "My Route");
-            //var routes = new GMapOverlay("routes");
-            //routes.Routes.Add(r);
-            //gMapControlParcelMap.Overlays.Add(routes);
-            //r.Stroke.Width = 2;
-            //r.Stroke.Color = Color.SeaGreen;
-
-            //PointLatLng startp = new PointLatLng(-25.974134, 32.593042);
-            //PointLatLng endp = new PointLatLng(-25.959048, 32.592827);
-            //MapRoute route = BingMapProvider.Instance.GetRoute(startp, endp, false, false, 15);
-            //GMapRoute r = new GMapRoute(route.Points, "Myroutes");
-            //GMapOverlay routesOverlay = new GMapOverlay("Myroutes");
-            //routesOverlay.Routes.Add(r);
-            //gMapControlParcelMap.Overlays.Add(routesOverlay);
-            //r.Stroke.Width = 2;
-            //r.Stroke.Color = Color.SeaGreen;
-
+           
             MapRoute route = GMap.NET.MapProviders.OpenStreetMapQuestProvider.Instance.GetRoute(startposition, endposition, true, false, 11);
-            GMapRoute r = new GMapRoute(route.Points, "My route");
+            r = new GMapRoute(route.Points, "My route");
             GMapOverlay routesOverlay = new GMapOverlay("routes");
             routesOverlay.Routes.Add(r);
             r.Stroke.Width = 4;
@@ -115,12 +103,13 @@ namespace Agroservice
             GMapOverlay markers = new GMapOverlay("markers");
             GMapMarker marker = new GMarkerGoogle(
             new PointLatLng(46.247612, 20.060842),
-            GMarkerGoogleType.blue_pushpin);
+            GMarkerGoogleType.green_dot);
             markers.Markers.Add(marker);
             gMapControlParcelMap.Overlays.Add(markers);
             gMapControlParcelMap.Position = new PointLatLng(46.247612, 20.060842);
             gMapControlParcelMap.Zoom = 12;
-
+            marker.ToolTipText = "Agroservice kft.";
+            existRoute = true;
 
         }
     }
