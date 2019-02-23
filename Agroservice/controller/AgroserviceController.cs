@@ -133,9 +133,9 @@ namespace Agroservice.controller
         /// A bejelentkezett dolgozó el nem végzett munkálatainak számának lekérése
         /// </summary>
         /// <returns>Bejelentkezett dolgozó nem végzett munkálatainak száma</returns>
-        internal string loadNewWorksNumber()
+        internal string loadNewWorksNumber(string username)
         {
-            string newWorksNumber= model.LoadNewWorksNumber.newWorksNumberLoad();
+            string newWorksNumber= model.LoadNewWorksNumber.newWorksNumberLoad(username);
             return newWorksNumber;
         }
     }

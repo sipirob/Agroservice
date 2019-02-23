@@ -11,14 +11,14 @@ namespace Agroservice.model
     class LoadNewWorksNumber
     {
         
-        internal static string newWorksNumberLoad()
+        internal static string newWorksNumberLoad(string username)
         {
             string numb ="";
             ConnectToDatabase a = new ConnectToDatabase();
             MySQLDatabaseInterface mdi = new MySQLDatabaseInterface();
             mdi = a.connect();
             mdi.open();
-            string query = "SELECT COUNT(work.id) FROM `work`,worker,workerdata where worker.id=workerdata.id and work.workerid=worker.id and done=0 and worker.username='" + FormSignIn.username + "'";
+            string query = "SELECT COUNT(work.id) FROM `work`,worker,workerdata where worker.id=workerdata.id and work.workerid=worker.id and done=0 and worker.username='" + username + "'";
             DataTable worksnumb = new DataTable();
             worksnumb = mdi.getToDataTable(query);
             foreach (DataRow row in worksnumb.Rows)
