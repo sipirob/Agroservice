@@ -125,17 +125,23 @@
     <Compile Include="repository\Work.cs" />
     <Compile Include="repository\Worker.cs" />
     <Compile Include="repository\Service.cs" />
+    <Compile Include="UserControlLeaderClientsData.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlLeaderClientsData.Designer.cs">
+      <DependentUpon>UserControlLeaderClientsData.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControlWorkerClientData.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControlWorkerClientData.Designer.cs">
       <DependentUpon>UserControlWorkerClientData.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControlLeaderNewWorks.cs">
+    <Compile Include="UserControlLeaderWorks.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControlLeaderNewWorks.Designer.cs">
-      <DependentUpon>UserControlLeaderNewWorks.cs</DependentUpon>
+    <Compile Include="UserControlLeaderWorks.Designer.cs">
+      <DependentUpon>UserControlLeaderWorks.cs</DependentUpon>
     </Compile>
     <Compile Include="View\UserControlWorkerCompleteWorks.cs">
       <SubType>UserControl</SubType>
@@ -167,8 +173,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="UserControlLeaderNewWorks.resx">
-      <DependentUpon>UserControlLeaderNewWorks.cs</DependentUpon>
+    <EmbeddedResource Include="UserControlLeaderWorks.resx">
+      <DependentUpon>UserControlLeaderWorks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlLeaderClientsData.resx">
+      <DependentUpon>UserControlLeaderClientsData.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlWorkerClientData.resx">
       <DependentUpon>UserControlWorkerClientData.cs</DependentUpon>

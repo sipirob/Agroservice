@@ -18,7 +18,6 @@ namespace Agroservice
 {
     public partial class UserControlNewWorks : UserControl 
     {
-        public static string parcelnumber;
         AgroserviceController controller = new AgroserviceController();
         GMapPolygon polygon;
         int openlayer = 0;
@@ -42,7 +41,7 @@ namespace Agroservice
         
         private void listViewNewWork_SelectedIndexChanged(object sender, EventArgs e)
         {
-            gMapControlParcelMap.Zoom = 15;
+            gMapControlParcelMap.Zoom = 15;//a térkép alap zoom távolsága
             gMapControlParcelMap.Show();
             if (existRoute==true)
             {
@@ -53,14 +52,15 @@ namespace Agroservice
                 polygon.Clear();
             }
 
+            //Parcella polygon megjelenítése a térképen
             if (listViewNewWork.SelectedItems.Count > 0)
             {
                 ListViewItem item = listViewNewWork.SelectedItems[0];
-                parcelnumber = item.SubItems[1].Text;
+                string  parcelnumber = item.SubItems[1].Text;
                
                 GMapOverlay polyOverlay = new GMapOverlay("polygons");
-                controller.getLoadParcelMapCoordinates();
-                string[] latlong = controller.getLoadParcelMapCoordinates();
+                controller.getLoadParcelMapCoordinates(parcelnumber);
+                string[] latlong = controller.getLoadParcelMapCoordinates(parcelnumber);
 
                 List<PointLatLng> points = new List<PointLatLng>();
 
@@ -89,7 +89,7 @@ namespace Agroservice
 
         private void buttonRoute_Click(object sender, EventArgs e)
         {
-           
+            //Útvonal megjelenítése a térképen
             MapRoute route = GMap.NET.MapProviders.OpenStreetMapQuestProvider.Instance.GetRoute(startposition, endposition, true, false, 11);
             r = new GMapRoute(route.Points, "My route");
             GMapOverlay routesOverlay = new GMapOverlay("routes");
@@ -100,13 +100,12 @@ namespace Agroservice
 
             gMapControlParcelMap.UpdateRouteLocalPosition(r);
 
+            //Marker jelzés elhelyezése a kezdő ponthoz
             GMapOverlay markers = new GMapOverlay("markers");
-            GMapMarker marker = new GMarkerGoogle(
-            new PointLatLng(46.247612, 20.060842),
-            GMarkerGoogleType.green_dot);
+            GMapMarker marker = new GMarkerGoogle(startposition,GMarkerGoogleType.green_dot);
             markers.Markers.Add(marker);
             gMapControlParcelMap.Overlays.Add(markers);
-            gMapControlParcelMap.Position = new PointLatLng(46.247612, 20.060842);
+            gMapControlParcelMap.Position = startposition;
             gMapControlParcelMap.Zoom = 12;
             marker.ToolTipText = "Agroservice kft.";
             existRoute = true;

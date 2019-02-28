@@ -16,12 +16,12 @@ namespace Agroservice
     public partial class FormLeader :Form
     {
         public Client cl;
-      // AgroserviceController controller;
+       AgroserviceController controller;
         private LogIn logIn;
 
         public FormLeader()
         {
-            //controller = new AgroserviceController();
+            controller = new AgroserviceController();
             InitializeComponent();
         }
 
@@ -50,18 +50,21 @@ namespace Agroservice
         {
             
             AgroserviceController controller = new AgroserviceController();
+            userControlLeaderClientsData1.Hide();
+            userControlLeaderWorks1.Hide();
+           
 
             //controller.loadWorkerData();
             //dataGridViewWorkers.DataSource = controller.getWorkerData();
 
-            //controller.loadNewWorkData();
-            //dataGridViewNewWorkData.DataSource = controller.getNewWorkData();
+            controller.loadNewWorkData();
+            userControlLeaderWorks1.dataGridViewAllNewWorks.DataSource = controller.getNewWorkData();
 
-            //controller.usernameLoad();
-            //labelUsernamae.Text = controller.getloadUsername();
+            controller.usernameLoad();
+            labelUsername.Text = controller.getloadUsername();
 
-            //controller.loadCompleteData();
-            //dataGridViewCompleteWorks.DataSource = controller.getCompleteWorksData();
+            controller.loadCompleteData();
+           userControlLeaderWorks1.dataGridViewAllCompleteWorks.DataSource = controller.getCompleteWorksData();
 
 
             controller.loadClientData();
@@ -78,10 +81,45 @@ namespace Agroservice
                 lvi.SubItems.Add(dr["telefonszám"].ToString());
 
 
-                //ListViewClientsData.Items.Add(lvi);
+                userControlLeaderClientsData1.listViewClientsData.Items.Add(lvi); 
             }
-
+           
             
+        }
+
+        private void buttonClientData_Click(object sender, EventArgs e)
+        {
+            panelSign.Height = buttonClientData.Height;
+            panelSign.Top = buttonClientData.Top;
+            userControlLeaderClientsData1.Show();
+            userControlLeaderWorks1.Hide();
+            
+        }
+
+        private void buttonNewWork_Click(object sender, EventArgs e)
+        {
+            panelSign.Height = buttonNewWork.Height;
+            panelSign.Top = buttonNewWork.Top;
+            userControlLeaderClientsData1.Hide();
+            userControlLeaderWorks1.Show();
+        }
+
+        private void buttonHome_Click(object sender, EventArgs e)
+        {
+            userControlLeaderWorks1.Hide();
+            userControlLeaderClientsData1.Hide();
+        }
+
+        private void buttonDoneWork_Click(object sender, EventArgs e)
+        {
+            panelSign.Height = buttonDoneWork.Height;
+            panelSign.Top = buttonDoneWork.Top;
+            userControlLeaderWorks1.Hide();
+            userControlLeaderClientsData1.Hide();
+           
+            
+            
+
         }
     }
 }

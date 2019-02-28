@@ -40,6 +40,9 @@
             this.buttonDoneWork = new System.Windows.Forms.Button();
             this.buttonNewWork = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.userControlLeaderAllNewWorks1 = new Agroservice.UserControlLeaderWorks();
+            this.userControlLeaderClientsData1 = new Agroservice.UserControlLeaderClientsData();
+            this.userControlLeaderWorks1 = new Agroservice.UserControlLeaderWorks();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -105,6 +108,7 @@
             this.buttonHome.TabIndex = 8;
             this.buttonHome.Text = "Főoldal";
             this.buttonHome.UseVisualStyleBackColor = true;
+            this.buttonHome.Click += new System.EventHandler(this.buttonHome_Click);
             // 
             // button5
             // 
@@ -147,6 +151,7 @@
             this.buttonClientData.TabIndex = 5;
             this.buttonClientData.Text = "Ügyfelek adatai";
             this.buttonClientData.UseVisualStyleBackColor = true;
+            this.buttonClientData.Click += new System.EventHandler(this.buttonClientData_Click);
             // 
             // buttonDoneWork
             // 
@@ -161,6 +166,7 @@
             this.buttonDoneWork.TabIndex = 4;
             this.buttonDoneWork.Text = "Elvégzett munkálatok";
             this.buttonDoneWork.UseVisualStyleBackColor = true;
+            this.buttonDoneWork.Click += new System.EventHandler(this.buttonDoneWork_Click);
             // 
             // buttonNewWork
             // 
@@ -173,8 +179,9 @@
             this.buttonNewWork.Name = "buttonNewWork";
             this.buttonNewWork.Size = new System.Drawing.Size(202, 86);
             this.buttonNewWork.TabIndex = 3;
-            this.buttonNewWork.Text = "Új munkálatok";
+            this.buttonNewWork.Text = "Munkálatok";
             this.buttonNewWork.UseVisualStyleBackColor = true;
+            this.buttonNewWork.Click += new System.EventHandler(this.buttonNewWork_Click);
             // 
             // pictureBox1
             // 
@@ -185,11 +192,42 @@
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
+            // userControlLeaderAllNewWorks1
+            // 
+            this.userControlLeaderAllNewWorks1.BackColor = System.Drawing.Color.White;
+            this.userControlLeaderAllNewWorks1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.userControlLeaderAllNewWorks1.Location = new System.Drawing.Point(202, 79);
+            this.userControlLeaderAllNewWorks1.Margin = new System.Windows.Forms.Padding(5);
+            this.userControlLeaderAllNewWorks1.Name = "userControlLeaderAllNewWorks1";
+            this.userControlLeaderAllNewWorks1.Size = new System.Drawing.Size(1062, 602);
+            this.userControlLeaderAllNewWorks1.TabIndex = 9;
+            // 
+            // userControlLeaderClientsData1
+            // 
+            this.userControlLeaderClientsData1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.userControlLeaderClientsData1.Location = new System.Drawing.Point(202, 80);
+            this.userControlLeaderClientsData1.Margin = new System.Windows.Forms.Padding(5);
+            this.userControlLeaderClientsData1.Name = "userControlLeaderClientsData1";
+            this.userControlLeaderClientsData1.Size = new System.Drawing.Size(1062, 601);
+            this.userControlLeaderClientsData1.TabIndex = 8;
+            // 
+            // userControlLeaderWorks1
+            // 
+            this.userControlLeaderWorks1.BackColor = System.Drawing.Color.White;
+            this.userControlLeaderWorks1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.userControlLeaderWorks1.Location = new System.Drawing.Point(202, 80);
+            this.userControlLeaderWorks1.Margin = new System.Windows.Forms.Padding(5);
+            this.userControlLeaderWorks1.Name = "userControlLeaderWorks1";
+            this.userControlLeaderWorks1.Size = new System.Drawing.Size(1062, 601);
+            this.userControlLeaderWorks1.TabIndex = 9;
+            // 
             // FormLeader
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.userControlLeaderWorks1);
+            this.Controls.Add(this.userControlLeaderClientsData1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -219,5 +257,8 @@
         private System.Windows.Forms.Button buttonDoneWork;
         private System.Windows.Forms.Button buttonNewWork;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private UserControlLeaderClientsData userControlLeaderClientsData1;
+        private UserControlLeaderWorks userControlLeaderAllNewWorks1;
+        private UserControlLeaderWorks userControlLeaderWorks1;
     }
 }

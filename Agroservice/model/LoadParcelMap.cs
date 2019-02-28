@@ -17,7 +17,7 @@ namespace Agroservice.model
     class LoadParcelMap
     {
         public static string[] latlong;
-        public static string[] LoadParcelCoordinates()
+        public static string[] LoadParcelCoordinates(string parcelnumber)
         {
           
             UserControlNewWorks ucw = new UserControlNewWorks();
@@ -28,7 +28,7 @@ namespace Agroservice.model
             ucw.gMapControlParcelMap.Zoom = 16;
             MySqlConnection connection = new MySqlConnection(model.Connection.connectionString);
 
-            string query = "SELECT `coordinates` FROM `parcels` WHERE parcelnumber = '" + UserControlNewWorks.parcelnumber  + "'";
+            string query = "SELECT `coordinates` FROM `parcels` WHERE parcelnumber = '" + parcelnumber  + "'";
             MySqlCommand cmd = new MySqlCommand(query,connection);
             connection.Open();
             MySqlDataReader dr;

@@ -114,18 +114,14 @@ namespace Agroservice.controller
             model.LoadUsername.workerDataLoad();
         }
 
-        //public void loadMap()
-        //{
-        //    model.LoadParcelMap.LoadParcelCoordinates();
-        //}
-        //internal List<PointLatLng> getLoadParcelMapCoordinates()
-        //{
-        //    List<PointLatLng> coordinates = model.LoadParcelMap.getParcelmapCoordinatesFromList();
-        //    return coordinates;
-        //}
-        internal string[] getLoadParcelMapCoordinates()
+        /// <summary>
+        /// parcella cooordinátáinak kiolvasása tömbből
+        /// </summary>
+        /// <param name="parcelnumber"></param>
+        /// <returns>parcella koordinátáinak tömbje</returns>
+        internal string[] getLoadParcelMapCoordinates(string parcelnumber)
         {
-            string[] coordinates = model.LoadParcelMap.LoadParcelCoordinates();
+            string[] coordinates = model.LoadParcelMap.LoadParcelCoordinates(parcelnumber);
             return coordinates;
         }
 

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Agroservice
 {
-    public partial class UserControlLeaderNewWorks : UserControl
+    public partial class UserControlLeaderWorks : UserControl
     {
-        public UserControlLeaderNewWorks()
+        public UserControlLeaderWorks()
         {
             InitializeComponent();
         }
