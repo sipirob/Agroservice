@@ -24,6 +24,7 @@ namespace Agroservice
         PointLatLng endposition;
         PointLatLng startposition;
         GMapRoute r;
+        int workId;//kiválasztott munkálat ID-je
         bool existRoute = false;
 
 
@@ -41,6 +42,7 @@ namespace Agroservice
         
         private void listViewNewWork_SelectedIndexChanged(object sender, EventArgs e)
         {
+
             gMapControlParcelMap.Zoom = 15;//a térkép alap zoom távolsága
             gMapControlParcelMap.Show();
             if (existRoute==true)
@@ -56,8 +58,8 @@ namespace Agroservice
             if (listViewNewWork.SelectedItems.Count > 0)
             {
                 ListViewItem item = listViewNewWork.SelectedItems[0];
-                string  parcelnumber = item.SubItems[1].Text;
-               
+                string  parcelnumber = item.SubItems[2].Text;
+                workId = Convert.ToInt32(item.SubItems[0].Text);
                 GMapOverlay polyOverlay = new GMapOverlay("polygons");
                 controller.getLoadParcelMapCoordinates(parcelnumber);
                 string[] latlong = controller.getLoadParcelMapCoordinates(parcelnumber);
@@ -112,6 +114,44 @@ namespace Agroservice
             marker.ToolTipText = "Agroservice kft.";
             existRoute = true;
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+           
+            if (MessageBox.Show(
+           "Biztosan elvégezte a munkát?",
+           "Igen",
+           MessageBoxButtons.YesNo,
+           MessageBoxIcon.Exclamation
+          ) == DialogResult.Yes)
+            {
+
+                try
+                {
+                    controller.setDoneWork(workId);
+                    listViewNewWork.Items.Clear();
+                    controller.loadNewWorkData();
+                    DataTable dt = new DataTable();
+
+                    dt = controller.getNewWorkData();
+                    foreach (DataRow dr in dt.Rows)
+                    {
+                        ListViewItem lvi = new ListViewItem(dr["Id"].ToString());
+                        lvi.SubItems.Add(dr["dátum"].ToString());
+                        lvi.SubItems.Add(dr["parcellaszám"].ToString());
+                        lvi.SubItems.Add(dr["munkálat neve"].ToString());
+                        lvi.SubItems.Add(dr["gabona"].ToString());
+                        //listViewNewWork.Items.Clear();
+                        listViewNewWork.Items.Add(lvi);
+                    }
+                    MessageBox.Show("A kijelölt munkálat elvégezve");
+                }
+                catch (Exception ex)
+                {
+                    return;
+                }
+            }
         }
     }
 }

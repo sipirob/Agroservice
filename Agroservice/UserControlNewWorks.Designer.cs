@@ -48,6 +48,7 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // label1
@@ -75,7 +76,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label6.Location = new System.Drawing.Point(556, 491);
+            this.label6.Location = new System.Drawing.Point(601, 488);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(101, 21);
             this.label6.TabIndex = 9;
@@ -85,7 +86,7 @@
             // 
             this.metroComboBox1.FormattingEnabled = true;
             this.metroComboBox1.ItemHeight = 23;
-            this.metroComboBox1.Location = new System.Drawing.Point(656, 485);
+            this.metroComboBox1.Location = new System.Drawing.Point(701, 482);
             this.metroComboBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.metroComboBox1.Name = "metroComboBox1";
             this.metroComboBox1.Size = new System.Drawing.Size(163, 29);
@@ -96,7 +97,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label7.Location = new System.Drawing.Point(556, 529);
+            this.label7.Location = new System.Drawing.Point(601, 526);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(168, 21);
             this.label7.TabIndex = 15;
@@ -107,7 +108,7 @@
             this.labelVetomag.AutoSize = true;
             this.labelVetomag.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.labelVetomag.ForeColor = System.Drawing.Color.Red;
-            this.labelVetomag.Location = new System.Drawing.Point(717, 530);
+            this.labelVetomag.Location = new System.Drawing.Point(762, 527);
             this.labelVetomag.Name = "labelVetomag";
             this.labelVetomag.Size = new System.Drawing.Size(49, 21);
             this.labelVetomag.TabIndex = 16;
@@ -117,7 +118,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label8.Location = new System.Drawing.Point(766, 530);
+            this.label8.Location = new System.Drawing.Point(811, 527);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(29, 21);
             this.label8.TabIndex = 17;
@@ -128,7 +129,7 @@
             this.labelPermetszer.AutoSize = true;
             this.labelPermetszer.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.labelPermetszer.ForeColor = System.Drawing.Color.Red;
-            this.labelPermetszer.Location = new System.Drawing.Point(857, 562);
+            this.labelPermetszer.Location = new System.Drawing.Point(902, 559);
             this.labelPermetszer.Name = "labelPermetszer";
             this.labelPermetszer.Size = new System.Drawing.Size(49, 21);
             this.labelPermetszer.TabIndex = 19;
@@ -138,7 +139,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label10.Location = new System.Drawing.Point(902, 562);
+            this.label10.Location = new System.Drawing.Point(947, 559);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(42, 21);
             this.label10.TabIndex = 20;
@@ -148,13 +149,14 @@
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button1.Location = new System.Drawing.Point(560, 432);
+            this.button1.Location = new System.Drawing.Point(593, 432);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(107, 33);
             this.button1.TabIndex = 21;
             this.button1.Text = "Elvégezve";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // gMapControlParcelMap
             // 
@@ -164,7 +166,7 @@
             this.gMapControlParcelMap.GrayScaleMode = false;
             this.gMapControlParcelMap.HelperLineOption = GMap.NET.WindowsForms.HelperLineOptions.DontShow;
             this.gMapControlParcelMap.LevelsKeepInMemmory = 5;
-            this.gMapControlParcelMap.Location = new System.Drawing.Point(560, 43);
+            this.gMapControlParcelMap.Location = new System.Drawing.Point(593, 43);
             this.gMapControlParcelMap.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gMapControlParcelMap.MarkersEnabled = true;
             this.gMapControlParcelMap.MaxZoom = 2;
@@ -179,7 +181,7 @@
             this.gMapControlParcelMap.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
             this.gMapControlParcelMap.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
             this.gMapControlParcelMap.ShowTileGridLines = false;
-            this.gMapControlParcelMap.Size = new System.Drawing.Size(480, 381);
+            this.gMapControlParcelMap.Size = new System.Drawing.Size(447, 381);
             this.gMapControlParcelMap.TabIndex = 22;
             this.gMapControlParcelMap.Zoom = 0D;
             // 
@@ -187,6 +189,7 @@
             // 
             this.listViewNewWork.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.listViewNewWork.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader5,
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3,
@@ -196,7 +199,7 @@
             this.listViewNewWork.GridLines = true;
             this.listViewNewWork.Location = new System.Drawing.Point(21, 43);
             this.listViewNewWork.Name = "listViewNewWork";
-            this.listViewNewWork.Size = new System.Drawing.Size(520, 540);
+            this.listViewNewWork.Size = new System.Drawing.Size(553, 540);
             this.listViewNewWork.TabIndex = 23;
             this.listViewNewWork.UseCompatibleStateImageBehavior = false;
             this.listViewNewWork.View = System.Windows.Forms.View.Details;
@@ -238,7 +241,7 @@
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox3.Location = new System.Drawing.Point(650, 559);
+            this.textBox3.Location = new System.Drawing.Point(695, 556);
             this.textBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(116, 27);
@@ -249,7 +252,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label9.Location = new System.Drawing.Point(555, 562);
+            this.label9.Location = new System.Drawing.Point(600, 559);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(98, 21);
             this.label9.TabIndex = 18;
@@ -259,11 +262,15 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label11.Location = new System.Drawing.Point(772, 562);
+            this.label11.Location = new System.Drawing.Point(817, 559);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(90, 21);
             this.label11.TabIndex = 26;
             this.label11.Text = "Szükséges:";
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Id";
             // 
             // UserControlNewWorks
             // 
@@ -315,5 +322,6 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
     }
 }

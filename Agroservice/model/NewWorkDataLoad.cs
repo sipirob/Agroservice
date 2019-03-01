@@ -81,19 +81,21 @@ namespace Agroservice.model
         {
 
             DataTable newWorkDT = new DataTable();
+            newWorkDT.Columns.Add("Id", typeof(int));
             newWorkDT.Columns.Add("dátum", typeof(DateTime));
             newWorkDT.Columns.Add("parcellaszám", typeof(int));
             newWorkDT.Columns.Add("munkálat neve", typeof(string));
             newWorkDT.Columns.Add("gabona", typeof(string));
             foreach (repository.Work w in Work)
             {
-                newWorkDT.Rows.Add(w.getDate(), w.getParcelnumber(), w.getServicename(), w.getGraincropname());
+                newWorkDT.Rows.Add(w.getId(), w.getDate(), w.getParcelnumber(), w.getServicename(), w.getGraincropname());
 
             }
 
             return newWorkDT;
 
         }
+       
 
     }
 }

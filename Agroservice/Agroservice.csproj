@@ -114,6 +114,7 @@
     <Compile Include="model\LoadUsername.cs" />
     <Compile Include="model\MySQLDatabaseInterface.cs" />
     <Compile Include="model\NewWorkDataLoad.cs" />
+    <Compile Include="model\SetDoneWork.cs" />
     <Compile Include="model\WorkerDataLoad.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

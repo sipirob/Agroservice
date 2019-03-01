@@ -18,6 +18,7 @@ namespace Agroservice.controller
         private model.LoadUsername loadUsername;
         private model.CompleteWorkDataLoad completeWorkDataLoad;
         private model.LoadParcelMap loadParcelMap;
+        private model.SetDoneWork setDoneWorkInDatabase;
        
         public AgroserviceController()
         {
@@ -27,6 +28,7 @@ namespace Agroservice.controller
             loadUsername = new model.LoadUsername();
             completeWorkDataLoad = new model.CompleteWorkDataLoad();
             loadParcelMap = new model.LoadParcelMap();
+            setDoneWorkInDatabase = new model.SetDoneWork();
         }
        /// <summary>
        /// Ügyfelek adatainak lekérése listából
@@ -133,6 +135,11 @@ namespace Agroservice.controller
         {
             string newWorksNumber= model.LoadNewWorksNumber.newWorksNumberLoad(username);
             return newWorksNumber;
+        }
+
+        internal void setDoneWork(int workId)
+        {
+            model.SetDoneWork.setDoneWorkInDatabase(workId);
         }
     }
 }

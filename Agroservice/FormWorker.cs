@@ -15,7 +15,19 @@ namespace Agroservice
     {
         AgroserviceController controller = new AgroserviceController();
         UserControlNewWorks userControlNew;
-       
+        public void newWorksNumber()
+        {
+            string username = FormSignIn.username;
+            panelNoWork.Hide();
+            panelNoWork.Location = panelIsWork.Location;
+            labelNewWorkNumber.Text = controller.loadNewWorksNumber(username);
+            if (labelNewWorkNumber.Text == "0")
+            {
+                panelIsWork.Hide();
+                panelNoWork.Show();
+            }
+        }
+
         public static string workername="";
         public FormWorker()
         {
@@ -38,6 +50,7 @@ namespace Agroservice
             userControlNewWorks1.Hide();
             userControlCompleteWorks1.Hide();
             userControlWorkerClientData1.Hide();
+            newWorksNumber();
         }
 
         private void buttonNewWork_Click(object sender, EventArgs e)
@@ -71,7 +84,8 @@ namespace Agroservice
             dt = controller.getNewWorkData();
             foreach (DataRow dr in dt.Rows)
             {
-                ListViewItem lvi = new ListViewItem(dr["dátum"].ToString());
+                ListViewItem lvi = new ListViewItem(dr["Id"].ToString());
+                lvi.SubItems.Add(dr["dátum"].ToString());
                 lvi.SubItems.Add(dr["parcellaszám"].ToString());
                 lvi.SubItems.Add(dr["munkálat neve"].ToString());
                 lvi.SubItems.Add(dr["gabona"].ToString());
@@ -91,17 +105,7 @@ namespace Agroservice
                 userControlWorkerClientData1.listViewClientData.Items.Add(clvi);
             }
             //El nem végzett munkálatok számának kiírása
-            string username = FormSignIn.username;
-            panelNoWork.Hide();
-            panelNoWork.Location = panelIsWork.Location;
-            labelNewWorkNumber.Text= controller.loadNewWorksNumber(username);
-            if (labelNewWorkNumber.Text =="0")
-            {
-                panelIsWork.Hide();
-                panelNoWork.Show();
-            }
-            
-           
+            newWorksNumber();
         }
 
         private void buttonDoneWork_Click(object sender, EventArgs e)
