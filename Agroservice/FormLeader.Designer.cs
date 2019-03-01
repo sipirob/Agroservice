@@ -36,13 +36,12 @@
             this.buttonHome = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.buttonSettings = new System.Windows.Forms.Button();
-            this.buttonClientData = new System.Windows.Forms.Button();
-            this.buttonDoneWork = new System.Windows.Forms.Button();
+            this.buttonUsersData = new System.Windows.Forms.Button();
             this.buttonNewWork = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.userControlLeaderAllNewWorks1 = new Agroservice.UserControlLeaderWorks();
-            this.userControlLeaderClientsData1 = new Agroservice.UserControlLeaderClientsData();
             this.userControlLeaderWorks1 = new Agroservice.UserControlLeaderWorks();
+            this.userControlLeaderClientsData1 = new Agroservice.UserControlLeaderClientsData();
+            this.userControlLeaderAllNewWorks1 = new Agroservice.UserControlLeaderWorks();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -77,8 +76,7 @@
             this.panel2.Controls.Add(this.buttonHome);
             this.panel2.Controls.Add(this.button5);
             this.panel2.Controls.Add(this.buttonSettings);
-            this.panel2.Controls.Add(this.buttonClientData);
-            this.panel2.Controls.Add(this.buttonDoneWork);
+            this.panel2.Controls.Add(this.buttonUsersData);
             this.panel2.Controls.Add(this.buttonNewWork);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 80);
@@ -130,7 +128,7 @@
             this.buttonSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSettings.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.buttonSettings.ForeColor = System.Drawing.Color.White;
-            this.buttonSettings.Location = new System.Drawing.Point(0, 367);
+            this.buttonSettings.Location = new System.Drawing.Point(0, 274);
             this.buttonSettings.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonSettings.Name = "buttonSettings";
             this.buttonSettings.Size = new System.Drawing.Size(202, 86);
@@ -138,35 +136,20 @@
             this.buttonSettings.Text = "Beállítások";
             this.buttonSettings.UseVisualStyleBackColor = true;
             // 
-            // buttonClientData
+            // buttonUsersData
             // 
-            this.buttonClientData.FlatAppearance.BorderSize = 0;
-            this.buttonClientData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonClientData.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buttonClientData.ForeColor = System.Drawing.Color.White;
-            this.buttonClientData.Location = new System.Drawing.Point(0, 273);
-            this.buttonClientData.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.buttonClientData.Name = "buttonClientData";
-            this.buttonClientData.Size = new System.Drawing.Size(202, 86);
-            this.buttonClientData.TabIndex = 5;
-            this.buttonClientData.Text = "Ügyfelek adatai";
-            this.buttonClientData.UseVisualStyleBackColor = true;
-            this.buttonClientData.Click += new System.EventHandler(this.buttonClientData_Click);
-            // 
-            // buttonDoneWork
-            // 
-            this.buttonDoneWork.FlatAppearance.BorderSize = 0;
-            this.buttonDoneWork.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonDoneWork.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buttonDoneWork.ForeColor = System.Drawing.Color.White;
-            this.buttonDoneWork.Location = new System.Drawing.Point(0, 180);
-            this.buttonDoneWork.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.buttonDoneWork.Name = "buttonDoneWork";
-            this.buttonDoneWork.Size = new System.Drawing.Size(202, 86);
-            this.buttonDoneWork.TabIndex = 4;
-            this.buttonDoneWork.Text = "Elvégzett munkálatok";
-            this.buttonDoneWork.UseVisualStyleBackColor = true;
-            this.buttonDoneWork.Click += new System.EventHandler(this.buttonDoneWork_Click);
+            this.buttonUsersData.FlatAppearance.BorderSize = 0;
+            this.buttonUsersData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonUsersData.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonUsersData.ForeColor = System.Drawing.Color.White;
+            this.buttonUsersData.Location = new System.Drawing.Point(0, 180);
+            this.buttonUsersData.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonUsersData.Name = "buttonUsersData";
+            this.buttonUsersData.Size = new System.Drawing.Size(202, 86);
+            this.buttonUsersData.TabIndex = 5;
+            this.buttonUsersData.Text = "Felhasználók";
+            this.buttonUsersData.UseVisualStyleBackColor = true;
+            this.buttonUsersData.Click += new System.EventHandler(this.buttonUsersData_Click);
             // 
             // buttonNewWork
             // 
@@ -192,15 +175,15 @@
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
-            // userControlLeaderAllNewWorks1
+            // userControlLeaderWorks1
             // 
-            this.userControlLeaderAllNewWorks1.BackColor = System.Drawing.Color.White;
-            this.userControlLeaderAllNewWorks1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.userControlLeaderAllNewWorks1.Location = new System.Drawing.Point(202, 79);
-            this.userControlLeaderAllNewWorks1.Margin = new System.Windows.Forms.Padding(5);
-            this.userControlLeaderAllNewWorks1.Name = "userControlLeaderAllNewWorks1";
-            this.userControlLeaderAllNewWorks1.Size = new System.Drawing.Size(1062, 602);
-            this.userControlLeaderAllNewWorks1.TabIndex = 9;
+            this.userControlLeaderWorks1.BackColor = System.Drawing.Color.White;
+            this.userControlLeaderWorks1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.userControlLeaderWorks1.Location = new System.Drawing.Point(202, 80);
+            this.userControlLeaderWorks1.Margin = new System.Windows.Forms.Padding(5);
+            this.userControlLeaderWorks1.Name = "userControlLeaderWorks1";
+            this.userControlLeaderWorks1.Size = new System.Drawing.Size(1062, 601);
+            this.userControlLeaderWorks1.TabIndex = 9;
             // 
             // userControlLeaderClientsData1
             // 
@@ -211,15 +194,15 @@
             this.userControlLeaderClientsData1.Size = new System.Drawing.Size(1062, 601);
             this.userControlLeaderClientsData1.TabIndex = 8;
             // 
-            // userControlLeaderWorks1
+            // userControlLeaderAllNewWorks1
             // 
-            this.userControlLeaderWorks1.BackColor = System.Drawing.Color.White;
-            this.userControlLeaderWorks1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.userControlLeaderWorks1.Location = new System.Drawing.Point(202, 80);
-            this.userControlLeaderWorks1.Margin = new System.Windows.Forms.Padding(5);
-            this.userControlLeaderWorks1.Name = "userControlLeaderWorks1";
-            this.userControlLeaderWorks1.Size = new System.Drawing.Size(1062, 601);
-            this.userControlLeaderWorks1.TabIndex = 9;
+            this.userControlLeaderAllNewWorks1.BackColor = System.Drawing.Color.White;
+            this.userControlLeaderAllNewWorks1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.userControlLeaderAllNewWorks1.Location = new System.Drawing.Point(202, 79);
+            this.userControlLeaderAllNewWorks1.Margin = new System.Windows.Forms.Padding(5);
+            this.userControlLeaderAllNewWorks1.Name = "userControlLeaderAllNewWorks1";
+            this.userControlLeaderAllNewWorks1.Size = new System.Drawing.Size(1062, 602);
+            this.userControlLeaderAllNewWorks1.TabIndex = 9;
             // 
             // FormLeader
             // 
@@ -253,8 +236,7 @@
         private System.Windows.Forms.Button buttonHome;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button buttonSettings;
-        private System.Windows.Forms.Button buttonClientData;
-        private System.Windows.Forms.Button buttonDoneWork;
+        private System.Windows.Forms.Button buttonUsersData;
         private System.Windows.Forms.Button buttonNewWork;
         private System.Windows.Forms.PictureBox pictureBox1;
         private UserControlLeaderClientsData userControlLeaderClientsData1;

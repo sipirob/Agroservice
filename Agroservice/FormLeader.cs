@@ -87,10 +87,10 @@ namespace Agroservice
             
         }
 
-        private void buttonClientData_Click(object sender, EventArgs e)
+        private void buttonUsersData_Click(object sender, EventArgs e)
         {
-            panelSign.Height = buttonClientData.Height;
-            panelSign.Top = buttonClientData.Top;
+            panelSign.Height = buttonUsersData.Height;
+            panelSign.Top = buttonUsersData.Top;
             userControlLeaderClientsData1.Show();
             userControlLeaderWorks1.Hide();
             
@@ -110,16 +110,8 @@ namespace Agroservice
             userControlLeaderClientsData1.Hide();
         }
 
-        private void buttonDoneWork_Click(object sender, EventArgs e)
-        {
-            panelSign.Height = buttonDoneWork.Height;
-            panelSign.Top = buttonDoneWork.Top;
-            userControlLeaderWorks1.Hide();
-            userControlLeaderClientsData1.Hide();
-           
-            
-            
+      
 
-        }
+      
     }
 }

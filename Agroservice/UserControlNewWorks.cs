@@ -89,6 +89,8 @@ namespace Agroservice
 
         private void buttonRoute_Click(object sender, EventArgs e)
         {
+            if (existRoute == true)
+                r.Clear();
             //Útvonal megjelenítése a térképen
             MapRoute route = GMap.NET.MapProviders.OpenStreetMapQuestProvider.Instance.GetRoute(startposition, endposition, true, false, 11);
             r = new GMapRoute(route.Points, "My route");
