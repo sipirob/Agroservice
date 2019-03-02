@@ -38,11 +38,7 @@ namespace Agroservice
 
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
+      
         private void buttonHome_Click(object sender, EventArgs e)
         {
             panelSign.Height = buttonHome.Height;

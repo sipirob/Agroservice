@@ -40,6 +40,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.gMapControlParcelMap = new GMap.NET.WindowsForms.GMapControl();
             this.listViewNewWork = new System.Windows.Forms.ListView();
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -48,7 +49,7 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.buttonCalc = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -205,6 +206,10 @@
             this.listViewNewWork.View = System.Windows.Forms.View.Details;
             this.listViewNewWork.SelectedIndexChanged += new System.EventHandler(this.listViewNewWork_SelectedIndexChanged);
             // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Id";
+            // 
             // columnHeader1
             // 
             this.columnHeader1.Text = "dátum";
@@ -268,14 +273,23 @@
             this.label11.TabIndex = 26;
             this.label11.Text = "Szükséges:";
             // 
-            // columnHeader5
+            // buttonCalc
             // 
-            this.columnHeader5.Text = "Id";
+            this.buttonCalc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCalc.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonCalc.Location = new System.Drawing.Point(951, 391);
+            this.buttonCalc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonCalc.Name = "buttonCalc";
+            this.buttonCalc.Size = new System.Drawing.Size(111, 33);
+            this.buttonCalc.TabIndex = 27;
+            this.buttonCalc.Text = "Kalkulátor";
+            this.buttonCalc.UseVisualStyleBackColor = true;
             // 
             // UserControlNewWorks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.buttonCalc);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.buttonRoute);
@@ -323,5 +337,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.Button buttonCalc;
     }
 }

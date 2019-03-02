@@ -144,6 +144,12 @@
     <Compile Include="UserControlLeaderWorks.Designer.cs">
       <DependentUpon>UserControlLeaderWorks.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\FormCalculator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormCalculator.Designer.cs">
+      <DependentUpon>FormCalculator.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\UserControlWorkerCompleteWorks.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -182,6 +188,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlWorkerClientData.resx">
       <DependentUpon>UserControlWorkerClientData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormCalculator.resx">
+      <DependentUpon>FormCalculator.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControlWorkerCompleteWorks.resx">
       <DependentUpon>UserControlWorkerCompleteWorks.cs</DependentUpon>

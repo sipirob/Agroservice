@@ -34,8 +34,8 @@
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
             this.buttonAddWorker = new System.Windows.Forms.Button();
             this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
-            this.dataGridViewAllCompleteWorks = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
+            this.dataGridViewAllCompleteWorks = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAllNewWorks)).BeginInit();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
@@ -51,7 +51,7 @@
             this.dataGridViewAllNewWorks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewAllNewWorks.Location = new System.Drawing.Point(7, 62);
             this.dataGridViewAllNewWorks.Name = "dataGridViewAllNewWorks";
-            this.dataGridViewAllNewWorks.Size = new System.Drawing.Size(858, 439);
+            this.dataGridViewAllNewWorks.Size = new System.Drawing.Size(814, 439);
             this.dataGridViewAllNewWorks.TabIndex = 0;
             // 
             // label1
@@ -72,7 +72,7 @@
             this.metroTabControl1.ItemSize = new System.Drawing.Size(120, 50);
             this.metroTabControl1.Location = new System.Drawing.Point(25, 15);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 0;
+            this.metroTabControl1.SelectedIndex = 1;
             this.metroTabControl1.Size = new System.Drawing.Size(1022, 581);
             this.metroTabControl1.Style = MetroFramework.MetroColorStyle.Green;
             this.metroTabControl1.TabIndex = 2;
@@ -87,7 +87,7 @@
             this.metroTabPage1.Controls.Add(this.dataGridViewAllNewWorks);
             this.metroTabPage1.HorizontalScrollbarBarColor = true;
             this.metroTabPage1.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroTabPage1.HorizontalScrollbarSize = 6;
+            this.metroTabPage1.HorizontalScrollbarSize = 4;
             this.metroTabPage1.Location = new System.Drawing.Point(4, 54);
             this.metroTabPage1.Name = "metroTabPage1";
             this.metroTabPage1.Size = new System.Drawing.Size(1014, 523);
@@ -96,7 +96,7 @@
             this.metroTabPage1.Text = "Új munkálatok";
             this.metroTabPage1.VerticalScrollbarBarColor = true;
             this.metroTabPage1.VerticalScrollbarHighlightOnWheel = false;
-            this.metroTabPage1.VerticalScrollbarSize = 6;
+            this.metroTabPage1.VerticalScrollbarSize = 4;
             // 
             // buttonAddWorker
             // 
@@ -113,7 +113,7 @@
             this.metroTabPage2.Controls.Add(this.dataGridViewAllCompleteWorks);
             this.metroTabPage2.HorizontalScrollbarBarColor = true;
             this.metroTabPage2.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroTabPage2.HorizontalScrollbarSize = 6;
+            this.metroTabPage2.HorizontalScrollbarSize = 4;
             this.metroTabPage2.Location = new System.Drawing.Point(4, 54);
             this.metroTabPage2.Name = "metroTabPage2";
             this.metroTabPage2.Size = new System.Drawing.Size(1014, 523);
@@ -121,15 +121,7 @@
             this.metroTabPage2.Text = "Elkészült munkálatok";
             this.metroTabPage2.VerticalScrollbarBarColor = true;
             this.metroTabPage2.VerticalScrollbarHighlightOnWheel = false;
-            this.metroTabPage2.VerticalScrollbarSize = 6;
-            // 
-            // dataGridViewAllCompleteWorks
-            // 
-            this.dataGridViewAllCompleteWorks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewAllCompleteWorks.Location = new System.Drawing.Point(3, 49);
-            this.dataGridViewAllCompleteWorks.Name = "dataGridViewAllCompleteWorks";
-            this.dataGridViewAllCompleteWorks.Size = new System.Drawing.Size(717, 458);
-            this.dataGridViewAllCompleteWorks.TabIndex = 2;
+            this.metroTabPage2.VerticalScrollbarSize = 4;
             // 
             // label2
             // 
@@ -139,6 +131,14 @@
             this.label2.Size = new System.Drawing.Size(174, 21);
             this.label2.TabIndex = 3;
             this.label2.Text = "Elkészült munkálatok:";
+            // 
+            // dataGridViewAllCompleteWorks
+            // 
+            this.dataGridViewAllCompleteWorks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewAllCompleteWorks.Location = new System.Drawing.Point(3, 49);
+            this.dataGridViewAllCompleteWorks.Name = "dataGridViewAllCompleteWorks";
+            this.dataGridViewAllCompleteWorks.Size = new System.Drawing.Size(717, 458);
+            this.dataGridViewAllCompleteWorks.TabIndex = 2;
             // 
             // UserControlLeaderWorks
             // 
