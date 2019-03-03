@@ -10,11 +10,19 @@ using System.Windows.Forms;
 
 namespace Agroservice.View
 {
-    public partial class FormCalculator : Form
+    public partial class FormCalculator : Form 
     {
+        controller.AgroserviceController controller = new controller.AgroserviceController();
+        UserControlNewWorks newWorks = new UserControlNewWorks();
         public FormCalculator()
         {
             InitializeComponent();
+            
+        }
+
+        private void FormCalculator_Load(object sender, EventArgs e)
+        {
+           
         }
     }
 }

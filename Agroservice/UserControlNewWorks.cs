@@ -18,6 +18,7 @@ namespace Agroservice
 {
     public partial class UserControlNewWorks : UserControl 
     {
+        View.FormCalculator formCalc;
         AgroserviceController controller = new AgroserviceController();
         GMapPolygon polygon;
         int openlayer = 0;
@@ -26,6 +27,7 @@ namespace Agroservice
         GMapRoute r;
         int workId;//kiválasztott munkálat ID-je
         bool existRoute = false;
+        string parcelnumber;
 
 
         public UserControlNewWorks()
@@ -58,7 +60,7 @@ namespace Agroservice
             if (listViewNewWork.SelectedItems.Count > 0)
             {
                 ListViewItem item = listViewNewWork.SelectedItems[0];
-                string  parcelnumber = item.SubItems[2].Text;
+                parcelnumber = item.SubItems[2].Text;
                 workId = Convert.ToInt32(item.SubItems[0].Text);
                 GMapOverlay polyOverlay = new GMapOverlay("polygons");
                 controller.getLoadParcelMapCoordinates(parcelnumber);
@@ -152,6 +154,24 @@ namespace Agroservice
                     return;
                 }
             }
+        }
+
+        private void buttonCalc_Click(object sender, EventArgs e)
+        {
+            formCalc = new View.FormCalculator();
+            formCalc.Show();
+            //if (listViewNewWork.SelectedItems.Count < 0)
+            //{
+            //    return;
+            //}
+            //string servicename = listViewNewWork.SelectedItems[3].ToString();
+            //string graincropname = listViewNewWork.SelectedItems[4].ToString();
+
+            controller.parcelDataloadFromList();
+            controller.loadParcelData(parcelnumber);
+            double parcelHa= controller.loadParcelData(parcelnumber);
+            formCalc.labelHa.Text = Convert.ToString(parcelHa);
+
         }
     }
 }

@@ -39,9 +39,10 @@
             this.metroComboBoxDis = new MetroFramework.Controls.MetroComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.buttonCalculate = new System.Windows.Forms.Button();
+            this.labelHa = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -159,16 +160,6 @@
             this.panel1.Size = new System.Drawing.Size(612, 72);
             this.panel1.TabIndex = 37;
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel2.Controls.Add(this.buttonCalculate);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 72);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(110, 493);
-            this.panel2.TabIndex = 38;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -181,6 +172,16 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Kalkulátor";
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel2.Controls.Add(this.buttonCalculate);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(0, 72);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(110, 493);
+            this.panel2.TabIndex = 38;
+            // 
             // buttonCalculate
             // 
             this.buttonCalculate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -192,11 +193,21 @@
             this.buttonCalculate.Text = "Számol";
             this.buttonCalculate.UseVisualStyleBackColor = true;
             // 
+            // labelHa
+            // 
+            this.labelHa.AutoSize = true;
+            this.labelHa.Location = new System.Drawing.Point(153, 156);
+            this.labelHa.Name = "labelHa";
+            this.labelHa.Size = new System.Drawing.Size(62, 21);
+            this.labelHa.TabIndex = 39;
+            this.labelHa.Text = "Hektár";
+            // 
             // FormCalculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(612, 565);
+            this.Controls.Add(this.labelHa);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label11);
@@ -210,9 +221,10 @@
             this.Controls.Add(this.metroComboBoxDis);
             this.Controls.Add(this.label6);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FormCalculator";
             this.Text = "FormCalculator";
+            this.Load += new System.EventHandler(this.FormCalculator_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -231,11 +243,12 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label labelVetomag;
         private System.Windows.Forms.Label label7;
-        private MetroFramework.Controls.MetroComboBox metroComboBoxDis;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonCalculate;
+        public MetroFramework.Controls.MetroComboBox metroComboBoxDis;
+        public System.Windows.Forms.Label labelHa;
     }
 }

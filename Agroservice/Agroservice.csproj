@@ -110,6 +110,7 @@
     <Compile Include="model\Connection.cs" />
     <Compile Include="model\ConnectToDatabase.cs" />
     <Compile Include="model\LoadNewWorksNumber.cs" />
+    <Compile Include="model\LoadParcelData.cs" />
     <Compile Include="model\LoadParcelMap.cs" />
     <Compile Include="model\LoadUsername.cs" />
     <Compile Include="model\MySQLDatabaseInterface.cs" />
