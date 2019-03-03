@@ -20,6 +20,7 @@ namespace Agroservice.controller
         private model.LoadParcelMap loadParcelMap;
         private model.SetDoneWork setDoneWorkInDatabase;
         private model.LoadParcelData loadParcelDataList;
+
        
         public AgroserviceController()
         {
@@ -32,10 +33,12 @@ namespace Agroservice.controller
             setDoneWorkInDatabase = new model.SetDoneWork();
             loadParcelDataList = new model.LoadParcelData();
         }
-       /// <summary>
-       /// Ügyfelek adatainak lekérése listából
-       /// </summary>
-       /// <returns>Ügyfelek adatainak listája</returns>
+
+       
+        /// <summary>
+        /// Ügyfelek adatainak lekérése listából
+        /// </summary>
+        /// <returns>Ügyfelek adatainak listája</returns>
         internal DataTable getClientData()
         {
             DataTable clientDT = model.ClientDataLoad.getClientDataFromList();
@@ -154,5 +157,13 @@ namespace Agroservice.controller
         {
             model.LoadParcelData.parcelDataLoad();
         }
+
+        internal string calculatePesticid(double parcelHa, double pesticidLiter)
+        {
+            string result = Convert.ToString(parcelHa * pesticidLiter);
+            return result;
+        }
+
+
     }
 }

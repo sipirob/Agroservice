@@ -22,7 +22,15 @@ namespace Agroservice.View
 
         private void FormCalculator_Load(object sender, EventArgs e)
         {
-           
+
+            
+        }
+
+        private void buttonCalculate_Click(object sender, EventArgs e)
+        {
+            double pesticidLiter = Convert.ToDouble(textBoxLiter.Text);
+            double parcelHa = Convert.ToDouble(labelHa.Text);
+            labelPermetszer.Text= controller.calculatePesticid(parcelHa,pesticidLiter);
         }
     }
 }

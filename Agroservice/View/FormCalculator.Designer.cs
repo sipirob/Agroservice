@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBoxLiter = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.labelPermetszer = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -57,15 +57,14 @@
             this.label11.TabIndex = 36;
             this.label11.Text = "Szükséges:";
             // 
-            // textBox3
+            // textBoxLiter
             // 
-            this.textBox3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox3.Location = new System.Drawing.Point(248, 349);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(116, 27);
-            this.textBox3.TabIndex = 35;
-            this.textBox3.Text = "Liter/hektár";
+            this.textBoxLiter.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBoxLiter.Location = new System.Drawing.Point(248, 349);
+            this.textBoxLiter.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBoxLiter.Name = "textBoxLiter";
+            this.textBoxLiter.Size = new System.Drawing.Size(116, 27);
+            this.textBoxLiter.TabIndex = 35;
             // 
             // label10
             // 
@@ -192,6 +191,7 @@
             this.buttonCalculate.TabIndex = 39;
             this.buttonCalculate.Text = "Számol";
             this.buttonCalculate.UseVisualStyleBackColor = true;
+            this.buttonCalculate.Click += new System.EventHandler(this.buttonCalculate_Click);
             // 
             // labelHa
             // 
@@ -211,7 +211,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBoxLiter);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.labelPermetszer);
             this.Controls.Add(this.label9);
@@ -236,7 +236,7 @@
         #endregion
 
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBoxLiter;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label labelPermetszer;
         private System.Windows.Forms.Label label9;
