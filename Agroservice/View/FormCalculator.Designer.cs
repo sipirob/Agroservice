@@ -43,6 +43,9 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.buttonCalculate = new System.Windows.Forms.Button();
             this.labelHa = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -51,16 +54,16 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label11.Location = new System.Drawing.Point(370, 352);
+            this.label11.Location = new System.Drawing.Point(155, 263);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(90, 21);
+            this.label11.Size = new System.Drawing.Size(212, 21);
             this.label11.TabIndex = 36;
-            this.label11.Text = "Szükséges:";
+            this.label11.Text = "A kiválasztott parcellához";
             // 
             // textBoxLiter
             // 
             this.textBoxLiter.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBoxLiter.Location = new System.Drawing.Point(248, 349);
+            this.textBoxLiter.Location = new System.Drawing.Point(251, 220);
             this.textBoxLiter.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxLiter.Name = "textBoxLiter";
             this.textBoxLiter.Size = new System.Drawing.Size(116, 27);
@@ -70,28 +73,27 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label10.Location = new System.Drawing.Point(500, 352);
+            this.label10.Location = new System.Drawing.Point(412, 263);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(42, 21);
+            this.label10.Size = new System.Drawing.Size(206, 21);
             this.label10.TabIndex = 34;
-            this.label10.Text = "Liter";
+            this.label10.Text = "liter permetszer szükséges";
             // 
             // labelPermetszer
             // 
             this.labelPermetszer.AutoSize = true;
             this.labelPermetszer.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.labelPermetszer.ForeColor = System.Drawing.Color.Red;
-            this.labelPermetszer.Location = new System.Drawing.Point(455, 352);
+            this.labelPermetszer.Location = new System.Drawing.Point(369, 263);
             this.labelPermetszer.Name = "labelPermetszer";
-            this.labelPermetszer.Size = new System.Drawing.Size(49, 21);
+            this.labelPermetszer.Size = new System.Drawing.Size(0, 21);
             this.labelPermetszer.TabIndex = 33;
-            this.labelPermetszer.Text = "szám";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label9.Location = new System.Drawing.Point(153, 352);
+            this.label9.Location = new System.Drawing.Point(156, 223);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(98, 21);
             this.label9.TabIndex = 32;
@@ -101,7 +103,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label8.Location = new System.Drawing.Point(360, 309);
+            this.label8.Location = new System.Drawing.Point(368, 179);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(29, 21);
             this.label8.TabIndex = 31;
@@ -112,7 +114,7 @@
             this.labelVetomag.AutoSize = true;
             this.labelVetomag.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.labelVetomag.ForeColor = System.Drawing.Color.Red;
-            this.labelVetomag.Location = new System.Drawing.Point(311, 309);
+            this.labelVetomag.Location = new System.Drawing.Point(319, 179);
             this.labelVetomag.Name = "labelVetomag";
             this.labelVetomag.Size = new System.Drawing.Size(49, 21);
             this.labelVetomag.TabIndex = 30;
@@ -122,7 +124,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label7.Location = new System.Drawing.Point(150, 308);
+            this.label7.Location = new System.Drawing.Point(153, 179);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(168, 21);
             this.label7.TabIndex = 29;
@@ -132,7 +134,7 @@
             // 
             this.metroComboBoxDis.FormattingEnabled = true;
             this.metroComboBoxDis.ItemHeight = 23;
-            this.metroComboBoxDis.Location = new System.Drawing.Point(250, 258);
+            this.metroComboBoxDis.Location = new System.Drawing.Point(253, 132);
             this.metroComboBoxDis.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.metroComboBoxDis.Name = "metroComboBoxDis";
             this.metroComboBoxDis.Size = new System.Drawing.Size(163, 29);
@@ -143,7 +145,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label6.Location = new System.Drawing.Point(150, 264);
+            this.label6.Location = new System.Drawing.Point(153, 138);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(101, 21);
             this.label6.TabIndex = 27;
@@ -156,7 +158,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(612, 72);
+            this.panel1.Size = new System.Drawing.Size(649, 72);
             this.panel1.TabIndex = 37;
             // 
             // label1
@@ -196,17 +198,48 @@
             // labelHa
             // 
             this.labelHa.AutoSize = true;
-            this.labelHa.Location = new System.Drawing.Point(153, 156);
+            this.labelHa.ForeColor = System.Drawing.Color.Red;
+            this.labelHa.Location = new System.Drawing.Point(401, 96);
             this.labelHa.Name = "labelHa";
-            this.labelHa.Size = new System.Drawing.Size(62, 21);
+            this.labelHa.Size = new System.Drawing.Size(49, 21);
             this.labelHa.TabIndex = 39;
-            this.labelHa.Text = "Hektár";
+            this.labelHa.Text = "szám";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(153, 96);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(251, 21);
+            this.label2.TabIndex = 40;
+            this.label2.Text = "A kiválasztott parcella területe";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(448, 96);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(65, 21);
+            this.label3.TabIndex = 41;
+            this.label3.Text = "hektár.";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(373, 226);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(42, 21);
+            this.label4.TabIndex = 42;
+            this.label4.Text = "l/Ha";
             // 
             // FormCalculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(612, 565);
+            this.ClientSize = new System.Drawing.Size(649, 565);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.labelHa);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -250,5 +283,8 @@
         private System.Windows.Forms.Button buttonCalculate;
         public MetroFramework.Controls.MetroComboBox metroComboBoxDis;
         public System.Windows.Forms.Label labelHa;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }

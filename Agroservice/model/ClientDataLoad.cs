@@ -77,5 +77,20 @@ namespace Agroservice.model
             return clientDT;
             
         }
+
+        internal static DataTable returnSearchedClient(string clientname)
+        {
+            DataTable clientDT = new DataTable();
+            clientDT.Columns.Add("id", typeof(int));
+            clientDT.Columns.Add("név", typeof(string));
+            clientDT.Columns.Add("lakhely", typeof(string));
+            clientDT.Columns.Add("telefonszám", typeof(int));
+            foreach (Client c in Clients)
+            {
+                if (c.getName() == clientname)
+                    clientDT.Rows.Add(c.getClientid(), c.getName(), c.getPlace(), c.getTel());
+            }
+            return clientDT;
+        }
     }
 }

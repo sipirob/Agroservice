@@ -116,6 +116,7 @@
     <Compile Include="model\MySQLDatabaseInterface.cs" />
     <Compile Include="model\NewWorkDataLoad.cs" />
     <Compile Include="model\SetDoneWork.cs" />
+    <Compile Include="model\SetPlantDistance.cs" />
     <Compile Include="model\WorkerDataLoad.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -123,6 +124,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="repository\Client.cs" />
+    <Compile Include="repository\PlantDistance.cs" />
     <Compile Include="repository\Parcel.cs" />
     <Compile Include="repository\Work.cs" />
     <Compile Include="repository\Worker.cs" />

@@ -140,6 +140,7 @@
             this.buttonSearchClient.TabIndex = 8;
             this.buttonSearchClient.Text = "Keresés";
             this.buttonSearchClient.UseVisualStyleBackColor = true;
+            this.buttonSearchClient.Click += new System.EventHandler(this.buttonSearchClient_Click);
             // 
             // UserControlWorkerClientData
             // 

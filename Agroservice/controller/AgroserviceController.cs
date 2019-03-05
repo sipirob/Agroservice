@@ -20,6 +20,10 @@ namespace Agroservice.controller
         private model.LoadParcelMap loadParcelMap;
         private model.SetDoneWork setDoneWorkInDatabase;
         private model.LoadParcelData loadParcelDataList;
+        
+
+       
+        private model.SetPlantDistance plantDistance;
 
        
         public AgroserviceController()
@@ -32,9 +36,14 @@ namespace Agroservice.controller
             loadParcelMap = new model.LoadParcelMap();
             setDoneWorkInDatabase = new model.SetDoneWork();
             loadParcelDataList = new model.LoadParcelData();
+            plantDistance = new model.SetPlantDistance();
         }
 
-       
+        
+
+
+
+
         /// <summary>
         /// Ügyfelek adatainak lekérése listából
         /// </summary>
@@ -157,11 +166,43 @@ namespace Agroservice.controller
         {
             model.LoadParcelData.parcelDataLoad();
         }
-
+        /// <summary>
+        /// Szükséges permetszer mennyiségének kiszámolása adott parcellához
+        /// </summary>
+        /// <param name="parcelHa"></param>
+        /// <param name="pesticidLiter"></param>
+        /// <returns>eredmény</returns>
         internal string calculatePesticid(double parcelHa, double pesticidLiter)
         {
             string result = Convert.ToString(parcelHa * pesticidLiter);
             return result;
+        }
+
+        internal void loadVegetablesDistance()
+        {
+            model.SetPlantDistance.setCornDistance();
+        }
+
+        //public int calculateSeed(string plantDistance)
+        //{
+        //   DataTable graincropDis = model.SetPlantDistance.getSeedDatatable();
+        //   foreach(DataRow dr in graincropDis.Columns)
+        //    {
+        //        if(graincropDis.Columns.ToString()==plantDistance)
+                    
+        //    }
+            
+        //}
+        internal DataTable loadGraincropDistanceDt()
+        {
+           DataTable graincropDis= model.SetPlantDistance.getSeedDatatable();
+            return graincropDis;
+            
+        }
+        internal DataTable searchClient(string clientname)
+        {
+            DataTable client = model.ClientDataLoad.returnSearchedClient(clientname);
+            return client;
         }
 
 
