@@ -189,16 +189,16 @@ namespace Agroservice.model
             controller.SetPlantDistance.setCornDistance();
         }
 
-        //public int calculateSeed(string plantDistance)
-        //{
-        //   DataTable graincropDis = controller.SetPlantDistance.getSeedDatatable();
-        //   foreach(DataRow dr in graincropDis.Columns)
-        //    {
-        //        if(graincropDis.Columns.ToString()==plantDistance)
-                    
-        //    }
-            
-        //}
+        public double calculateSeed(int plantDisValue,double parcelHa)
+        {
+            double needSeed = Convert.ToDouble(plantDisValue) * parcelHa;
+            return needSeed;
+
+        }
+        /// <summary>
+        /// vetőmag tőtávolságának és a hozzá tartozó magszám adatainak lekérése
+        /// </summary>
+        /// <returns>tőtávolság, vetőmag adattáblája</returns>
         internal DataTable loadGraincropDistanceDt()
         {
             DataTable graincropDis = controller.SetPlantDistance.plantDistanceWithValue();
@@ -222,6 +222,11 @@ namespace Agroservice.model
             DataTable workersname = controller.WorkerDataLoad.getWorkersName();
             return workersname;
         }
+        /// <summary>
+        /// Dolgozó hozzárendelése munkálathoz
+        /// </summary>
+        /// <param name="workerId">kiválasztott dolgozó id-ja</param>
+        /// <param name="workId">a kiválasztott munkálat id-ja</param>
         internal void setWorkerOfWork(int workerId, int workId)
         {
             controller.SetWorkerOfWork.setWorker(workerId, workId);

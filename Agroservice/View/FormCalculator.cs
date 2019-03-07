@@ -37,10 +37,13 @@ namespace Agroservice.View
             double parcelHa = Convert.ToDouble(labelHa.Text);
             labelPermetszer.Text= model.calculatePesticid(parcelHa,pesticidLiter);
 
-           string plantDistance = metroComboBoxDis.Text;
+           
+            int plantDisValue = Convert.ToInt32(metroComboBoxDis.SelectedValue);
+            
 
-        
-          // controller.calculateSeed(plantDistance);
+           double seed= model.calculateSeed(plantDisValue,parcelHa);
+            labelVetomag.Text = seed.ToString();
+            
             
         }
     }
