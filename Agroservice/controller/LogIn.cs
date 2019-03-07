@@ -15,7 +15,7 @@ namespace Agroservice.repository
         public FormSignIn si = new FormSignIn();
         public  void Login()
         {
-            MySqlConnection connection = new MySqlConnection(model.Connection.connectionString);
+            MySqlConnection connection = new MySqlConnection(controller.Connection.connectionString);
             int i = 0;
             connection.Open();
             MySqlCommand cmd = connection.CreateCommand();

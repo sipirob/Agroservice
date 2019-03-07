@@ -19,7 +19,7 @@ namespace Agroservice
     public partial class UserControlNewWorks : UserControl 
     {
         View.FormCalculator formCalc;
-        AgroserviceController controller = new AgroserviceController();
+        model.AgroserviceModel model = new model.AgroserviceModel();
         GMapPolygon polygon;
         int openlayer = 0;
         PointLatLng endposition;
@@ -63,8 +63,8 @@ namespace Agroservice
                 parcelnumber = item.SubItems[2].Text;
                 workId = Convert.ToInt32(item.SubItems[0].Text);
                 GMapOverlay polyOverlay = new GMapOverlay("polygons");
-                controller.getLoadParcelMapCoordinates(parcelnumber);
-                string[] latlong = controller.getLoadParcelMapCoordinates(parcelnumber);
+                model.getLoadParcelMapCoordinates(parcelnumber);
+                string[] latlong = model.getLoadParcelMapCoordinates(parcelnumber);
 
                 List<PointLatLng> points = new List<PointLatLng>();
 
@@ -131,12 +131,12 @@ namespace Agroservice
 
                 try
                 {
-                    controller.setDoneWork(workId);
+                    model.setDoneWork(workId);
                     listViewNewWork.Items.Clear();
-                    controller.loadNewWorkData();
+                    model.loadNewWorkData();
                     DataTable dt = new DataTable();
 
-                    dt = controller.getNewWorkData();
+                    dt = model.getNewWorkData();
                     foreach (DataRow dr in dt.Rows)
                     {
                         ListViewItem lvi = new ListViewItem(dr["Id"].ToString());
@@ -167,9 +167,9 @@ namespace Agroservice
             //string servicename = listViewNewWork.SelectedItems[3].ToString();
             //string graincropname = listViewNewWork.SelectedItems[4].ToString();
 
-            controller.parcelDataloadFromList();
-            controller.loadParcelData(parcelnumber);
-            double parcelHa= controller.loadParcelData(parcelnumber);
+            model.parcelDataloadFromList();
+            model.loadParcelData(parcelnumber);
+            double parcelHa= model.loadParcelData(parcelnumber);
             formCalc.labelHa.Text = Convert.ToString(parcelHa);
 
         }

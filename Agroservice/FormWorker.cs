@@ -13,7 +13,7 @@ namespace Agroservice
 {
     public partial class FormWorker : Form
     {
-        AgroserviceController controller = new AgroserviceController();
+        model.AgroserviceModel controller = new model.AgroserviceModel();
         UserControlNewWorks userControlNew;
         public void newWorksNumber()
         {

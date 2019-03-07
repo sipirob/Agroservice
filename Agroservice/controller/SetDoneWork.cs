@@ -5,13 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Agroservice.model
+namespace Agroservice.controller
 {
     class SetDoneWork
     {
         internal static void setDoneWorkInDatabase(int workId)
         {
-            MySqlConnection connection = new MySqlConnection(model.Connection.connectionString);
+            MySqlConnection connection = new MySqlConnection(controller.Connection.connectionString);
             connection.Open();
             MySqlCommand cmdUpdate = new MySqlCommand();
             cmdUpdate.Connection = connection;

@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Agroservice.repository;
 
-namespace Agroservice.model
+namespace Agroservice.controller
 {
     class LoadParcelData
     {

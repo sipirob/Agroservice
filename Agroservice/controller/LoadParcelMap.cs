@@ -12,7 +12,7 @@ using System.Windows.Forms;
 using System.Data;
 
 
-namespace Agroservice.model
+namespace Agroservice.controller
 {
     class LoadParcelMap
     {
@@ -26,7 +26,7 @@ namespace Agroservice.model
             ucw.gMapControlParcelMap.MinZoom = 1;
             ucw.gMapControlParcelMap.MaxZoom = 100;
             ucw.gMapControlParcelMap.Zoom = 16;
-            MySqlConnection connection = new MySqlConnection(model.Connection.connectionString);
+            MySqlConnection connection = new MySqlConnection(controller.Connection.connectionString);
 
             string query = "SELECT `coordinates` FROM `parcels` WHERE parcelnumber = '" + parcelnumber  + "'";
             MySqlCommand cmd = new MySqlCommand(query,connection);

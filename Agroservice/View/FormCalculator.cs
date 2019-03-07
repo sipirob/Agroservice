@@ -12,7 +12,7 @@ namespace Agroservice.View
 {
     public partial class FormCalculator : Form 
     {
-        controller.AgroserviceController controller = new controller.AgroserviceController();
+        model.AgroserviceModel model = new model.AgroserviceModel();
         UserControlNewWorks newWorks = new UserControlNewWorks();
         public FormCalculator()
         {
@@ -22,8 +22,8 @@ namespace Agroservice.View
 
         private void FormCalculator_Load(object sender, EventArgs e)
         {
-           controller.loadVegetablesDistance();
-           controller.loadGraincropDistanceDt();
+           model.loadVegetablesDistance();
+           model.loadGraincropDistanceDt();
            // metroComboBoxDis.Items.Add(controller.loadGraincropDistanceDt().DefaultView);
 
 
@@ -33,7 +33,7 @@ namespace Agroservice.View
         {
             double pesticidLiter = Convert.ToDouble(textBoxLiter.Text);
             double parcelHa = Convert.ToDouble(labelHa.Text);
-            labelPermetszer.Text= controller.calculatePesticid(parcelHa,pesticidLiter);
+            labelPermetszer.Text= model.calculatePesticid(parcelHa,pesticidLiter);
 
            string plantDistance = metroComboBoxDis.Text;
 

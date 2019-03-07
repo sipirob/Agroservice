@@ -12,7 +12,7 @@ namespace Agroservice
 {
     public partial class UserControlWorkerClientData : UserControl
     {
-        controller.AgroserviceController controller = new controller.AgroserviceController();
+        model.AgroserviceModel model = new model.AgroserviceModel();
         public UserControlWorkerClientData()
         {
             InitializeComponent();
@@ -22,7 +22,7 @@ namespace Agroservice
         {
             
             string clientname = TextboxClientName.Text;
-            DataTable searchedClient= controller.searchClient(clientname);
+            DataTable searchedClient= model.searchClient(clientname);
             foreach (DataRow dr in searchedClient.Rows)
             {
                 ListViewItem clvi = new ListViewItem(dr["id"].ToString());

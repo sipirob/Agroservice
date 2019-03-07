@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 
-namespace Agroservice.model
+namespace Agroservice.controller
 {
     class SetPlantDistance
     {

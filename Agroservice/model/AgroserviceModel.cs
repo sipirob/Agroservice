@@ -7,36 +7,36 @@ using System.Windows.Forms;
 using System.Data;
 using GMap.NET;
 
-namespace Agroservice.controller
+namespace Agroservice.model
 {
    
-   public class AgroserviceController
+   public class AgroserviceModel
     {
-        private model.ClientDataLoad clientDataLoad;
-        private model.WorkerDataLoad workerDataLoad;
-        private model.NewWorkDataLoad newWorkDataLoad;
-        private model.LoadUsername loadUsername;
-        private model.CompleteWorkDataLoad completeWorkDataLoad;
-        private model.LoadParcelMap loadParcelMap;
-        private model.SetDoneWork setDoneWorkInDatabase;
-        private model.LoadParcelData loadParcelDataList;
+        private controller.ClientDataLoad clientDataLoad;
+        private controller.WorkerDataLoad workerDataLoad;
+        private controller.NewWorkDataLoad newWorkDataLoad;
+        private controller.LoadUsername loadUsername;
+        private controller.CompleteWorkDataLoad completeWorkDataLoad;
+        private controller.LoadParcelMap loadParcelMap;
+        private controller.SetDoneWork setDoneWorkInDatabase;
+        private controller.LoadParcelData loadParcelDataList;
         
 
        
-        private model.SetPlantDistance plantDistance;
+        private controller.SetPlantDistance plantDistance;
 
        
-        public AgroserviceController()
+        public AgroserviceModel()
         {
-            clientDataLoad = new model.ClientDataLoad();
-            workerDataLoad = new model.WorkerDataLoad();
-            newWorkDataLoad = new model.NewWorkDataLoad();
-            loadUsername = new model.LoadUsername();
-            completeWorkDataLoad = new model.CompleteWorkDataLoad();
-            loadParcelMap = new model.LoadParcelMap();
-            setDoneWorkInDatabase = new model.SetDoneWork();
-            loadParcelDataList = new model.LoadParcelData();
-            plantDistance = new model.SetPlantDistance();
+            clientDataLoad = new controller.ClientDataLoad();
+            workerDataLoad = new controller.WorkerDataLoad();
+            newWorkDataLoad = new controller.NewWorkDataLoad();
+            loadUsername = new controller.LoadUsername();
+            completeWorkDataLoad = new controller.CompleteWorkDataLoad();
+            loadParcelMap = new controller.LoadParcelMap();
+            setDoneWorkInDatabase = new controller.SetDoneWork();
+            loadParcelDataList = new controller.LoadParcelData();
+            plantDistance = new controller.SetPlantDistance();
         }
 
         /// <summary>
@@ -45,7 +45,7 @@ namespace Agroservice.controller
         /// <returns>Ügyfelek adatainak listája</returns>
         internal DataTable getClientData()
         {
-            DataTable clientDT = model.ClientDataLoad.getClientDataFromList();
+            DataTable clientDT = controller.ClientDataLoad.getClientDataFromList();
             return clientDT;
         }
         /// <summary>
@@ -53,7 +53,7 @@ namespace Agroservice.controller
         /// </summary>
         public void loadClientData()
         {
-            model.ClientDataLoad.clientDataLoad();
+            controller.ClientDataLoad.clientDataLoad();
         }
 
         /// <summary>
@@ -62,7 +62,7 @@ namespace Agroservice.controller
         /// <returns>Dolgozók adatainak listája</returns>
         internal DataTable getWorkerData()
         {
-            DataTable workerDT = model.WorkerDataLoad.getWorkerDataFromList();
+            DataTable workerDT = controller.WorkerDataLoad.getWorkerDataFromList();
             return workerDT;
         }
         /// <summary>
@@ -70,18 +70,18 @@ namespace Agroservice.controller
         /// </summary>
         public void loadWorkerData()
         {
-            model.WorkerDataLoad.workerDataLoad();
+            controller.WorkerDataLoad.workerDataLoad();
         }
 
         internal DataTable getCompleteWorksData()
         {
-            DataTable compWorkData = model.CompleteWorkDataLoad.getCompleteWorkDataFromList();
+            DataTable compWorkData = controller.CompleteWorkDataLoad.getCompleteWorkDataFromList();
             return compWorkData;
         }
 
         public void loadCompleteData()
         {
-            model.CompleteWorkDataLoad.completeWorkDataLoad();
+            controller.CompleteWorkDataLoad.completeWorkDataLoad();
         }
 
 
@@ -91,7 +91,7 @@ namespace Agroservice.controller
         /// <returns>Az el nem végzett munkálatok listája</returns>
         internal DataTable getNewWorkData()
         {
-            DataTable newWorkDT = model.NewWorkDataLoad.getNewWorkDataFromList();
+            DataTable newWorkDT = controller.NewWorkDataLoad.getNewWorkDataFromList();
             return newWorkDT;
         }
 
@@ -101,7 +101,7 @@ namespace Agroservice.controller
         /// </summary>
         public void loadNewWorkData()
         {
-            model.NewWorkDataLoad.newWorkDataLoad();
+            controller.NewWorkDataLoad.newWorkDataLoad();
            
         }
 
@@ -111,7 +111,7 @@ namespace Agroservice.controller
         /// <returns>A belépett felhasználó neve</returns>
         internal string getloadUsername()
         {
-            string username = model.LoadUsername.getUsername();
+            string username = controller.LoadUsername.getUsername();
             return username;
                 
         }
@@ -122,7 +122,7 @@ namespace Agroservice.controller
         /// </summary>
         public void usernameLoad()
         {
-            model.LoadUsername.workerDataLoad();
+            controller.LoadUsername.workerDataLoad();
         }
 
         /// <summary>
@@ -132,7 +132,7 @@ namespace Agroservice.controller
         /// <returns>parcella koordinátáinak tömbje</returns>
         internal string[] getLoadParcelMapCoordinates(string parcelnumber)
         {
-            string[] coordinates = model.LoadParcelMap.LoadParcelCoordinates(parcelnumber);
+            string[] coordinates = controller.LoadParcelMap.LoadParcelCoordinates(parcelnumber);
             return coordinates;
         }
 
@@ -142,7 +142,7 @@ namespace Agroservice.controller
         /// <returns>Bejelentkezett dolgozó nem végzett munkálatainak száma</returns>
         internal string loadNewWorksNumber(string username)
         {
-            string newWorksNumber= model.LoadNewWorksNumber.newWorksNumberLoad(username);
+            string newWorksNumber= controller.LoadNewWorksNumber.newWorksNumberLoad(username);
             return newWorksNumber;
         }
         /// <summary>
@@ -151,7 +151,7 @@ namespace Agroservice.controller
         /// <param name="workId">A kiválasztott munkálat id-je</param>
         internal void setDoneWork(int workId)
         {
-            model.SetDoneWork.setDoneWorkInDatabase(workId);
+            controller.SetDoneWork.setDoneWorkInDatabase(workId);
         }
 
         /// <summary>
@@ -161,13 +161,13 @@ namespace Agroservice.controller
         /// <returns>a parcella területe hektárban</returns>
         internal double loadParcelData(string parcelnumber)
         {
-           double parcelHa= model.LoadParcelData.getParcelData(parcelnumber);
+           double parcelHa= controller.LoadParcelData.getParcelData(parcelnumber);
             return parcelHa;
         }
 
         internal void parcelDataloadFromList()
         {
-            model.LoadParcelData.parcelDataLoad();
+            controller.LoadParcelData.parcelDataLoad();
         }
         /// <summary>
         /// Szükséges permetszer mennyiségének kiszámolása adott parcellához
@@ -183,12 +183,12 @@ namespace Agroservice.controller
 
         internal void loadVegetablesDistance()
         {
-            model.SetPlantDistance.setCornDistance();
+            controller.SetPlantDistance.setCornDistance();
         }
 
         //public int calculateSeed(string plantDistance)
         //{
-        //   DataTable graincropDis = model.SetPlantDistance.getSeedDatatable();
+        //   DataTable graincropDis = controller.SetPlantDistance.getSeedDatatable();
         //   foreach(DataRow dr in graincropDis.Columns)
         //    {
         //        if(graincropDis.Columns.ToString()==plantDistance)
@@ -198,7 +198,7 @@ namespace Agroservice.controller
         //}
         internal DataTable loadGraincropDistanceDt()
         {
-           DataTable graincropDis= model.SetPlantDistance.getSeedDatatable();
+           DataTable graincropDis= controller.SetPlantDistance.getSeedDatatable();
             return graincropDis;
             
         }
@@ -209,7 +209,7 @@ namespace Agroservice.controller
         /// <returns>keresett ügyfél adatai</returns>
         internal DataTable searchClient(string clientname)
         {
-            DataTable client = model.ClientDataLoad.returnSearchedClient(clientname);
+            DataTable client = controller.ClientDataLoad.returnSearchedClient(clientname);
             return client;
         }
 

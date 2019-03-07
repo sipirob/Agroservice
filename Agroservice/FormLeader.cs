@@ -16,12 +16,12 @@ namespace Agroservice
     public partial class FormLeader :Form
     {
         public Client cl;
-       AgroserviceController controller;
+        model.AgroserviceModel controller;
         private LogIn logIn;
 
         public FormLeader()
         {
-            controller = new AgroserviceController();
+            controller = new model.AgroserviceModel();
             InitializeComponent();
         }
 
@@ -37,9 +37,9 @@ namespace Agroservice
 
         private void buttonAllClient_Click(object sender, EventArgs e)
         {
-           // Client cl = new Client();
-            AgroserviceController controller = new AgroserviceController();
-            controller.loadClientData();
+            // Client cl = new Client();
+            model.AgroserviceModel model = new model.AgroserviceModel();
+            model.loadClientData();
            // dataGridViewClient.DataSource = controller.getClientData();
             
            
@@ -48,8 +48,8 @@ namespace Agroservice
 
         private void FormLeader_Load(object sender, EventArgs e)
         {
-            
-            AgroserviceController controller = new AgroserviceController();
+
+            model.AgroserviceModel model = new model.AgroserviceModel();
             userControlLeaderClientsData1.Hide();
             userControlLeaderWorks1.Hide();
            
@@ -57,20 +57,20 @@ namespace Agroservice
             //controller.loadWorkerData();
             //dataGridViewWorkers.DataSource = controller.getWorkerData();
 
-            controller.loadNewWorkData();
-            userControlLeaderWorks1.dataGridViewAllNewWorks.DataSource = controller.getNewWorkData();
+            model.loadNewWorkData();
+            userControlLeaderWorks1.dataGridViewAllNewWorks.DataSource = model.getNewWorkData();
 
-            controller.usernameLoad();
-            labelUsername.Text = controller.getloadUsername();
+            model.usernameLoad();
+            labelUsername.Text = model.getloadUsername();
 
-            controller.loadCompleteData();
-           userControlLeaderWorks1.dataGridViewAllCompleteWorks.DataSource = controller.getCompleteWorksData();
+            model.loadCompleteData();
+           userControlLeaderWorks1.dataGridViewAllCompleteWorks.DataSource = model.getCompleteWorksData();
 
 
-            controller.loadClientData();
+            model.loadClientData();
            // dataGridViewClient.DataSource = controller.getClientData();
             DataTable dt = new DataTable();
-            dt = controller.getClientData();
+            dt = model.getClientData();
             
             ListViewItem lv = new ListViewItem();
             foreach (DataRow dr in dt.Rows)
