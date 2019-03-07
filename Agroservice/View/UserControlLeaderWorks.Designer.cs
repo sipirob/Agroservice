@@ -36,6 +36,7 @@
             this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridViewAllCompleteWorks = new System.Windows.Forms.DataGridView();
+            this.metroComboBoxWorkers = new MetroFramework.Controls.MetroComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAllNewWorks)).BeginInit();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
@@ -51,8 +52,9 @@
             this.dataGridViewAllNewWorks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewAllNewWorks.Location = new System.Drawing.Point(7, 62);
             this.dataGridViewAllNewWorks.Name = "dataGridViewAllNewWorks";
-            this.dataGridViewAllNewWorks.Size = new System.Drawing.Size(814, 439);
+            this.dataGridViewAllNewWorks.Size = new System.Drawing.Size(676, 439);
             this.dataGridViewAllNewWorks.TabIndex = 0;
+            this.dataGridViewAllNewWorks.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewAllNewWorks_CellContentClick);
             // 
             // label1
             // 
@@ -72,7 +74,7 @@
             this.metroTabControl1.ItemSize = new System.Drawing.Size(120, 50);
             this.metroTabControl1.Location = new System.Drawing.Point(25, 15);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 1;
+            this.metroTabControl1.SelectedIndex = 0;
             this.metroTabControl1.Size = new System.Drawing.Size(1022, 581);
             this.metroTabControl1.Style = MetroFramework.MetroColorStyle.Green;
             this.metroTabControl1.TabIndex = 2;
@@ -82,12 +84,13 @@
             // metroTabPage1
             // 
             this.metroTabPage1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.metroTabPage1.Controls.Add(this.metroComboBoxWorkers);
             this.metroTabPage1.Controls.Add(this.buttonAddWorker);
             this.metroTabPage1.Controls.Add(this.label1);
             this.metroTabPage1.Controls.Add(this.dataGridViewAllNewWorks);
             this.metroTabPage1.HorizontalScrollbarBarColor = true;
             this.metroTabPage1.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroTabPage1.HorizontalScrollbarSize = 4;
+            this.metroTabPage1.HorizontalScrollbarSize = 2;
             this.metroTabPage1.Location = new System.Drawing.Point(4, 54);
             this.metroTabPage1.Name = "metroTabPage1";
             this.metroTabPage1.Size = new System.Drawing.Size(1014, 523);
@@ -96,11 +99,11 @@
             this.metroTabPage1.Text = "Új munkálatok";
             this.metroTabPage1.VerticalScrollbarBarColor = true;
             this.metroTabPage1.VerticalScrollbarHighlightOnWheel = false;
-            this.metroTabPage1.VerticalScrollbarSize = 4;
+            this.metroTabPage1.VerticalScrollbarSize = 2;
             // 
             // buttonAddWorker
             // 
-            this.buttonAddWorker.Location = new System.Drawing.Point(871, 62);
+            this.buttonAddWorker.Location = new System.Drawing.Point(861, 450);
             this.buttonAddWorker.Name = "buttonAddWorker";
             this.buttonAddWorker.Size = new System.Drawing.Size(139, 51);
             this.buttonAddWorker.TabIndex = 2;
@@ -113,7 +116,7 @@
             this.metroTabPage2.Controls.Add(this.dataGridViewAllCompleteWorks);
             this.metroTabPage2.HorizontalScrollbarBarColor = true;
             this.metroTabPage2.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroTabPage2.HorizontalScrollbarSize = 4;
+            this.metroTabPage2.HorizontalScrollbarSize = 2;
             this.metroTabPage2.Location = new System.Drawing.Point(4, 54);
             this.metroTabPage2.Name = "metroTabPage2";
             this.metroTabPage2.Size = new System.Drawing.Size(1014, 523);
@@ -121,7 +124,7 @@
             this.metroTabPage2.Text = "Elkészült munkálatok";
             this.metroTabPage2.VerticalScrollbarBarColor = true;
             this.metroTabPage2.VerticalScrollbarHighlightOnWheel = false;
-            this.metroTabPage2.VerticalScrollbarSize = 4;
+            this.metroTabPage2.VerticalScrollbarSize = 2;
             // 
             // label2
             // 
@@ -139,6 +142,16 @@
             this.dataGridViewAllCompleteWorks.Name = "dataGridViewAllCompleteWorks";
             this.dataGridViewAllCompleteWorks.Size = new System.Drawing.Size(717, 458);
             this.dataGridViewAllCompleteWorks.TabIndex = 2;
+            // 
+            // metroComboBoxWorkers
+            // 
+            this.metroComboBoxWorkers.FormattingEnabled = true;
+            this.metroComboBoxWorkers.ItemHeight = 23;
+            this.metroComboBoxWorkers.Location = new System.Drawing.Point(718, 62);
+            this.metroComboBoxWorkers.Name = "metroComboBoxWorkers";
+            this.metroComboBoxWorkers.Size = new System.Drawing.Size(293, 29);
+            this.metroComboBoxWorkers.TabIndex = 3;
+            this.metroComboBoxWorkers.UseSelectable = true;
             // 
             // UserControlLeaderWorks
             // 
@@ -170,5 +183,6 @@
         private System.Windows.Forms.Button buttonAddWorker;
         private System.Windows.Forms.Label label2;
         public System.Windows.Forms.DataGridView dataGridViewAllCompleteWorks;
+        public MetroFramework.Controls.MetroComboBox metroComboBoxWorkers;
     }
 }

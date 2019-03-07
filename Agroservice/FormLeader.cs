@@ -16,12 +16,12 @@ namespace Agroservice
     public partial class FormLeader :Form
     {
         public Client cl;
-        model.AgroserviceModel controller;
+        model.AgroserviceModel model;
         private LogIn logIn;
 
         public FormLeader()
         {
-            controller = new model.AgroserviceModel();
+            model = new model.AgroserviceModel();
             InitializeComponent();
         }
 
@@ -102,6 +102,9 @@ namespace Agroservice
             panelSign.Top = buttonNewWork.Top;
             userControlLeaderClientsData1.Hide();
             userControlLeaderWorks1.Show();
+            model.loadWorkerData();
+            userControlLeaderWorks1.metroComboBoxWorkers.DataSource = model.getWorkersName().DefaultView;
+            userControlLeaderWorks1.metroComboBoxWorkers.DisplayMember = "név";
         }
 
         private void buttonHome_Click(object sender, EventArgs e)

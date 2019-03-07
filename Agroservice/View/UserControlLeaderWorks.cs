@@ -16,5 +16,10 @@ namespace Agroservice
         {
             InitializeComponent();
         }
+
+        private void dataGridViewAllNewWorks_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
     }
 }

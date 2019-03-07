@@ -95,7 +95,7 @@ namespace Agroservice.model
             return newWorkDT;
         }
 
-      
+
         /// <summary>
         /// Az el nem végzett munkálatok lekérése adatbázisból
         /// </summary>
@@ -211,6 +211,13 @@ namespace Agroservice.model
         {
             DataTable client = controller.ClientDataLoad.returnSearchedClient(clientname);
             return client;
+        }
+
+
+        internal DataTable getWorkersName()
+        {
+            DataTable workersname = controller.WorkerDataLoad.getWorkersName();
+            return workersname;
         }
 
 

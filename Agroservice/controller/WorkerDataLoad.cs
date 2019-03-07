@@ -73,6 +73,16 @@ namespace Agroservice.controller
             }
             return workerDT;
         }
+        public static DataTable getWorkersName()
+        {
+            DataTable wname = new DataTable();
+            wname.Columns.Add("név", typeof(string));
+            foreach(Worker w in Workers)
+            {
+                wname.Rows.Add(w.getName());
+            }
+            return wname;
+        }
        
     }
 }
