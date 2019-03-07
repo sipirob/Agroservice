@@ -201,7 +201,7 @@ namespace Agroservice.model
         //}
         internal DataTable loadGraincropDistanceDt()
         {
-           DataTable graincropDis= controller.SetPlantDistance.getSeedDatatable();
+            DataTable graincropDis = controller.SetPlantDistance.plantDistanceWithValue();
             return graincropDis;
             
         }

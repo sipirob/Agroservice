@@ -22,9 +22,11 @@ namespace Agroservice.View
 
         private void FormCalculator_Load(object sender, EventArgs e)
         {
-           model.loadVegetablesDistance();
-           model.loadGraincropDistanceDt();
-           metroComboBoxDis.Items.Add(model.loadGraincropDistanceDt());
+            model.loadVegetablesDistance();
+            model.loadGraincropDistanceDt();
+            metroComboBoxDis.DataSource = model.loadGraincropDistanceDt().DefaultView;
+            metroComboBoxDis.DisplayMember = "distance";
+            metroComboBoxDis.ValueMember = "value";
 
 
         }

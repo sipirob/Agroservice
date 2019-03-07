@@ -126,6 +126,7 @@
     </Compile>
     <Compile Include="repository\Client.cs" />
     <Compile Include="repository\PlantDistance.cs" />
+    <Compile Include="repository\PlantDistance2.cs" />
     <Compile Include="repository\Parcel.cs" />
     <Compile Include="repository\Work.cs" />
     <Compile Include="repository\Worker.cs" />
