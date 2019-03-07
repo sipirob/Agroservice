@@ -39,11 +39,6 @@ namespace Agroservice.controller
             plantDistance = new model.SetPlantDistance();
         }
 
-        
-
-
-
-
         /// <summary>
         /// Ügyfelek adatainak lekérése listából
         /// </summary>
@@ -150,12 +145,20 @@ namespace Agroservice.controller
             string newWorksNumber= model.LoadNewWorksNumber.newWorksNumberLoad(username);
             return newWorksNumber;
         }
-
+        /// <summary>
+        /// Munkálat elvégzésének visszaigazolása
+        /// </summary>
+        /// <param name="workId">A kiválasztott munkálat id-je</param>
         internal void setDoneWork(int workId)
         {
             model.SetDoneWork.setDoneWorkInDatabase(workId);
         }
 
+        /// <summary>
+        /// kiválasztott termőföldhöz tartozó parcella adatainak lekérése
+        /// </summary>
+        /// <param name="parcelnumber"></param>
+        /// <returns>a parcella területe hektárban</returns>
         internal double loadParcelData(string parcelnumber)
         {
            double parcelHa= model.LoadParcelData.getParcelData(parcelnumber);
@@ -169,8 +172,8 @@ namespace Agroservice.controller
         /// <summary>
         /// Szükséges permetszer mennyiségének kiszámolása adott parcellához
         /// </summary>
-        /// <param name="parcelHa"></param>
-        /// <param name="pesticidLiter"></param>
+        /// <param name="parcelHa">a kiválasztott termőföld területe hektárban</param>
+        /// <param name="pesticidLiter">a permetszer szükséges hektáronkénti liter mennyisége</param>
         /// <returns>eredmény</returns>
         internal string calculatePesticid(double parcelHa, double pesticidLiter)
         {
@@ -199,6 +202,11 @@ namespace Agroservice.controller
             return graincropDis;
             
         }
+        /// <summary>
+        /// Ügyfél keresése név alapján
+        /// </summary>
+        /// <param name="clientname">a keresett ügyfél neve</param>
+        /// <returns>keresett ügyfél adatai</returns>
         internal DataTable searchClient(string clientname)
         {
             DataTable client = model.ClientDataLoad.returnSearchedClient(clientname);
