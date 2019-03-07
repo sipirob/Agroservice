@@ -141,10 +141,10 @@
     <Compile Include="UserControlWorkerClientData.Designer.cs">
       <DependentUpon>UserControlWorkerClientData.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControlLeaderWorks.cs">
+    <Compile Include="View\UserControlLeaderWorks.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControlLeaderWorks.Designer.cs">
+    <Compile Include="View\UserControlLeaderWorks.Designer.cs">
       <DependentUpon>UserControlLeaderWorks.cs</DependentUpon>
     </Compile>
     <Compile Include="View\FormCalculator.cs">
@@ -183,7 +183,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="UserControlLeaderWorks.resx">
+    <EmbeddedResource Include="View\UserControlLeaderWorks.resx">
       <DependentUpon>UserControlLeaderWorks.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlLeaderClientsData.resx">
