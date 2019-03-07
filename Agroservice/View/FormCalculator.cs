@@ -24,7 +24,7 @@ namespace Agroservice.View
         {
            model.loadVegetablesDistance();
            model.loadGraincropDistanceDt();
-           // metroComboBoxDis.Items.Add(controller.loadGraincropDistanceDt().DefaultView);
+           metroComboBoxDis.Items.Add(model.loadGraincropDistanceDt());
 
 
         }

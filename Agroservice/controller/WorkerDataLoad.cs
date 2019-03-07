@@ -77,9 +77,10 @@ namespace Agroservice.controller
         {
             DataTable wname = new DataTable();
             wname.Columns.Add("név", typeof(string));
-            foreach(Worker w in Workers)
+            wname.Columns.Add("id", typeof(int));
+            foreach (Worker w in Workers)
             {
-                wname.Rows.Add(w.getName());
+                wname.Rows.Add(w.getName(),w.getWorkerid());
             }
             return wname;
         }

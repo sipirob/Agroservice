@@ -12,6 +12,7 @@ namespace Agroservice
 {
     public partial class UserControlLeaderWorks : UserControl
     {
+        model.AgroserviceModel model = new model.AgroserviceModel();
         public UserControlLeaderWorks()
         {
             InitializeComponent();
@@ -20,6 +21,15 @@ namespace Agroservice
         private void dataGridViewAllNewWorks_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             
+        }
+
+        private void buttonAddWorker_Click(object sender, EventArgs e)
+        {
+            int workId = Convert.ToInt32(dataGridViewAllNewWorks.CurrentRow.Cells[0].Value);
+            int workerId = Convert.ToInt32(metroComboBoxWorkers.SelectedValue);
+            model.setWorkerOfWork(workerId, workId);
+            dataGridViewAllNewWorks.Rows.RemoveAt(dataGridViewAllNewWorks.SelectedRows[0].Index);
+            MessageBox.Show("Dolgozó hozzáadva a munkálathoz");
         }
     }
 }

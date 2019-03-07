@@ -20,6 +20,7 @@ namespace Agroservice.model
         private controller.LoadParcelMap loadParcelMap;
         private controller.SetDoneWork setDoneWorkInDatabase;
         private controller.LoadParcelData loadParcelDataList;
+        private controller.SetWorkerOfWork setWorkerofWork;
         
 
        
@@ -37,6 +38,7 @@ namespace Agroservice.model
             setDoneWorkInDatabase = new controller.SetDoneWork();
             loadParcelDataList = new controller.LoadParcelData();
             plantDistance = new controller.SetPlantDistance();
+            setWorkerofWork = new controller.SetWorkerOfWork();
         }
 
         /// <summary>
@@ -117,6 +119,7 @@ namespace Agroservice.model
         }
 
       
+
         /// <summary>
         /// A belépett felhasználó nevének lekérdezése adatbázisból
         /// </summary>
@@ -218,6 +221,10 @@ namespace Agroservice.model
         {
             DataTable workersname = controller.WorkerDataLoad.getWorkersName();
             return workersname;
+        }
+        internal void setWorkerOfWork(int workerId, int workId)
+        {
+            controller.SetWorkerOfWork.setWorker(workerId, workId);
         }
 
 

@@ -184,6 +184,7 @@
             this.userControlLeaderWorks1.Name = "userControlLeaderWorks1";
             this.userControlLeaderWorks1.Size = new System.Drawing.Size(1062, 601);
             this.userControlLeaderWorks1.TabIndex = 9;
+            this.userControlLeaderWorks1.Load += new System.EventHandler(this.userControlLeaderWorks1_Load);
             // 
             // userControlLeaderClientsData1
             // 

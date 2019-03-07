@@ -52,6 +52,7 @@ namespace Agroservice
             model.AgroserviceModel model = new model.AgroserviceModel();
             userControlLeaderClientsData1.Hide();
             userControlLeaderWorks1.Hide();
+
            
 
             //controller.loadWorkerData();
@@ -102,9 +103,16 @@ namespace Agroservice
             panelSign.Top = buttonNewWork.Top;
             userControlLeaderClientsData1.Hide();
             userControlLeaderWorks1.Show();
+
             model.loadWorkerData();
+            userControlLeaderAllNewWorks1.metroComboBoxWorkers.Items.Clear();
             userControlLeaderWorks1.metroComboBoxWorkers.DataSource = model.getWorkersName().DefaultView;
             userControlLeaderWorks1.metroComboBoxWorkers.DisplayMember = "név";
+            userControlLeaderWorks1.metroComboBoxWorkers.ValueMember = "id";
+
+           
+
+
         }
 
         private void buttonHome_Click(object sender, EventArgs e)
@@ -113,8 +121,9 @@ namespace Agroservice
             userControlLeaderClientsData1.Hide();
         }
 
-      
-
-      
+        private void userControlLeaderWorks1_Load(object sender, EventArgs e)
+        {
+           
+        }
     }
 }

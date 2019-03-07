@@ -42,7 +42,8 @@ namespace Agroservice.controller
             string query = "";
             if(FormSignIn.leader == true)
             {
-                 query = "SELECT work.id,`date`,`parcelnumber`,`workname`,`graincropname`,clientdata.name as clientname, workerdata.name as workername,`rating`,`comment`,`price`,`done` FROM worker,client,`work`,clientdata, workerdata where work.workerid=worker.id and work.clientid=client.id and worker.id=workerdata.id and client.id=clientdata.id and done=0";
+                // query = "SELECT work.id,`date`,`parcelnumber`,`workname`,`graincropname`,clientdata.name as clientname, workerdata.name as workername,`rating`,`comment`,`price`,`done` FROM worker,client,`work`,clientdata, workerdata where work.workerid=worker.id and work.clientid=client.id and worker.id=workerdata.id and client.id=clientdata.id and done=0 and workerid=0";
+                query = "SELECT work.id,`date`,`parcelnumber`,`workname`,`graincropname`,clientdata.name as clientname,workerid as workername, `rating`,`comment`,`price`,`done` FROM worker,client,`work`,clientdata where work.clientid=client.id  and client.id=clientdata.id  and work.workerid is null group by id";
             }
             else if (FormSignIn.leader==false)
             {
