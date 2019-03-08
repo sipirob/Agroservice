@@ -74,7 +74,7 @@
             this.metroTabControl1.ItemSize = new System.Drawing.Size(120, 50);
             this.metroTabControl1.Location = new System.Drawing.Point(25, 15);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 0;
+            this.metroTabControl1.SelectedIndex = 1;
             this.metroTabControl1.Size = new System.Drawing.Size(1022, 581);
             this.metroTabControl1.Style = MetroFramework.MetroColorStyle.Green;
             this.metroTabControl1.TabIndex = 2;
@@ -148,6 +148,7 @@
             // 
             // dataGridViewAllCompleteWorks
             // 
+            this.dataGridViewAllCompleteWorks.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dataGridViewAllCompleteWorks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewAllCompleteWorks.Location = new System.Drawing.Point(3, 49);
             this.dataGridViewAllCompleteWorks.Name = "dataGridViewAllCompleteWorks";

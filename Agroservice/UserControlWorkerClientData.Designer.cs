@@ -42,14 +42,17 @@
             // 
             // listViewClientData
             // 
+            this.listViewClientData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.listViewClientData.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3,
             this.columnHeader4});
+            this.listViewClientData.FullRowSelect = true;
+            this.listViewClientData.GridLines = true;
             this.listViewClientData.Location = new System.Drawing.Point(22, 69);
             this.listViewClientData.Name = "listViewClientData";
-            this.listViewClientData.Size = new System.Drawing.Size(540, 516);
+            this.listViewClientData.Size = new System.Drawing.Size(487, 516);
             this.listViewClientData.TabIndex = 1;
             this.listViewClientData.UseCompatibleStateImageBehavior = false;
             this.listViewClientData.View = System.Windows.Forms.View.Details;

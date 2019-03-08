@@ -18,5 +18,10 @@ namespace Agroservice
         }
 
         public static object ListViewClientsData { get; internal set; }
+
+        private void metroTabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

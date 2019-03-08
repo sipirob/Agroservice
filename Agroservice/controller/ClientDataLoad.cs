@@ -89,6 +89,7 @@ namespace Agroservice.controller
             {
                 if (c.getName() == clientname)
                     clientDT.Rows.Add(c.getClientid(), c.getName(), c.getPlace(), c.getTel());
+               
             }
             return clientDT;
         }

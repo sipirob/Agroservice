@@ -31,7 +31,7 @@ namespace Agroservice
                 clvi.SubItems.Add(dr["telefonszám"].ToString());
                 listViewClientData.Items.Clear();
                 listViewClientData.Items.Add(clvi);
-                break;
+                
             }
         }
     }
