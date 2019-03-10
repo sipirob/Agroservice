@@ -85,9 +85,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="controller\DeleteUser.cs" />
+    <Compile Include="controller\DeleteWorker.cs" />
     <Compile Include="controller\SetWorkerOfWork.cs" />
     <Compile Include="model\AgroserviceModel.cs" />
-    <Compile Include="model\LogInController.cs" />
     <Compile Include="FormLeader.cs">
       <SubType>Form</SubType>
     </Compile>

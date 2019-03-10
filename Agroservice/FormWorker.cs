@@ -70,9 +70,7 @@ namespace Agroservice
             workername = controller.getloadUsername();
             labelUsername.Text = workername;
 
-            //Elvégzett munkálatok betöltése
-            controller.loadCompleteData();
-            userControlCompleteWorks1.dataGridViewCompleteWorks.DataSource = controller.getCompleteWorksData();
+           
 
             //Függőben lévő munkálatok betöltése
             controller.loadNewWorkData();
@@ -111,6 +109,11 @@ namespace Agroservice
             userControlCompleteWorks1.Show();
             userControlWorkerClientData1.Hide();
             userControlNewWorks1.Hide();
+            //Elvégzett munkálatok betöltése
+            controller.loadCompleteData();
+
+            userControlCompleteWorks1.dataGridView1.DataSource = null;
+            userControlCompleteWorks1.dataGridView1.DataSource = controller.getCompleteWorksData();
 
         }
 

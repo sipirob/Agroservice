@@ -41,6 +41,8 @@ namespace Agroservice.model
             setWorkerofWork = new controller.SetWorkerOfWork();
         }
 
+       
+
         /// <summary>
         /// Ügyfelek adatainak lekérése listából
         /// </summary>
@@ -57,6 +59,7 @@ namespace Agroservice.model
         {
             controller.ClientDataLoad.clientDataLoad();
         }
+
 
         /// <summary>
         /// Dolgozók adatainak lekérése listából
@@ -231,7 +234,14 @@ namespace Agroservice.model
         {
             controller.SetWorkerOfWork.setWorker(workerId, workId);
         }
+        internal void getdeleteUser(int clientid)
+        {
+            controller.DeleteUser.deleteUser(clientid);
+        }
 
-
+        internal void getDeleteWorker(int workerid)
+        {
+            controller.DeleteWorker.deleteWorker(workerid);
+        }
     }
 }
