@@ -12,10 +12,13 @@ namespace Agroservice
 {
     public partial class UserControlLeaderClientsData : UserControl
     {
+        int workerid;
         model.AgroserviceModel model = new model.AgroserviceModel();
         public UserControlLeaderClientsData()
         {
             InitializeComponent();
+            listBoxWorkers.ValueMember = "id";
+            //workerid = Convert.ToInt32(listBoxWorkers.SelectedValue);
         }
 
         public static object ListViewClientsData { get; internal set; }
@@ -84,6 +87,25 @@ namespace Agroservice
                 
             else 
             return;
+        }
+
+        private void buttonUpdateWorkerData_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void listBoxWorkers_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            workerid = Convert.ToInt32(listBoxWorkers.SelectedValue);
+            if (listBoxWorkers.SelectedIndex > 0)
+            {
+                DataTable workerdata = model.getSelectedWorkerdata(workerid);
+                textBoxWorkerName.Text = workerdata.Rows[0]["név"].ToString();
+            }
+
+
+           
+
         }
     }
 }

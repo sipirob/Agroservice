@@ -45,17 +45,17 @@
             this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonUpdateWorkerData = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBoxWorkerTelnumber = new System.Windows.Forms.TextBox();
+            this.textBoxWorkerPlace = new System.Windows.Forms.TextBox();
+            this.textBoxWorkerBirthday = new System.Windows.Forms.TextBox();
+            this.textBoxWorkerName = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -232,7 +232,7 @@
             // 
             this.metroTabPage2.Controls.Add(this.button4);
             this.metroTabPage2.Controls.Add(this.button3);
-            this.metroTabPage2.Controls.Add(this.button2);
+            this.metroTabPage2.Controls.Add(this.buttonUpdateWorkerData);
             this.metroTabPage2.Controls.Add(this.button1);
             this.metroTabPage2.Controls.Add(this.groupBox2);
             this.metroTabPage2.Controls.Add(this.groupBox1);
@@ -268,14 +268,15 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button2
+            // buttonUpdateWorkerData
             // 
-            this.button2.Location = new System.Drawing.Point(843, 96);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(121, 67);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Módosít";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonUpdateWorkerData.Location = new System.Drawing.Point(843, 96);
+            this.buttonUpdateWorkerData.Name = "buttonUpdateWorkerData";
+            this.buttonUpdateWorkerData.Size = new System.Drawing.Size(121, 67);
+            this.buttonUpdateWorkerData.TabIndex = 6;
+            this.buttonUpdateWorkerData.Text = "Módosít";
+            this.buttonUpdateWorkerData.UseVisualStyleBackColor = true;
+            this.buttonUpdateWorkerData.Click += new System.EventHandler(this.buttonUpdateWorkerData_Click);
             // 
             // button1
             // 
@@ -292,10 +293,10 @@
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.textBox6);
-            this.groupBox2.Controls.Add(this.textBox5);
-            this.groupBox2.Controls.Add(this.textBox4);
-            this.groupBox2.Controls.Add(this.textBox3);
+            this.groupBox2.Controls.Add(this.textBoxWorkerTelnumber);
+            this.groupBox2.Controls.Add(this.textBoxWorkerPlace);
+            this.groupBox2.Controls.Add(this.textBoxWorkerBirthday);
+            this.groupBox2.Controls.Add(this.textBoxWorkerName);
             this.groupBox2.Location = new System.Drawing.Point(300, 197);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(499, 262);
@@ -339,33 +340,33 @@
             this.label5.TabIndex = 5;
             this.label5.Text = "Név:";
             // 
-            // textBox6
+            // textBoxWorkerTelnumber
             // 
-            this.textBox6.Location = new System.Drawing.Point(172, 184);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(165, 27);
-            this.textBox6.TabIndex = 4;
+            this.textBoxWorkerTelnumber.Location = new System.Drawing.Point(172, 184);
+            this.textBoxWorkerTelnumber.Name = "textBoxWorkerTelnumber";
+            this.textBoxWorkerTelnumber.Size = new System.Drawing.Size(165, 27);
+            this.textBoxWorkerTelnumber.TabIndex = 4;
             // 
-            // textBox5
+            // textBoxWorkerPlace
             // 
-            this.textBox5.Location = new System.Drawing.Point(172, 138);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(165, 27);
-            this.textBox5.TabIndex = 3;
+            this.textBoxWorkerPlace.Location = new System.Drawing.Point(172, 138);
+            this.textBoxWorkerPlace.Name = "textBoxWorkerPlace";
+            this.textBoxWorkerPlace.Size = new System.Drawing.Size(165, 27);
+            this.textBoxWorkerPlace.TabIndex = 3;
             // 
-            // textBox4
+            // textBoxWorkerBirthday
             // 
-            this.textBox4.Location = new System.Drawing.Point(172, 91);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(165, 27);
-            this.textBox4.TabIndex = 2;
+            this.textBoxWorkerBirthday.Location = new System.Drawing.Point(172, 91);
+            this.textBoxWorkerBirthday.Name = "textBoxWorkerBirthday";
+            this.textBoxWorkerBirthday.Size = new System.Drawing.Size(165, 27);
+            this.textBoxWorkerBirthday.TabIndex = 2;
             // 
-            // textBox3
+            // textBoxWorkerName
             // 
-            this.textBox3.Location = new System.Drawing.Point(172, 43);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(165, 27);
-            this.textBox3.TabIndex = 1;
+            this.textBoxWorkerName.Location = new System.Drawing.Point(172, 43);
+            this.textBoxWorkerName.Name = "textBoxWorkerName";
+            this.textBoxWorkerName.Size = new System.Drawing.Size(165, 27);
+            this.textBoxWorkerName.TabIndex = 1;
             // 
             // groupBox1
             // 
@@ -438,6 +439,7 @@
             this.listBoxWorkers.Name = "listBoxWorkers";
             this.listBoxWorkers.Size = new System.Drawing.Size(227, 445);
             this.listBoxWorkers.TabIndex = 2;
+            this.listBoxWorkers.SelectedIndexChanged += new System.EventHandler(this.listBoxWorkers_SelectedIndexChanged);
             // 
             // UserControlLeaderClientsData
             // 
@@ -476,17 +478,17 @@
         private MetroFramework.Controls.MetroTabPage metroTabPage2;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonUpdateWorkerData;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBoxWorkerTelnumber;
+        private System.Windows.Forms.TextBox textBoxWorkerPlace;
+        private System.Windows.Forms.TextBox textBoxWorkerBirthday;
+        private System.Windows.Forms.TextBox textBoxWorkerName;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;

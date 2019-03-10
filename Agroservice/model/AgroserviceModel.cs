@@ -89,6 +89,7 @@ namespace Agroservice.model
             controller.CompleteWorkDataLoad.completeWorkDataLoad();
         }
 
+       
 
         /// <summary>
         /// A még el nem végzett munkálatok listájának lekérése
@@ -243,5 +244,10 @@ namespace Agroservice.model
         {
             controller.DeleteWorker.deleteWorker(workerid);
         }
+        internal DataTable getSelectedWorkerdata(int workerid)
+        {
+           return controller.WorkerDataLoad.getSelectedWorkerData(workerid);
+        }
+
     }
 }

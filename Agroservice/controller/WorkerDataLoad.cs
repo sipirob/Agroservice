@@ -85,6 +85,20 @@ namespace Agroservice.controller
             }
             return wname;
         }
-       
+        public static DataTable getSelectedWorkerData(int workerid)
+        {
+            DataTable workerDT = new DataTable();
+            workerDT.Columns.Add("id", typeof(int));
+            workerDT.Columns.Add("név", typeof(string));
+            workerDT.Columns.Add("születési idő", typeof(DateTime));
+            workerDT.Columns.Add("lakhely", typeof(string));
+            workerDT.Columns.Add("telefonszám", typeof(int));
+            foreach (repository.Worker w in Workers)
+            {
+                if (w.getWorkerid() == workerid)
+                    workerDT.Rows.Add(w.getWorkerid(), w.getName(), w.getBirtday(), w.getPlace(), w.getTel());
+            }
+            return workerDT;
+        }
     }
 }
