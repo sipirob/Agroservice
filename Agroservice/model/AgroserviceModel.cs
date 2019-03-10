@@ -91,6 +91,7 @@ namespace Agroservice.model
 
        
 
+
         /// <summary>
         /// A még el nem végzett munkálatok listájának lekérése
         /// </summary>
@@ -99,6 +100,11 @@ namespace Agroservice.model
         {
             DataTable newWorkDT = controller.NewWorkDataLoad.getNewWorkDataFromList();
             return newWorkDT;
+        }
+
+        internal void getUpdateWorkerData(int workerid, string workerName, DateTime workerBirthday, string workerPlace, int workerTelnumb)
+        {
+            controller.UpdateWorkerData.updateWorkerData(workerid, workerName, workerBirthday, workerPlace, workerTelnumb);
         }
 
 
@@ -248,6 +254,10 @@ namespace Agroservice.model
         {
            return controller.WorkerDataLoad.getSelectedWorkerData(workerid);
         }
+        //internal void getUpdateWorkerdata(DataTable workerdata)
+        //{
+        //    controller.UpdateDatatable.updateWorkerData(workerdata);
+        //}
 
     }
 }

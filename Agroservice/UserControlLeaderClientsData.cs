@@ -13,11 +13,18 @@ namespace Agroservice
     public partial class UserControlLeaderClientsData : UserControl
     {
         int workerid;
+        string workerName;
+        DateTime workerBirthday;
+        string workerPlace;
+        int workerTelnumb;
+        DataTable workerdata = new DataTable();
         model.AgroserviceModel model = new model.AgroserviceModel();
+        DataTable listboxDt;
         public UserControlLeaderClientsData()
         {
             InitializeComponent();
             listBoxWorkers.ValueMember = "id";
+            listboxDt = new DataTable();
             //workerid = Convert.ToInt32(listBoxWorkers.SelectedValue);
         }
 
@@ -91,17 +98,42 @@ namespace Agroservice
 
         private void buttonUpdateWorkerData_Click(object sender, EventArgs e)
         {
+            workerid = Convert.ToInt32(listBoxWorkers.SelectedValue);
+            workerName = textBoxWorkerName.Text;
+            workerBirthday = Convert.ToDateTime(metroWorkerBirthday.Text);
+            workerPlace = textBoxWorkerPlace.Text;
+            workerTelnumb = Convert.ToInt32(textBoxWorkerTelnumber.Text);
+            //model.getUpdateWorkerdata(workerdata);
+            model.getUpdateWorkerData(workerid,workerName,workerBirthday,workerPlace,workerTelnumb);
+            model.loadWorkerData();
             
+            listBoxWorkers.DataSource = null;
+            listBoxWorkers.DisplayMember = null;
+            listBoxWorkers.Items.Clear();
+            
+            listBoxWorkers.DataSource = model.getWorkersName().DefaultView;
+            listBoxWorkers.DisplayMember = "név";
+            
+            //workerdata.Clear();
+            //model.loadWorkerData();
+            //model.getSelectedWorkerdata(workerid).Clear();
         }
 
         private void listBoxWorkers_SelectedIndexChanged(object sender, EventArgs e)
         {
-            workerid = Convert.ToInt32(listBoxWorkers.SelectedValue);
-            if (listBoxWorkers.SelectedIndex > 0)
+            
+            if (listBoxWorkers.SelectedIndex >= 0)
             {
-                DataTable workerdata = model.getSelectedWorkerdata(workerid);
+                workerid = Convert.ToInt32(listBoxWorkers.SelectedValue);
+                workerdata = model.getSelectedWorkerdata(workerid);
                 textBoxWorkerName.Text = workerdata.Rows[0]["név"].ToString();
+                metroWorkerBirthday.Text = workerdata.Rows[0]["születési idő"].ToString();
+                textBoxWorkerPlace.Text = workerdata.Rows[0]["lakhely"].ToString();
+                textBoxWorkerTelnumber.Text = workerdata.Rows[0]["telefonszám"].ToString();
+
+                
             }
+            else return;
 
 
            

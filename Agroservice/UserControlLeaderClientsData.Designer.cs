@@ -54,7 +54,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.textBoxWorkerTelnumber = new System.Windows.Forms.TextBox();
             this.textBoxWorkerPlace = new System.Windows.Forms.TextBox();
-            this.textBoxWorkerBirthday = new System.Windows.Forms.TextBox();
             this.textBoxWorkerName = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -64,6 +63,7 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.listBoxWorkers = new System.Windows.Forms.ListBox();
+            this.metroWorkerBirthday = new MetroFramework.Controls.MetroDateTime();
             this.metroTabControl2.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
             this.metroTabPage2.SuspendLayout();
@@ -289,13 +289,13 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.metroWorkerBirthday);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.textBoxWorkerTelnumber);
             this.groupBox2.Controls.Add(this.textBoxWorkerPlace);
-            this.groupBox2.Controls.Add(this.textBoxWorkerBirthday);
             this.groupBox2.Controls.Add(this.textBoxWorkerName);
             this.groupBox2.Location = new System.Drawing.Point(300, 197);
             this.groupBox2.Name = "groupBox2";
@@ -344,28 +344,21 @@
             // 
             this.textBoxWorkerTelnumber.Location = new System.Drawing.Point(172, 184);
             this.textBoxWorkerTelnumber.Name = "textBoxWorkerTelnumber";
-            this.textBoxWorkerTelnumber.Size = new System.Drawing.Size(165, 27);
+            this.textBoxWorkerTelnumber.Size = new System.Drawing.Size(201, 27);
             this.textBoxWorkerTelnumber.TabIndex = 4;
             // 
             // textBoxWorkerPlace
             // 
             this.textBoxWorkerPlace.Location = new System.Drawing.Point(172, 138);
             this.textBoxWorkerPlace.Name = "textBoxWorkerPlace";
-            this.textBoxWorkerPlace.Size = new System.Drawing.Size(165, 27);
+            this.textBoxWorkerPlace.Size = new System.Drawing.Size(201, 27);
             this.textBoxWorkerPlace.TabIndex = 3;
-            // 
-            // textBoxWorkerBirthday
-            // 
-            this.textBoxWorkerBirthday.Location = new System.Drawing.Point(172, 91);
-            this.textBoxWorkerBirthday.Name = "textBoxWorkerBirthday";
-            this.textBoxWorkerBirthday.Size = new System.Drawing.Size(165, 27);
-            this.textBoxWorkerBirthday.TabIndex = 2;
             // 
             // textBoxWorkerName
             // 
             this.textBoxWorkerName.Location = new System.Drawing.Point(172, 43);
             this.textBoxWorkerName.Name = "textBoxWorkerName";
-            this.textBoxWorkerName.Size = new System.Drawing.Size(165, 27);
+            this.textBoxWorkerName.Size = new System.Drawing.Size(201, 27);
             this.textBoxWorkerName.TabIndex = 1;
             // 
             // groupBox1
@@ -441,6 +434,14 @@
             this.listBoxWorkers.TabIndex = 2;
             this.listBoxWorkers.SelectedIndexChanged += new System.EventHandler(this.listBoxWorkers_SelectedIndexChanged);
             // 
+            // metroWorkerBirthday
+            // 
+            this.metroWorkerBirthday.Location = new System.Drawing.Point(172, 91);
+            this.metroWorkerBirthday.MinimumSize = new System.Drawing.Size(0, 29);
+            this.metroWorkerBirthday.Name = "metroWorkerBirthday";
+            this.metroWorkerBirthday.Size = new System.Drawing.Size(201, 29);
+            this.metroWorkerBirthday.TabIndex = 9;
+            // 
             // UserControlLeaderClientsData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -487,7 +488,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBoxWorkerTelnumber;
         private System.Windows.Forms.TextBox textBoxWorkerPlace;
-        private System.Windows.Forms.TextBox textBoxWorkerBirthday;
         private System.Windows.Forms.TextBox textBoxWorkerName;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label4;
@@ -500,5 +500,6 @@
         private System.Windows.Forms.Button buttonSearchClient;
         public MetroFramework.Controls.MetroTextBox TextboxClientName;
         private System.Windows.Forms.Label label9;
+        public MetroFramework.Controls.MetroDateTime metroWorkerBirthday;
     }
 }
