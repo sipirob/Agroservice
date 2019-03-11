@@ -96,5 +96,10 @@ namespace Agroservice.controller
             return cpWorkDT;
 
         }
+
+        internal static void clearCompleteWorksList()
+        {
+            Work.Clear();
+        }
     }
 }

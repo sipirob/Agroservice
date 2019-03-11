@@ -15,6 +15,7 @@ namespace Agroservice
     {
         model.AgroserviceModel controller = new model.AgroserviceModel();
         UserControlNewWorks userControlNew;
+        DataTable cldt;
         public void newWorksNumber()
         {
             string username = FormSignIn.username;
@@ -34,6 +35,7 @@ namespace Agroservice
             InitializeComponent();
             panelSign.Height = buttonHome.Height;
             userControlNew = new UserControlNewWorks();
+            cldt = new DataTable();
             
 
         }
@@ -86,18 +88,7 @@ namespace Agroservice
 
                 userControlNewWorks1.listViewNewWork.Items.Add(lvi);
             }
-            //Ügyfelek adatainak betöltése
-            controller.loadClientData();
-            DataTable cldt = new DataTable();
-            cldt = controller.getClientData();
-            foreach (DataRow dr in cldt.Rows)
-            {
-                ListViewItem clvi = new ListViewItem(dr["id"].ToString());
-                clvi.SubItems.Add(dr["név"].ToString());
-                clvi.SubItems.Add(dr["lakhely"].ToString());
-                clvi.SubItems.Add(dr["telefonszám"].ToString());
-                userControlWorkerClientData1.listViewClientData.Items.Add(clvi);
-            }
+           
             //El nem végzett munkálatok számának kiírása
             newWorksNumber();
         }
@@ -110,9 +101,13 @@ namespace Agroservice
             userControlWorkerClientData1.Hide();
             userControlNewWorks1.Hide();
             //Elvégzett munkálatok betöltése
+
+            //controller.getClearWorkerList();
+            controller.getClearWorksList();
             controller.loadCompleteData();
 
-            userControlCompleteWorks1.dataGridView1.DataSource = null;
+            //userControlCompleteWorks1.dataGridView1.DataSource = null;
+            
             userControlCompleteWorks1.dataGridView1.DataSource = controller.getCompleteWorksData();
 
         }
@@ -126,10 +121,24 @@ namespace Agroservice
             userControlNewWorks1.Hide();
             userControlWorkerClientData1.Show();
 
+            //Ügyfelek adatainak betöltése
+            controller.getClearClientsDataList();
+            cldt.Clear();
+            userControlWorkerClientData1.listViewClientData.Items.Clear();
+            controller.loadClientData();
+            cldt = new DataTable();
+            cldt = controller.getClientData();
+            foreach (DataRow dr in cldt.Rows)
+            {
+                ListViewItem clvi = new ListViewItem(dr["id"].ToString());
+                clvi.SubItems.Add(dr["név"].ToString());
+                clvi.SubItems.Add(dr["lakhely"].ToString());
+                clvi.SubItems.Add(dr["telefonszám"].ToString());
+                userControlWorkerClientData1.listViewClientData.Items.Add(clvi);
+            }
 
-            
-           
-            
+
+
         }
     }
 }

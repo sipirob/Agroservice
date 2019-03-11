@@ -43,7 +43,6 @@
             this.TextboxClientName = new MetroFramework.Controls.MetroTextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
-            this.buttonLoad = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.buttonUpdateWorkerData = new System.Windows.Forms.Button();
@@ -231,7 +230,6 @@
             // 
             // metroTabPage2
             // 
-            this.metroTabPage2.Controls.Add(this.buttonLoad);
             this.metroTabPage2.Controls.Add(this.button4);
             this.metroTabPage2.Controls.Add(this.button3);
             this.metroTabPage2.Controls.Add(this.buttonUpdateWorkerData);
@@ -250,16 +248,6 @@
             this.metroTabPage2.VerticalScrollbarBarColor = true;
             this.metroTabPage2.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage2.VerticalScrollbarSize = 1;
-            // 
-            // buttonLoad
-            // 
-            this.buttonLoad.Location = new System.Drawing.Point(843, 186);
-            this.buttonLoad.Name = "buttonLoad";
-            this.buttonLoad.Size = new System.Drawing.Size(121, 67);
-            this.buttonLoad.TabIndex = 9;
-            this.buttonLoad.Text = "Betölt";
-            this.buttonLoad.UseVisualStyleBackColor = true;
-            this.buttonLoad.Click += new System.EventHandler(this.buttonLoad_Click);
             // 
             // button4
             // 
@@ -515,6 +503,5 @@
         public MetroFramework.Controls.MetroTextBox TextboxClientName;
         private System.Windows.Forms.Label label9;
         public MetroFramework.Controls.MetroDateTime metroWorkerBirthday;
-        private System.Windows.Forms.Button buttonLoad;
     }
 }

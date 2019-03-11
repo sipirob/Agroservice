@@ -93,5 +93,10 @@ namespace Agroservice.controller
             }
             return clientDT;
         }
+
+        internal static void clearClientsDataList()
+        {
+            Clients.Clear();
+        }
     }
 }

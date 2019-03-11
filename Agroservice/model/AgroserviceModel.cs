@@ -130,6 +130,7 @@ namespace Agroservice.model
 
       
 
+
         /// <summary>
         /// A belépett felhasználó nevének lekérdezése adatbázisból
         /// </summary>
@@ -264,5 +265,15 @@ namespace Agroservice.model
         {
             controller.WorkerDataLoad.clearWorkerList();
         }
+
+        internal void getClearWorksList()
+        {
+            controller.CompleteWorkDataLoad.clearCompleteWorksList();
+        }
+        internal void getClearClientsDataList()
+        {
+            controller.ClientDataLoad.clearClientsDataList();
+        }
+
     }
 }

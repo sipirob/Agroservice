@@ -12,7 +12,7 @@ namespace Agroservice
 {
     public partial class UserControlLeaderClientsData : UserControl
     {
-        bool modified = false;
+       
         int workerid;
         string workerName;
         DateTime workerBirthday;
@@ -87,12 +87,10 @@ namespace Agroservice
             {
                 model.getDeleteWorker(workerid);
                 MessageBox.Show("Dolgozó törölve");
-                
-                model.getWorkersName().Clear();
-                listBoxWorkers.DataSource = null;
-                listBoxWorkers.Items.Clear();
+
+
+                model.getClearWorkerList();
                 model.loadWorkerData();
-               
                 listBoxWorkers.DataSource = listboxDt.DefaultView;
                 listBoxWorkers.DisplayMember = "név";
                 listBoxWorkers.ValueMember = "id";
@@ -105,20 +103,24 @@ namespace Agroservice
 
         private void buttonUpdateWorkerData_Click(object sender, EventArgs e)
         {
-            modified = true;
-            workerid = Convert.ToInt32(listBoxWorkers.SelectedValue);
-            workerName = textBoxWorkerName.Text;
-            workerBirthday = Convert.ToDateTime(metroWorkerBirthday.Text);
-            workerPlace = textBoxWorkerPlace.Text;
-            workerTelnumb = Convert.ToInt32(textBoxWorkerTelnumber.Text);
-           
-            model.getUpdateWorkerData(workerid,workerName,workerBirthday,workerPlace,workerTelnumb);
-            
-            model.getClearWorkerList();
-            model.loadWorkerData();
-            listBoxWorkers.DataSource = model.getWorkersName().DefaultView;
-            listBoxWorkers.DisplayMember = "név";
-            listBoxWorkers.ValueMember = "id";
+            if (MessageBox.Show("Biztosan módosítja a dolgozó adatait?", "Igen", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
+            {
+                workerid = Convert.ToInt32(listBoxWorkers.SelectedValue);
+                workerName = textBoxWorkerName.Text;
+                workerBirthday = Convert.ToDateTime(metroWorkerBirthday.Text);
+                workerPlace = textBoxWorkerPlace.Text;
+                workerTelnumb = Convert.ToInt32(textBoxWorkerTelnumber.Text);
+
+                model.getUpdateWorkerData(workerid, workerName, workerBirthday, workerPlace, workerTelnumb);
+
+                model.getClearWorkerList();
+                model.loadWorkerData();
+                listBoxWorkers.DataSource = model.getWorkersName().DefaultView;
+                listBoxWorkers.DisplayMember = "név";
+                listBoxWorkers.ValueMember = "id";
+                MessageBox.Show("Dolgozó adataina módosítása megtörtént");
+            }
+               
         }
 
         private void listBoxWorkers_SelectedIndexChanged(object sender, EventArgs e)
@@ -147,18 +149,6 @@ namespace Agroservice
 
         }
 
-        private void buttonLoad_Click(object sender, EventArgs e)
-        {
-            model.getClearWorkerList();
-            //listBoxWorkers.DataSource = null;
-            //listBoxWorkers.Items.Clear();
-            //model.getWorkersName().Clear();
-            model.loadWorkerData();
-            //listBoxWorkers.DataSource =workerdata.DefaultView;
-            listBoxWorkers.DataSource =model.getWorkersName().DefaultView;
-
-            listBoxWorkers.DisplayMember = "név";
-           
-        }
+        
     }
 }
