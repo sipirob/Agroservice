@@ -98,7 +98,14 @@ namespace Agroservice.controller
                 if (w.getWorkerid() == workerid)
                     workerDT.Rows.Add(w.getWorkerid(), w.getName(), w.getBirtday(), w.getPlace(), w.getTel());
             }
+            
             return workerDT;
+            
+        }
+
+        internal static void clearWorkerList()
+        {
+            Workers.Clear();
         }
     }
 }

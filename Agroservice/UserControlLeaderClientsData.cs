@@ -12,6 +12,7 @@ namespace Agroservice
 {
     public partial class UserControlLeaderClientsData : UserControl
     {
+        bool modified = false;
         int workerid;
         string workerName;
         DateTime workerBirthday;
@@ -20,12 +21,14 @@ namespace Agroservice
         DataTable workerdata = new DataTable();
         model.AgroserviceModel model = new model.AgroserviceModel();
         DataTable listboxDt;
+       
         public UserControlLeaderClientsData()
         {
             InitializeComponent();
-            listBoxWorkers.ValueMember = "id";
+            
             listboxDt = new DataTable();
-            //workerid = Convert.ToInt32(listBoxWorkers.SelectedValue);
+           
+           
         }
 
         public static object ListViewClientsData { get; internal set; }
@@ -37,8 +40,12 @@ namespace Agroservice
 
         private void UserControlLeaderClientsData_Load(object sender, EventArgs e)
         {
-           
+
+            model.loadWorkerData();
             
+            listBoxWorkers.DataSource = model.getWorkersName().DefaultView;
+            listBoxWorkers.DisplayMember = "név";
+            listBoxWorkers.ValueMember = "id";
         }
 
         private void buttonDeleteClient_Click(object sender, EventArgs e)
@@ -86,7 +93,7 @@ namespace Agroservice
                 listBoxWorkers.Items.Clear();
                 model.loadWorkerData();
                
-                listBoxWorkers.DataSource = model.getWorkersName().DefaultView;
+                listBoxWorkers.DataSource = listboxDt.DefaultView;
                 listBoxWorkers.DisplayMember = "név";
                 listBoxWorkers.ValueMember = "id";
               
@@ -98,38 +105,38 @@ namespace Agroservice
 
         private void buttonUpdateWorkerData_Click(object sender, EventArgs e)
         {
+            modified = true;
             workerid = Convert.ToInt32(listBoxWorkers.SelectedValue);
             workerName = textBoxWorkerName.Text;
             workerBirthday = Convert.ToDateTime(metroWorkerBirthday.Text);
             workerPlace = textBoxWorkerPlace.Text;
             workerTelnumb = Convert.ToInt32(textBoxWorkerTelnumber.Text);
-            //model.getUpdateWorkerdata(workerdata);
+           
             model.getUpdateWorkerData(workerid,workerName,workerBirthday,workerPlace,workerTelnumb);
+            
+            model.getClearWorkerList();
             model.loadWorkerData();
-            
-            listBoxWorkers.DataSource = null;
-            listBoxWorkers.DisplayMember = null;
-            listBoxWorkers.Items.Clear();
-            
             listBoxWorkers.DataSource = model.getWorkersName().DefaultView;
             listBoxWorkers.DisplayMember = "név";
-            
-            //workerdata.Clear();
-            //model.loadWorkerData();
-            //model.getSelectedWorkerdata(workerid).Clear();
+            listBoxWorkers.ValueMember = "id";
         }
 
         private void listBoxWorkers_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+           
+
             if (listBoxWorkers.SelectedIndex >= 0)
             {
+               
+                listBoxWorkers.ValueMember = "id";
+                model.loadWorkerData();
                 workerid = Convert.ToInt32(listBoxWorkers.SelectedValue);
                 workerdata = model.getSelectedWorkerdata(workerid);
                 textBoxWorkerName.Text = workerdata.Rows[0]["név"].ToString();
                 metroWorkerBirthday.Text = workerdata.Rows[0]["születési idő"].ToString();
                 textBoxWorkerPlace.Text = workerdata.Rows[0]["lakhely"].ToString();
                 textBoxWorkerTelnumber.Text = workerdata.Rows[0]["telefonszám"].ToString();
+                workerdata.Clear();
 
                 
             }
@@ -138,6 +145,20 @@ namespace Agroservice
 
            
 
+        }
+
+        private void buttonLoad_Click(object sender, EventArgs e)
+        {
+            model.getClearWorkerList();
+            //listBoxWorkers.DataSource = null;
+            //listBoxWorkers.Items.Clear();
+            //model.getWorkersName().Clear();
+            model.loadWorkerData();
+            //listBoxWorkers.DataSource =workerdata.DefaultView;
+            listBoxWorkers.DataSource =model.getWorkersName().DefaultView;
+
+            listBoxWorkers.DisplayMember = "név";
+           // listBoxWorkers.ValueMember = "id";
         }
     }
 }

@@ -43,11 +43,13 @@
             this.TextboxClientName = new MetroFramework.Controls.MetroTextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
+            this.buttonLoad = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.buttonUpdateWorkerData = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.metroWorkerBirthday = new MetroFramework.Controls.MetroDateTime();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -63,7 +65,6 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.listBoxWorkers = new System.Windows.Forms.ListBox();
-            this.metroWorkerBirthday = new MetroFramework.Controls.MetroDateTime();
             this.metroTabControl2.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
             this.metroTabPage2.SuspendLayout();
@@ -156,7 +157,7 @@
             this.metroTabPage1.Controls.Add(this.label1);
             this.metroTabPage1.HorizontalScrollbarBarColor = true;
             this.metroTabPage1.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroTabPage1.HorizontalScrollbarSize = 4;
+            this.metroTabPage1.HorizontalScrollbarSize = 1;
             this.metroTabPage1.Location = new System.Drawing.Point(4, 38);
             this.metroTabPage1.Name = "metroTabPage1";
             this.metroTabPage1.Size = new System.Drawing.Size(980, 498);
@@ -165,7 +166,7 @@
             this.metroTabPage1.Text = "Ügyfelek";
             this.metroTabPage1.VerticalScrollbarBarColor = true;
             this.metroTabPage1.VerticalScrollbarHighlightOnWheel = false;
-            this.metroTabPage1.VerticalScrollbarSize = 4;
+            this.metroTabPage1.VerticalScrollbarSize = 1;
             this.metroTabPage1.Click += new System.EventHandler(this.metroTabPage1_Click);
             // 
             // buttonSearchClient
@@ -230,6 +231,7 @@
             // 
             // metroTabPage2
             // 
+            this.metroTabPage2.Controls.Add(this.buttonLoad);
             this.metroTabPage2.Controls.Add(this.button4);
             this.metroTabPage2.Controls.Add(this.button3);
             this.metroTabPage2.Controls.Add(this.buttonUpdateWorkerData);
@@ -239,7 +241,7 @@
             this.metroTabPage2.Controls.Add(this.listBoxWorkers);
             this.metroTabPage2.HorizontalScrollbarBarColor = true;
             this.metroTabPage2.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroTabPage2.HorizontalScrollbarSize = 4;
+            this.metroTabPage2.HorizontalScrollbarSize = 1;
             this.metroTabPage2.Location = new System.Drawing.Point(4, 38);
             this.metroTabPage2.Name = "metroTabPage2";
             this.metroTabPage2.Size = new System.Drawing.Size(980, 498);
@@ -247,7 +249,17 @@
             this.metroTabPage2.Text = "Dolgozók";
             this.metroTabPage2.VerticalScrollbarBarColor = true;
             this.metroTabPage2.VerticalScrollbarHighlightOnWheel = false;
-            this.metroTabPage2.VerticalScrollbarSize = 4;
+            this.metroTabPage2.VerticalScrollbarSize = 1;
+            // 
+            // buttonLoad
+            // 
+            this.buttonLoad.Location = new System.Drawing.Point(843, 186);
+            this.buttonLoad.Name = "buttonLoad";
+            this.buttonLoad.Size = new System.Drawing.Size(121, 67);
+            this.buttonLoad.TabIndex = 9;
+            this.buttonLoad.Text = "Betölt";
+            this.buttonLoad.UseVisualStyleBackColor = true;
+            this.buttonLoad.Click += new System.EventHandler(this.buttonLoad_Click);
             // 
             // button4
             // 
@@ -260,7 +272,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(843, 185);
+            this.button3.Location = new System.Drawing.Point(843, 292);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(121, 67);
             this.button3.TabIndex = 7;
@@ -289,6 +301,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.groupBox2.Controls.Add(this.metroWorkerBirthday);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.label7);
@@ -303,6 +316,14 @@
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Személyes adatok";
+            // 
+            // metroWorkerBirthday
+            // 
+            this.metroWorkerBirthday.Location = new System.Drawing.Point(172, 91);
+            this.metroWorkerBirthday.MinimumSize = new System.Drawing.Size(0, 29);
+            this.metroWorkerBirthday.Name = "metroWorkerBirthday";
+            this.metroWorkerBirthday.Size = new System.Drawing.Size(201, 29);
+            this.metroWorkerBirthday.TabIndex = 9;
             // 
             // label8
             // 
@@ -363,6 +384,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
@@ -434,14 +456,6 @@
             this.listBoxWorkers.TabIndex = 2;
             this.listBoxWorkers.SelectedIndexChanged += new System.EventHandler(this.listBoxWorkers_SelectedIndexChanged);
             // 
-            // metroWorkerBirthday
-            // 
-            this.metroWorkerBirthday.Location = new System.Drawing.Point(172, 91);
-            this.metroWorkerBirthday.MinimumSize = new System.Drawing.Size(0, 29);
-            this.metroWorkerBirthday.Name = "metroWorkerBirthday";
-            this.metroWorkerBirthday.Size = new System.Drawing.Size(201, 29);
-            this.metroWorkerBirthday.TabIndex = 9;
-            // 
             // UserControlLeaderClientsData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -501,5 +515,6 @@
         public MetroFramework.Controls.MetroTextBox TextboxClientName;
         private System.Windows.Forms.Label label9;
         public MetroFramework.Controls.MetroDateTime metroWorkerBirthday;
+        private System.Windows.Forms.Button buttonLoad;
     }
 }

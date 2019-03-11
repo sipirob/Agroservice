@@ -167,6 +167,8 @@ namespace Agroservice.model
             controller.SetDoneWork.setDoneWorkInDatabase(workId);
         }
 
+       
+
         /// <summary>
         /// kiválasztott termőföldhöz tartozó parcella adatainak lekérése
         /// </summary>
@@ -258,6 +260,9 @@ namespace Agroservice.model
         //{
         //    controller.UpdateDatatable.updateWorkerData(workerdata);
         //}
-
+        internal void getClearWorkerList()
+        {
+            controller.WorkerDataLoad.clearWorkerList();
+        }
     }
 }

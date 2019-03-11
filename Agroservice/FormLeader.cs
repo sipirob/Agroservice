@@ -53,10 +53,11 @@ namespace Agroservice
             userControlLeaderClientsData1.Hide();
             userControlLeaderWorks1.Hide();
 
+            //userControlLeaderClientsData1.listBoxWorkers.DataSource = null;
             model.loadWorkerData();
-            userControlLeaderClientsData1.listBoxWorkers.DataSource = model.getWorkersName().DefaultView;
-            userControlLeaderClientsData1.listBoxWorkers.DisplayMember = "név";
-            userControlLeaderClientsData1.listBoxWorkers.ValueMember = "id";
+            //userControlLeaderClientsData1.listBoxWorkers.DataSource = model.getWorkersName().DefaultView;
+            //userControlLeaderClientsData1.listBoxWorkers.DisplayMember = "név";
+            //userControlLeaderClientsData1.listBoxWorkers.ValueMember = "id";
 
 
             userControlLeaderWorks1.metroComboBoxWorkers.DataSource = model.getWorkersName().DefaultView;

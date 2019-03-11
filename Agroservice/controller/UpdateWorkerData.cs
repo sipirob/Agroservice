@@ -23,6 +23,13 @@ namespace Agroservice.controller
             cmdUpdate.Parameters.AddWithValue("@bday", workerBirthday);
             cmdUpdate.ExecuteNonQuery();
             connection.Close();
+
+            repository.Worker w = new repository.Worker(workerid, workerName, workerBirthday, workerPlace, workerTelnumb);
+            w.setWorkerid(workerid);
+            w.setName(workerName);
+            w.setBirthday(workerBirthday);
+            w.setPlace(workerPlace);
+            w.setTel(workerTelnumb);
         }
     }
 }
