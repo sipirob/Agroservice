@@ -158,7 +158,7 @@ namespace Agroservice
             listBoxWorkers.DataSource =model.getWorkersName().DefaultView;
 
             listBoxWorkers.DisplayMember = "név";
-           // listBoxWorkers.ValueMember = "id";
+           
         }
     }
 }
