@@ -41,7 +41,7 @@ namespace Agroservice.model
             setWorkerofWork = new controller.SetWorkerOfWork();
         }
 
-       
+
 
         /// <summary>
         /// Ügyfelek adatainak lekérése listából
@@ -180,7 +180,9 @@ namespace Agroservice.model
            double parcelHa= controller.LoadParcelData.getParcelData(parcelnumber);
             return parcelHa;
         }
-
+        /// <summary>
+        /// termőföld adatainak lekérése
+        /// </summary>
         internal void parcelDataloadFromList()
         {
             controller.LoadParcelData.parcelDataLoad();
@@ -197,11 +199,19 @@ namespace Agroservice.model
             return result;
         }
 
+        /// <summary>
+        /// tőtávolság lekérése
+        /// </summary>
         internal void loadVegetablesDistance()
         {
             controller.SetPlantDistance.setCornDistance();
         }
-
+        /// <summary>
+        /// Szükésges vetőmag száma az adott parcellába, kiszámítása
+        /// </summary>
+        /// <param name="plantDisValue">tőtávolság</param>
+        /// <param name="parcelHa">kiválazstott parcella területe</param>
+        /// <returns></returns>
         public double calculateSeed(int plantDisValue,double parcelHa)
         {
             double needSeed = Convert.ToDouble(plantDisValue) * parcelHa;
@@ -229,7 +239,10 @@ namespace Agroservice.model
             return client;
         }
 
-
+        /// <summary>
+        /// Dolgozók nevének és azonosítójának lekérése
+        /// </summary>
+        /// <returns>Dolgozó neve és a hozzá tartozó azonosító</returns>
         internal DataTable getWorkersName()
         {
             DataTable workersname = controller.WorkerDataLoad.getWorkersName();
@@ -244,15 +257,26 @@ namespace Agroservice.model
         {
             controller.SetWorkerOfWork.setWorker(workerId, workId);
         }
+        /// <summary>
+        /// Ügyfel törlése az adatbázisból
+        /// </summary>
+        /// <param name="clientid">Ügyfél id-ja</param>
         internal void getdeleteUser(int clientid)
         {
             controller.DeleteUser.deleteUser(clientid);
         }
-
+        /// <summary>
+        /// Törli a kiválasztott dolgozót az adatbázisból
+        /// </summary>
+        /// <param name="workerid">Dolgozó id-ja</param>
         internal void getDeleteWorker(int workerid)
         {
             controller.DeleteWorker.deleteWorker(workerid);
-        }
+        }/// <summary>
+        /// Kiválasztott dolgozó adatainak lekérése listából
+        /// </summary>
+        /// <param name="workerid">Dolgozó azonosítója</param>
+        /// <returns>Kiválasztott dolgozó adatai</returns>
         internal DataTable getSelectedWorkerdata(int workerid)
         {
            return controller.WorkerDataLoad.getSelectedWorkerData(workerid);
@@ -261,18 +285,33 @@ namespace Agroservice.model
         //{
         //    controller.UpdateDatatable.updateWorkerData(workerdata);
         //}
+        /// <summary>
+        /// Dolgozók adatainak listáját törli
+        /// </summary>
         internal void getClearWorkerList()
         {
             controller.WorkerDataLoad.clearWorkerList();
         }
 
-        internal void getClearWorksList()
+        /// <summary>
+        /// Elvégzett munkálatok listáját törli
+        /// </summary>
+        internal void getClearCompleteWorksList()
         {
             controller.CompleteWorkDataLoad.clearCompleteWorksList();
         }
+        /// <summary>
+        /// Ügyfelek listáját törli
+        /// </summary>
         internal void getClearClientsDataList()
         {
             controller.ClientDataLoad.clearClientsDataList();
+        }
+
+        internal DataTable getSearchWorkByClientName(string clientname)
+        {
+            DataTable work = controller.CompleteWorkDataLoad.searchWorkByClientName(clientname);
+            return work;
         }
 
     }

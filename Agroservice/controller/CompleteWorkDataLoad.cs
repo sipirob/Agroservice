@@ -43,7 +43,7 @@ namespace Agroservice.controller
             string query = "";
             if (FormSignIn.leader == true)
             {
-                query = "SELECT work.id,`date`,`parcelnumber`,`workname`,`graincropname`,clientdata.name as clientname, workerdata.name as workername,`rating`,`comment`,`price`,`done` FROM worker,client,`work`,clientdata, workerdata where work.workerid=worker.id and work.clientid=client.id and worker.id=workerdata.id and client.id=clientdata.id and done=1";
+                query = "SELECT work.id,`date`,`parcelnumber`,`workname`,`graincropname`,clientdata.name as clientname, workerdata.name as workername,`rating`,`comment`,`price`,`done` FROM worker,client,`work`,clientdata, workerdata where work.workerid=worker.id and work.clientid=client.id and worker.id=workerdata.id and client.id=clientdata.id and done=1  ORDER BY date DESC";
             }
             else
                 query = "SELECT work.id,`date`,`parcelnumber`,`workname`,`graincropname`,clientdata.name as clientname, workerdata.name as workername,`rating`,`comment`,`price`,`done` FROM worker,client,`work`,clientdata, workerdata where work.workerid=worker.id and work.clientid=client.id and worker.id=workerdata.id and client.id=clientdata.id and done=1 and worker.username='" + FormSignIn.username + "'";
@@ -85,11 +85,13 @@ namespace Agroservice.controller
             cpWorkDT.Columns.Add("parcellaszám", typeof(int));
             cpWorkDT.Columns.Add("munkálat neve", typeof(string));
             cpWorkDT.Columns.Add("gabona", typeof(string));
+            cpWorkDT.Columns.Add("Ügyfél neve", typeof(string));
+            cpWorkDT.Columns.Add("Dolgozó neve", typeof(string));
             cpWorkDT.Columns.Add("értékelés", typeof(int));
             cpWorkDT.Columns.Add("hozzászólás", typeof(string));
             foreach (repository.Work w in Work)
             {
-                cpWorkDT.Rows.Add(w.getDate(), w.getParcelnumber(), w.getServicename(), w.getGraincropname(), w.getRating(),w.getComment());
+                cpWorkDT.Rows.Add(w.getDate(), w.getParcelnumber(), w.getServicename(), w.getGraincropname(),w.getClientname(),w.getWorkername(), w.getRating(),w.getComment());
 
             }
 
@@ -100,6 +102,29 @@ namespace Agroservice.controller
         internal static void clearCompleteWorksList()
         {
             Work.Clear();
+        }
+
+        internal static DataTable searchWorkByClientName(string clientname)
+        {
+            DataTable cpWorkDT = new DataTable();
+            cpWorkDT.Columns.Add("dátum", typeof(DateTime));
+            cpWorkDT.Columns.Add("parcellaszám", typeof(int));
+            cpWorkDT.Columns.Add("munkálat neve", typeof(string));
+            cpWorkDT.Columns.Add("gabona", typeof(string));
+            cpWorkDT.Columns.Add("Ügyfél neve", typeof(string));
+            cpWorkDT.Columns.Add("Dolgozó neve", typeof(string));
+            cpWorkDT.Columns.Add("értékelés", typeof(int));
+            cpWorkDT.Columns.Add("hozzászólás", typeof(string));
+            foreach (repository.Work w in Work)
+            {
+                if (w.getClientname() == clientname)
+                {
+                    cpWorkDT.Rows.Add(w.getDate(), w.getParcelnumber(), w.getServicename(), w.getGraincropname(), w.getClientname(), w.getWorkername(), w.getRating(), w.getComment());
+                }
+               
+            }
+
+            return cpWorkDT;
         }
     }
 }

@@ -31,5 +31,22 @@ namespace Agroservice
             dataGridViewAllNewWorks.Rows.RemoveAt(dataGridViewAllNewWorks.SelectedRows[0].Index);
             MessageBox.Show("Dolgozó hozzáadva a munkálathoz");
         }
+
+        private void UserControlLeaderWorks_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string clientname = TextboxClient.Text;
+            
+            model.getClearCompleteWorksList();
+            
+            model.loadCompleteData();
+           // model.getCompleteWorksData();
+            dataGridViewAllCompleteWorks.DataSource = model.getSearchWorkByClientName(clientname);
+
+        }
     }
 }

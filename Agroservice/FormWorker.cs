@@ -103,7 +103,7 @@ namespace Agroservice
             //Elvégzett munkálatok betöltése
 
             //controller.getClearWorkerList();
-            controller.getClearWorksList();
+            controller.getClearCompleteWorksList();
             controller.loadCompleteData();
 
             //userControlCompleteWorks1.dataGridView1.DataSource = null;
