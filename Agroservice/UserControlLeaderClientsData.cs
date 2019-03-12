@@ -12,7 +12,7 @@ namespace Agroservice
 {
     public partial class UserControlLeaderClientsData : UserControl
     {
-       
+        int lastWorkerId;
         int workerid;
         string workerName;
         DateTime workerBirthday;
@@ -41,8 +41,11 @@ namespace Agroservice
         private void UserControlLeaderClientsData_Load(object sender, EventArgs e)
         {
 
+           
+
             model.loadWorkerData();
-            
+           
+
             listBoxWorkers.DataSource = model.getWorkersName().DefaultView;
             listBoxWorkers.DisplayMember = "név";
             listBoxWorkers.ValueMember = "id";
@@ -149,6 +152,9 @@ namespace Agroservice
 
         }
 
-        
+        private void buttonAddNewWorker_Click(object sender, EventArgs e)
+        {
+            lastWorkerId = model.getSearchLastWorkerId() + 1;
+        }
     }
 }

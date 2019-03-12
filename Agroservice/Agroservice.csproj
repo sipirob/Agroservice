@@ -87,6 +87,7 @@
   <ItemGroup>
     <Compile Include="controller\DeleteUser.cs" />
     <Compile Include="controller\DeleteWorker.cs" />
+    <Compile Include="controller\LastWorkerId.cs" />
     <Compile Include="controller\SetWorkerOfWork.cs" />
     <Compile Include="controller\UpdateDatatable.cs" />
     <Compile Include="controller\UpdateWorkerData.cs" />

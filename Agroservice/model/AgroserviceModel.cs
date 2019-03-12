@@ -21,6 +21,7 @@ namespace Agroservice.model
         private controller.SetDoneWork setDoneWorkInDatabase;
         private controller.LoadParcelData loadParcelDataList;
         private controller.SetWorkerOfWork setWorkerofWork;
+        private controller.LastWorkerId searchLastWorkerid;
         
 
        
@@ -39,8 +40,10 @@ namespace Agroservice.model
             loadParcelDataList = new controller.LoadParcelData();
             plantDistance = new controller.SetPlantDistance();
             setWorkerofWork = new controller.SetWorkerOfWork();
+            searchLastWorkerid = new controller.LastWorkerId();
         }
 
+      
 
 
         /// <summary>
@@ -313,6 +316,12 @@ namespace Agroservice.model
             DataTable work = controller.CompleteWorkDataLoad.searchWorkByClientName(clientname);
             return work;
         }
+        internal int getSearchLastWorkerId()
+        {
+            int id = searchLastWorkerid.searchLastWorkerId();
+            return id;
+        }
+
 
     }
 }

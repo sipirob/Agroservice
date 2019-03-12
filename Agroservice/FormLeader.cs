@@ -48,6 +48,7 @@ namespace Agroservice
 
         private void FormLeader_Load(object sender, EventArgs e)
         {
+            
 
             model.AgroserviceModel model = new model.AgroserviceModel();
             userControlLeaderClientsData1.Hide();

@@ -46,7 +46,7 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.buttonUpdateWorkerData = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonAddNewWorker = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.metroWorkerBirthday = new MetroFramework.Controls.MetroDateTime();
             this.label8 = new System.Windows.Forms.Label();
@@ -233,7 +233,7 @@
             this.metroTabPage2.Controls.Add(this.button4);
             this.metroTabPage2.Controls.Add(this.button3);
             this.metroTabPage2.Controls.Add(this.buttonUpdateWorkerData);
-            this.metroTabPage2.Controls.Add(this.button1);
+            this.metroTabPage2.Controls.Add(this.buttonAddNewWorker);
             this.metroTabPage2.Controls.Add(this.groupBox2);
             this.metroTabPage2.Controls.Add(this.groupBox1);
             this.metroTabPage2.Controls.Add(this.listBoxWorkers);
@@ -278,14 +278,15 @@
             this.buttonUpdateWorkerData.UseVisualStyleBackColor = true;
             this.buttonUpdateWorkerData.Click += new System.EventHandler(this.buttonUpdateWorkerData_Click);
             // 
-            // button1
+            // buttonAddNewWorker
             // 
-            this.button1.Location = new System.Drawing.Point(843, 14);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(121, 67);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Új";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonAddNewWorker.Location = new System.Drawing.Point(843, 14);
+            this.buttonAddNewWorker.Name = "buttonAddNewWorker";
+            this.buttonAddNewWorker.Size = new System.Drawing.Size(121, 67);
+            this.buttonAddNewWorker.TabIndex = 5;
+            this.buttonAddNewWorker.Text = "Új";
+            this.buttonAddNewWorker.UseVisualStyleBackColor = true;
+            this.buttonAddNewWorker.Click += new System.EventHandler(this.buttonAddNewWorker_Click);
             // 
             // groupBox2
             // 
@@ -482,7 +483,7 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button buttonUpdateWorkerData;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonAddNewWorker;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;

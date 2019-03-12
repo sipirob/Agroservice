@@ -107,5 +107,16 @@ namespace Agroservice.controller
         {
             Workers.Clear();
         }
+        public static int searchLastWorkerId()
+        {
+            DataTable workerDT = new DataTable();
+            workerDT.Columns.Add("id", typeof(int));
+            int id=0;
+            foreach (Worker w in Workers)
+            { 
+                id = w.getWorkerid();
+            }
+            return id;
+        }
     }
 }
