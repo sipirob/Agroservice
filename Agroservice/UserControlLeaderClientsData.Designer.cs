@@ -60,10 +60,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxPassword = new System.Windows.Forms.TextBox();
+            this.textBoxUsername = new System.Windows.Forms.TextBox();
             this.listBoxWorkers = new System.Windows.Forms.ListBox();
+            this.comboBoxCategory = new System.Windows.Forms.ComboBox();
             this.metroTabControl2.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
             this.metroTabPage2.SuspendLayout();
@@ -257,6 +257,7 @@
             this.button4.TabIndex = 8;
             this.button4.Text = "Ment";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -374,12 +375,12 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.groupBox1.Controls.Add(this.comboBoxCategory);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBox7);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.textBoxPassword);
+            this.groupBox1.Controls.Add(this.textBoxUsername);
             this.groupBox1.Location = new System.Drawing.Point(300, 23);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(499, 168);
@@ -414,26 +415,19 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "felhasználónév:";
             // 
-            // textBox7
+            // textBoxPassword
             // 
-            this.textBox7.Location = new System.Drawing.Point(172, 113);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(165, 27);
-            this.textBox7.TabIndex = 2;
+            this.textBoxPassword.Location = new System.Drawing.Point(172, 73);
+            this.textBoxPassword.Name = "textBoxPassword";
+            this.textBoxPassword.Size = new System.Drawing.Size(165, 27);
+            this.textBoxPassword.TabIndex = 1;
             // 
-            // textBox2
+            // textBoxUsername
             // 
-            this.textBox2.Location = new System.Drawing.Point(172, 73);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(165, 27);
-            this.textBox2.TabIndex = 1;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(172, 31);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(165, 27);
-            this.textBox1.TabIndex = 0;
+            this.textBoxUsername.Location = new System.Drawing.Point(172, 31);
+            this.textBoxUsername.Name = "textBoxUsername";
+            this.textBoxUsername.Size = new System.Drawing.Size(165, 27);
+            this.textBoxUsername.TabIndex = 0;
             // 
             // listBoxWorkers
             // 
@@ -444,6 +438,17 @@
             this.listBoxWorkers.Size = new System.Drawing.Size(227, 445);
             this.listBoxWorkers.TabIndex = 2;
             this.listBoxWorkers.SelectedIndexChanged += new System.EventHandler(this.listBoxWorkers_SelectedIndexChanged);
+            // 
+            // comboBoxCategory
+            // 
+            this.comboBoxCategory.FormattingEnabled = true;
+            this.comboBoxCategory.Items.AddRange(new object[] {
+            "worker",
+            "leader"});
+            this.comboBoxCategory.Location = new System.Drawing.Point(172, 116);
+            this.comboBoxCategory.Name = "comboBoxCategory";
+            this.comboBoxCategory.Size = new System.Drawing.Size(165, 29);
+            this.comboBoxCategory.TabIndex = 6;
             // 
             // UserControlLeaderClientsData
             // 
@@ -496,13 +501,13 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
         public System.Windows.Forms.ListBox listBoxWorkers;
         private System.Windows.Forms.Button buttonSearchClient;
         public MetroFramework.Controls.MetroTextBox TextboxClientName;
         private System.Windows.Forms.Label label9;
         public MetroFramework.Controls.MetroDateTime metroWorkerBirthday;
+        public System.Windows.Forms.ComboBox comboBoxCategory;
+        public System.Windows.Forms.TextBox textBoxPassword;
+        public System.Windows.Forms.TextBox textBoxUsername;
     }
 }

@@ -22,6 +22,7 @@ namespace Agroservice.model
         private controller.LoadParcelData loadParcelDataList;
         private controller.SetWorkerOfWork setWorkerofWork;
         private controller.LastWorkerId searchLastWorkerid;
+        private controller.RegistryNewWorker registryNewWorkerData;
         
 
        
@@ -41,6 +42,7 @@ namespace Agroservice.model
             plantDistance = new controller.SetPlantDistance();
             setWorkerofWork = new controller.SetWorkerOfWork();
             searchLastWorkerid = new controller.LastWorkerId();
+            registryNewWorkerData = new controller.RegistryNewWorker();
         }
 
       
@@ -173,6 +175,8 @@ namespace Agroservice.model
 
        
 
+
+
         /// <summary>
         /// kiválasztott termőföldhöz tartozó parcella adatainak lekérése
         /// </summary>
@@ -183,6 +187,7 @@ namespace Agroservice.model
            double parcelHa= controller.LoadParcelData.getParcelData(parcelnumber);
             return parcelHa;
         }
+
         /// <summary>
         /// termőföld adatainak lekérése
         /// </summary>
@@ -321,7 +326,15 @@ namespace Agroservice.model
             int id = searchLastWorkerid.searchLastWorkerId();
             return id;
         }
+        internal void getInsertNewWorkerData(string workerName, DateTime workerBirthday, string workerPlace, int workerTelnumb)
+        {
+            registryNewWorkerData.setNewWorkerData(workerName, workerBirthday, workerPlace, workerTelnumb);
+        }
 
+        internal void getInsertNewWorker(int newWorkerId, string username, string password ,int category)
+        {
+            registryNewWorkerData.insertNewWorker(newWorkerId,username,password, category);
+        }
 
     }
 }

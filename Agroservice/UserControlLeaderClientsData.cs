@@ -12,7 +12,8 @@ namespace Agroservice
 {
     public partial class UserControlLeaderClientsData : UserControl
     {
-        int lastWorkerId;
+        int category;
+        int newWorkerId;
         int workerid;
         string workerName;
         DateTime workerBirthday;
@@ -43,9 +44,8 @@ namespace Agroservice
 
            
 
-            model.loadWorkerData();
            
-
+            model.loadWorkerData();
             listBoxWorkers.DataSource = model.getWorkersName().DefaultView;
             listBoxWorkers.DisplayMember = "név";
             listBoxWorkers.ValueMember = "id";
@@ -154,7 +154,44 @@ namespace Agroservice
 
         private void buttonAddNewWorker_Click(object sender, EventArgs e)
         {
-            lastWorkerId = model.getSearchLastWorkerId() + 1;
+            newWorkerId = model.getSearchLastWorkerId() + 1;
+            textBoxWorkerName.Text = null;
+            metroWorkerBirthday.Text = null;
+            textBoxWorkerPlace.Text = null;
+            textBoxWorkerTelnumber.Text = null;
+           
+            
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (comboBoxCategory.Text == "worker")
+            {
+                category = 1;
+            }
+            else if (comboBoxCategory.Text == "leader")
+            {
+                category = 2;
+            }
+            string username = textBoxUsername.Text;
+            string password = textBoxPassword.Text;
+            workerName = textBoxWorkerName.Text;
+            workerBirthday = Convert.ToDateTime(metroWorkerBirthday.Text);
+            workerPlace = textBoxWorkerPlace.Text;
+            workerTelnumb = Convert.ToInt32(textBoxWorkerTelnumber.Text);
+            model.getInsertNewWorkerData(workerName, workerBirthday, workerPlace, workerTelnumb);
+            
+            model.getInsertNewWorker(newWorkerId, username, password, category);
+            textBoxPassword.Text = null;
+            textBoxUsername.Text = null;
+
+            model.getClearWorkerList();
+            model.loadWorkerData();
+            listBoxWorkers.DataSource = model.getWorkersName().DefaultView;
+            listBoxWorkers.DisplayMember = "név";
+            listBoxWorkers.ValueMember = "id";
+
+
         }
     }
 }
