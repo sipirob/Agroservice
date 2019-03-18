@@ -38,11 +38,8 @@ namespace Agroservice.controller
             while (dr.Read())
             {
                 GMapOverlay polyOverlay = new GMapOverlay("polygons");
-               latlong = dr[0].ToString().Split(' ');
-               
+                latlong = dr[0].ToString().Split(' ');
                 List<PointLatLng> points = new List<PointLatLng>();
-
-              
             }
             
             

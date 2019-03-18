@@ -57,13 +57,14 @@
             this.textBoxWorkerPlace = new System.Windows.Forms.TextBox();
             this.textBoxWorkerName = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.comboBoxCategory = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.textBoxUsername = new System.Windows.Forms.TextBox();
             this.listBoxWorkers = new System.Windows.Forms.ListBox();
-            this.comboBoxCategory = new System.Windows.Forms.ComboBox();
+            this.buttonCancel = new System.Windows.Forms.Button();
             this.metroTabControl2.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
             this.metroTabPage2.SuspendLayout();
@@ -230,6 +231,7 @@
             // 
             // metroTabPage2
             // 
+            this.metroTabPage2.Controls.Add(this.buttonCancel);
             this.metroTabPage2.Controls.Add(this.button4);
             this.metroTabPage2.Controls.Add(this.button3);
             this.metroTabPage2.Controls.Add(this.buttonUpdateWorkerData);
@@ -271,7 +273,7 @@
             // 
             // buttonUpdateWorkerData
             // 
-            this.buttonUpdateWorkerData.Location = new System.Drawing.Point(843, 96);
+            this.buttonUpdateWorkerData.Location = new System.Drawing.Point(843, 197);
             this.buttonUpdateWorkerData.Name = "buttonUpdateWorkerData";
             this.buttonUpdateWorkerData.Size = new System.Drawing.Size(121, 67);
             this.buttonUpdateWorkerData.TabIndex = 6;
@@ -388,6 +390,17 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Belépési adatok";
             // 
+            // comboBoxCategory
+            // 
+            this.comboBoxCategory.FormattingEnabled = true;
+            this.comboBoxCategory.Items.AddRange(new object[] {
+            "worker",
+            "leader"});
+            this.comboBoxCategory.Location = new System.Drawing.Point(172, 116);
+            this.comboBoxCategory.Name = "comboBoxCategory";
+            this.comboBoxCategory.Size = new System.Drawing.Size(165, 29);
+            this.comboBoxCategory.TabIndex = 6;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -439,16 +452,15 @@
             this.listBoxWorkers.TabIndex = 2;
             this.listBoxWorkers.SelectedIndexChanged += new System.EventHandler(this.listBoxWorkers_SelectedIndexChanged);
             // 
-            // comboBoxCategory
+            // buttonCancel
             // 
-            this.comboBoxCategory.FormattingEnabled = true;
-            this.comboBoxCategory.Items.AddRange(new object[] {
-            "worker",
-            "leader"});
-            this.comboBoxCategory.Location = new System.Drawing.Point(172, 116);
-            this.comboBoxCategory.Name = "comboBoxCategory";
-            this.comboBoxCategory.Size = new System.Drawing.Size(165, 29);
-            this.comboBoxCategory.TabIndex = 6;
+            this.buttonCancel.Location = new System.Drawing.Point(843, 96);
+            this.buttonCancel.Name = "buttonCancel";
+            this.buttonCancel.Size = new System.Drawing.Size(121, 67);
+            this.buttonCancel.TabIndex = 9;
+            this.buttonCancel.Text = "Mégse";
+            this.buttonCancel.UseVisualStyleBackColor = true;
+            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
             // UserControlLeaderClientsData
             // 
@@ -509,5 +521,6 @@
         public System.Windows.Forms.ComboBox comboBoxCategory;
         public System.Windows.Forms.TextBox textBoxPassword;
         public System.Windows.Forms.TextBox textBoxUsername;
+        private System.Windows.Forms.Button buttonCancel;
     }
 }

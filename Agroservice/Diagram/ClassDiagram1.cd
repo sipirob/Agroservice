@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="Agroservice.repository.Client" Collapsed="true">
+    <Position X="2" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEQCAAAIAAAAAAAACEQABAAAIECAAAAAA=</HashCode>
+      <FileName>repository\Client.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Agroservice.repository.Parcel" Collapsed="true">
+    <Position X="3.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AiAAAAIAAgAAiKAAACAgAAAAACAgAAAAAAIAAAAAAgA=</HashCode>
+      <FileName>repository\Parcel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Agroservice.repository.Service" Collapsed="true">
+    <Position X="3.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgABAAAAAAAAAAAAACAAARAAAAAEAABAAAAEAAAAAgA=</HashCode>
+      <FileName>repository\Service.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Agroservice.repository.Work" Collapsed="true">
+    <Position X="3.75" Y="3.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>UiQBASIAQAEUgAAAAGAEARQAAwAkQEAAAAAAQQAUAgA=</HashCode>
+      <FileName>repository\Work.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Agroservice.repository.Worker" Collapsed="true">
+    <Position X="3.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CEAAAoAAAAAEQAAAAIAAAAgAgAAEQABAAAAECAAAAAA=</HashCode>
+      <FileName>repository\Worker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Agroservice.model.AgroserviceModel" Collapsed="true">
+    <Position X="10" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BASQAgEkATABEYAMgKESCAIACAjAIEJEECgECACAABA=</HashCode>
+      <FileName>model\AgroserviceModel.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="clientDataLoad" />
+      <Field Name="workerDataLoad" />
+      <Field Name="newWorkDataLoad" />
+      <Field Name="loadUsername" />
+      <Field Name="completeWorkDataLoad" />
+      <Field Name="loadParcelMap" />
+      <Field Name="setDoneWorkInDatabase" />
+      <Field Name="loadParcelDataList" />
+      <Field Name="setWorkerofWork" />
+      <Field Name="searchLastWorkerid" />
+      <Field Name="registryNewWorkerData" />
+      <Field Name="plantDistance" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Agroservice.controller.ClientDataLoad" Collapsed="true">
+    <Position X="6.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAIACAAAICAEAAAAAAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>controller\ClientDataLoad.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Agroservice.controller.CompleteWorkDataLoad" Collapsed="true">
+    <Position X="6.5" Y="6" Width="2" />
+    <TypeIdentifier>
+      <HashCode>CAoAAAAAAAAAAAAAAAAAAAIUAABAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>controller\CompleteWorkDataLoad.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Agroservice.controller.DeleteUser" Collapsed="true">
+    <Position X="3.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>controller\DeleteUser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Agroservice.controller.DeleteWorker" Collapsed="true">
+    <Position X="3.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>controller\DeleteWorker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Agroservice.controller.LastWorkerId" Collapsed="true">
+    <Position X="6.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>controller\LastWorkerId.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Agroservice.controller.LoadNewWorksNumber" Collapsed="true">
+    <Position X="3.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>controller\LoadNewWorksNumber.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Agroservice.controller.LoadParcelData" Collapsed="true">
+    <Position X="6.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAIAAAAAAAAAAAAAAgAAAAACAAAEAAAAA=</HashCode>
+      <FileName>controller\LoadParcelData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Agroservice.controller.LoadParcelMap" Collapsed="true">
+    <Position X="6.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>controller\LoadParcelMap.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Agroservice.controller.LoadUsername" Collapsed="true">
+    <Position X="6.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAIAAAAAAAAAAAAAAAAAAEAAgCAAAAAA=</HashCode>
+      <FileName>controller\LoadUsername.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Agroservice.controller.RegistryNewWorker" Collapsed="true">
+    <Position X="6.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>controller\RegistryNewWorker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Agroservice.controller.SetDoneWork" Collapsed="true">
+    <Position X="6.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>controller\SetDoneWork.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Agroservice.controller.SetPlantDistance" Collapsed="true">
+    <Position X="6.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAQAAAAAAAAAAAAAAAAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>controller\SetPlantDistance.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Agroservice.controller.SetWorkerOfWork" Collapsed="true">
+    <Position X="6.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>controller\SetWorkerOfWork.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Agroservice.controller.UpdateWorkerData" Collapsed="true">
+    <Position X="3.75" Y="4.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>controller\UpdateWorkerData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Agroservice.controller.WorkerDataLoad" Collapsed="true">
+    <Position X="6.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAABECCAAAAAAAAAAAEAAgCBAAAAA=</HashCode>
+      <FileName>controller\WorkerDataLoad.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Agroservice.controller.NewWorkDataLoad" Collapsed="true">
+    <Position X="6.5" Y="6.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAACEAAAAAAAAAAAAAAAAAAAAAAAAAACEAAAA=</HashCode>
+      <FileName>controller\NewWorkDataLoad.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Agroservice.FormLeader" Collapsed="true">
+    <Position X="12.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAwAAAAAWQAIAAAAESBAAASQIAQAAAAAAAAAQDokCA=</HashCode>
+      <FileName>FormLeader.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="model" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Agroservice.FormWorker" Collapsed="true">
+    <Position X="12.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIgAAAAICAAIhEACEWDAAACQJAwAgIAAgAAARBAgAA=</HashCode>
+      <FileName>FormWorker.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="controller" />
+      <Field Name="userControlNew" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Agroservice.View.FormCalculator" Collapsed="true">
+    <Position X="17.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>MAIAAAAAICAAABAAAACgCAMiAAAAAAAAACAIAQAIACA=</HashCode>
+      <FileName>View\FormCalculator.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="model" />
+      <Field Name="newWorks" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Agroservice.UserControlNewWorks" Collapsed="true">
+    <Position X="15.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAQACAMgBAAEACAAADiAwDIEIAAAEABACALAgA=</HashCode>
+      <FileName>UserControlNewWorks.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

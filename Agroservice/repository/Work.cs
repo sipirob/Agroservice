@@ -8,6 +8,8 @@ namespace Agroservice.repository
 {
     public class Work
     {
+        
+
         private int id;
         private DateTime date;
         private int parcelnumber;
@@ -34,6 +36,11 @@ namespace Agroservice.repository
             this.done = done;
            
         }
+
+        public Work()
+        {
+        }
+
         public void setId(int id)
         {
             this.id = id;

@@ -45,7 +45,8 @@ namespace Agroservice.model
             registryNewWorkerData = new controller.RegistryNewWorker();
         }
 
-      
+       
+
 
 
         /// <summary>
@@ -335,6 +336,13 @@ namespace Agroservice.model
         {
             registryNewWorkerData.insertNewWorker(newWorkerId,username,password, category);
         }
+
+        internal int getNumberOfNewWorks()
+        {
+            int numb = controller.NewWorkDataLoad.countNewWork();
+            return numb;
+        }
+
 
     }
 }

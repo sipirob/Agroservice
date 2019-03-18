@@ -48,11 +48,25 @@ namespace Agroservice
 
         private void FormLeader_Load(object sender, EventArgs e)
         {
-            
-
+           
+            labelIsWorks.Hide();
+            labelNoworks.Hide();
             model.AgroserviceModel model = new model.AgroserviceModel();
+            model.loadNewWorkData();
             userControlLeaderClientsData1.Hide();
             userControlLeaderWorks1.Hide();
+            int newWorksNumb=model.getNumberOfNewWorks();
+
+            if (newWorksNumb > 0)
+            {
+                labelIsWorks.Show();
+                labelIsWorks.Text = "Önnek " + newWorksNumb + " újonnan beérkezett munkálat foglalása van";
+            }
+            else if (newWorksNumb == 0)
+            {
+                labelNoworks.Show();
+                labelNoworks.Text = "Nincs új szolgáltatás igénylés";
+            }
 
             //userControlLeaderClientsData1.listBoxWorkers.DataSource = null;
             model.loadWorkerData();
@@ -64,36 +78,23 @@ namespace Agroservice
             userControlLeaderWorks1.metroComboBoxWorkers.DataSource = model.getWorkersName().DefaultView;
             userControlLeaderWorks1.metroComboBoxWorkers.DisplayMember = "név";
             userControlLeaderWorks1.metroComboBoxWorkers.ValueMember = "id";
+
+            userControlLeaderWorks1.metroComboBoxWorker.DataSource = model.getWorkersName().DefaultView;
+            userControlLeaderWorks1.metroComboBoxWorker.DisplayMember = "név";
+            userControlLeaderWorks1.metroComboBoxWorker.ValueMember = "id";
             //controller.loadWorkerData();
             //dataGridViewWorkers.DataSource = controller.getWorkerData();
 
-            model.loadNewWorkData();
+           
             userControlLeaderWorks1.dataGridViewAllNewWorks.DataSource = model.getNewWorkData();
 
             model.usernameLoad();
             labelUsername.Text = model.getloadUsername();
 
-            model.loadCompleteData();
-           userControlLeaderWorks1.dataGridViewAllCompleteWorks.DataSource = model.getCompleteWorksData();
-
-
-            model.loadClientData();
-           // dataGridViewClient.DataSource = controller.getClientData();
-            DataTable dt = new DataTable();
-            dt = model.getClientData();
-            
-            ListViewItem lv = new ListViewItem();
-            foreach (DataRow dr in dt.Rows)
-            {
-                ListViewItem lvi = new ListViewItem(dr["id"].ToString());
-                lvi.SubItems.Add(dr["név"].ToString());
-                lvi.SubItems.Add(dr["lakhely"].ToString());
-                lvi.SubItems.Add(dr["telefonszám"].ToString());
-
-
-                userControlLeaderClientsData1.listViewClientsData.Items.Add(lvi); 
-            }
            
+
+
+          
             
         }
 
@@ -103,7 +104,28 @@ namespace Agroservice
             panelSign.Top = buttonUsersData.Top;
             userControlLeaderClientsData1.Show();
             userControlLeaderWorks1.Hide();
-            
+
+            model.getClearClientsDataList();
+            userControlLeaderClientsData1.listViewClientsData.Items.Clear();
+            model.loadClientData();
+           
+            // dataGridViewClient.DataSource = controller.getClientData();
+            DataTable dt = new DataTable();
+            dt = model.getClientData();
+
+            ListViewItem lv = new ListViewItem();
+            foreach (DataRow dr in dt.Rows)
+            {
+                ListViewItem lvi = new ListViewItem(dr["id"].ToString());
+                lvi.SubItems.Add(dr["név"].ToString());
+                lvi.SubItems.Add(dr["lakhely"].ToString());
+                lvi.SubItems.Add(dr["telefonszám"].ToString());
+
+
+                userControlLeaderClientsData1.listViewClientsData.Items.Add(lvi);
+            }
+
+
         }
 
         private void buttonNewWork_Click(object sender, EventArgs e)
@@ -114,10 +136,11 @@ namespace Agroservice
             userControlLeaderWorks1.Show();
 
             model.loadWorkerData();
-            
-            
+            model.getClearCompleteWorksList();
+            model.loadCompleteData();
+            userControlLeaderWorks1.dataGridViewAllCompleteWorks.DataSource = model.getCompleteWorksData();
 
-           
+
 
 
         }

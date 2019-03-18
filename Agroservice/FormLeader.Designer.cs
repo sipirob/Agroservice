@@ -39,6 +39,8 @@
             this.buttonUsersData = new System.Windows.Forms.Button();
             this.buttonNewWork = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.labelIsWorks = new System.Windows.Forms.Label();
+            this.labelNoworks = new System.Windows.Forms.Label();
             this.userControlLeaderWorks1 = new Agroservice.UserControlLeaderWorks();
             this.userControlLeaderClientsData1 = new Agroservice.UserControlLeaderClientsData();
             this.userControlLeaderAllNewWorks1 = new Agroservice.UserControlLeaderWorks();
@@ -169,11 +171,29 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(202, 157);
+            this.pictureBox1.Location = new System.Drawing.Point(202, 214);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1062, 524);
+            this.pictureBox1.Size = new System.Drawing.Size(1062, 467);
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
+            // 
+            // labelIsWorks
+            // 
+            this.labelIsWorks.AutoSize = true;
+            this.labelIsWorks.Location = new System.Drawing.Point(250, 90);
+            this.labelIsWorks.Name = "labelIsWorks";
+            this.labelIsWorks.Size = new System.Drawing.Size(57, 21);
+            this.labelIsWorks.TabIndex = 10;
+            this.labelIsWorks.Text = "label1";
+            // 
+            // labelNoworks
+            // 
+            this.labelNoworks.AutoSize = true;
+            this.labelNoworks.Location = new System.Drawing.Point(250, 111);
+            this.labelNoworks.Name = "labelNoworks";
+            this.labelNoworks.Size = new System.Drawing.Size(57, 21);
+            this.labelNoworks.TabIndex = 11;
+            this.labelNoworks.Text = "label1";
             // 
             // userControlLeaderWorks1
             // 
@@ -215,6 +235,8 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.labelNoworks);
+            this.Controls.Add(this.labelIsWorks);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FormLeader";
@@ -225,6 +247,7 @@
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -243,5 +266,7 @@
         private UserControlLeaderClientsData userControlLeaderClientsData1;
         private UserControlLeaderWorks userControlLeaderAllNewWorks1;
         private UserControlLeaderWorks userControlLeaderWorks1;
+        private System.Windows.Forms.Label labelIsWorks;
+        private System.Windows.Forms.Label labelNoworks;
     }
 }

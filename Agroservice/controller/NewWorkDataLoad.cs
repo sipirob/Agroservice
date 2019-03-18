@@ -11,6 +11,7 @@ namespace Agroservice.controller
 {
     class NewWorkDataLoad
     {
+        
         private static List<repository.Work> Work;
 
        
@@ -96,7 +97,16 @@ namespace Agroservice.controller
             return newWorkDT;
 
         }
-       
+       public static int countNewWork()
+        {
+            int sum = 0;
+            foreach (Work w in Work)
+            {
+                sum += 1;
+            }
+               
+            return sum;
+        }
 
     }
 }

@@ -67,7 +67,6 @@ namespace Agroservice
                 string[] latlong = model.getLoadParcelMapCoordinates(parcelnumber);
 
                 List<PointLatLng> points = new List<PointLatLng>();
-
                 points.Add(new PointLatLng(Convert.ToDouble(latlong[0]), Convert.ToDouble(latlong[1])));
                 points.Add(new PointLatLng(Convert.ToDouble(latlong[2]), Convert.ToDouble(latlong[3])));
                 points.Add(new PointLatLng(Convert.ToDouble(latlong[4]), Convert.ToDouble(latlong[5])));

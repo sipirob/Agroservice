@@ -26,10 +26,7 @@ namespace Agroservice
         public UserControlLeaderClientsData()
         {
             InitializeComponent();
-            
             listboxDt = new DataTable();
-           
-           
         }
 
         public static object ListViewClientsData { get; internal set; }
@@ -41,14 +38,11 @@ namespace Agroservice
 
         private void UserControlLeaderClientsData_Load(object sender, EventArgs e)
         {
-
-           
-
-           
             model.loadWorkerData();
             listBoxWorkers.DataSource = model.getWorkersName().DefaultView;
             listBoxWorkers.DisplayMember = "név";
             listBoxWorkers.ValueMember = "id";
+            buttonCancel.Hide();
         }
 
         private void buttonDeleteClient_Click(object sender, EventArgs e)
@@ -78,7 +72,6 @@ namespace Agroservice
                 clvi.SubItems.Add(dr["telefonszám"].ToString());
                 listViewClientsData.Items.Clear();
                 listViewClientsData.Items.Add(clvi);
-
             }
         }
 
@@ -90,14 +83,12 @@ namespace Agroservice
             {
                 model.getDeleteWorker(workerid);
                 MessageBox.Show("Dolgozó törölve");
-
-
+                
                 model.getClearWorkerList();
                 model.loadWorkerData();
                 listBoxWorkers.DataSource = listboxDt.DefaultView;
                 listBoxWorkers.DisplayMember = "név";
                 listBoxWorkers.ValueMember = "id";
-              
             }
                 
             else 
@@ -128,11 +119,8 @@ namespace Agroservice
 
         private void listBoxWorkers_SelectedIndexChanged(object sender, EventArgs e)
         {
-           
-
             if (listBoxWorkers.SelectedIndex >= 0)
             {
-               
                 listBoxWorkers.ValueMember = "id";
                 model.loadWorkerData();
                 workerid = Convert.ToInt32(listBoxWorkers.SelectedValue);
@@ -142,14 +130,8 @@ namespace Agroservice
                 textBoxWorkerPlace.Text = workerdata.Rows[0]["lakhely"].ToString();
                 textBoxWorkerTelnumber.Text = workerdata.Rows[0]["telefonszám"].ToString();
                 workerdata.Clear();
-
-                
             }
             else return;
-
-
-           
-
         }
 
         private void buttonAddNewWorker_Click(object sender, EventArgs e)
@@ -159,8 +141,9 @@ namespace Agroservice
             metroWorkerBirthday.Text = null;
             textBoxWorkerPlace.Text = null;
             textBoxWorkerTelnumber.Text = null;
-           
-            
+            button3.Hide();
+            buttonUpdateWorkerData.Hide();
+            buttonCancel.Show();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -184,14 +167,21 @@ namespace Agroservice
             model.getInsertNewWorker(newWorkerId, username, password, category);
             textBoxPassword.Text = null;
             textBoxUsername.Text = null;
+            button3.Show();
+            buttonUpdateWorkerData.Show();
 
             model.getClearWorkerList();
             model.loadWorkerData();
             listBoxWorkers.DataSource = model.getWorkersName().DefaultView;
             listBoxWorkers.DisplayMember = "név";
             listBoxWorkers.ValueMember = "id";
+        }
 
-
+        private void buttonCancel_Click(object sender, EventArgs e)
+        {
+            button3.Show();
+            buttonUpdateWorkerData.Show();
+            buttonCancel.Hide();
         }
     }
 }

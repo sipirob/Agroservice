@@ -36,11 +36,11 @@
             this.metroComboBoxWorkers = new MetroFramework.Controls.MetroComboBox();
             this.buttonAddWorker = new System.Windows.Forms.Button();
             this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
+            this.TextboxClient = new MetroFramework.Controls.MetroTextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.metroComboBoxWorker = new MetroFramework.Controls.MetroComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridViewAllCompleteWorks = new System.Windows.Forms.DataGridView();
-            this.TextboxClient = new MetroFramework.Controls.MetroTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAllNewWorks)).BeginInit();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
@@ -56,7 +56,7 @@
             this.dataGridViewAllNewWorks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewAllNewWorks.Location = new System.Drawing.Point(7, 62);
             this.dataGridViewAllNewWorks.Name = "dataGridViewAllNewWorks";
-            this.dataGridViewAllNewWorks.Size = new System.Drawing.Size(676, 439);
+            this.dataGridViewAllNewWorks.Size = new System.Drawing.Size(705, 439);
             this.dataGridViewAllNewWorks.TabIndex = 0;
             this.dataGridViewAllNewWorks.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewAllNewWorks_CellContentClick);
             // 
@@ -78,7 +78,7 @@
             this.metroTabControl1.ItemSize = new System.Drawing.Size(120, 50);
             this.metroTabControl1.Location = new System.Drawing.Point(25, 15);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 1;
+            this.metroTabControl1.SelectedIndex = 0;
             this.metroTabControl1.Size = new System.Drawing.Size(1022, 581);
             this.metroTabControl1.Style = MetroFramework.MetroColorStyle.Lime;
             this.metroTabControl1.TabIndex = 2;
@@ -109,9 +109,10 @@
             // 
             this.metroComboBoxWorkers.FormattingEnabled = true;
             this.metroComboBoxWorkers.ItemHeight = 23;
-            this.metroComboBoxWorkers.Location = new System.Drawing.Point(718, 62);
+            this.metroComboBoxWorkers.Location = new System.Drawing.Point(736, 62);
             this.metroComboBoxWorkers.Name = "metroComboBoxWorkers";
-            this.metroComboBoxWorkers.Size = new System.Drawing.Size(293, 29);
+            this.metroComboBoxWorkers.Size = new System.Drawing.Size(275, 29);
+            this.metroComboBoxWorkers.Style = MetroFramework.MetroColorStyle.Lime;
             this.metroComboBoxWorkers.TabIndex = 3;
             this.metroComboBoxWorkers.UseSelectable = true;
             // 
@@ -144,6 +145,47 @@
             this.metroTabPage2.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage2.VerticalScrollbarSize = 1;
             // 
+            // TextboxClient
+            // 
+            this.TextboxClient.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.TextboxClient.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.HistoryList;
+            // 
+            // 
+            // 
+            this.TextboxClient.CustomButton.FlatAppearance.BorderSize = 0;
+            this.TextboxClient.CustomButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.TextboxClient.CustomButton.Image = null;
+            this.TextboxClient.CustomButton.Location = new System.Drawing.Point(182, 2);
+            this.TextboxClient.CustomButton.Name = "";
+            this.TextboxClient.CustomButton.Size = new System.Drawing.Size(25, 25);
+            this.TextboxClient.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.TextboxClient.CustomButton.TabIndex = 1;
+            this.TextboxClient.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.TextboxClient.CustomButton.UseSelectable = true;
+            this.TextboxClient.CustomButton.Visible = false;
+            this.TextboxClient.DisplayIcon = true;
+            this.TextboxClient.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.TextboxClient.Icon = ((System.Drawing.Image)(resources.GetObject("TextboxClient.Icon")));
+            this.TextboxClient.Lines = new string[0];
+            this.TextboxClient.Location = new System.Drawing.Point(792, 49);
+            this.TextboxClient.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
+            this.TextboxClient.MaxLength = 32767;
+            this.TextboxClient.Name = "TextboxClient";
+            this.TextboxClient.PasswordChar = '\0';
+            this.TextboxClient.PromptText = "Ügyfél neve";
+            this.TextboxClient.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.TextboxClient.SelectedText = "";
+            this.TextboxClient.SelectionLength = 0;
+            this.TextboxClient.SelectionStart = 0;
+            this.TextboxClient.ShortcutsEnabled = true;
+            this.TextboxClient.Size = new System.Drawing.Size(210, 30);
+            this.TextboxClient.Style = MetroFramework.MetroColorStyle.Lime;
+            this.TextboxClient.TabIndex = 11;
+            this.TextboxClient.UseSelectable = true;
+            this.TextboxClient.WaterMark = "Ügyfél neve";
+            this.TextboxClient.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.TextboxClient.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(882, 461);
@@ -158,9 +200,10 @@
             // 
             this.metroComboBoxWorker.FormattingEnabled = true;
             this.metroComboBoxWorker.ItemHeight = 23;
-            this.metroComboBoxWorker.Location = new System.Drawing.Point(736, 49);
+            this.metroComboBoxWorker.Location = new System.Drawing.Point(792, 94);
             this.metroComboBoxWorker.Name = "metroComboBoxWorker";
-            this.metroComboBoxWorker.Size = new System.Drawing.Size(266, 29);
+            this.metroComboBoxWorker.Size = new System.Drawing.Size(210, 29);
+            this.metroComboBoxWorker.Style = MetroFramework.MetroColorStyle.Lime;
             this.metroComboBoxWorker.TabIndex = 4;
             this.metroComboBoxWorker.UseSelectable = true;
             // 
@@ -179,49 +222,8 @@
             this.dataGridViewAllCompleteWorks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewAllCompleteWorks.Location = new System.Drawing.Point(3, 49);
             this.dataGridViewAllCompleteWorks.Name = "dataGridViewAllCompleteWorks";
-            this.dataGridViewAllCompleteWorks.Size = new System.Drawing.Size(717, 458);
+            this.dataGridViewAllCompleteWorks.Size = new System.Drawing.Size(783, 458);
             this.dataGridViewAllCompleteWorks.TabIndex = 2;
-            // 
-            // TextboxClient
-            // 
-            this.TextboxClient.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.TextboxClient.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.HistoryList;
-            // 
-            // 
-            // 
-            this.TextboxClient.CustomButton.FlatAppearance.BorderSize = 0;
-            this.TextboxClient.CustomButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.TextboxClient.CustomButton.Image = null;
-            this.TextboxClient.CustomButton.Location = new System.Drawing.Point(238, 2);
-            this.TextboxClient.CustomButton.Name = "";
-            this.TextboxClient.CustomButton.Size = new System.Drawing.Size(25, 25);
-            this.TextboxClient.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.TextboxClient.CustomButton.TabIndex = 1;
-            this.TextboxClient.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.TextboxClient.CustomButton.UseSelectable = true;
-            this.TextboxClient.CustomButton.Visible = false;
-            this.TextboxClient.DisplayIcon = true;
-            this.TextboxClient.FontSize = MetroFramework.MetroTextBoxSize.Medium;
-            this.TextboxClient.Icon = ((System.Drawing.Image)(resources.GetObject("TextboxClient.Icon")));
-            this.TextboxClient.Lines = new string[0];
-            this.TextboxClient.Location = new System.Drawing.Point(736, 118);
-            this.TextboxClient.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
-            this.TextboxClient.MaxLength = 32767;
-            this.TextboxClient.Name = "TextboxClient";
-            this.TextboxClient.PasswordChar = '\0';
-            this.TextboxClient.PromptText = "Ügyfél neve";
-            this.TextboxClient.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.TextboxClient.SelectedText = "";
-            this.TextboxClient.SelectionLength = 0;
-            this.TextboxClient.SelectionStart = 0;
-            this.TextboxClient.ShortcutsEnabled = true;
-            this.TextboxClient.Size = new System.Drawing.Size(266, 30);
-            this.TextboxClient.Style = MetroFramework.MetroColorStyle.Brown;
-            this.TextboxClient.TabIndex = 11;
-            this.TextboxClient.UseSelectable = true;
-            this.TextboxClient.WaterMark = "Ügyfél neve";
-            this.TextboxClient.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.TextboxClient.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // UserControlLeaderWorks
             // 
