@@ -55,6 +55,7 @@ namespace Agroservice
             model.loadNewWorkData();
             userControlLeaderClientsData1.Hide();
             userControlLeaderWorks1.Hide();
+            userControlLeaderSettings1.Hide();
             int newWorksNumb=model.getNumberOfNewWorks();
 
             if (newWorksNumb > 0)
@@ -81,7 +82,7 @@ namespace Agroservice
 
             userControlLeaderWorks1.metroComboBoxWorker.DataSource = model.getWorkersName().DefaultView;
             userControlLeaderWorks1.metroComboBoxWorker.DisplayMember = "név";
-            userControlLeaderWorks1.metroComboBoxWorker.ValueMember = "id";
+            userControlLeaderWorks1.metroComboBoxWorker.ValueMember = "név";
             //controller.loadWorkerData();
             //dataGridViewWorkers.DataSource = controller.getWorkerData();
 
@@ -103,6 +104,7 @@ namespace Agroservice
             panelSign.Height = buttonUsersData.Height;
             panelSign.Top = buttonUsersData.Top;
             userControlLeaderClientsData1.Show();
+            userControlLeaderSettings1.Hide();
             userControlLeaderWorks1.Hide();
 
             model.getClearClientsDataList();
@@ -134,6 +136,7 @@ namespace Agroservice
             panelSign.Top = buttonNewWork.Top;
             userControlLeaderClientsData1.Hide();
             userControlLeaderWorks1.Show();
+            userControlLeaderSettings1.Hide();
 
             model.loadWorkerData();
             model.getClearCompleteWorksList();
@@ -149,11 +152,24 @@ namespace Agroservice
         {
             userControlLeaderWorks1.Hide();
             userControlLeaderClientsData1.Hide();
+            userControlLeaderSettings1.Hide();
         }
 
         private void userControlLeaderWorks1_Load(object sender, EventArgs e)
         {
            
+        }
+
+        private void buttonSettings_Click(object sender, EventArgs e)
+        {
+            panelSign.Height = buttonNewWork.Height;
+            panelSign.Top = buttonSettings.Top;
+            userControlLeaderClientsData1.Hide();
+            userControlLeaderWorks1.Hide();
+            userControlLeaderSettings1.Show();
+            userControlLeaderAllNewWorks1.Hide();
+
+            //userControlLeaderSettings1.listBoxServices.DataSource=
         }
     }
 }

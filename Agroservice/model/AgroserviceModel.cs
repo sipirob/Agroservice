@@ -45,7 +45,8 @@ namespace Agroservice.model
             registryNewWorkerData = new controller.RegistryNewWorker();
         }
 
-       
+      
+
 
 
 
@@ -58,6 +59,7 @@ namespace Agroservice.model
             DataTable clientDT = controller.ClientDataLoad.getClientDataFromList();
             return clientDT;
         }
+
         /// <summary>
         /// Ügyfelek adatainak lekérése adatbázisból
         /// </summary>
@@ -322,6 +324,19 @@ namespace Agroservice.model
             DataTable work = controller.CompleteWorkDataLoad.searchWorkByClientName(clientname);
             return work;
         }
+        internal DataTable getSearchWorkByWorkerName(string workername)
+        {
+            DataTable work = controller.CompleteWorkDataLoad.searchWorkByWorker(workername);
+            return work;
+        }
+
+        internal object getSearchWorkComplex(string workername, string clientname)
+        {
+            DataTable work = controller.CompleteWorkDataLoad.searchWorkByWorkerAndClientname(workername,clientname);
+            return work;
+        }
+
+
         internal int getSearchLastWorkerId()
         {
             int id = searchLastWorkerid.searchLastWorkerId();

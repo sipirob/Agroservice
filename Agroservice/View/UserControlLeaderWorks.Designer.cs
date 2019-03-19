@@ -36,8 +36,10 @@
             this.metroComboBoxWorkers = new MetroFramework.Controls.MetroComboBox();
             this.buttonAddWorker = new System.Windows.Forms.Button();
             this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
+            this.buttonSearchBoth = new System.Windows.Forms.Button();
+            this.buttonSearchWorker = new System.Windows.Forms.Button();
             this.TextboxClient = new MetroFramework.Controls.MetroTextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonSearchClient = new System.Windows.Forms.Button();
             this.metroComboBoxWorker = new MetroFramework.Controls.MetroComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridViewAllCompleteWorks = new System.Windows.Forms.DataGridView();
@@ -78,7 +80,7 @@
             this.metroTabControl1.ItemSize = new System.Drawing.Size(120, 50);
             this.metroTabControl1.Location = new System.Drawing.Point(25, 15);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 0;
+            this.metroTabControl1.SelectedIndex = 1;
             this.metroTabControl1.Size = new System.Drawing.Size(1022, 581);
             this.metroTabControl1.Style = MetroFramework.MetroColorStyle.Lime;
             this.metroTabControl1.TabIndex = 2;
@@ -128,8 +130,10 @@
             // 
             // metroTabPage2
             // 
+            this.metroTabPage2.Controls.Add(this.buttonSearchBoth);
+            this.metroTabPage2.Controls.Add(this.buttonSearchWorker);
             this.metroTabPage2.Controls.Add(this.TextboxClient);
-            this.metroTabPage2.Controls.Add(this.button1);
+            this.metroTabPage2.Controls.Add(this.buttonSearchClient);
             this.metroTabPage2.Controls.Add(this.metroComboBoxWorker);
             this.metroTabPage2.Controls.Add(this.label2);
             this.metroTabPage2.Controls.Add(this.dataGridViewAllCompleteWorks);
@@ -144,6 +148,26 @@
             this.metroTabPage2.VerticalScrollbarBarColor = true;
             this.metroTabPage2.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage2.VerticalScrollbarSize = 1;
+            // 
+            // buttonSearchBoth
+            // 
+            this.buttonSearchBoth.Location = new System.Drawing.Point(792, 369);
+            this.buttonSearchBoth.Name = "buttonSearchBoth";
+            this.buttonSearchBoth.Size = new System.Drawing.Size(210, 46);
+            this.buttonSearchBoth.TabIndex = 13;
+            this.buttonSearchBoth.Text = "Komplex keresés";
+            this.buttonSearchBoth.UseVisualStyleBackColor = true;
+            this.buttonSearchBoth.Click += new System.EventHandler(this.buttonSearchBoth_Click);
+            // 
+            // buttonSearchWorker
+            // 
+            this.buttonSearchWorker.Location = new System.Drawing.Point(792, 284);
+            this.buttonSearchWorker.Name = "buttonSearchWorker";
+            this.buttonSearchWorker.Size = new System.Drawing.Size(210, 46);
+            this.buttonSearchWorker.TabIndex = 12;
+            this.buttonSearchWorker.Text = "Keresés dolgozó alapján";
+            this.buttonSearchWorker.UseVisualStyleBackColor = true;
+            this.buttonSearchWorker.Click += new System.EventHandler(this.buttonSearchWorker_Click);
             // 
             // TextboxClient
             // 
@@ -186,21 +210,23 @@
             this.TextboxClient.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.TextboxClient.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // button1
+            // buttonSearchClient
             // 
-            this.button1.Location = new System.Drawing.Point(882, 461);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(120, 46);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Keresés";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonSearchClient.Location = new System.Drawing.Point(792, 219);
+            this.buttonSearchClient.Name = "buttonSearchClient";
+            this.buttonSearchClient.Size = new System.Drawing.Size(210, 46);
+            this.buttonSearchClient.TabIndex = 6;
+            this.buttonSearchClient.Text = "Keresés ügyfél alapján";
+            this.buttonSearchClient.UseVisualStyleBackColor = true;
+            this.buttonSearchClient.Click += new System.EventHandler(this.button1_Click);
             // 
             // metroComboBoxWorker
             // 
             this.metroComboBoxWorker.FormattingEnabled = true;
             this.metroComboBoxWorker.ItemHeight = 23;
-            this.metroComboBoxWorker.Location = new System.Drawing.Point(792, 94);
+            this.metroComboBoxWorker.Items.AddRange(new object[] {
+            "Üres"});
+            this.metroComboBoxWorker.Location = new System.Drawing.Point(792, 117);
             this.metroComboBoxWorker.Name = "metroComboBoxWorker";
             this.metroComboBoxWorker.Size = new System.Drawing.Size(210, 29);
             this.metroComboBoxWorker.Style = MetroFramework.MetroColorStyle.Lime;
@@ -257,8 +283,10 @@
         private System.Windows.Forms.Label label2;
         public System.Windows.Forms.DataGridView dataGridViewAllCompleteWorks;
         public MetroFramework.Controls.MetroComboBox metroComboBoxWorkers;
-        private System.Windows.Forms.Button button1;
-        public MetroFramework.Controls.MetroComboBox metroComboBoxWorker;
+        private System.Windows.Forms.Button buttonSearchClient;
         public MetroFramework.Controls.MetroTextBox TextboxClient;
+        public MetroFramework.Controls.MetroComboBox metroComboBoxWorker;
+        private System.Windows.Forms.Button buttonSearchWorker;
+        private System.Windows.Forms.Button buttonSearchBoth;
     }
 }

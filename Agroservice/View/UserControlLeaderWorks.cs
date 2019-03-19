@@ -39,14 +39,27 @@ namespace Agroservice
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string clientname = TextboxClient.Text;
-            
             model.getClearCompleteWorksList();
-            
             model.loadCompleteData();
-           // model.getCompleteWorksData();
-            dataGridViewAllCompleteWorks.DataSource = model.getSearchWorkByClientName(clientname);
+            string clientname = TextboxClient.Text;
+            dataGridViewAllCompleteWorks.DataSource= model.getSearchWorkByClientName(clientname);
+        }
 
+        private void buttonSearchWorker_Click(object sender, EventArgs e)
+        {
+            model.getClearCompleteWorksList();
+            model.loadCompleteData();
+            string workername = metroComboBoxWorker.SelectedValue.ToString();
+            dataGridViewAllCompleteWorks.DataSource = model.getSearchWorkByWorkerName(workername);
+        }
+
+        private void buttonSearchBoth_Click(object sender, EventArgs e)
+        {
+            model.getClearCompleteWorksList();
+            model.loadCompleteData();
+            string workername = metroComboBoxWorker.SelectedValue.ToString();
+            string clientname = TextboxClient.Text;
+            dataGridViewAllCompleteWorks.DataSource = model.getSearchWorkComplex(workername, clientname);
         }
     }
 }

@@ -44,14 +44,18 @@
             this.userControlLeaderWorks1 = new Agroservice.UserControlLeaderWorks();
             this.userControlLeaderClientsData1 = new Agroservice.UserControlLeaderClientsData();
             this.userControlLeaderAllNewWorks1 = new Agroservice.UserControlLeaderWorks();
+            this.userControlLeaderSettings1 = new Agroservice.View.UserControlLeaderSettings();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.labelUsername);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -137,6 +141,7 @@
             this.buttonSettings.TabIndex = 6;
             this.buttonSettings.Text = "Beállítások";
             this.buttonSettings.UseVisualStyleBackColor = true;
+            this.buttonSettings.Click += new System.EventHandler(this.buttonSettings_Click);
             // 
             // buttonUsersData
             // 
@@ -225,11 +230,31 @@
             this.userControlLeaderAllNewWorks1.Size = new System.Drawing.Size(1062, 602);
             this.userControlLeaderAllNewWorks1.TabIndex = 9;
             // 
+            // userControlLeaderSettings1
+            // 
+            this.userControlLeaderSettings1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.userControlLeaderSettings1.Location = new System.Drawing.Point(202, 80);
+            this.userControlLeaderSettings1.Margin = new System.Windows.Forms.Padding(5);
+            this.userControlLeaderSettings1.Name = "userControlLeaderSettings1";
+            this.userControlLeaderSettings1.Size = new System.Drawing.Size(1062, 601);
+            this.userControlLeaderSettings1.TabIndex = 12;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(12, 6);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(99, 67);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
+            // 
             // FormLeader
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.userControlLeaderSettings1);
             this.Controls.Add(this.userControlLeaderWorks1);
             this.Controls.Add(this.userControlLeaderClientsData1);
             this.Controls.Add(this.pictureBox1);
@@ -246,6 +271,7 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -268,5 +294,7 @@
         private UserControlLeaderWorks userControlLeaderWorks1;
         private System.Windows.Forms.Label labelIsWorks;
         private System.Windows.Forms.Label labelNoworks;
+        private View.UserControlLeaderSettings userControlLeaderSettings1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

@@ -126,5 +126,49 @@ namespace Agroservice.controller
 
             return cpWorkDT;
         }
+        internal static DataTable searchWorkByWorker(string workername)
+        {
+            DataTable cpWorkDT = new DataTable();
+            cpWorkDT.Columns.Add("dátum", typeof(DateTime));
+            cpWorkDT.Columns.Add("parcellaszám", typeof(int));
+            cpWorkDT.Columns.Add("munkálat neve", typeof(string));
+            cpWorkDT.Columns.Add("gabona", typeof(string));
+            cpWorkDT.Columns.Add("Ügyfél neve", typeof(string));
+            cpWorkDT.Columns.Add("Dolgozó neve", typeof(string));
+            cpWorkDT.Columns.Add("értékelés", typeof(int));
+            cpWorkDT.Columns.Add("hozzászólás", typeof(string));
+            foreach (repository.Work w in Work)
+            {
+                if (w.getWorkername() == workername)
+                {
+                    cpWorkDT.Rows.Add(w.getDate(), w.getParcelnumber(), w.getServicename(), w.getGraincropname(), w.getClientname(), w.getWorkername(), w.getRating(), w.getComment());
+                }
+
+            }
+
+            return cpWorkDT;
+        }
+        internal static DataTable searchWorkByWorkerAndClientname(string workername, string clientname)
+        {
+            DataTable cpWorkDT = new DataTable();
+            cpWorkDT.Columns.Add("dátum", typeof(DateTime));
+            cpWorkDT.Columns.Add("parcellaszám", typeof(int));
+            cpWorkDT.Columns.Add("munkálat neve", typeof(string));
+            cpWorkDT.Columns.Add("gabona", typeof(string));
+            cpWorkDT.Columns.Add("Ügyfél neve", typeof(string));
+            cpWorkDT.Columns.Add("Dolgozó neve", typeof(string));
+            cpWorkDT.Columns.Add("értékelés", typeof(int));
+            cpWorkDT.Columns.Add("hozzászólás", typeof(string));
+            foreach (repository.Work w in Work)
+            {
+                if (w.getClientname() == clientname && w.getWorkername()==workername)
+                {
+                    cpWorkDT.Rows.Add(w.getDate(), w.getParcelnumber(), w.getServicename(), w.getGraincropname(), w.getClientname(), w.getWorkername(), w.getRating(), w.getComment());
+                }
+
+            }
+
+            return cpWorkDT;
+        }
     }
 }

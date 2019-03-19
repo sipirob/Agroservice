@@ -105,6 +105,7 @@
     <Compile Include="controller\DeleteUser.cs" />
     <Compile Include="controller\DeleteWorker.cs" />
     <Compile Include="controller\LastWorkerId.cs" />
+    <Compile Include="controller\LoadServices.cs" />
     <Compile Include="controller\RegistryNewWorker.cs" />
     <Compile Include="controller\SetWorkerOfWork.cs" />
     <Compile Include="controller\UpdateDatatable.cs" />
@@ -165,6 +166,12 @@
     <Compile Include="UserControlWorkerClientData.Designer.cs">
       <DependentUpon>UserControlWorkerClientData.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\UserControlLeaderSettings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControlLeaderSettings.Designer.cs">
+      <DependentUpon>UserControlLeaderSettings.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\UserControlLeaderWorks.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -207,6 +214,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\UserControlLeaderSettings.resx">
+      <DependentUpon>UserControlLeaderSettings.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\UserControlLeaderWorks.resx">
       <DependentUpon>UserControlLeaderWorks.cs</DependentUpon>
     </EmbeddedResource>
