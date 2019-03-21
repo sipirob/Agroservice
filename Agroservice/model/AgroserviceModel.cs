@@ -23,6 +23,7 @@ namespace Agroservice.model
         private controller.SetWorkerOfWork setWorkerofWork;
         private controller.LastWorkerId searchLastWorkerid;
         private controller.RegistryNewWorker registryNewWorkerData;
+        private controller.ManageService manageService;
 
         
         private controller.LoadServices loadServices;
@@ -47,9 +48,12 @@ namespace Agroservice.model
             searchLastWorkerid = new controller.LastWorkerId();
             registryNewWorkerData = new controller.RegistryNewWorker();
             loadServices = new controller.LoadServices();
+            manageService = new controller.ManageService();
         }
 
-      
+        
+
+
 
 
 
@@ -378,6 +382,19 @@ namespace Agroservice.model
         {
             DataTable servicedt = controller.LoadServices.selectedServicenameData(serviceid);
             return servicedt;
+        }
+        internal void addNewService(string servicename, int servicePrice)
+        {
+            controller.ManageService.getAddNewService(servicename,servicePrice);
+        }
+
+        internal void getDelteService(int serviceid)
+        {
+            controller.ManageService.getDeleteService(serviceid);
+        }
+        internal void updateServiceData(int serviceid, string servicename, int servicePrice)
+        {
+            controller.ManageService.getUpdateService(serviceid, servicename, servicePrice);
         }
 
     }

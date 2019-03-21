@@ -36,6 +36,7 @@
             this.buttonDeleteService = new System.Windows.Forms.Button();
             this.buttonUpdateService = new System.Windows.Forms.Button();
             this.buttonNewService = new System.Windows.Forms.Button();
+            this.buttonSaveService = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listBoxServices
@@ -45,7 +46,7 @@
             this.listBoxServices.ItemHeight = 21;
             this.listBoxServices.Location = new System.Drawing.Point(50, 40);
             this.listBoxServices.Name = "listBoxServices";
-            this.listBoxServices.Size = new System.Drawing.Size(237, 445);
+            this.listBoxServices.Size = new System.Drawing.Size(237, 529);
             this.listBoxServices.TabIndex = 0;
             this.listBoxServices.SelectedIndexChanged += new System.EventHandler(this.listBoxServices_SelectedIndexChanged);
             // 
@@ -89,6 +90,7 @@
             this.buttonDeleteService.TabIndex = 5;
             this.buttonDeleteService.Text = "Törlés";
             this.buttonDeleteService.UseVisualStyleBackColor = true;
+            this.buttonDeleteService.Click += new System.EventHandler(this.buttonDeleteService_Click);
             // 
             // buttonUpdateService
             // 
@@ -98,6 +100,7 @@
             this.buttonUpdateService.TabIndex = 6;
             this.buttonUpdateService.Text = "Módosít";
             this.buttonUpdateService.UseVisualStyleBackColor = true;
+            this.buttonUpdateService.Click += new System.EventHandler(this.buttonUpdateService_Click);
             // 
             // buttonNewService
             // 
@@ -107,11 +110,23 @@
             this.buttonNewService.TabIndex = 7;
             this.buttonNewService.Text = "Új";
             this.buttonNewService.UseVisualStyleBackColor = true;
+            this.buttonNewService.Click += new System.EventHandler(this.buttonNewService_Click);
+            // 
+            // buttonSaveService
+            // 
+            this.buttonSaveService.Location = new System.Drawing.Point(844, 513);
+            this.buttonSaveService.Name = "buttonSaveService";
+            this.buttonSaveService.Size = new System.Drawing.Size(119, 56);
+            this.buttonSaveService.TabIndex = 8;
+            this.buttonSaveService.Text = "Mentés";
+            this.buttonSaveService.UseVisualStyleBackColor = true;
+            this.buttonSaveService.Click += new System.EventHandler(this.buttonSaveService_Click);
             // 
             // UserControlLeaderSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.buttonSaveService);
             this.Controls.Add(this.buttonNewService);
             this.Controls.Add(this.buttonUpdateService);
             this.Controls.Add(this.buttonDeleteService);
@@ -138,5 +153,6 @@
         public System.Windows.Forms.ListBox listBoxServices;
         public System.Windows.Forms.TextBox textBoxServiceName;
         public System.Windows.Forms.TextBox textBoxServicePrice;
+        private System.Windows.Forms.Button buttonSaveService;
     }
 }

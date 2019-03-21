@@ -106,6 +106,7 @@
     <Compile Include="controller\DeleteWorker.cs" />
     <Compile Include="controller\LastWorkerId.cs" />
     <Compile Include="controller\LoadServices.cs" />
+    <Compile Include="controller\ManageService.cs" />
     <Compile Include="controller\RegistryNewWorker.cs" />
     <Compile Include="controller\SetWorkerOfWork.cs" />
     <Compile Include="controller\UpdateDatatable.cs" />

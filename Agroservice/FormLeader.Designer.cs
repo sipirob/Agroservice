@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLeader));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.labelUsername = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelSign = new System.Windows.Forms.Panel();
@@ -41,15 +42,14 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelIsWorks = new System.Windows.Forms.Label();
             this.labelNoworks = new System.Windows.Forms.Label();
+            this.userControlLeaderSettings1 = new Agroservice.View.UserControlLeaderSettings();
             this.userControlLeaderWorks1 = new Agroservice.UserControlLeaderWorks();
             this.userControlLeaderClientsData1 = new Agroservice.UserControlLeaderClientsData();
             this.userControlLeaderAllNewWorks1 = new Agroservice.UserControlLeaderWorks();
-            this.userControlLeaderSettings1 = new Agroservice.View.UserControlLeaderSettings();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -63,6 +63,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1264, 80);
             this.panel1.TabIndex = 2;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(25, 5);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(115, 72);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
             // 
             // labelUsername
             // 
@@ -200,6 +210,16 @@
             this.labelNoworks.TabIndex = 11;
             this.labelNoworks.Text = "label1";
             // 
+            // userControlLeaderSettings1
+            // 
+            this.userControlLeaderSettings1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.userControlLeaderSettings1.Location = new System.Drawing.Point(202, 80);
+            this.userControlLeaderSettings1.Margin = new System.Windows.Forms.Padding(5);
+            this.userControlLeaderSettings1.Name = "userControlLeaderSettings1";
+            this.userControlLeaderSettings1.Size = new System.Drawing.Size(1062, 601);
+            this.userControlLeaderSettings1.TabIndex = 12;
+            this.userControlLeaderSettings1.Load += new System.EventHandler(this.userControlLeaderSettings1_Load);
+            // 
             // userControlLeaderWorks1
             // 
             this.userControlLeaderWorks1.BackColor = System.Drawing.Color.White;
@@ -230,25 +250,6 @@
             this.userControlLeaderAllNewWorks1.Size = new System.Drawing.Size(1062, 602);
             this.userControlLeaderAllNewWorks1.TabIndex = 9;
             // 
-            // userControlLeaderSettings1
-            // 
-            this.userControlLeaderSettings1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.userControlLeaderSettings1.Location = new System.Drawing.Point(202, 80);
-            this.userControlLeaderSettings1.Margin = new System.Windows.Forms.Padding(5);
-            this.userControlLeaderSettings1.Name = "userControlLeaderSettings1";
-            this.userControlLeaderSettings1.Size = new System.Drawing.Size(1062, 601);
-            this.userControlLeaderSettings1.TabIndex = 12;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(12, 6);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(99, 67);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            // 
             // FormLeader
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -269,9 +270,9 @@
             this.Load += new System.EventHandler(this.FormLeader_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

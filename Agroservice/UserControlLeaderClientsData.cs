@@ -112,7 +112,7 @@ namespace Agroservice
                 listBoxWorkers.DataSource = model.getWorkersName().DefaultView;
                 listBoxWorkers.DisplayMember = "név";
                 listBoxWorkers.ValueMember = "id";
-                MessageBox.Show("Dolgozó adataina módosítása megtörtént");
+                MessageBox.Show("Dolgozó adatainak módosítása megtörtént");
             }
                
         }

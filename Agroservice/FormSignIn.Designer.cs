@@ -32,6 +32,8 @@
             this.TextboxUsername = new MetroFramework.Controls.MetroTextBox();
             this.TextboxPassword = new MetroFramework.Controls.MetroTextBox();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // TextboxUsername
@@ -68,7 +70,7 @@
             this.TextboxUsername.SelectionStart = 0;
             this.TextboxUsername.ShortcutsEnabled = true;
             this.TextboxUsername.Size = new System.Drawing.Size(236, 30);
-            this.TextboxUsername.Style = MetroFramework.MetroColorStyle.Lime;
+            this.TextboxUsername.Style = MetroFramework.MetroColorStyle.Yellow;
             this.TextboxUsername.TabIndex = 6;
             this.TextboxUsername.UseSelectable = true;
             this.TextboxUsername.WaterMark = "Felhasználónév";
@@ -105,7 +107,7 @@
             this.TextboxPassword.SelectionStart = 0;
             this.TextboxPassword.ShortcutsEnabled = true;
             this.TextboxPassword.Size = new System.Drawing.Size(236, 30);
-            this.TextboxPassword.Style = MetroFramework.MetroColorStyle.Lime;
+            this.TextboxPassword.Style = MetroFramework.MetroColorStyle.Brown;
             this.TextboxPassword.TabIndex = 7;
             this.TextboxPassword.UseSelectable = true;
             this.TextboxPassword.WaterMark = "Jelszó";
@@ -128,16 +130,28 @@
             this.metroButton1.UseStyleColors = true;
             this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(92, 43);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(186, 184);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            // 
             // FormSignIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(369, 481);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.metroButton1);
             this.Controls.Add(this.TextboxPassword);
             this.Controls.Add(this.TextboxUsername);
             this.Name = "FormSignIn";
-            this.Style = MetroFramework.MetroColorStyle.Lime;
+            this.Style = MetroFramework.MetroColorStyle.Yellow;
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -146,6 +160,7 @@
         private MetroFramework.Controls.MetroButton metroButton1;
         public MetroFramework.Controls.MetroTextBox TextboxUsername;
         public MetroFramework.Controls.MetroTextBox TextboxPassword;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

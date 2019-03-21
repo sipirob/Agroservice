@@ -33,5 +33,34 @@ namespace Agroservice.View
             }
            
         }
+
+        private void buttonNewService_Click(object sender, EventArgs e)
+        {
+            textBoxServicePrice.Clear();
+            textBoxServiceName.Clear();
+            buttonDeleteService.Hide();
+            buttonUpdateService.Hide();
+        }
+
+        private void buttonDeleteService_Click(object sender, EventArgs e)
+        {
+            int serviceid = Convert.ToInt32(listBoxServices.SelectedValue);
+            model.getDelteService(serviceid);
+        }
+
+        private void buttonSaveService_Click(object sender, EventArgs e)
+        {
+            string servicename = textBoxServiceName.Text;
+            int servicePrice = Convert.ToInt32(textBoxServicePrice.Text);
+            model.addNewService(servicename, servicePrice);
+        }
+
+        private void buttonUpdateService_Click(object sender, EventArgs e)
+        {
+            string servicename = textBoxServiceName.Text;
+            int servicePrice = Convert.ToInt32(textBoxServicePrice.Text);
+            int serviceid = Convert.ToInt32(listBoxServices.SelectedValue);
+            model.updateServiceData(serviceid, servicename, servicePrice);
+        }
     }
 }

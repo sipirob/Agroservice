@@ -172,7 +172,12 @@ namespace Agroservice
             userControlLeaderSettings1.listBoxServices.DataSource = model.getLoadServiceName().DefaultView;
             userControlLeaderSettings1.listBoxServices.DisplayMember = "name";
             userControlLeaderSettings1.listBoxServices.ValueMember = "id";
-            userControlLeaderSettings1.textBoxServiceName.Text = userControlLeaderSettings1.listBoxServices.SelectedItems.ToString();
+            
+        }
+
+        private void userControlLeaderSettings1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

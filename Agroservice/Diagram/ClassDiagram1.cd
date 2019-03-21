@@ -10,19 +10,22 @@
   <Class Name="Agroservice.repository.Parcel" Collapsed="true">
     <Position X="3.75" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AiAAAAIAAgAAiKAAACAgAAAAACAgAAAAAAIAAAAAAgA=</HashCode>
+      <HashCode>AiAAAAIAAgAAiKAAACAgAAAgACAgAAAAAAIAAAAAAgA=</HashCode>
       <FileName>repository\Parcel.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="LoadParcelData" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="Agroservice.repository.Service" Collapsed="true">
-    <Position X="3.75" Y="2.75" Width="1.5" />
+    <Position X="3.75" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AgABAAAAAAAAAAAAACAAARAAAAAEAABAAAAEAAAAAgA=</HashCode>
       <FileName>repository\Service.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Agroservice.repository.Work" Collapsed="true">
-    <Position X="3.75" Y="3.5" Width="1.5" />
+    <Position X="3.75" Y="3.75" Width="1.5" />
     <Compartments>
       <Compartment Name="Methods" Collapsed="true" />
     </Compartments>
@@ -41,7 +44,7 @@
   <Class Name="Agroservice.model.AgroserviceModel" Collapsed="true">
     <Position X="10" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>BASQAgEkATABEYAMgKESCAIACAjAIEJEECgECACAABA=</HashCode>
+      <HashCode>BASQAhEkATABEYCNgKESCAIACAjAIEJEEmoECACAEBA=</HashCode>
       <FileName>model\AgroserviceModel.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -69,7 +72,7 @@
   <Class Name="Agroservice.controller.CompleteWorkDataLoad" Collapsed="true">
     <Position X="6.5" Y="6" Width="2" />
     <TypeIdentifier>
-      <HashCode>CAoAAAAAAAAAAAAAAAAAAAIUAABAAAAAAAAAAAAAQAA=</HashCode>
+      <HashCode>CAoAAAAAAAAACQAAAAAAAAIUAABAAAAAAAAAAAAAQAA=</HashCode>
       <FileName>controller\CompleteWorkDataLoad.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -167,14 +170,14 @@
   <Class Name="Agroservice.controller.NewWorkDataLoad" Collapsed="true">
     <Position X="6.5" Y="6.75" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAgAAAAAACEAAAAAAAAAAAAAAAAAAAAAAAAAACEAAAA=</HashCode>
+      <HashCode>AAiAAAAAACEAAAAAAAAAAAAAAAAAAAAAAAAAACEAAAA=</HashCode>
       <FileName>controller\NewWorkDataLoad.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Agroservice.FormLeader" Collapsed="true">
     <Position X="12.5" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAwAAAAAWQAIAAAAESBAAASQIAQAAAAAAAAAQDokCA=</HashCode>
+      <HashCode>AAAwAAAAAWQAIAAAAESBCAAWQIAQAAIAAAAgAQDokCA=</HashCode>
       <FileName>FormLeader.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>

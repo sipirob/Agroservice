@@ -8,6 +8,7 @@ namespace Agroservice.repository
 {
     class Parcel
     {
+        controller.LoadParcelData LoadParcelData = new controller.LoadParcelData();
         private int id;
         private int parcelnumber;
         private double ha;
