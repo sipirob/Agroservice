@@ -23,6 +23,9 @@ namespace Agroservice.model
         private controller.SetWorkerOfWork setWorkerofWork;
         private controller.LastWorkerId searchLastWorkerid;
         private controller.RegistryNewWorker registryNewWorkerData;
+
+        
+        private controller.LoadServices loadServices;
         
 
        
@@ -43,6 +46,7 @@ namespace Agroservice.model
             setWorkerofWork = new controller.SetWorkerOfWork();
             searchLastWorkerid = new controller.LastWorkerId();
             registryNewWorkerData = new controller.RegistryNewWorker();
+            loadServices = new controller.LoadServices();
         }
 
       
@@ -167,6 +171,10 @@ namespace Agroservice.model
             string newWorksNumber= controller.LoadNewWorksNumber.newWorksNumberLoad(username);
             return newWorksNumber;
         }
+
+       
+
+
         /// <summary>
         /// Munkálat elvégzésének visszaigazolása
         /// </summary>
@@ -357,7 +365,20 @@ namespace Agroservice.model
             int numb = controller.NewWorkDataLoad.countNewWork();
             return numb;
         }
-
+        internal DataTable getLoadServiceName()
+        {
+            DataTable sdata = controller.LoadServices.getServiceData();
+            return sdata;
+        }
+        internal void getloadServiceData()
+        {
+            controller.LoadServices.serviceDataLoad();
+        }
+        internal DataTable getSelectedService(int serviceid)
+        {
+            DataTable servicedt = controller.LoadServices.selectedServicenameData(serviceid);
+            return servicedt;
+        }
 
     }
 }

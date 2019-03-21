@@ -168,8 +168,11 @@ namespace Agroservice
             userControlLeaderWorks1.Hide();
             userControlLeaderSettings1.Show();
             userControlLeaderAllNewWorks1.Hide();
-
-            //userControlLeaderSettings1.listBoxServices.DataSource=
+            model.getloadServiceData();
+            userControlLeaderSettings1.listBoxServices.DataSource = model.getLoadServiceName().DefaultView;
+            userControlLeaderSettings1.listBoxServices.DisplayMember = "name";
+            userControlLeaderSettings1.listBoxServices.ValueMember = "id";
+            userControlLeaderSettings1.textBoxServiceName.Text = userControlLeaderSettings1.listBoxServices.SelectedItems.ToString();
         }
     }
 }

@@ -38,7 +38,7 @@ namespace Agroservice.controller
             MySQLDatabaseInterface mdi = new MySQLDatabaseInterface();
             mdi = a.connect();
             mdi.open();
-            string query = "SELECT * from parcels ";
+            string query = "SELECT * from service ";
             DataTable servicedt = new DataTable();
             servicedt = mdi.getToDataTable(query);
             loadServiceList(servicedt);
@@ -67,6 +67,19 @@ namespace Agroservice.controller
             sname.Columns.Add("price", typeof(int));
             foreach (Service s in Services)
             {
+                sname.Rows.Add(s.getId(), s.getName(), s.getPrice());
+            }
+            return sname;
+        }
+
+        internal static DataTable selectedServicenameData(int serviceid)
+        {
+            DataTable sname = new DataTable();
+            sname.Columns.Add("id", typeof(int));
+            sname.Columns.Add("name", typeof(string));
+            sname.Columns.Add("price", typeof(int));
+            foreach (Service s in Services)
+            { if(s.getId()==serviceid)
                 sname.Rows.Add(s.getId(), s.getName(), s.getPrice());
             }
             return sname;

@@ -47,6 +47,7 @@
             this.listBoxServices.Name = "listBoxServices";
             this.listBoxServices.Size = new System.Drawing.Size(237, 445);
             this.listBoxServices.TabIndex = 0;
+            this.listBoxServices.SelectedIndexChanged += new System.EventHandler(this.listBoxServices_SelectedIndexChanged);
             // 
             // textBoxServiceName
             // 
@@ -120,7 +121,7 @@
             this.Controls.Add(this.textBoxServiceName);
             this.Controls.Add(this.listBoxServices);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "UserControlLeaderSettings";
             this.Size = new System.Drawing.Size(1062, 612);
             this.ResumeLayout(false);
@@ -129,13 +130,13 @@
         }
 
         #endregion
-        private System.Windows.Forms.TextBox textBoxServiceName;
-        private System.Windows.Forms.TextBox textBoxServicePrice;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button buttonDeleteService;
         private System.Windows.Forms.Button buttonUpdateService;
         private System.Windows.Forms.Button buttonNewService;
         public System.Windows.Forms.ListBox listBoxServices;
+        public System.Windows.Forms.TextBox textBoxServiceName;
+        public System.Windows.Forms.TextBox textBoxServicePrice;
     }
 }
