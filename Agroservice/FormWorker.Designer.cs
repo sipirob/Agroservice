@@ -43,17 +43,19 @@
             this.labelNewWorkNumber = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.userControlWorkerClientData1 = new Agroservice.UserControlWorkerClientData();
-            this.userControlCompleteWorks1 = new Agroservice.UserControlWorkerCompleteWorks();
-            this.userControlNewWorks1 = new Agroservice.UserControlNewWorks();
             this.panelIsWork = new System.Windows.Forms.Panel();
             this.panelNoWork = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
+            this.userControlWorkerClientData1 = new Agroservice.UserControlWorkerClientData();
+            this.userControlCompleteWorks1 = new Agroservice.UserControlWorkerCompleteWorks();
+            this.userControlNewWorks1 = new Agroservice.UserControlNewWorks();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelIsWork.SuspendLayout();
             this.panelNoWork.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -66,7 +68,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1264, 80);
             this.panel1.TabIndex = 1;
-           
             // 
             // labelUsername
             // 
@@ -226,38 +227,11 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(202, 172);
+            this.pictureBox1.Location = new System.Drawing.Point(202, 408);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1062, 521);
+            this.pictureBox1.Size = new System.Drawing.Size(1062, 285);
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
-            // 
-            // userControlWorkerClientData1
-            // 
-            this.userControlWorkerClientData1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.userControlWorkerClientData1.Location = new System.Drawing.Point(201, 80);
-            this.userControlWorkerClientData1.Margin = new System.Windows.Forms.Padding(5);
-            this.userControlWorkerClientData1.Name = "userControlWorkerClientData1";
-            this.userControlWorkerClientData1.Size = new System.Drawing.Size(1062, 601);
-            this.userControlWorkerClientData1.TabIndex = 9;
-            // 
-            // userControlCompleteWorks1
-            // 
-            this.userControlCompleteWorks1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.userControlCompleteWorks1.Location = new System.Drawing.Point(202, 80);
-            this.userControlCompleteWorks1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.userControlCompleteWorks1.Name = "userControlCompleteWorks1";
-            this.userControlCompleteWorks1.Size = new System.Drawing.Size(1062, 602);
-            this.userControlCompleteWorks1.TabIndex = 8;
-            // 
-            // userControlNewWorks1
-            // 
-            this.userControlNewWorks1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.userControlNewWorks1.Location = new System.Drawing.Point(202, 80);
-            this.userControlNewWorks1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.userControlNewWorks1.Name = "userControlNewWorks1";
-            this.userControlNewWorks1.Size = new System.Drawing.Size(1062, 601);
-            this.userControlNewWorks1.TabIndex = 7;
             // 
             // panelIsWork
             // 
@@ -287,6 +261,43 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "Önnek nincs függőben lévő munkája";
             // 
+            // userControlWorkerClientData1
+            // 
+            this.userControlWorkerClientData1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.userControlWorkerClientData1.Location = new System.Drawing.Point(201, 79);
+            this.userControlWorkerClientData1.Margin = new System.Windows.Forms.Padding(5);
+            this.userControlWorkerClientData1.Name = "userControlWorkerClientData1";
+            this.userControlWorkerClientData1.Size = new System.Drawing.Size(1062, 602);
+            this.userControlWorkerClientData1.TabIndex = 9;
+            // 
+            // userControlCompleteWorks1
+            // 
+            this.userControlCompleteWorks1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.userControlCompleteWorks1.Location = new System.Drawing.Point(202, 80);
+            this.userControlCompleteWorks1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.userControlCompleteWorks1.Name = "userControlCompleteWorks1";
+            this.userControlCompleteWorks1.Size = new System.Drawing.Size(1062, 602);
+            this.userControlCompleteWorks1.TabIndex = 8;
+            // 
+            // userControlNewWorks1
+            // 
+            this.userControlNewWorks1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.userControlNewWorks1.Location = new System.Drawing.Point(202, 80);
+            this.userControlNewWorks1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.userControlNewWorks1.Name = "userControlNewWorks1";
+            this.userControlNewWorks1.Size = new System.Drawing.Size(1062, 601);
+            this.userControlNewWorks1.TabIndex = 7;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(576, 201);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(279, 201);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 12;
+            this.pictureBox2.TabStop = false;
+            // 
             // FormWorker
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -300,6 +311,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelIsWork);
             this.Controls.Add(this.panelNoWork);
+            this.Controls.Add(this.pictureBox2);
             this.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -313,6 +325,7 @@
             this.panelIsWork.PerformLayout();
             this.panelNoWork.ResumeLayout(false);
             this.panelNoWork.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -339,5 +352,6 @@
         private System.Windows.Forms.Panel panelIsWork;
         private System.Windows.Forms.Panel panelNoWork;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

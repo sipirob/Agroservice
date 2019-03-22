@@ -37,6 +37,7 @@
             this.buttonUpdateService = new System.Windows.Forms.Button();
             this.buttonNewService = new System.Windows.Forms.Button();
             this.buttonSaveService = new System.Windows.Forms.Button();
+            this.buttonCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listBoxServices
@@ -54,14 +55,14 @@
             // 
             this.textBoxServiceName.Location = new System.Drawing.Point(463, 40);
             this.textBoxServiceName.Name = "textBoxServiceName";
-            this.textBoxServiceName.Size = new System.Drawing.Size(173, 27);
+            this.textBoxServiceName.Size = new System.Drawing.Size(302, 27);
             this.textBoxServiceName.TabIndex = 1;
             // 
             // textBoxServicePrice
             // 
             this.textBoxServicePrice.Location = new System.Drawing.Point(461, 124);
             this.textBoxServicePrice.Name = "textBoxServicePrice";
-            this.textBoxServicePrice.Size = new System.Drawing.Size(173, 27);
+            this.textBoxServicePrice.Size = new System.Drawing.Size(304, 27);
             this.textBoxServicePrice.TabIndex = 2;
             // 
             // label1
@@ -122,10 +123,21 @@
             this.buttonSaveService.UseVisualStyleBackColor = true;
             this.buttonSaveService.Click += new System.EventHandler(this.buttonSaveService_Click);
             // 
+            // buttonCancel
+            // 
+            this.buttonCancel.Location = new System.Drawing.Point(844, 292);
+            this.buttonCancel.Name = "buttonCancel";
+            this.buttonCancel.Size = new System.Drawing.Size(119, 56);
+            this.buttonCancel.TabIndex = 9;
+            this.buttonCancel.Text = "Mégse";
+            this.buttonCancel.UseVisualStyleBackColor = true;
+            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
+            // 
             // UserControlLeaderSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonSaveService);
             this.Controls.Add(this.buttonNewService);
             this.Controls.Add(this.buttonUpdateService);
@@ -154,5 +166,6 @@
         public System.Windows.Forms.TextBox textBoxServiceName;
         public System.Windows.Forms.TextBox textBoxServicePrice;
         private System.Windows.Forms.Button buttonSaveService;
+        private System.Windows.Forms.Button buttonCancel;
     }
 }

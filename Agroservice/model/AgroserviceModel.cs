@@ -176,7 +176,8 @@ namespace Agroservice.model
             return newWorksNumber;
         }
 
-       
+      
+
 
 
         /// <summary>
@@ -396,6 +397,12 @@ namespace Agroservice.model
         {
             controller.ManageService.getUpdateService(serviceid, servicename, servicePrice);
         }
+
+        internal void getClearServiceList()
+        {
+            controller.LoadServices.clearServiceList();
+        }
+
 
     }
 }

@@ -44,7 +44,7 @@
   <Class Name="Agroservice.model.AgroserviceModel" Collapsed="true">
     <Position X="10" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>BASQAhEkATABEYCNgKESCAIACAjAIEJEEmoECACAEBA=</HashCode>
+      <HashCode>BCSQAhEkATABEYCNgKESCAIACAjAIEJEEmoECACAEBA=</HashCode>
       <FileName>model\AgroserviceModel.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -154,7 +154,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Agroservice.controller.UpdateWorkerData" Collapsed="true">
-    <Position X="3.75" Y="4.5" Width="2" />
+    <Position X="3.75" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>controller\UpdateWorkerData.cs</FileName>
@@ -177,7 +177,7 @@
   <Class Name="Agroservice.FormLeader" Collapsed="true">
     <Position X="12.5" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAwAAAAAWQAIAAAAESBCAAWQIAQAAIAAAAgAQDokCA=</HashCode>
+      <HashCode>AABwAAAAAWQAIAAAAESBCAAWQIAQAAIAAAAgAQDokCA=</HashCode>
       <FileName>FormLeader.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>

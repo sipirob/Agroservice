@@ -16,8 +16,16 @@ namespace Agroservice.View
         public UserControlLeaderSettings()
         {
             InitializeComponent();
+            buttonCancel.Hide();
         }
-
+        private void refreshService()
+        {
+            model.getClearServiceList();
+            model.getloadServiceData();
+            listBoxServices.DataSource = model.getLoadServiceName().DefaultView;
+            listBoxServices.DisplayMember = "name";
+            listBoxServices.ValueMember = "id";
+        }
         private void listBoxServices_SelectedIndexChanged(object sender, EventArgs e)
         {
             listBoxServices.ValueMember = "id";
@@ -40,19 +48,33 @@ namespace Agroservice.View
             textBoxServiceName.Clear();
             buttonDeleteService.Hide();
             buttonUpdateService.Hide();
+            buttonCancel.Show();
+            buttonNewService.Hide();
         }
 
         private void buttonDeleteService_Click(object sender, EventArgs e)
         {
             int serviceid = Convert.ToInt32(listBoxServices.SelectedValue);
-            model.getDelteService(serviceid);
+            if (MessageBox.Show("Biztosan törli a szolgáltatást?", "Igen", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
+            {
+                model.getDelteService(serviceid);
+                refreshService();
+                MessageBox.Show("A kiválasztott szolgáltatás törölve");
+            }
+            else
+                return;
         }
 
         private void buttonSaveService_Click(object sender, EventArgs e)
         {
             string servicename = textBoxServiceName.Text;
             int servicePrice = Convert.ToInt32(textBoxServicePrice.Text);
-            model.addNewService(servicename, servicePrice);
+            if (MessageBox.Show("Biztosan felveszi az új szolgáltatást?", "Igen", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
+            {
+                model.addNewService(servicename, servicePrice);
+                refreshService();
+                MessageBox.Show("Szolgáltatás mentve");
+            }
         }
 
         private void buttonUpdateService_Click(object sender, EventArgs e)
@@ -60,7 +82,19 @@ namespace Agroservice.View
             string servicename = textBoxServiceName.Text;
             int servicePrice = Convert.ToInt32(textBoxServicePrice.Text);
             int serviceid = Convert.ToInt32(listBoxServices.SelectedValue);
-            model.updateServiceData(serviceid, servicename, servicePrice);
+            if (MessageBox.Show("Biztosan módosítja a szolgáltatás adatait?", "Igen", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
+            {
+                model.updateServiceData(serviceid, servicename, servicePrice);
+                refreshService();
+                MessageBox.Show("A szolgáltatás módosítva");
+            }
+        }
+
+        private void buttonCancel_Click(object sender, EventArgs e)
+        {
+            buttonDeleteService.Show();
+            buttonNewService.Show();
+            buttonUpdateService.Show();
         }
     }
 }

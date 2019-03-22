@@ -84,5 +84,10 @@ namespace Agroservice.controller
             }
             return sname;
         }
+
+        internal static void clearServiceList()
+        {
+            Services.Clear();
+        }
     }
 }
