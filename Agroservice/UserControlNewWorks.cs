@@ -39,6 +39,7 @@ namespace Agroservice
             gMapControlParcelMap.Zoom = 15;
             gMapControlParcelMap.DragButton = MouseButtons.Left;
             GMap.NET.GMaps.Instance.Mode = GMap.NET.AccessMode.ServerAndCache;
+            
 
         }
         
@@ -119,7 +120,7 @@ namespace Agroservice
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
+            
             if (MessageBox.Show(
            "Biztosan elvégezte a munkát?",
            "Igen",

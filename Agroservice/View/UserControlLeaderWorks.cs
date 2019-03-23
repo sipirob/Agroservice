@@ -30,6 +30,7 @@ namespace Agroservice
             model.setWorkerOfWork(workerId, workId);
             dataGridViewAllNewWorks.Rows.RemoveAt(dataGridViewAllNewWorks.SelectedRows[0].Index);
             MessageBox.Show("Dolgozó hozzáadva a munkálathoz");
+            model.getNumberOfNewWorks();
         }
 
         private void UserControlLeaderWorks_Load(object sender, EventArgs e)

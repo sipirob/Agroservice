@@ -155,6 +155,7 @@ namespace Agroservice.model
             controller.LoadUsername.workerDataLoad();
         }
 
+
         /// <summary>
         /// parcella cooordinátáinak kiolvasása tömbből
         /// </summary>
@@ -176,7 +177,11 @@ namespace Agroservice.model
             return newWorksNumber;
         }
 
-      
+
+        internal void getClearNewWorkList()
+        {
+            controller.NewWorkDataLoad.clerNewWorkList();
+        }
 
 
 

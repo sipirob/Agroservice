@@ -29,7 +29,23 @@ namespace Agroservice
         {
             this.logIn = logIn;
         }
+        public void numberOfWorks()
+        {
+            model.getClearNewWorkList();
+            model.loadNewWorkData();
+            int newWorksNumb = model.getNumberOfNewWorks();
 
+            if (newWorksNumb > 0)
+            {
+                labelIsWorks.Show();
+                labelIsWorks.Text = "Önnek " + newWorksNumb + " újonnan beérkezett munkálat foglalása van";
+            }
+            else if (newWorksNumb == 0)
+            {
+                labelNoworks.Show();
+                labelNoworks.Text = "Nincs új szolgáltatás igénylés";
+            }
+        }
         private void TextBoxWorkerName_Click(object sender, EventArgs e)
         {
 
@@ -56,18 +72,7 @@ namespace Agroservice
             userControlLeaderClientsData1.Hide();
             userControlLeaderWorks1.Hide();
             userControlLeaderSettings1.Hide();
-            int newWorksNumb=model.getNumberOfNewWorks();
-
-            if (newWorksNumb > 0)
-            {
-                labelIsWorks.Show();
-                labelIsWorks.Text = "Önnek " + newWorksNumb + " újonnan beérkezett munkálat foglalása van";
-            }
-            else if (newWorksNumb == 0)
-            {
-                labelNoworks.Show();
-                labelNoworks.Text = "Nincs új szolgáltatás igénylés";
-            }
+            numberOfWorks();
 
             //userControlLeaderClientsData1.listBoxWorkers.DataSource = null;
             model.loadWorkerData();
@@ -87,7 +92,7 @@ namespace Agroservice
             //dataGridViewWorkers.DataSource = controller.getWorkerData();
 
            
-            userControlLeaderWorks1.dataGridViewAllNewWorks.DataSource = model.getNewWorkData();
+            
 
             model.usernameLoad();
             labelUsername.Text = model.getloadUsername();
@@ -143,6 +148,11 @@ namespace Agroservice
             model.loadCompleteData();
             userControlLeaderWorks1.dataGridViewAllCompleteWorks.DataSource = model.getCompleteWorksData();
 
+            model.getClearNewWorkList();
+            model.loadNewWorkData();
+            
+            userControlLeaderWorks1.dataGridViewAllNewWorks.DataSource = model.getNewWorkData();
+
 
 
 
@@ -150,9 +160,11 @@ namespace Agroservice
 
         private void buttonHome_Click(object sender, EventArgs e)
         {
+            
             userControlLeaderWorks1.Hide();
             userControlLeaderClientsData1.Hide();
             userControlLeaderSettings1.Hide();
+            numberOfWorks();
         }
 
         private void userControlLeaderWorks1_Load(object sender, EventArgs e)

@@ -44,22 +44,27 @@ namespace Agroservice.controller
             if(FormSignIn.leader == true)
             {
                 // query = "SELECT work.id,`date`,`parcelnumber`,`workname`,`graincropname`,clientdata.name as clientname, workerdata.name as workername,`rating`,`comment`,`price`,`done` FROM worker,client,`work`,clientdata, workerdata where work.workerid=worker.id and work.clientid=client.id and worker.id=workerdata.id and client.id=clientdata.id and done=0 and workerid=0";
-                query = "SELECT work.id,`date`,`parcelnumber`,`workname`,`graincropname`,clientdata.name as clientname,workerid as workername, `rating`,`comment`,`price`,`done` FROM worker,client,`work`,clientdata where work.clientid=client.id  and client.id=clientdata.id  and work.workerid is null group by id";
+                query = "SELECT work.id,`date`,`parcelnumber`,`workname`,`graincropname`,clientdata.name as clientname,workerid as workername, `rating`,`comment`,`price`,`done` FROM worker,client,`work`,clientdata where work.clientid=client.id and client.id=clientdata.id and work.workerid is null group by id";
+                DataTable newworkdt = new DataTable();
+                newworkdt = mdi.getToDataTable(query);
+                loadNewWorkList(newworkdt);
+                mdi.close();
             }
             else if (FormSignIn.leader==false)
             {
                 query = "SELECT work.id,`date`,`parcelnumber`,`workname`,`graincropname`,clientdata.name as clientname, workerdata.name as workername,`rating`,`comment`,`price`,`done` FROM worker,client,`work`,clientdata, workerdata where work.workerid=worker.id and work.clientid=client.id and worker.id=workerdata.id and client.id=clientdata.id and done=0 and worker.username='" + FormSignIn.username + "'";
+                DataTable newworkdt = new DataTable();
+                newworkdt = mdi.getToDataTable(query);
+                loadNewWorkList(newworkdt);
+                mdi.close();
             }
            
-            DataTable newworkdt = new DataTable();
-            newworkdt = mdi.getToDataTable(query);
-            loadNewWorkList(newworkdt);
-            mdi.close();
+           
         }
 
 
 
-        private static void loadNewWorkList(DataTable newworkdt)
+        public static void loadNewWorkList(DataTable newworkdt)
         {
             foreach (DataRow row in newworkdt.Rows)
             {
@@ -108,5 +113,9 @@ namespace Agroservice.controller
             return sum;
         }
 
+        internal static void clerNewWorkList()
+        {
+            Work.Clear();
+        }
     }
 }
