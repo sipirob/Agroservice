@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.listBoxServices = new System.Windows.Forms.ListBox();
             this.textBoxServiceName = new System.Windows.Forms.TextBox();
             this.textBoxServicePrice = new System.Windows.Forms.TextBox();
@@ -38,6 +39,8 @@
             this.buttonNewService = new System.Windows.Forms.Button();
             this.buttonSaveService = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
+            this.errorProviderServiePrice = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderServiePrice)).BeginInit();
             this.SuspendLayout();
             // 
             // listBoxServices
@@ -133,6 +136,10 @@
             this.buttonCancel.UseVisualStyleBackColor = true;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
+            // errorProviderServiePrice
+            // 
+            this.errorProviderServiePrice.ContainerControl = this;
+            // 
             // UserControlLeaderSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -151,6 +158,7 @@
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "UserControlLeaderSettings";
             this.Size = new System.Drawing.Size(1062, 612);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderServiePrice)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -167,5 +175,6 @@
         public System.Windows.Forms.TextBox textBoxServicePrice;
         private System.Windows.Forms.Button buttonSaveService;
         private System.Windows.Forms.Button buttonCancel;
+        private System.Windows.Forms.ErrorProvider errorProviderServiePrice;
     }
 }

@@ -111,6 +111,7 @@
     <Compile Include="controller\SetWorkerOfWork.cs" />
     <Compile Include="controller\UpdateDatatable.cs" />
     <Compile Include="controller\UpdateWorkerData.cs" />
+    <Compile Include="Exceptions\ServicePriceException.cs" />
     <Compile Include="model\AgroserviceModel.cs" />
     <Compile Include="FormLeader.cs">
       <SubType>Form</SubType>
@@ -167,6 +168,7 @@
     <Compile Include="UserControlWorkerClientData.Designer.cs">
       <DependentUpon>UserControlWorkerClientData.cs</DependentUpon>
     </Compile>
+    <Compile Include="Validation\ServicePriceValidation.cs" />
     <Compile Include="View\UserControlLeaderSettings.cs">
       <SubType>UserControl</SubType>
     </Compile>

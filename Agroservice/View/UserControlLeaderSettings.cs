@@ -69,12 +69,26 @@ namespace Agroservice.View
         {
             string servicename = textBoxServiceName.Text;
             int servicePrice = Convert.ToInt32(textBoxServicePrice.Text);
+            Validation.ServicePriceValidation spval = new Validation.ServicePriceValidation(servicePrice);
+            try
+            {
+                spval.validation();
+            }
+            catch (Exceptions.ServicePriceException spex)
+            {
+                errorProviderServiePrice.SetError(textBoxServicePrice, spex.Message);
+                return;
+            }
+            
             if (MessageBox.Show("Biztosan felveszi az új szolgáltatást?", "Igen", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
             {
+                errorProviderServiePrice.Clear();
                 model.addNewService(servicename, servicePrice);
                 refreshService();
                 MessageBox.Show("Szolgáltatás mentve");
+                
             }
+          
         }
 
         private void buttonUpdateService_Click(object sender, EventArgs e)
