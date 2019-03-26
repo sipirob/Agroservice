@@ -33,16 +33,22 @@ namespace Agroservice.View
 
         private void buttonCalculate_Click(object sender, EventArgs e)
         {
-            double pesticidLiter = Convert.ToDouble(textBoxLiter.Text);
+            
             double parcelHa = Convert.ToDouble(labelHa.Text);
-            labelPermetszer.Text= model.calculatePesticid(parcelHa,pesticidLiter);
+            int plantDisValue = Convert.ToInt32(metroComboBoxDis.SelectedValue);
+            double seed = model.calculateSeed(plantDisValue, parcelHa);
+            labelVetomag.Text = seed.ToString();
+            if (textBoxLiter.Text != "")
+            {
+                double pesticidLiter = Convert.ToDouble(textBoxLiter.Text);
+                labelPermetszer.Text = model.calculatePesticid(parcelHa, pesticidLiter);
+            }
+            else
+                return;
+         
 
            
-            int plantDisValue = Convert.ToInt32(metroComboBoxDis.SelectedValue);
-            
-
-           double seed= model.calculateSeed(plantDisValue,parcelHa);
-            labelVetomag.Text = seed.ToString();
+           
             
             
         }

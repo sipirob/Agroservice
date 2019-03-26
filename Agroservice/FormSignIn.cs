@@ -17,23 +17,28 @@ namespace Agroservice
        public static string password;
        public static bool leader;
        public static bool worker;
-           
+       
         public FormSignIn()
         {
            
             InitializeComponent();
-            
+            this.AcceptButton = metroButton1;
         }
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
             //leader = false;
+            
             username = TextboxUsername.Text;
             password = TextboxPassword.Text;
             repository.LogIn log = new repository.LogIn();
+            
             log.Login();
            
+            
          
         }
+
+      
     }
 }

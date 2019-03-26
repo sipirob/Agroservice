@@ -12,7 +12,7 @@ namespace Agroservice.repository
 {
    public class LogIn :FormSignIn
     {
-        public FormSignIn si = new FormSignIn();
+      
         public  void Login()
         {
             MySqlConnection connection = new MySqlConnection(controller.Connection.connectionString);
@@ -41,11 +41,12 @@ namespace Agroservice.repository
                         {
                             worker = true;
                             leader = false;
-                            FormSignIn siin = new FormSignIn();
+                           
                             FormWorker fw = new FormWorker();
-                            siin.Hide();
+                           
                             fw.Show();
                             connection.Close();
+                           
                             break;
                         }
                     case "leader":
@@ -57,6 +58,7 @@ namespace Agroservice.repository
                             fl.Show();
                             connection.Close();
                             break;
+                            
                         }
 
                 }

@@ -45,7 +45,7 @@ namespace Agroservice
         
         private void listViewNewWork_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            labelDistance.Text = null;
             gMapControlParcelMap.Zoom = 15;//a térkép alap zoom távolsága
             gMapControlParcelMap.Show();
             if (existRoute==true)
@@ -115,6 +115,8 @@ namespace Agroservice
             gMapControlParcelMap.Zoom = 12;
             marker.ToolTipText = "Agroservice kft.";
             existRoute = true;
+            //Távolság kiírása
+            labelDistance.Text = "Távolság: " + route.Distance+"km";
 
         }
 
@@ -160,13 +162,6 @@ namespace Agroservice
         {
             formCalc = new View.FormCalculator();
             formCalc.Show();
-            //if (listViewNewWork.SelectedItems.Count < 0)
-            //{
-            //    return;
-            //}
-            //string servicename = listViewNewWork.SelectedItems[3].ToString();
-            //string graincropname = listViewNewWork.SelectedItems[4].ToString();
-
             model.parcelDataloadFromList();
             model.loadParcelData(parcelnumber);
             double parcelHa= model.loadParcelData(parcelnumber);

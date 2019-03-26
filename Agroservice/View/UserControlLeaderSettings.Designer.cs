@@ -42,7 +42,7 @@
             // 
             // listBoxServices
             // 
-            this.listBoxServices.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.listBoxServices.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.listBoxServices.FormattingEnabled = true;
             this.listBoxServices.ItemHeight = 21;
             this.listBoxServices.Location = new System.Drawing.Point(50, 40);

@@ -32,10 +32,10 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.labelUsername = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.buttonExit = new System.Windows.Forms.Button();
             this.panelSign = new System.Windows.Forms.Panel();
             this.buttonHome = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.buttonSettings = new System.Windows.Forms.Button();
             this.buttonClientData = new System.Windows.Forms.Button();
             this.buttonDoneWork = new System.Windows.Forms.Button();
             this.buttonNewWork = new System.Windows.Forms.Button();
@@ -46,10 +46,11 @@
             this.panelIsWork = new System.Windows.Forms.Panel();
             this.panelNoWork = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.userControlWorkerClientData1 = new Agroservice.UserControlWorkerClientData();
-            this.userControlCompleteWorks1 = new Agroservice.UserControlWorkerCompleteWorks();
-            this.userControlNewWorks1 = new Agroservice.UserControlNewWorks();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.userControlWorkerDoneWorks1 = new Agroservice.View.UserControlWorkerDoneWorks();
+            this.userControlWorkerClientData1 = new Agroservice.UserControlWorkerClientData();
+            this.userControlWorkerCompleteWorks1 = new Agroservice.UserControlWorkerCompleteWorks();
+            this.userControlNewWorks1 = new Agroservice.UserControlNewWorks();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -83,10 +84,10 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel2.Controls.Add(this.buttonExit);
             this.panel2.Controls.Add(this.panelSign);
             this.panel2.Controls.Add(this.buttonHome);
             this.panel2.Controls.Add(this.button5);
-            this.panel2.Controls.Add(this.buttonSettings);
             this.panel2.Controls.Add(this.buttonClientData);
             this.panel2.Controls.Add(this.buttonDoneWork);
             this.panel2.Controls.Add(this.buttonNewWork);
@@ -97,9 +98,25 @@
             this.panel2.Size = new System.Drawing.Size(202, 601);
             this.panel2.TabIndex = 2;
             // 
+            // buttonExit
+            // 
+            this.buttonExit.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.buttonExit.FlatAppearance.BorderSize = 0;
+            this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonExit.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonExit.ForeColor = System.Drawing.Color.White;
+            this.buttonExit.Location = new System.Drawing.Point(0, 516);
+            this.buttonExit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonExit.Name = "buttonExit";
+            this.buttonExit.Size = new System.Drawing.Size(202, 86);
+            this.buttonExit.TabIndex = 9;
+            this.buttonExit.Text = "Kilép";
+            this.buttonExit.UseVisualStyleBackColor = false;
+            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
+            // 
             // panelSign
             // 
-            this.panelSign.BackColor = System.Drawing.Color.Chartreuse;
+            this.panelSign.BackColor = System.Drawing.Color.Gold;
             this.panelSign.Location = new System.Drawing.Point(3, -1);
             this.panelSign.Name = "panelSign";
             this.panelSign.Size = new System.Drawing.Size(12, 88);
@@ -126,27 +143,14 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(0, 460);
+            this.button5.Location = new System.Drawing.Point(3, 367);
             this.button5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(202, 86);
             this.button5.TabIndex = 7;
             this.button5.Text = "Névjegy";
             this.button5.UseVisualStyleBackColor = true;
-            // 
-            // buttonSettings
-            // 
-            this.buttonSettings.FlatAppearance.BorderSize = 0;
-            this.buttonSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSettings.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buttonSettings.ForeColor = System.Drawing.Color.White;
-            this.buttonSettings.Location = new System.Drawing.Point(0, 367);
-            this.buttonSettings.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.buttonSettings.Name = "buttonSettings";
-            this.buttonSettings.Size = new System.Drawing.Size(202, 86);
-            this.buttonSettings.TabIndex = 6;
-            this.buttonSettings.Text = "Beállítások";
-            this.buttonSettings.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // buttonClientData
             // 
@@ -261,33 +265,6 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "Önnek nincs függőben lévő munkája";
             // 
-            // userControlWorkerClientData1
-            // 
-            this.userControlWorkerClientData1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.userControlWorkerClientData1.Location = new System.Drawing.Point(201, 79);
-            this.userControlWorkerClientData1.Margin = new System.Windows.Forms.Padding(5);
-            this.userControlWorkerClientData1.Name = "userControlWorkerClientData1";
-            this.userControlWorkerClientData1.Size = new System.Drawing.Size(1062, 602);
-            this.userControlWorkerClientData1.TabIndex = 9;
-            // 
-            // userControlCompleteWorks1
-            // 
-            this.userControlCompleteWorks1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.userControlCompleteWorks1.Location = new System.Drawing.Point(202, 80);
-            this.userControlCompleteWorks1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.userControlCompleteWorks1.Name = "userControlCompleteWorks1";
-            this.userControlCompleteWorks1.Size = new System.Drawing.Size(1062, 602);
-            this.userControlCompleteWorks1.TabIndex = 8;
-            // 
-            // userControlNewWorks1
-            // 
-            this.userControlNewWorks1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.userControlNewWorks1.Location = new System.Drawing.Point(202, 80);
-            this.userControlNewWorks1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.userControlNewWorks1.Name = "userControlNewWorks1";
-            this.userControlNewWorks1.Size = new System.Drawing.Size(1062, 601);
-            this.userControlNewWorks1.TabIndex = 7;
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
@@ -298,13 +275,50 @@
             this.pictureBox2.TabIndex = 12;
             this.pictureBox2.TabStop = false;
             // 
+            // userControlWorkerDoneWorks1
+            // 
+            this.userControlWorkerDoneWorks1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.userControlWorkerDoneWorks1.Location = new System.Drawing.Point(202, 80);
+            this.userControlWorkerDoneWorks1.Margin = new System.Windows.Forms.Padding(5);
+            this.userControlWorkerDoneWorks1.Name = "userControlWorkerDoneWorks1";
+            this.userControlWorkerDoneWorks1.Size = new System.Drawing.Size(1062, 612);
+            this.userControlWorkerDoneWorks1.TabIndex = 13;
+            // 
+            // userControlWorkerClientData1
+            // 
+            this.userControlWorkerClientData1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.userControlWorkerClientData1.Location = new System.Drawing.Point(201, 79);
+            this.userControlWorkerClientData1.Margin = new System.Windows.Forms.Padding(5);
+            this.userControlWorkerClientData1.Name = "userControlWorkerClientData1";
+            this.userControlWorkerClientData1.Size = new System.Drawing.Size(1062, 602);
+            this.userControlWorkerClientData1.TabIndex = 9;
+            // 
+            // userControlWorkerCompleteWorks1
+            // 
+            this.userControlWorkerCompleteWorks1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.userControlWorkerCompleteWorks1.Location = new System.Drawing.Point(202, 80);
+            this.userControlWorkerCompleteWorks1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.userControlWorkerCompleteWorks1.Name = "userControlWorkerCompleteWorks1";
+            this.userControlWorkerCompleteWorks1.Size = new System.Drawing.Size(1062, 602);
+            this.userControlWorkerCompleteWorks1.TabIndex = 8;
+            // 
+            // userControlNewWorks1
+            // 
+            this.userControlNewWorks1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.userControlNewWorks1.Location = new System.Drawing.Point(202, 80);
+            this.userControlNewWorks1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.userControlNewWorks1.Name = "userControlNewWorks1";
+            this.userControlNewWorks1.Size = new System.Drawing.Size(1062, 601);
+            this.userControlNewWorks1.TabIndex = 7;
+            // 
             // FormWorker
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.userControlWorkerDoneWorks1);
             this.Controls.Add(this.userControlWorkerClientData1);
-            this.Controls.Add(this.userControlCompleteWorks1);
+            this.Controls.Add(this.userControlWorkerCompleteWorks1);
             this.Controls.Add(this.userControlNewWorks1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel2);
@@ -335,7 +349,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button buttonSettings;
         private System.Windows.Forms.Button buttonClientData;
         private System.Windows.Forms.Button buttonDoneWork;
         private System.Windows.Forms.Button buttonNewWork;
@@ -347,11 +360,13 @@
         private System.Windows.Forms.Button buttonHome;
         private System.Windows.Forms.Panel panelSign;
         private UserControlNewWorks userControlNewWorks1;
-        private UserControlWorkerCompleteWorks userControlCompleteWorks1;
+        private UserControlWorkerCompleteWorks userControlWorkerCompleteWorks1;
         private UserControlWorkerClientData userControlWorkerClientData1;
         private System.Windows.Forms.Panel panelIsWork;
         private System.Windows.Forms.Panel panelNoWork;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button buttonExit;
+        private View.UserControlWorkerDoneWorks userControlWorkerDoneWorks1;
     }
 }

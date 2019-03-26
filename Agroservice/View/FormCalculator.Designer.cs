@@ -170,7 +170,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.label1.ForeColor = System.Drawing.Color.Yellow;
             this.label1.Location = new System.Drawing.Point(273, 23);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(129, 30);
@@ -189,6 +189,7 @@
             // 
             // buttonCalculate
             // 
+            this.buttonCalculate.FlatAppearance.BorderSize = 0;
             this.buttonCalculate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCalculate.ForeColor = System.Drawing.Color.White;
             this.buttonCalculate.Location = new System.Drawing.Point(0, 0);
@@ -238,6 +239,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.groupBox1.Controls.Add(this.metroComboBoxDis);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label3);
@@ -256,6 +258,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.label4);

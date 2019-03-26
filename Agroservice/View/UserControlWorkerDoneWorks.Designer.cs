@@ -1,6 +1,6 @@
-﻿namespace Agroservice
+﻿namespace Agroservice.View
 {
-    partial class UserControlWorkerCompleteWorks
+    partial class UserControlWorkerDoneWorks
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,50 +29,48 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.MultiSelect = false;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 62);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1062, 510);
-            this.dataGridView1.TabIndex = 2;
+            this.dataGridView1.Size = new System.Drawing.Size(1062, 550);
+            this.dataGridView1.TabIndex = 0;
             // 
-            // panel1
+            // label1
             // 
-            this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 102);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1062, 510);
-            this.panel1.TabIndex = 3;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(7, 27);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(170, 21);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Elkészült munkálatok";
             // 
-            // UserControlWorkerCompleteWorks
+            // UserControlWorkerDoneWorks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.dataGridView1);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Margin = new System.Windows.Forms.Padding(5);
-            this.Name = "UserControlWorkerCompleteWorks";
+            this.Name = "UserControlWorkerDoneWorks";
             this.Size = new System.Drawing.Size(1062, 612);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
         public System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
     }
 }

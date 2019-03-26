@@ -113,6 +113,7 @@
             this.TextboxPassword.WaterMark = "Jelszó";
             this.TextboxPassword.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.TextboxPassword.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+
             // 
             // metroButton1
             // 
@@ -151,6 +152,7 @@
             this.Controls.Add(this.TextboxUsername);
             this.Name = "FormSignIn";
             this.Style = MetroFramework.MetroColorStyle.Yellow;
+            
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 

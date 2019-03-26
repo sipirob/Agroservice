@@ -40,6 +40,7 @@
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.buttonRoute = new System.Windows.Forms.Button();
             this.buttonCalc = new System.Windows.Forms.Button();
+            this.labelDistance = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -65,12 +66,15 @@
             // 
             // button1
             // 
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button1.Location = new System.Drawing.Point(593, 432);
+            this.button1.Location = new System.Drawing.Point(581, 564);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(107, 33);
+            this.button1.Size = new System.Drawing.Size(111, 33);
             this.button1.TabIndex = 21;
             this.button1.Text = "Elvégezve";
             this.button1.UseVisualStyleBackColor = true;
@@ -84,7 +88,7 @@
             this.gMapControlParcelMap.GrayScaleMode = false;
             this.gMapControlParcelMap.HelperLineOption = GMap.NET.WindowsForms.HelperLineOptions.DontShow;
             this.gMapControlParcelMap.LevelsKeepInMemmory = 5;
-            this.gMapControlParcelMap.Location = new System.Drawing.Point(593, 43);
+            this.gMapControlParcelMap.Location = new System.Drawing.Point(581, 43);
             this.gMapControlParcelMap.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gMapControlParcelMap.MarkersEnabled = true;
             this.gMapControlParcelMap.MaxZoom = 2;
@@ -99,13 +103,13 @@
             this.gMapControlParcelMap.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
             this.gMapControlParcelMap.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
             this.gMapControlParcelMap.ShowTileGridLines = false;
-            this.gMapControlParcelMap.Size = new System.Drawing.Size(447, 381);
+            this.gMapControlParcelMap.Size = new System.Drawing.Size(478, 479);
             this.gMapControlParcelMap.TabIndex = 22;
             this.gMapControlParcelMap.Zoom = 0D;
             // 
             // listViewNewWork
             // 
-            this.listViewNewWork.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.listViewNewWork.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.listViewNewWork.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader5,
             this.columnHeader1,
@@ -115,9 +119,9 @@
             this.listViewNewWork.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.listViewNewWork.FullRowSelect = true;
             this.listViewNewWork.GridLines = true;
-            this.listViewNewWork.Location = new System.Drawing.Point(21, 43);
+            this.listViewNewWork.Location = new System.Drawing.Point(0, 43);
             this.listViewNewWork.Name = "listViewNewWork";
-            this.listViewNewWork.Size = new System.Drawing.Size(553, 540);
+            this.listViewNewWork.Size = new System.Drawing.Size(575, 554);
             this.listViewNewWork.TabIndex = 23;
             this.listViewNewWork.UseCompatibleStateImageBehavior = false;
             this.listViewNewWork.View = System.Windows.Forms.View.Details;
@@ -149,12 +153,14 @@
             // 
             // buttonRoute
             // 
+            this.buttonRoute.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.buttonRoute.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.buttonRoute.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonRoute.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buttonRoute.Location = new System.Drawing.Point(948, 432);
+            this.buttonRoute.Location = new System.Drawing.Point(698, 564);
             this.buttonRoute.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonRoute.Name = "buttonRoute";
-            this.buttonRoute.Size = new System.Drawing.Size(92, 33);
+            this.buttonRoute.Size = new System.Drawing.Size(99, 33);
             this.buttonRoute.TabIndex = 24;
             this.buttonRoute.Text = "Útvonal";
             this.buttonRoute.UseVisualStyleBackColor = true;
@@ -162,9 +168,11 @@
             // 
             // buttonCalc
             // 
+            this.buttonCalc.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.buttonCalc.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.buttonCalc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCalc.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buttonCalc.Location = new System.Drawing.Point(593, 491);
+            this.buttonCalc.Location = new System.Drawing.Point(803, 564);
             this.buttonCalc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonCalc.Name = "buttonCalc";
             this.buttonCalc.Size = new System.Drawing.Size(111, 33);
@@ -173,10 +181,20 @@
             this.buttonCalc.UseVisualStyleBackColor = true;
             this.buttonCalc.Click += new System.EventHandler(this.buttonCalc_Click);
             // 
+            // labelDistance
+            // 
+            this.labelDistance.AutoSize = true;
+            this.labelDistance.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelDistance.Location = new System.Drawing.Point(581, 526);
+            this.labelDistance.Name = "labelDistance";
+            this.labelDistance.Size = new System.Drawing.Size(0, 21);
+            this.labelDistance.TabIndex = 28;
+            // 
             // UserControlNewWorks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.labelDistance);
             this.Controls.Add(this.buttonCalc);
             this.Controls.Add(this.buttonRoute);
             this.Controls.Add(this.listViewNewWork);
@@ -187,7 +205,7 @@
             this.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "UserControlNewWorks";
-            this.Size = new System.Drawing.Size(1062, 617);
+            this.Size = new System.Drawing.Size(1062, 612);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -206,5 +224,6 @@
         private System.Windows.Forms.Button buttonRoute;
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.Button buttonCalc;
+        private System.Windows.Forms.Label labelDistance;
     }
 }

@@ -197,6 +197,12 @@
     <Compile Include="UserControlNewWorks.Designer.cs">
       <DependentUpon>UserControlNewWorks.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\UserControlWorkerDoneWorks.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControlWorkerDoneWorks.Designer.cs">
+      <DependentUpon>UserControlWorkerDoneWorks.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FormLeader.resx">
       <DependentUpon>FormLeader.cs</DependentUpon>
     </EmbeddedResource>
@@ -235,6 +241,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlNewWorks.resx">
       <DependentUpon>UserControlNewWorks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControlWorkerDoneWorks.resx">
+      <DependentUpon>UserControlWorkerDoneWorks.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Diagram\ClassDiagram1.cd" />
     <None Include="packages.config" />

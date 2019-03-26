@@ -13,6 +13,7 @@ namespace Agroservice
 {
     public partial class FormWorker : Form
     {
+        FormSignIn signIn = new FormSignIn();
         model.AgroserviceModel controller = new model.AgroserviceModel();
         UserControlNewWorks userControlNew;
         DataTable cldt;
@@ -32,11 +33,12 @@ namespace Agroservice
         public static string workername="";
         public FormWorker()
         {
+            signIn.Hide();
             InitializeComponent();
             panelSign.Height = buttonHome.Height;
             userControlNew = new UserControlNewWorks();
             cldt = new DataTable();
-            
+           
 
         }
 
@@ -46,14 +48,14 @@ namespace Agroservice
             panelSign.Height = buttonHome.Height;
             panelSign.Top = buttonHome.Top;
             userControlNewWorks1.Hide();
-            userControlCompleteWorks1.Hide();
+            userControlWorkerCompleteWorks1.Hide();
             userControlWorkerClientData1.Hide();
             newWorksNumber();
         }
 
         private void buttonNewWork_Click(object sender, EventArgs e)
         {
-            userControlCompleteWorks1.Hide();
+            userControlWorkerCompleteWorks1.Hide();
             panelSign.Height = buttonNewWork.Height;
             panelSign.Top = buttonNewWork.Top;
             userControlNewWorks1.Show();
@@ -67,12 +69,12 @@ namespace Agroservice
         {
             userControlWorkerClientData1.Hide();
             userControlNewWorks1.Hide();
-            userControlCompleteWorks1.Hide();
+            userControlWorkerCompleteWorks1.Hide();
             controller.usernameLoad();
             workername = controller.getloadUsername();
             labelUsername.Text = workername;
+            userControlWorkerDoneWorks1.Hide();
 
-           
 
             //Függőben lévő munkálatok betöltése
             controller.loadNewWorkData();
@@ -97,7 +99,7 @@ namespace Agroservice
         {
             panelSign.Height = buttonDoneWork.Height;
             panelSign.Top = buttonDoneWork.Top;
-            userControlCompleteWorks1.Show();
+            userControlWorkerCompleteWorks1.Show();
             userControlWorkerClientData1.Hide();
             userControlNewWorks1.Hide();
             //Elvégzett munkálatok betöltése
@@ -108,7 +110,7 @@ namespace Agroservice
 
             //userControlCompleteWorks1.dataGridView1.DataSource = null;
             
-            userControlCompleteWorks1.dataGridView1.DataSource = controller.getCompleteWorksData();
+            userControlWorkerDoneWorks1.dataGridView1.DataSource = controller.getCompleteWorksData();
 
         }
 
@@ -117,7 +119,7 @@ namespace Agroservice
            
             panelSign.Height = buttonClientData.Height;
             panelSign.Top = buttonClientData.Top;
-            userControlCompleteWorks1.Hide();
+            userControlWorkerCompleteWorks1.Hide();
             userControlNewWorks1.Hide();
             userControlWorkerClientData1.Show();
 
@@ -139,6 +141,19 @@ namespace Agroservice
 
 
 
+        }
+
+        private void buttonExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            userControlWorkerDoneWorks1.Show();
+            controller.getClearCompleteWorksList();
+            controller.loadCompleteData();
+            userControlWorkerDoneWorks1.dataGridView1.DataSource = controller.getCompleteWorksData();
         }
     }
 }
