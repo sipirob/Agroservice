@@ -12,6 +12,7 @@ namespace Agroservice
 {
     public partial class UserControlWorkerClientData : UserControl
     {
+       
         model.AgroserviceModel model = new model.AgroserviceModel();
         public UserControlWorkerClientData()
         {
@@ -20,9 +21,25 @@ namespace Agroservice
 
         private void buttonSearchClient_Click(object sender, EventArgs e)
         {
-            
+            errorProviderNameFirstLetterLover.Clear();
             string clientname = TextboxClientName.Text;
+            Validation.NameValidation nv = new Validation.NameValidation(clientname);
+            try
+            {
+                nv.validation();
+            }
+            catch(Exceptions.NameException ne)
+            {
+                errorProviderNameFirstLetterLover.SetError(TextboxClientName, ne.Message);
+                return;
+            }
             DataTable searchedClient= model.searchClient(clientname);
+            if (searchedClient.Rows.Count <= 0)
+            {
+                MessageBox.Show("Ilyen nevű ügyfél nem szerepel a nyilvántartásban");
+                
+            }
+            else
             foreach (DataRow dr in searchedClient.Rows)
             {
                 ListViewItem clvi = new ListViewItem(dr["id"].ToString());

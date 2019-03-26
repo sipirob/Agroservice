@@ -19,13 +19,15 @@ namespace Agroservice.Validation.Tests
                 ServicePriceValidation spe = new ServicePriceValidation(-55);
                 bool actual = spe.validation();
                 Assert.Fail("Negatív számra nem dobott kivételt");
-                
+
             }
-            catch(Exceptions.ServicePriceException sprex)
+            catch (Exceptions.ServicePriceException sprex)
             {
                 if (sprex.Message != "A szolgáltatás ára nem lehet negatív")
                     Assert.Fail("Negatív számra rossz szövegű kivételt dobott");
             }
         }
+
+       
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControlWorkerClientData));
             this.listViewClientData = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -38,6 +39,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.TextboxClientName = new MetroFramework.Controls.MetroTextBox();
             this.buttonSearchClient = new System.Windows.Forms.Button();
+            this.errorProviderNameFirstLetterLover = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderNameFirstLetterLover)).BeginInit();
             this.SuspendLayout();
             // 
             // listViewClientData
@@ -145,6 +148,10 @@
             this.buttonSearchClient.UseVisualStyleBackColor = true;
             this.buttonSearchClient.Click += new System.EventHandler(this.buttonSearchClient_Click);
             // 
+            // errorProviderNameFirstLetterLover
+            // 
+            this.errorProviderNameFirstLetterLover.ContainerControl = this;
+            // 
             // UserControlWorkerClientData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -158,6 +165,7 @@
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "UserControlWorkerClientData";
             this.Size = new System.Drawing.Size(1062, 612);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderNameFirstLetterLover)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -174,5 +182,6 @@
         private System.Windows.Forms.Label label2;
         public MetroFramework.Controls.MetroTextBox TextboxClientName;
         private System.Windows.Forms.Button buttonSearchClient;
+        private System.Windows.Forms.ErrorProvider errorProviderNameFirstLetterLover;
     }
 }

@@ -76,7 +76,7 @@ namespace Agroservice.View
             }
             catch (Exceptions.ServicePriceException spex)
             {
-                errorProviderServiePrice.SetError(textBoxServicePrice, spex.Message);
+                errorProviderServiePrice. SetError(textBoxServicePrice, spex.Message);
                 return;
             }
             

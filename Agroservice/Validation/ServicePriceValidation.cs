@@ -16,11 +16,11 @@ namespace Agroservice.Validation
         public bool validation()
         {
             bool servicepriceRight = true;
-            if (servicepriceRight = ellenorizNegativ())
+            if (servicepriceRight = validFirstLetterLovercase())
                 throw new Exceptions.ServicePriceException("A szolgáltatás ára nem lehet negatív");
             return servicepriceRight;
         }
-        public bool ellenorizNegativ()
+        public bool validFirstLetterLovercase()
         {
             if (servicePrice < 0)
                 return true;
