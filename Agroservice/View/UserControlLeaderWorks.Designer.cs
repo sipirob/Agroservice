@@ -42,13 +42,16 @@
             this.TextboxClient = new MetroFramework.Controls.MetroTextBox();
             this.buttonSearchClient = new System.Windows.Forms.Button();
             this.metroComboBoxWorker = new MetroFramework.Controls.MetroComboBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.dataGridViewAllCompleteWorks = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAllNewWorks)).BeginInit();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
             this.metroTabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAllCompleteWorks)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridViewAllNewWorks
@@ -65,9 +68,9 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.Desktop;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewAllNewWorks.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridViewAllNewWorks.Location = new System.Drawing.Point(3, 3);
+            this.dataGridViewAllNewWorks.Location = new System.Drawing.Point(3, 0);
             this.dataGridViewAllNewWorks.Name = "dataGridViewAllNewWorks";
-            this.dataGridViewAllNewWorks.Size = new System.Drawing.Size(652, 498);
+            this.dataGridViewAllNewWorks.Size = new System.Drawing.Size(755, 555);
             this.dataGridViewAllNewWorks.TabIndex = 0;
             this.dataGridViewAllNewWorks.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewAllNewWorks_CellContentClick);
             // 
@@ -76,12 +79,13 @@
             this.metroTabControl1.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
             this.metroTabControl1.Controls.Add(this.metroTabPage1);
             this.metroTabControl1.Controls.Add(this.metroTabPage2);
+            this.metroTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroTabControl1.FontWeight = MetroFramework.MetroTabControlWeight.Bold;
             this.metroTabControl1.ItemSize = new System.Drawing.Size(120, 50);
-            this.metroTabControl1.Location = new System.Drawing.Point(3, 15);
+            this.metroTabControl1.Location = new System.Drawing.Point(0, 0);
             this.metroTabControl1.Name = "metroTabControl1";
             this.metroTabControl1.SelectedIndex = 1;
-            this.metroTabControl1.Size = new System.Drawing.Size(1059, 581);
+            this.metroTabControl1.Size = new System.Drawing.Size(1062, 612);
             this.metroTabControl1.Style = MetroFramework.MetroColorStyle.Silver;
             this.metroTabControl1.TabIndex = 2;
             this.metroTabControl1.UseSelectable = true;
@@ -90,15 +94,14 @@
             // metroTabPage1
             // 
             this.metroTabPage1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.metroTabPage1.Controls.Add(this.metroComboBoxWorkers);
-            this.metroTabPage1.Controls.Add(this.buttonAddWorker);
+            this.metroTabPage1.Controls.Add(this.panel1);
             this.metroTabPage1.Controls.Add(this.dataGridViewAllNewWorks);
             this.metroTabPage1.HorizontalScrollbarBarColor = true;
             this.metroTabPage1.HorizontalScrollbarHighlightOnWheel = false;
             this.metroTabPage1.HorizontalScrollbarSize = 1;
             this.metroTabPage1.Location = new System.Drawing.Point(4, 54);
             this.metroTabPage1.Name = "metroTabPage1";
-            this.metroTabPage1.Size = new System.Drawing.Size(1051, 523);
+            this.metroTabPage1.Size = new System.Drawing.Size(1054, 554);
             this.metroTabPage1.Style = MetroFramework.MetroColorStyle.Green;
             this.metroTabPage1.TabIndex = 0;
             this.metroTabPage1.Text = "Új munkálatok";
@@ -110,9 +113,9 @@
             // 
             this.metroComboBoxWorkers.FormattingEnabled = true;
             this.metroComboBoxWorkers.ItemHeight = 23;
-            this.metroComboBoxWorkers.Location = new System.Drawing.Point(725, 3);
+            this.metroComboBoxWorkers.Location = new System.Drawing.Point(3, 27);
             this.metroComboBoxWorkers.Name = "metroComboBoxWorkers";
-            this.metroComboBoxWorkers.Size = new System.Drawing.Size(323, 29);
+            this.metroComboBoxWorkers.Size = new System.Drawing.Size(287, 29);
             this.metroComboBoxWorkers.Style = MetroFramework.MetroColorStyle.Silver;
             this.metroComboBoxWorkers.TabIndex = 3;
             this.metroComboBoxWorkers.UseSelectable = true;
@@ -120,10 +123,13 @@
             // buttonAddWorker
             // 
             this.buttonAddWorker.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.buttonAddWorker.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.buttonAddWorker.Location = new System.Drawing.Point(725, 450);
+            this.buttonAddWorker.FlatAppearance.BorderSize = 0;
+            this.buttonAddWorker.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.buttonAddWorker.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAddWorker.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.buttonAddWorker.Location = new System.Drawing.Point(0, 115);
             this.buttonAddWorker.Name = "buttonAddWorker";
-            this.buttonAddWorker.Size = new System.Drawing.Size(323, 51);
+            this.buttonAddWorker.Size = new System.Drawing.Size(294, 51);
             this.buttonAddWorker.TabIndex = 2;
             this.buttonAddWorker.Text = "Dolgozó hozzáadása";
             this.buttonAddWorker.UseVisualStyleBackColor = true;
@@ -131,19 +137,14 @@
             // 
             // metroTabPage2
             // 
-            this.metroTabPage2.Controls.Add(this.buttonSearchBoth);
-            this.metroTabPage2.Controls.Add(this.buttonSearchWorker);
-            this.metroTabPage2.Controls.Add(this.TextboxClient);
-            this.metroTabPage2.Controls.Add(this.buttonSearchClient);
-            this.metroTabPage2.Controls.Add(this.metroComboBoxWorker);
-            this.metroTabPage2.Controls.Add(this.label2);
+            this.metroTabPage2.Controls.Add(this.panel2);
             this.metroTabPage2.Controls.Add(this.dataGridViewAllCompleteWorks);
             this.metroTabPage2.HorizontalScrollbarBarColor = true;
             this.metroTabPage2.HorizontalScrollbarHighlightOnWheel = false;
             this.metroTabPage2.HorizontalScrollbarSize = 1;
             this.metroTabPage2.Location = new System.Drawing.Point(4, 54);
             this.metroTabPage2.Name = "metroTabPage2";
-            this.metroTabPage2.Size = new System.Drawing.Size(1051, 523);
+            this.metroTabPage2.Size = new System.Drawing.Size(1054, 554);
             this.metroTabPage2.TabIndex = 1;
             this.metroTabPage2.Text = "Elkészült munkálatok";
             this.metroTabPage2.VerticalScrollbarBarColor = true;
@@ -152,7 +153,10 @@
             // 
             // buttonSearchBoth
             // 
-            this.buttonSearchBoth.Location = new System.Drawing.Point(854, 474);
+            this.buttonSearchBoth.FlatAppearance.BorderSize = 0;
+            this.buttonSearchBoth.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSearchBoth.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.buttonSearchBoth.Location = new System.Drawing.Point(3, 474);
             this.buttonSearchBoth.Name = "buttonSearchBoth";
             this.buttonSearchBoth.Size = new System.Drawing.Size(194, 46);
             this.buttonSearchBoth.TabIndex = 13;
@@ -162,7 +166,10 @@
             // 
             // buttonSearchWorker
             // 
-            this.buttonSearchWorker.Location = new System.Drawing.Point(853, 413);
+            this.buttonSearchWorker.FlatAppearance.BorderSize = 0;
+            this.buttonSearchWorker.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSearchWorker.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.buttonSearchWorker.Location = new System.Drawing.Point(3, 413);
             this.buttonSearchWorker.Name = "buttonSearchWorker";
             this.buttonSearchWorker.Size = new System.Drawing.Size(194, 55);
             this.buttonSearchWorker.TabIndex = 12;
@@ -192,7 +199,7 @@
             this.TextboxClient.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.TextboxClient.Icon = ((System.Drawing.Image)(resources.GetObject("TextboxClient.Icon")));
             this.TextboxClient.Lines = new string[0];
-            this.TextboxClient.Location = new System.Drawing.Point(854, 49);
+            this.TextboxClient.Location = new System.Drawing.Point(3, 19);
             this.TextboxClient.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
             this.TextboxClient.MaxLength = 32767;
             this.TextboxClient.Name = "TextboxClient";
@@ -213,7 +220,10 @@
             // 
             // buttonSearchClient
             // 
-            this.buttonSearchClient.Location = new System.Drawing.Point(854, 347);
+            this.buttonSearchClient.FlatAppearance.BorderSize = 0;
+            this.buttonSearchClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSearchClient.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.buttonSearchClient.Location = new System.Drawing.Point(3, 361);
             this.buttonSearchClient.Name = "buttonSearchClient";
             this.buttonSearchClient.Size = new System.Drawing.Size(194, 46);
             this.buttonSearchClient.TabIndex = 6;
@@ -227,21 +237,12 @@
             this.metroComboBoxWorker.ItemHeight = 23;
             this.metroComboBoxWorker.Items.AddRange(new object[] {
             "Üres"});
-            this.metroComboBoxWorker.Location = new System.Drawing.Point(854, 117);
+            this.metroComboBoxWorker.Location = new System.Drawing.Point(3, 69);
             this.metroComboBoxWorker.Name = "metroComboBoxWorker";
             this.metroComboBoxWorker.Size = new System.Drawing.Size(194, 29);
             this.metroComboBoxWorker.Style = MetroFramework.MetroColorStyle.Silver;
             this.metroComboBoxWorker.TabIndex = 4;
             this.metroComboBoxWorker.UseSelectable = true;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(4, 25);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(174, 21);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Elkészült munkálatok:";
             // 
             // dataGridViewAllCompleteWorks
             // 
@@ -250,11 +251,36 @@
             this.dataGridViewAllCompleteWorks.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewAllCompleteWorks.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dataGridViewAllCompleteWorks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewAllCompleteWorks.Location = new System.Drawing.Point(0, 49);
+            this.dataGridViewAllCompleteWorks.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewAllCompleteWorks.Name = "dataGridViewAllCompleteWorks";
             this.dataGridViewAllCompleteWorks.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewAllCompleteWorks.Size = new System.Drawing.Size(848, 471);
+            this.dataGridViewAllCompleteWorks.Size = new System.Drawing.Size(851, 554);
             this.dataGridViewAllCompleteWorks.TabIndex = 2;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel1.Controls.Add(this.metroComboBoxWorkers);
+            this.panel1.Controls.Add(this.buttonAddWorker);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel1.Location = new System.Drawing.Point(761, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(293, 554);
+            this.panel1.TabIndex = 4;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel2.Controls.Add(this.TextboxClient);
+            this.panel2.Controls.Add(this.metroComboBoxWorker);
+            this.panel2.Controls.Add(this.buttonSearchClient);
+            this.panel2.Controls.Add(this.buttonSearchBoth);
+            this.panel2.Controls.Add(this.buttonSearchWorker);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel2.Location = new System.Drawing.Point(854, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(200, 554);
+            this.panel2.TabIndex = 14;
             // 
             // UserControlLeaderWorks
             // 
@@ -271,8 +297,9 @@
             this.metroTabControl1.ResumeLayout(false);
             this.metroTabPage1.ResumeLayout(false);
             this.metroTabPage2.ResumeLayout(false);
-            this.metroTabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAllCompleteWorks)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -283,7 +310,6 @@
         private MetroFramework.Controls.MetroTabPage metroTabPage1;
         private MetroFramework.Controls.MetroTabPage metroTabPage2;
         private System.Windows.Forms.Button buttonAddWorker;
-        private System.Windows.Forms.Label label2;
         public System.Windows.Forms.DataGridView dataGridViewAllCompleteWorks;
         public MetroFramework.Controls.MetroComboBox metroComboBoxWorkers;
         private System.Windows.Forms.Button buttonSearchClient;
@@ -291,5 +317,7 @@
         public MetroFramework.Controls.MetroComboBox metroComboBoxWorker;
         private System.Windows.Forms.Button buttonSearchWorker;
         private System.Windows.Forms.Button buttonSearchBoth;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
     }
 }

@@ -93,9 +93,12 @@ namespace Agroservice.controller
             newWorkDT.Columns.Add("parcellaszám", typeof(int));
             newWorkDT.Columns.Add("munkálat neve", typeof(string));
             newWorkDT.Columns.Add("gabona", typeof(string));
+            newWorkDT.Columns.Add("Ügyfél", typeof(string));
+            newWorkDT.Columns.Add("Megjegyzés", typeof(string));
+            newWorkDT.Columns.Add("Ár", typeof(int));
             foreach (repository.Work w in Work)
             {
-                newWorkDT.Rows.Add(w.getId(), w.getDate(), w.getParcelnumber(), w.getServicename(), w.getGraincropname());
+                newWorkDT.Rows.Add(w.getId(), w.getDate(), w.getParcelnumber(), w.getServicename(), w.getGraincropname(),w.getClientname(),w.getComment(),w.getPrice());
 
             }
 

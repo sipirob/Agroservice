@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.gMapControlParcelMap = new GMap.NET.WindowsForms.GMapControl();
@@ -42,17 +41,6 @@
             this.buttonCalc = new System.Windows.Forms.Button();
             this.labelDistance = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(17, 14);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(225, 21);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Függőben lévő munkálatok";
             // 
             // label5
             // 
@@ -88,7 +76,7 @@
             this.gMapControlParcelMap.GrayScaleMode = false;
             this.gMapControlParcelMap.HelperLineOption = GMap.NET.WindowsForms.HelperLineOptions.DontShow;
             this.gMapControlParcelMap.LevelsKeepInMemmory = 5;
-            this.gMapControlParcelMap.Location = new System.Drawing.Point(581, 43);
+            this.gMapControlParcelMap.Location = new System.Drawing.Point(581, 4);
             this.gMapControlParcelMap.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gMapControlParcelMap.MarkersEnabled = true;
             this.gMapControlParcelMap.MaxZoom = 2;
@@ -103,7 +91,7 @@
             this.gMapControlParcelMap.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
             this.gMapControlParcelMap.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
             this.gMapControlParcelMap.ShowTileGridLines = false;
-            this.gMapControlParcelMap.Size = new System.Drawing.Size(478, 479);
+            this.gMapControlParcelMap.Size = new System.Drawing.Size(478, 518);
             this.gMapControlParcelMap.TabIndex = 22;
             this.gMapControlParcelMap.Zoom = 0D;
             // 
@@ -119,9 +107,9 @@
             this.listViewNewWork.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.listViewNewWork.FullRowSelect = true;
             this.listViewNewWork.GridLines = true;
-            this.listViewNewWork.Location = new System.Drawing.Point(0, 43);
+            this.listViewNewWork.Location = new System.Drawing.Point(0, 0);
             this.listViewNewWork.Name = "listViewNewWork";
-            this.listViewNewWork.Size = new System.Drawing.Size(575, 554);
+            this.listViewNewWork.Size = new System.Drawing.Size(575, 597);
             this.listViewNewWork.TabIndex = 23;
             this.listViewNewWork.UseCompatibleStateImageBehavior = false;
             this.listViewNewWork.View = System.Windows.Forms.View.Details;
@@ -201,7 +189,6 @@
             this.Controls.Add(this.gMapControlParcelMap);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "UserControlNewWorks";
@@ -212,7 +199,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button1;
         public System.Windows.Forms.ListView listViewNewWork;

@@ -46,10 +46,12 @@
             this.userControlLeaderWorks1 = new Agroservice.UserControlLeaderWorks();
             this.userControlLeaderClientsData1 = new Agroservice.UserControlLeaderClientsData();
             this.userControlLeaderAllNewWorks1 = new Agroservice.UserControlLeaderWorks();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -103,7 +105,7 @@
             // 
             // panelSign
             // 
-            this.panelSign.BackColor = System.Drawing.Color.Chartreuse;
+            this.panelSign.BackColor = System.Drawing.Color.Goldenrod;
             this.panelSign.Location = new System.Drawing.Point(3, -1);
             this.panelSign.Name = "panelSign";
             this.panelSign.Size = new System.Drawing.Size(12, 88);
@@ -186,9 +188,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(202, 214);
+            this.pictureBox1.Location = new System.Drawing.Point(202, 367);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(1062, 467);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
@@ -213,10 +216,10 @@
             // userControlLeaderSettings1
             // 
             this.userControlLeaderSettings1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.userControlLeaderSettings1.Location = new System.Drawing.Point(202, 80);
+            this.userControlLeaderSettings1.Location = new System.Drawing.Point(202, 79);
             this.userControlLeaderSettings1.Margin = new System.Windows.Forms.Padding(5);
             this.userControlLeaderSettings1.Name = "userControlLeaderSettings1";
-            this.userControlLeaderSettings1.Size = new System.Drawing.Size(1062, 601);
+            this.userControlLeaderSettings1.Size = new System.Drawing.Size(1062, 602);
             this.userControlLeaderSettings1.TabIndex = 12;
             this.userControlLeaderSettings1.Load += new System.EventHandler(this.userControlLeaderSettings1_Load);
             // 
@@ -224,20 +227,20 @@
             // 
             this.userControlLeaderWorks1.BackColor = System.Drawing.Color.White;
             this.userControlLeaderWorks1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.userControlLeaderWorks1.Location = new System.Drawing.Point(202, 80);
+            this.userControlLeaderWorks1.Location = new System.Drawing.Point(202, 79);
             this.userControlLeaderWorks1.Margin = new System.Windows.Forms.Padding(5);
             this.userControlLeaderWorks1.Name = "userControlLeaderWorks1";
-            this.userControlLeaderWorks1.Size = new System.Drawing.Size(1062, 601);
+            this.userControlLeaderWorks1.Size = new System.Drawing.Size(1062, 602);
             this.userControlLeaderWorks1.TabIndex = 9;
             this.userControlLeaderWorks1.Load += new System.EventHandler(this.userControlLeaderWorks1_Load);
             // 
             // userControlLeaderClientsData1
             // 
             this.userControlLeaderClientsData1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.userControlLeaderClientsData1.Location = new System.Drawing.Point(202, 80);
+            this.userControlLeaderClientsData1.Location = new System.Drawing.Point(202, 79);
             this.userControlLeaderClientsData1.Margin = new System.Windows.Forms.Padding(5);
             this.userControlLeaderClientsData1.Name = "userControlLeaderClientsData1";
-            this.userControlLeaderClientsData1.Size = new System.Drawing.Size(1062, 601);
+            this.userControlLeaderClientsData1.Size = new System.Drawing.Size(1062, 602);
             this.userControlLeaderClientsData1.TabIndex = 8;
             // 
             // userControlLeaderAllNewWorks1
@@ -249,6 +252,16 @@
             this.userControlLeaderAllNewWorks1.Name = "userControlLeaderAllNewWorks1";
             this.userControlLeaderAllNewWorks1.Size = new System.Drawing.Size(1062, 602);
             this.userControlLeaderAllNewWorks1.TabIndex = 9;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(605, 150);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(243, 211);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 13;
+            this.pictureBox3.TabStop = false;
             // 
             // FormLeader
             // 
@@ -263,6 +276,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.labelNoworks);
             this.Controls.Add(this.labelIsWorks);
+            this.Controls.Add(this.pictureBox3);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FormLeader";
@@ -273,6 +287,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -297,5 +312,6 @@
         private System.Windows.Forms.Label labelNoworks;
         private View.UserControlLeaderSettings userControlLeaderSettings1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

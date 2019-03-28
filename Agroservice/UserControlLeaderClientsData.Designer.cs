@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControlLeaderClientsData));
             this.buttonDeleteClient = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.listViewClientsData = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -41,8 +40,8 @@
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
             this.buttonSearchClient = new System.Windows.Forms.Button();
             this.TextboxClientName = new MetroFramework.Controls.MetroTextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
+            this.buttonCancel = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.buttonUpdateWorkerData = new System.Windows.Forms.Button();
@@ -64,36 +63,33 @@
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.textBoxUsername = new System.Windows.Forms.TextBox();
             this.listBoxWorkers = new System.Windows.Forms.ListBox();
-            this.buttonCancel = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.metroTabControl2.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
             this.metroTabPage2.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonDeleteClient
             // 
-            this.buttonDeleteClient.Location = new System.Drawing.Point(785, 442);
+            this.buttonDeleteClient.FlatAppearance.BorderSize = 0;
+            this.buttonDeleteClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonDeleteClient.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.buttonDeleteClient.Location = new System.Drawing.Point(3, 494);
             this.buttonDeleteClient.Name = "buttonDeleteClient";
-            this.buttonDeleteClient.Size = new System.Drawing.Size(163, 53);
+            this.buttonDeleteClient.Size = new System.Drawing.Size(238, 53);
             this.buttonDeleteClient.TabIndex = 1;
             this.buttonDeleteClient.Text = "Ügyfél törlése";
             this.buttonDeleteClient.UseVisualStyleBackColor = true;
             this.buttonDeleteClient.Click += new System.EventHandler(this.buttonDeleteClient_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(10, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(134, 21);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Ügyfelek adatai";
-            // 
             // listViewClientsData
             // 
-            this.listViewClientsData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.listViewClientsData.BackColor = System.Drawing.Color.LemonChiffon;
             this.listViewClientsData.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
@@ -101,9 +97,9 @@
             this.columnHeader4});
             this.listViewClientsData.FullRowSelect = true;
             this.listViewClientsData.GridLines = true;
-            this.listViewClientsData.Location = new System.Drawing.Point(31, 54);
+            this.listViewClientsData.Location = new System.Drawing.Point(0, 0);
             this.listViewClientsData.Name = "listViewClientsData";
-            this.listViewClientsData.Size = new System.Drawing.Size(531, 448);
+            this.listViewClientsData.Size = new System.Drawing.Size(544, 564);
             this.listViewClientsData.TabIndex = 3;
             this.listViewClientsData.UseCompatibleStateImageBehavior = false;
             this.listViewClientsData.View = System.Windows.Forms.View.Details;
@@ -137,30 +133,29 @@
             // 
             // metroTabControl2
             // 
+            this.metroTabControl2.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
             this.metroTabControl2.Controls.Add(this.metroTabPage1);
             this.metroTabControl2.Controls.Add(this.metroTabPage2);
-            this.metroTabControl2.Location = new System.Drawing.Point(39, 27);
+            this.metroTabControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.metroTabControl2.FontWeight = MetroFramework.MetroTabControlWeight.Bold;
+            this.metroTabControl2.Location = new System.Drawing.Point(0, 0);
             this.metroTabControl2.Name = "metroTabControl2";
             this.metroTabControl2.SelectedIndex = 1;
-            this.metroTabControl2.Size = new System.Drawing.Size(988, 540);
-            this.metroTabControl2.Style = MetroFramework.MetroColorStyle.Lime;
+            this.metroTabControl2.Size = new System.Drawing.Size(1062, 612);
+            this.metroTabControl2.Style = MetroFramework.MetroColorStyle.Silver;
             this.metroTabControl2.TabIndex = 5;
             this.metroTabControl2.UseSelectable = true;
             // 
             // metroTabPage1
             // 
-            this.metroTabPage1.Controls.Add(this.buttonSearchClient);
-            this.metroTabPage1.Controls.Add(this.TextboxClientName);
-            this.metroTabPage1.Controls.Add(this.label9);
-            this.metroTabPage1.Controls.Add(this.buttonDeleteClient);
+            this.metroTabPage1.Controls.Add(this.panel1);
             this.metroTabPage1.Controls.Add(this.listViewClientsData);
-            this.metroTabPage1.Controls.Add(this.label1);
             this.metroTabPage1.HorizontalScrollbarBarColor = true;
             this.metroTabPage1.HorizontalScrollbarHighlightOnWheel = false;
             this.metroTabPage1.HorizontalScrollbarSize = 1;
-            this.metroTabPage1.Location = new System.Drawing.Point(4, 38);
+            this.metroTabPage1.Location = new System.Drawing.Point(4, 41);
             this.metroTabPage1.Name = "metroTabPage1";
-            this.metroTabPage1.Size = new System.Drawing.Size(980, 498);
+            this.metroTabPage1.Size = new System.Drawing.Size(1054, 567);
             this.metroTabPage1.Style = MetroFramework.MetroColorStyle.Lime;
             this.metroTabPage1.TabIndex = 0;
             this.metroTabPage1.Text = "Ügyfelek";
@@ -171,9 +166,12 @@
             // 
             // buttonSearchClient
             // 
-            this.buttonSearchClient.Location = new System.Drawing.Point(826, 110);
+            this.buttonSearchClient.FlatAppearance.BorderSize = 0;
+            this.buttonSearchClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSearchClient.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.buttonSearchClient.Location = new System.Drawing.Point(3, 73);
             this.buttonSearchClient.Name = "buttonSearchClient";
-            this.buttonSearchClient.Size = new System.Drawing.Size(122, 40);
+            this.buttonSearchClient.Size = new System.Drawing.Size(238, 40);
             this.buttonSearchClient.TabIndex = 11;
             this.buttonSearchClient.Text = "Keresés";
             this.buttonSearchClient.UseVisualStyleBackColor = true;
@@ -201,7 +199,7 @@
             this.TextboxClientName.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.TextboxClientName.Icon = ((System.Drawing.Image)(resources.GetObject("TextboxClientName.Icon")));
             this.TextboxClientName.Lines = new string[0];
-            this.TextboxClientName.Location = new System.Drawing.Point(712, 54);
+            this.TextboxClientName.Location = new System.Drawing.Point(5, 19);
             this.TextboxClientName.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
             this.TextboxClientName.MaxLength = 32767;
             this.TextboxClientName.Name = "TextboxClientName";
@@ -220,42 +218,45 @@
             this.TextboxClientName.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.TextboxClientName.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(575, 63);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(131, 21);
-            this.label9.TabIndex = 9;
-            this.label9.Text = "Ügyfél keresése:";
-            // 
             // metroTabPage2
             // 
-            this.metroTabPage2.Controls.Add(this.buttonCancel);
-            this.metroTabPage2.Controls.Add(this.button4);
-            this.metroTabPage2.Controls.Add(this.button3);
-            this.metroTabPage2.Controls.Add(this.buttonUpdateWorkerData);
-            this.metroTabPage2.Controls.Add(this.buttonAddNewWorker);
+            this.metroTabPage2.Controls.Add(this.panel2);
             this.metroTabPage2.Controls.Add(this.groupBox2);
             this.metroTabPage2.Controls.Add(this.groupBox1);
             this.metroTabPage2.Controls.Add(this.listBoxWorkers);
             this.metroTabPage2.HorizontalScrollbarBarColor = true;
             this.metroTabPage2.HorizontalScrollbarHighlightOnWheel = false;
             this.metroTabPage2.HorizontalScrollbarSize = 1;
-            this.metroTabPage2.Location = new System.Drawing.Point(4, 38);
+            this.metroTabPage2.Location = new System.Drawing.Point(4, 41);
             this.metroTabPage2.Name = "metroTabPage2";
-            this.metroTabPage2.Size = new System.Drawing.Size(980, 498);
+            this.metroTabPage2.Size = new System.Drawing.Size(1054, 567);
             this.metroTabPage2.TabIndex = 1;
             this.metroTabPage2.Text = "Dolgozók";
             this.metroTabPage2.VerticalScrollbarBarColor = true;
             this.metroTabPage2.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage2.VerticalScrollbarSize = 1;
             // 
+            // buttonCancel
+            // 
+            this.buttonCancel.FlatAppearance.BorderSize = 0;
+            this.buttonCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCancel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.buttonCancel.Location = new System.Drawing.Point(3, 71);
+            this.buttonCancel.Name = "buttonCancel";
+            this.buttonCancel.Size = new System.Drawing.Size(194, 67);
+            this.buttonCancel.TabIndex = 9;
+            this.buttonCancel.Text = "Mégse";
+            this.buttonCancel.UseVisualStyleBackColor = true;
+            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
+            // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(843, 392);
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button4.Location = new System.Drawing.Point(3, 287);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(121, 67);
+            this.button4.Size = new System.Drawing.Size(194, 67);
             this.button4.TabIndex = 8;
             this.button4.Text = "Ment";
             this.button4.UseVisualStyleBackColor = true;
@@ -263,9 +264,12 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(843, 292);
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button3.Location = new System.Drawing.Point(3, 214);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(121, 67);
+            this.button3.Size = new System.Drawing.Size(194, 67);
             this.button3.TabIndex = 7;
             this.button3.Text = "Töröl";
             this.button3.UseVisualStyleBackColor = true;
@@ -273,9 +277,12 @@
             // 
             // buttonUpdateWorkerData
             // 
-            this.buttonUpdateWorkerData.Location = new System.Drawing.Point(843, 197);
+            this.buttonUpdateWorkerData.FlatAppearance.BorderSize = 0;
+            this.buttonUpdateWorkerData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonUpdateWorkerData.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.buttonUpdateWorkerData.Location = new System.Drawing.Point(3, 141);
             this.buttonUpdateWorkerData.Name = "buttonUpdateWorkerData";
-            this.buttonUpdateWorkerData.Size = new System.Drawing.Size(121, 67);
+            this.buttonUpdateWorkerData.Size = new System.Drawing.Size(194, 67);
             this.buttonUpdateWorkerData.TabIndex = 6;
             this.buttonUpdateWorkerData.Text = "Módosít";
             this.buttonUpdateWorkerData.UseVisualStyleBackColor = true;
@@ -283,9 +290,12 @@
             // 
             // buttonAddNewWorker
             // 
-            this.buttonAddNewWorker.Location = new System.Drawing.Point(843, 14);
+            this.buttonAddNewWorker.FlatAppearance.BorderSize = 0;
+            this.buttonAddNewWorker.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAddNewWorker.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.buttonAddNewWorker.Location = new System.Drawing.Point(3, 1);
             this.buttonAddNewWorker.Name = "buttonAddNewWorker";
-            this.buttonAddNewWorker.Size = new System.Drawing.Size(121, 67);
+            this.buttonAddNewWorker.Size = new System.Drawing.Size(194, 67);
             this.buttonAddNewWorker.TabIndex = 5;
             this.buttonAddNewWorker.Text = "Új";
             this.buttonAddNewWorker.UseVisualStyleBackColor = true;
@@ -293,7 +303,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.groupBox2.BackColor = System.Drawing.Color.Cornsilk;
             this.groupBox2.Controls.Add(this.metroWorkerBirthday);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.label7);
@@ -302,9 +312,9 @@
             this.groupBox2.Controls.Add(this.textBoxWorkerTelnumber);
             this.groupBox2.Controls.Add(this.textBoxWorkerPlace);
             this.groupBox2.Controls.Add(this.textBoxWorkerName);
-            this.groupBox2.Location = new System.Drawing.Point(300, 197);
+            this.groupBox2.Location = new System.Drawing.Point(249, 3);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(499, 262);
+            this.groupBox2.Size = new System.Drawing.Size(599, 262);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Személyes adatok";
@@ -376,16 +386,16 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.groupBox1.BackColor = System.Drawing.Color.Cornsilk;
             this.groupBox1.Controls.Add(this.comboBoxCategory);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.textBoxPassword);
             this.groupBox1.Controls.Add(this.textBoxUsername);
-            this.groupBox1.Location = new System.Drawing.Point(300, 23);
+            this.groupBox1.Location = new System.Drawing.Point(249, 287);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(499, 168);
+            this.groupBox1.Size = new System.Drawing.Size(599, 168);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Belépési adatok";
@@ -444,23 +454,40 @@
             // 
             // listBoxWorkers
             // 
+            this.listBoxWorkers.BackColor = System.Drawing.Color.LightGoldenrodYellow;
             this.listBoxWorkers.FormattingEnabled = true;
             this.listBoxWorkers.ItemHeight = 21;
-            this.listBoxWorkers.Location = new System.Drawing.Point(12, 14);
+            this.listBoxWorkers.Location = new System.Drawing.Point(-1, 0);
             this.listBoxWorkers.Name = "listBoxWorkers";
-            this.listBoxWorkers.Size = new System.Drawing.Size(227, 445);
+            this.listBoxWorkers.Size = new System.Drawing.Size(244, 571);
             this.listBoxWorkers.TabIndex = 2;
             this.listBoxWorkers.SelectedIndexChanged += new System.EventHandler(this.listBoxWorkers_SelectedIndexChanged);
             // 
-            // buttonCancel
+            // panel1
             // 
-            this.buttonCancel.Location = new System.Drawing.Point(843, 96);
-            this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(121, 67);
-            this.buttonCancel.TabIndex = 9;
-            this.buttonCancel.Text = "Mégse";
-            this.buttonCancel.UseVisualStyleBackColor = true;
-            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel1.Controls.Add(this.TextboxClientName);
+            this.panel1.Controls.Add(this.buttonSearchClient);
+            this.panel1.Controls.Add(this.buttonDeleteClient);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel1.Location = new System.Drawing.Point(810, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(244, 567);
+            this.panel1.TabIndex = 12;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel2.Controls.Add(this.button4);
+            this.panel2.Controls.Add(this.buttonAddNewWorker);
+            this.panel2.Controls.Add(this.buttonUpdateWorkerData);
+            this.panel2.Controls.Add(this.buttonCancel);
+            this.panel2.Controls.Add(this.button3);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel2.Location = new System.Drawing.Point(854, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(200, 567);
+            this.panel2.TabIndex = 10;
             // 
             // UserControlLeaderClientsData
             // 
@@ -475,19 +502,19 @@
             this.Load += new System.EventHandler(this.UserControlLeaderClientsData_Load);
             this.metroTabControl2.ResumeLayout(false);
             this.metroTabPage1.ResumeLayout(false);
-            this.metroTabPage1.PerformLayout();
             this.metroTabPage2.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private System.Windows.Forms.Button buttonDeleteClient;
-        private System.Windows.Forms.Label label1;
         public System.Windows.Forms.ListView listViewClientsData;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
@@ -516,11 +543,12 @@
         public System.Windows.Forms.ListBox listBoxWorkers;
         private System.Windows.Forms.Button buttonSearchClient;
         public MetroFramework.Controls.MetroTextBox TextboxClientName;
-        private System.Windows.Forms.Label label9;
         public MetroFramework.Controls.MetroDateTime metroWorkerBirthday;
         public System.Windows.Forms.ComboBox comboBoxCategory;
         public System.Windows.Forms.TextBox textBoxPassword;
         public System.Windows.Forms.TextBox textBoxUsername;
         private System.Windows.Forms.Button buttonCancel;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
     }
 }

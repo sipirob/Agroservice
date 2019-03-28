@@ -33,7 +33,7 @@ namespace Agroservice.View
             model.getloadServiceData();
             
             DataTable serviceData= model.getLoadServiceName();
-            if (listBoxServices.SelectedIndex > 0)
+            if (listBoxServices.SelectedIndex >= 0)
             {
                 DataTable servicedata = model.getSelectedService(serviceid);
                 textBoxServiceName.Text = servicedata.Rows[0]["name"].ToString();

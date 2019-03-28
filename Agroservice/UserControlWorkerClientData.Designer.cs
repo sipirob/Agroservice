@@ -35,12 +35,12 @@
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.TextboxClientName = new MetroFramework.Controls.MetroTextBox();
             this.buttonSearchClient = new System.Windows.Forms.Button();
             this.errorProviderNameFirstLetterLover = new System.Windows.Forms.ErrorProvider(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderNameFirstLetterLover)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // listViewClientData
@@ -53,9 +53,9 @@
             this.columnHeader4});
             this.listViewClientData.FullRowSelect = true;
             this.listViewClientData.GridLines = true;
-            this.listViewClientData.Location = new System.Drawing.Point(22, 69);
+            this.listViewClientData.Location = new System.Drawing.Point(3, 0);
             this.listViewClientData.Name = "listViewClientData";
-            this.listViewClientData.Size = new System.Drawing.Size(487, 516);
+            this.listViewClientData.Size = new System.Drawing.Size(490, 612);
             this.listViewClientData.TabIndex = 1;
             this.listViewClientData.UseCompatibleStateImageBehavior = false;
             this.listViewClientData.View = System.Windows.Forms.View.Details;
@@ -79,24 +79,6 @@
             this.columnHeader4.Text = "telefonszám";
             this.columnHeader4.Width = 120;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(18, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(138, 21);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Ügyfelek adatai:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(582, 78);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(131, 21);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Ügyfél keresése:";
-            // 
             // TextboxClientName
             // 
             this.TextboxClientName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
@@ -119,7 +101,7 @@
             this.TextboxClientName.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.TextboxClientName.Icon = ((System.Drawing.Image)(resources.GetObject("TextboxClientName.Icon")));
             this.TextboxClientName.Lines = new string[0];
-            this.TextboxClientName.Location = new System.Drawing.Point(719, 69);
+            this.TextboxClientName.Location = new System.Drawing.Point(14, 30);
             this.TextboxClientName.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
             this.TextboxClientName.MaxLength = 32767;
             this.TextboxClientName.Name = "TextboxClientName";
@@ -140,9 +122,12 @@
             // 
             // buttonSearchClient
             // 
-            this.buttonSearchClient.Location = new System.Drawing.Point(833, 125);
+            this.buttonSearchClient.FlatAppearance.BorderSize = 0;
+            this.buttonSearchClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSearchClient.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.buttonSearchClient.Location = new System.Drawing.Point(14, 101);
             this.buttonSearchClient.Name = "buttonSearchClient";
-            this.buttonSearchClient.Size = new System.Drawing.Size(122, 40);
+            this.buttonSearchClient.Size = new System.Drawing.Size(236, 56);
             this.buttonSearchClient.TabIndex = 8;
             this.buttonSearchClient.Text = "Keresés";
             this.buttonSearchClient.UseVisualStyleBackColor = true;
@@ -152,22 +137,30 @@
             // 
             this.errorProviderNameFirstLetterLover.ContainerControl = this;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel1.Controls.Add(this.TextboxClientName);
+            this.panel1.Controls.Add(this.buttonSearchClient);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel1.Location = new System.Drawing.Point(797, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(265, 612);
+            this.panel1.TabIndex = 9;
+            // 
             // UserControlWorkerClientData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.buttonSearchClient);
-            this.Controls.Add(this.TextboxClientName);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.listViewClientData);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "UserControlWorkerClientData";
             this.Size = new System.Drawing.Size(1062, 612);
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderNameFirstLetterLover)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -178,10 +171,9 @@
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         public MetroFramework.Controls.MetroTextBox TextboxClientName;
         private System.Windows.Forms.Button buttonSearchClient;
         private System.Windows.Forms.ErrorProvider errorProviderNameFirstLetterLover;
+        private System.Windows.Forms.Panel panel1;
     }
 }
