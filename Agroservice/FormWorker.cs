@@ -48,14 +48,14 @@ namespace Agroservice
             panelSign.Height = buttonHome.Height;
             panelSign.Top = buttonHome.Top;
             userControlNewWorks1.Hide();
-            userControlWorkerCompleteWorks1.Hide();
+            userControlWorkerDoneWorks1.Hide();
             userControlWorkerClientData1.Hide();
             newWorksNumber();
         }
 
         private void buttonNewWork_Click(object sender, EventArgs e)
         {
-            userControlWorkerCompleteWorks1.Hide();
+            userControlWorkerDoneWorks1.Hide();
             panelSign.Height = buttonNewWork.Height;
             panelSign.Top = buttonNewWork.Top;
             userControlNewWorks1.Show();
@@ -69,7 +69,7 @@ namespace Agroservice
         {
             userControlWorkerClientData1.Hide();
             userControlNewWorks1.Hide();
-            userControlWorkerCompleteWorks1.Hide();
+            userControlWorkerDoneWorks1.Hide();
             controller.usernameLoad();
             workername = controller.getloadUsername();
             labelUsername.Text = workername;
@@ -99,7 +99,7 @@ namespace Agroservice
         {
             panelSign.Height = buttonDoneWork.Height;
             panelSign.Top = buttonDoneWork.Top;
-            userControlWorkerCompleteWorks1.Show();
+            userControlWorkerDoneWorks1.Show();
             userControlWorkerClientData1.Hide();
             userControlNewWorks1.Hide();
             //Elvégzett munkálatok betöltése
@@ -111,6 +111,14 @@ namespace Agroservice
             //userControlCompleteWorks1.dataGridView1.DataSource = null;
             
             userControlWorkerDoneWorks1.dataGridView1.DataSource = controller.getCompleteWorksData();
+            userControlWorkerDoneWorks1.dataGridView1.Columns[0].Width = 120;
+            userControlWorkerDoneWorks1.dataGridView1.Columns[1].Width = 120;
+            userControlWorkerDoneWorks1.dataGridView1.Columns[2].Width = 150;
+            userControlWorkerDoneWorks1.dataGridView1.Columns[3].Width = 100;
+            userControlWorkerDoneWorks1.dataGridView1.Columns[4].Width = 150;
+            userControlWorkerDoneWorks1.dataGridView1.Columns[5].Width = 150;
+            userControlWorkerDoneWorks1.dataGridView1.Columns[6].Width = 100;
+            userControlWorkerDoneWorks1.dataGridView1.Columns[7].Width = 140;
 
         }
 
@@ -119,7 +127,7 @@ namespace Agroservice
            
             panelSign.Height = buttonClientData.Height;
             panelSign.Top = buttonClientData.Top;
-            userControlWorkerCompleteWorks1.Hide();
+            userControlWorkerDoneWorks1.Hide();
             userControlNewWorks1.Hide();
             userControlWorkerClientData1.Show();
 
@@ -150,10 +158,8 @@ namespace Agroservice
 
         private void button5_Click(object sender, EventArgs e)
         {
-            userControlWorkerDoneWorks1.Show();
-            controller.getClearCompleteWorksList();
-            controller.loadCompleteData();
-            userControlWorkerDoneWorks1.dataGridView1.DataSource = controller.getCompleteWorksData();
+            panelSign.Height = buttonClientData.Height;
+            panelSign.Top = button5.Top;
         }
     }
 }

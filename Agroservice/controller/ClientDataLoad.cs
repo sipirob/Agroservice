@@ -41,7 +41,7 @@ namespace Agroservice.controller
             mdi.open();
             string query = "SELECT `id`, `name`, `lakhely`, `telefonszam` FROM `clientdata`";
             DataTable clientdt = new DataTable();
-           clientdt = mdi.getToDataTable(query);
+            clientdt = mdi.getToDataTable(query);
             loadClientList(clientdt);
             mdi.close();
         }

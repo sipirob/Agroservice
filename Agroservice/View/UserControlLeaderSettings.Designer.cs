@@ -49,10 +49,11 @@
             // 
             this.listBoxServices.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.listBoxServices.FormattingEnabled = true;
+            this.errorProviderServiePrice.SetIconAlignment(this.listBoxServices, System.Windows.Forms.ErrorIconAlignment.BottomLeft);
             this.listBoxServices.ItemHeight = 21;
-            this.listBoxServices.Location = new System.Drawing.Point(3, 3);
+            this.listBoxServices.Location = new System.Drawing.Point(0, 3);
             this.listBoxServices.Name = "listBoxServices";
-            this.listBoxServices.Size = new System.Drawing.Size(299, 613);
+            this.listBoxServices.Size = new System.Drawing.Size(302, 613);
             this.listBoxServices.TabIndex = 0;
             this.listBoxServices.SelectedIndexChanged += new System.EventHandler(this.listBoxServices_SelectedIndexChanged);
             // 
@@ -130,6 +131,7 @@
             // 
             // buttonSaveService
             // 
+            this.buttonSaveService.BackColor = System.Drawing.Color.DimGray;
             this.buttonSaveService.FlatAppearance.BorderSize = 0;
             this.buttonSaveService.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSaveService.ForeColor = System.Drawing.SystemColors.ButtonFace;
@@ -138,7 +140,7 @@
             this.buttonSaveService.Size = new System.Drawing.Size(194, 56);
             this.buttonSaveService.TabIndex = 8;
             this.buttonSaveService.Text = "Mentés";
-            this.buttonSaveService.UseVisualStyleBackColor = true;
+            this.buttonSaveService.UseVisualStyleBackColor = false;
             this.buttonSaveService.Click += new System.EventHandler(this.buttonSaveService_Click);
             // 
             // buttonCancel

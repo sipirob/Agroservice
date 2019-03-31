@@ -86,7 +86,7 @@ namespace Agroservice
                 
                 model.getClearWorkerList();
                 model.loadWorkerData();
-                listBoxWorkers.DataSource = listboxDt.DefaultView;
+                listBoxWorkers.DataSource = model.getWorkersName().DefaultView;
                 listBoxWorkers.DisplayMember = "név";
                 listBoxWorkers.ValueMember = "id";
             }

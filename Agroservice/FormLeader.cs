@@ -147,12 +147,24 @@ namespace Agroservice
             model.getClearCompleteWorksList();
             model.loadCompleteData();
             userControlLeaderWorks1.dataGridViewAllCompleteWorks.DataSource = model.getCompleteWorksData();
+            userControlLeaderWorks1.dataGridViewAllCompleteWorks.Columns[0].Width = 120;
+            userControlLeaderWorks1.dataGridViewAllCompleteWorks.Columns[1].Width = 120;
+            userControlLeaderWorks1.dataGridViewAllCompleteWorks.Columns[2].Width = 150;
+            userControlLeaderWorks1.dataGridViewAllCompleteWorks.Columns[3].Width = 150;
+            userControlLeaderWorks1.dataGridViewAllCompleteWorks.Columns[4].Width = 150;
+            userControlLeaderWorks1.dataGridViewAllCompleteWorks.Columns[5].Width = 150;
 
             model.getClearNewWorkList();
             model.loadNewWorkData();
             
             userControlLeaderWorks1.dataGridViewAllNewWorks.DataSource = model.getNewWorkData();
-
+            userControlLeaderWorks1.dataGridViewAllNewWorks.Columns[0].Width = 70;
+            userControlLeaderWorks1.dataGridViewAllNewWorks.Columns[1].Width = 150;
+            userControlLeaderWorks1.dataGridViewAllNewWorks.Columns[2].Width = 150;
+            userControlLeaderWorks1.dataGridViewAllNewWorks.Columns[3].Width = 150;
+            userControlLeaderWorks1.dataGridViewAllNewWorks.Columns[4].Width = 150;
+            userControlLeaderWorks1.dataGridViewAllNewWorks.Columns[5].Width = 150;
+            userControlLeaderWorks1.dataGridViewAllNewWorks.Columns[6].Width = 150;
 
 
 
@@ -160,7 +172,8 @@ namespace Agroservice
 
         private void buttonHome_Click(object sender, EventArgs e)
         {
-            
+            panelSign.Height = buttonNewWork.Height;
+            panelSign.Top = buttonHome.Top;
             userControlLeaderWorks1.Hide();
             userControlLeaderClientsData1.Hide();
             userControlLeaderSettings1.Hide();
@@ -192,6 +205,17 @@ namespace Agroservice
         private void userControlLeaderSettings1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            panelSign.Height = buttonNewWork.Height;
+            panelSign.Top = button5.Top;
+        }
+
+        private void buttonExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

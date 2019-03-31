@@ -53,9 +53,9 @@
             this.columnHeader4});
             this.listViewClientData.FullRowSelect = true;
             this.listViewClientData.GridLines = true;
-            this.listViewClientData.Location = new System.Drawing.Point(3, 0);
+            this.listViewClientData.Location = new System.Drawing.Point(0, 0);
             this.listViewClientData.Name = "listViewClientData";
-            this.listViewClientData.Size = new System.Drawing.Size(490, 612);
+            this.listViewClientData.Size = new System.Drawing.Size(721, 612);
             this.listViewClientData.TabIndex = 1;
             this.listViewClientData.UseCompatibleStateImageBehavior = false;
             this.listViewClientData.View = System.Windows.Forms.View.Details;
@@ -67,17 +67,17 @@
             // columnHeader2
             // 
             this.columnHeader2.Text = "név";
-            this.columnHeader2.Width = 120;
+            this.columnHeader2.Width = 200;
             // 
             // columnHeader3
             // 
             this.columnHeader3.Text = "lakhely";
-            this.columnHeader3.Width = 180;
+            this.columnHeader3.Width = 250;
             // 
             // columnHeader4
             // 
             this.columnHeader4.Text = "telefonszám";
-            this.columnHeader4.Width = 120;
+            this.columnHeader4.Width = 200;
             // 
             // TextboxClientName
             // 
@@ -89,7 +89,7 @@
             this.TextboxClientName.CustomButton.FlatAppearance.BorderSize = 0;
             this.TextboxClientName.CustomButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.TextboxClientName.CustomButton.Image = null;
-            this.TextboxClientName.CustomButton.Location = new System.Drawing.Point(208, 2);
+            this.TextboxClientName.CustomButton.Location = new System.Drawing.Point(284, 2);
             this.TextboxClientName.CustomButton.Name = "";
             this.TextboxClientName.CustomButton.Size = new System.Drawing.Size(25, 25);
             this.TextboxClientName.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -112,7 +112,7 @@
             this.TextboxClientName.SelectionLength = 0;
             this.TextboxClientName.SelectionStart = 0;
             this.TextboxClientName.ShortcutsEnabled = true;
-            this.TextboxClientName.Size = new System.Drawing.Size(236, 30);
+            this.TextboxClientName.Size = new System.Drawing.Size(312, 30);
             this.TextboxClientName.Style = MetroFramework.MetroColorStyle.Brown;
             this.TextboxClientName.TabIndex = 7;
             this.TextboxClientName.UseSelectable = true;
@@ -125,9 +125,9 @@
             this.buttonSearchClient.FlatAppearance.BorderSize = 0;
             this.buttonSearchClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSearchClient.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.buttonSearchClient.Location = new System.Drawing.Point(14, 101);
+            this.buttonSearchClient.Location = new System.Drawing.Point(3, 101);
             this.buttonSearchClient.Name = "buttonSearchClient";
-            this.buttonSearchClient.Size = new System.Drawing.Size(236, 56);
+            this.buttonSearchClient.Size = new System.Drawing.Size(338, 56);
             this.buttonSearchClient.TabIndex = 8;
             this.buttonSearchClient.Text = "Keresés";
             this.buttonSearchClient.UseVisualStyleBackColor = true;
@@ -143,9 +143,9 @@
             this.panel1.Controls.Add(this.TextboxClientName);
             this.panel1.Controls.Add(this.buttonSearchClient);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(797, 0);
+            this.panel1.Location = new System.Drawing.Point(718, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(265, 612);
+            this.panel1.Size = new System.Drawing.Size(344, 612);
             this.panel1.TabIndex = 9;
             // 
             // UserControlWorkerClientData

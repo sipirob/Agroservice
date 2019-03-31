@@ -15,6 +15,11 @@ namespace Agroservice
         public UserControlWorkerCompleteWorks()
         {
             InitializeComponent();
+            
+        }
+
+        private void UserControlWorkerCompleteWorks_Load(object sender, EventArgs e)
+        {
         }
     }
 }

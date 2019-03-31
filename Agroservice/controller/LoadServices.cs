@@ -71,7 +71,11 @@ namespace Agroservice.controller
             }
             return sname;
         }
-
+        /// <summary>
+        /// kiválasztott szolgáltatás adatainak eltárolása adattáblába
+        /// </summary>
+        /// <param name="serviceid">kiválasztott szolgáltatás azonosítója</param>
+        /// <returns>kiválasztott szolgáltatás adatainak adattáblája</returns>
         internal static DataTable selectedServicenameData(int serviceid)
         {
             DataTable sname = new DataTable();
@@ -84,7 +88,9 @@ namespace Agroservice.controller
             }
             return sname;
         }
-
+        /// <summary>
+        /// Service lista kiürítése
+        /// </summary>
         internal static void clearServiceList()
         {
             Services.Clear();

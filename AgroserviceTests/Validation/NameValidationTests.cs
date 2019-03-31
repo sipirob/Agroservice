@@ -16,15 +16,32 @@ namespace Agroservice.Validation.Tests
         {
             try
             {
-                NameValidation nv = new NameValidation("sipos");
+                NameValidation nv = new NameValidation("sipos Róbert");
                 bool actual = nv.validation();
                 Assert.Fail("kisbetűre nem dob kivételt");
 
             }
             catch (Exceptions.NameException ne)
             {
-                if (ne.Message != "A vezetéknév nem kezdőthet kisbetűvel")
+                if (ne.Message != "A vezetéknév nem kezdődhet kisbetűvel")
                     Assert.Fail("Kisbetűre rossz szövegű kivételt dobott");
+            }
+        }
+
+        [TestMethod()]
+        public void validLastnameTest()
+        {
+            try
+            {
+                NameValidation nv = new NameValidation("SiposRóbert");
+                bool actual = nv.validation();
+                Assert.Fail("szóköz hiányára nem dob kivételt");
+
+            }
+            catch (Exceptions.NameException ne)
+            {
+                if (ne.Message != "Nincs keresztnév!")
+                    Assert.Fail("szóköz hiányára rossz szövegű kivételt dobott");
             }
         }
     }

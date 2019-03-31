@@ -42,11 +42,12 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelIsWorks = new System.Windows.Forms.Label();
             this.labelNoworks = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.buttonExit = new System.Windows.Forms.Button();
             this.userControlLeaderSettings1 = new Agroservice.View.UserControlLeaderSettings();
             this.userControlLeaderWorks1 = new Agroservice.UserControlLeaderWorks();
             this.userControlLeaderClientsData1 = new Agroservice.UserControlLeaderClientsData();
             this.userControlLeaderAllNewWorks1 = new Agroservice.UserControlLeaderWorks();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
@@ -90,6 +91,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel2.Controls.Add(this.buttonExit);
             this.panel2.Controls.Add(this.panelSign);
             this.panel2.Controls.Add(this.buttonHome);
             this.panel2.Controls.Add(this.button5);
@@ -132,13 +134,14 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(0, 460);
+            this.button5.Location = new System.Drawing.Point(0, 368);
             this.button5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(202, 86);
             this.button5.TabIndex = 7;
             this.button5.Text = "Névjegy";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // buttonSettings
             // 
@@ -213,6 +216,32 @@
             this.labelNoworks.TabIndex = 11;
             this.labelNoworks.Text = "label1";
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(605, 150);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(243, 211);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 13;
+            this.pictureBox3.TabStop = false;
+            // 
+            // buttonExit
+            // 
+            this.buttonExit.BackColor = System.Drawing.Color.DimGray;
+            this.buttonExit.FlatAppearance.BorderSize = 0;
+            this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonExit.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonExit.ForeColor = System.Drawing.Color.White;
+            this.buttonExit.Location = new System.Drawing.Point(0, 515);
+            this.buttonExit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonExit.Name = "buttonExit";
+            this.buttonExit.Size = new System.Drawing.Size(202, 86);
+            this.buttonExit.TabIndex = 9;
+            this.buttonExit.Text = "Kilépés";
+            this.buttonExit.UseVisualStyleBackColor = false;
+            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
+            // 
             // userControlLeaderSettings1
             // 
             this.userControlLeaderSettings1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -252,16 +281,6 @@
             this.userControlLeaderAllNewWorks1.Name = "userControlLeaderAllNewWorks1";
             this.userControlLeaderAllNewWorks1.Size = new System.Drawing.Size(1062, 602);
             this.userControlLeaderAllNewWorks1.TabIndex = 9;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(605, 150);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(243, 211);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 13;
-            this.pictureBox3.TabStop = false;
             // 
             // FormLeader
             // 
@@ -313,5 +332,6 @@
         private View.UserControlLeaderSettings userControlLeaderSettings1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Button buttonExit;
     }
 }

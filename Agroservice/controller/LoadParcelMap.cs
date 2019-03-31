@@ -17,6 +17,11 @@ namespace Agroservice.controller
     class LoadParcelMap
     {
         public static string[] latlong;
+        /// <summary>
+        /// Kiválasztott parcella koordinátáinak lekérése adatbázisból majd tömbbe történő mentése
+        /// </summary>
+        /// <param name="parcelnumber">kiválasztott parcella száma</param>
+        /// <returns>sarokpontok koordinátáinak tömbje</returns>
         public static string[] LoadParcelCoordinates(string parcelnumber)
         {
           
@@ -39,7 +44,7 @@ namespace Agroservice.controller
             {
                 GMapOverlay polyOverlay = new GMapOverlay("polygons");
                 latlong = dr[0].ToString().Split(' ');
-                List<PointLatLng> points = new List<PointLatLng>();
+                //List<PointLatLng> points = new List<PointLatLng>();
             }
             
             

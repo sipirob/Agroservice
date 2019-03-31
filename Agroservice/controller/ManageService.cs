@@ -9,6 +9,11 @@ namespace Agroservice.controller
 {
     class ManageService
     {
+        /// <summary>
+        /// Új szolgáltatás létrehozása adatbázisba
+        /// </summary>
+        /// <param name="servicename">szolgáltatás neve</param>
+        /// <param name="servicePrice">szolgáltatás ára</param>
         internal static void getAddNewService(string servicename, int servicePrice)
         {
 
@@ -24,7 +29,10 @@ namespace Agroservice.controller
             cmdUpdate.ExecuteNonQuery();
             connection.Close();
         }
-
+        /// <summary>
+        /// szolgáltatás törlése adatbázisból
+        /// </summary>
+        /// <param name="serviceid">szolgáltatás azonosítója</param>
         internal static void getDeleteService(int serviceid)
         {
 
@@ -40,7 +48,12 @@ namespace Agroservice.controller
             cmdUpdate.ExecuteNonQuery();
             connection.Close();
         }
-
+        /// <summary>
+        /// szolgáltatás adatainak módosítása
+        /// </summary>
+        /// <param name="serviceid">kiválasztott szolgáltatás azonosítója</param>
+        /// <param name="servicename">kiválasztott szolgáltatás neve</param>
+        /// <param name="servicePrice">kiválasztott szolgáltatás ára</param>
         internal static void getUpdateService(int serviceid, string servicename, int servicePrice)
         {
             MySqlConnection connection = new MySqlConnection(controller.Connection.connectionString);

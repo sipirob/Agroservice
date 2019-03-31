@@ -105,6 +105,10 @@ namespace Agroservice.controller
             return newWorkDT;
 
         }
+        /// <summary>
+        /// el nem végzett munkálatok számának meghatározása
+        /// </summary>
+        /// <returns>el nem végzett munkálatok száma</returns>
        public static int countNewWork()
         {
             int sum = 0;
@@ -115,7 +119,9 @@ namespace Agroservice.controller
                
             return sum;
         }
-
+        /// <summary>
+        /// Új munkálatok listájának kiürítése
+        /// </summary>
         internal static void clerNewWorkList()
         {
             Work.Clear();

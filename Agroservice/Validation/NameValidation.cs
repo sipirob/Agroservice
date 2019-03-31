@@ -15,10 +15,14 @@ namespace Agroservice.Validation
         }
         public bool validation()
         {
-            bool nameLoverFirstLetter = true;
-            if (nameLoverFirstLetter = validNameFirstLetterLovercase())
-                throw new Exceptions.NameException("A vezetéknév nem kezdőthet kisbetűvel");
-            return nameLoverFirstLetter;
+            bool validName = true;
+            
+            if (validName = validNameFirstLetterLovercase())
+                throw new Exceptions.NameException("A vezetéknév nem kezdődhet kisbetűvel");
+            if (validName = validLastname())
+                throw new Exceptions.NameException("Nincs keresztnév!");
+            return validName;
+            
         }
 
         public bool validNameFirstLetterLovercase()
@@ -30,6 +34,21 @@ namespace Agroservice.Validation
                 return false;
             else
                 return true;
+        }
+        public bool validLastname()
+        {
+            bool lastname = true;
+            int index = 0;
+           foreach(char letter in name)
+            {
+                index += 1;
+                if (letter == Convert.ToChar(" ") && index > 3)
+                {
+                    lastname= false;
+                }
+                
+            }
+            return lastname;
         }
     }
 }

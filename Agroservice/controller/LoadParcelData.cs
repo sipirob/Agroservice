@@ -59,14 +59,19 @@ namespace Agroservice.controller
             }
 
         }
-
+        /// <summary>
+        /// Kiválasztott parcella területének kinyerése
+        /// </summary>
+        /// <param name="parcelnumber">kiválasztott parcella száma</param>
+        /// <returns>kiválasztott parcella területe hektárban megadva</returns>
         public static double getParcelData(string parcelnumber)
         {
+            int parcelnumb = Convert.ToInt32(parcelnumber);
             double parcelHa = 0;
             foreach (Parcel p in Parcels)
             {
-                if (p.getParcelnumber() == Convert.ToInt32(parcelnumber))
-                    return p.getHa();
+                if (p.getParcelnumber() == parcelnumb)
+                    
                 parcelHa = p.getHa();
             }
             return parcelHa;

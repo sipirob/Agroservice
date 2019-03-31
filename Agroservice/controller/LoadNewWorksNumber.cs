@@ -25,7 +25,7 @@ namespace Agroservice.controller
             {
                  numb = row[0].ToString();
             }
-                //string newWorksNumb = worksnumb.Rows[0].ToString();
+                
             mdi.close();
             return numb;
         }
