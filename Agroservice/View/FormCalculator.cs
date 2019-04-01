@@ -45,12 +45,7 @@ namespace Agroservice.View
             }
             else
                 return;
-         
-
-           
-           
-            
-            
+       
         }
     }
 }

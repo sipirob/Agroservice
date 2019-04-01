@@ -53,13 +53,10 @@ namespace Agroservice
 
         private void buttonAllClient_Click(object sender, EventArgs e)
         {
-            // Client cl = new Client();
+           
             model.AgroserviceModel model = new model.AgroserviceModel();
             model.loadClientData();
-           // dataGridViewClient.DataSource = controller.getClientData();
-            
-           
-
+          
         }
 
         private void FormLeader_Load(object sender, EventArgs e)
@@ -73,14 +70,9 @@ namespace Agroservice
             userControlLeaderWorks1.Hide();
             userControlLeaderSettings1.Hide();
             numberOfWorks();
-
-            //userControlLeaderClientsData1.listBoxWorkers.DataSource = null;
+            
             model.loadWorkerData();
-            //userControlLeaderClientsData1.listBoxWorkers.DataSource = model.getWorkersName().DefaultView;
-            //userControlLeaderClientsData1.listBoxWorkers.DisplayMember = "név";
-            //userControlLeaderClientsData1.listBoxWorkers.ValueMember = "id";
-
-
+           
             userControlLeaderWorks1.metroComboBoxWorkers.DataSource = model.getWorkersName().DefaultView;
             userControlLeaderWorks1.metroComboBoxWorkers.DisplayMember = "név";
             userControlLeaderWorks1.metroComboBoxWorkers.ValueMember = "id";
@@ -88,20 +80,10 @@ namespace Agroservice
             userControlLeaderWorks1.metroComboBoxWorker.DataSource = model.getWorkersName().DefaultView;
             userControlLeaderWorks1.metroComboBoxWorker.DisplayMember = "név";
             userControlLeaderWorks1.metroComboBoxWorker.ValueMember = "név";
-            //controller.loadWorkerData();
-            //dataGridViewWorkers.DataSource = controller.getWorkerData();
-
            
-            
-
             model.usernameLoad();
             labelUsername.Text = model.getloadUsername();
 
-           
-
-
-          
-            
         }
 
         private void buttonUsersData_Click(object sender, EventArgs e)
@@ -116,7 +98,6 @@ namespace Agroservice
             userControlLeaderClientsData1.listViewClientsData.Items.Clear();
             model.loadClientData();
            
-            // dataGridViewClient.DataSource = controller.getClientData();
             DataTable dt = new DataTable();
             dt = model.getClientData();
 
@@ -127,8 +108,7 @@ namespace Agroservice
                 lvi.SubItems.Add(dr["név"].ToString());
                 lvi.SubItems.Add(dr["lakhely"].ToString());
                 lvi.SubItems.Add(dr["telefonszám"].ToString());
-
-
+                
                 userControlLeaderClientsData1.listViewClientsData.Items.Add(lvi);
             }
 
@@ -166,8 +146,7 @@ namespace Agroservice
             userControlLeaderWorks1.dataGridViewAllNewWorks.Columns[5].Width = 150;
             userControlLeaderWorks1.dataGridViewAllNewWorks.Columns[6].Width = 150;
 
-
-
+            
         }
 
         private void buttonHome_Click(object sender, EventArgs e)
@@ -198,8 +177,6 @@ namespace Agroservice
             userControlLeaderSettings1.listBoxServices.DataSource = model.getLoadServiceName().DefaultView;
             userControlLeaderSettings1.listBoxServices.DisplayMember = "name";
             userControlLeaderSettings1.listBoxServices.ValueMember = "id";
-
-            
         }
 
         private void userControlLeaderSettings1_Load(object sender, EventArgs e)

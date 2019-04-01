@@ -9,7 +9,11 @@ namespace Agroservice.controller
 {
     class SetWorkerOfWork
     {
-      
+      /// <summary>
+      /// dolgozó hozzáadása munkálathoz
+      /// </summary>
+      /// <param name="workerId">dolgozó azonosítója</param>
+      /// <param name="workId">munkálat azonosítója</param>
         internal static void setWorker(int workerId, int workId)
         {
           

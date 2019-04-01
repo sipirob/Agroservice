@@ -146,7 +146,6 @@ namespace Agroservice
                         lvi.SubItems.Add(dr["parcellaszám"].ToString());
                         lvi.SubItems.Add(dr["munkálat neve"].ToString());
                         lvi.SubItems.Add(dr["gabona"].ToString());
-                        //listViewNewWork.Items.Clear();
                         listViewNewWork.Items.Add(lvi);
                     }
                     MessageBox.Show("A kijelölt munkálat elvégezve");
@@ -163,7 +162,6 @@ namespace Agroservice
             formCalc = new View.FormCalculator();
             formCalc.Show();
             model.parcelDataloadFromList();
-           // model.loadParcelData(parcelnumber);
             double parcelHa= model.loadParcelData(parcelnumber);
             formCalc.labelHa.Text = Convert.ToString(parcelHa);
 

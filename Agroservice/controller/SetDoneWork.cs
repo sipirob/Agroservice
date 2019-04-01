@@ -9,6 +9,10 @@ namespace Agroservice.controller
 {
     class SetDoneWork
     {
+        /// <summary>
+        /// elkészült munkálat visszaigazolása
+        /// </summary>
+        /// <param name="workId">dolgozó azonosítója</param>
         internal static void setDoneWorkInDatabase(int workId)
         {
             MySqlConnection connection = new MySqlConnection(controller.Connection.connectionString);

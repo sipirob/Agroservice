@@ -9,6 +9,10 @@ namespace Agroservice.controller
 {
     class LastWorkerId
     {
+        /// <summary>
+        /// az utolsó regisztrált dolgozó azonosítójának meghatározása
+        /// </summary>
+        /// <returns>dolgozó azonosítója</returns>
         public int searchLastWorkerId()
         {
             int id = 0;

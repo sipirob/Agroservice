@@ -14,8 +14,6 @@ namespace Agroservice.controller
     {
         private static List<repository.Client> Clients;
 
-       // public static List<Client> Clients { get => clients; set => clients = value; }
-
         public  ClientDataLoad()
         {
             Clients = new List<repository.Client>();
@@ -77,7 +75,11 @@ namespace Agroservice.controller
             return clientDT;
             
         }
-
+        /// <summary>
+        /// keresett ügyfél adatai
+        /// </summary>
+        /// <param name="clientname">ügyfél neve</param>
+        /// <returns>ügyfél adatai adattáblában</returns>
         internal static DataTable returnSearchedClient(string clientname)
         {
             DataTable clientDT = new DataTable();

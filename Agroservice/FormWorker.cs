@@ -38,8 +38,6 @@ namespace Agroservice
             panelSign.Height = buttonHome.Height;
             userControlNew = new UserControlNewWorks();
             cldt = new DataTable();
-           
-
         }
 
       
@@ -61,7 +59,6 @@ namespace Agroservice
             userControlNewWorks1.Show();
             userControlNewWorks1.gMapControlParcelMap.Hide();
             userControlWorkerClientData1.Hide();
-            
             
         }
         
@@ -104,12 +101,9 @@ namespace Agroservice
             userControlNewWorks1.Hide();
             //Elvégzett munkálatok betöltése
 
-            //controller.getClearWorkerList();
             controller.getClearCompleteWorksList();
             controller.loadCompleteData();
 
-            //userControlCompleteWorks1.dataGridView1.DataSource = null;
-            
             userControlWorkerDoneWorks1.dataGridView1.DataSource = controller.getCompleteWorksData();
             userControlWorkerDoneWorks1.dataGridView1.Columns[0].Width = 120;
             userControlWorkerDoneWorks1.dataGridView1.Columns[1].Width = 120;
@@ -146,9 +140,7 @@ namespace Agroservice
                 clvi.SubItems.Add(dr["telefonszám"].ToString());
                 userControlWorkerClientData1.listViewClientData.Items.Add(clvi);
             }
-
-
-
+            
         }
 
         private void buttonExit_Click(object sender, EventArgs e)

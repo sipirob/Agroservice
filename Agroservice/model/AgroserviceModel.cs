@@ -51,12 +51,7 @@ namespace Agroservice.model
             manageService = new controller.ManageService();
         }
 
-        
-
-
-
-
-
+     
 
         /// <summary>
         /// Ügyfelek adatainak lekérése listából
@@ -105,9 +100,6 @@ namespace Agroservice.model
             controller.CompleteWorkDataLoad.completeWorkDataLoad();
         }
 
-       
-
-
         /// <summary>
         /// A még el nem végzett munkálatok listájának lekérése
         /// </summary>
@@ -143,10 +135,7 @@ namespace Agroservice.model
             return username;
                 
         }
-
-      
-
-
+     
         /// <summary>
         /// A belépett felhasználó nevének lekérdezése adatbázisból
         /// </summary>
@@ -154,7 +143,6 @@ namespace Agroservice.model
         {
             controller.LoadUsername.workerDataLoad();
         }
-
 
         /// <summary>
         /// parcella cooordinátáinak kiolvasása tömbből
@@ -183,8 +171,6 @@ namespace Agroservice.model
             controller.NewWorkDataLoad.clerNewWorkList();
         }
 
-
-
         /// <summary>
         /// Munkálat elvégzésének visszaigazolása
         /// </summary>
@@ -193,9 +179,6 @@ namespace Agroservice.model
         {
             controller.SetDoneWork.setDoneWorkInDatabase(workId);
         }
-
-       
-
 
 
         /// <summary>
@@ -336,73 +319,134 @@ namespace Agroservice.model
         {
             controller.ClientDataLoad.clearClientsDataList();
         }
-
+        /// <summary>
+        /// munkálat keresése ügyfél alapján
+        /// </summary>
+        /// <param name="clientname">ügyfél neve</param>
+        /// <returns>munkálat adatai</returns>
         internal DataTable getSearchWorkByClientName(string clientname)
         {
             DataTable work = controller.CompleteWorkDataLoad.searchWorkByClientName(clientname);
             return work;
         }
+        /// <summary>
+        /// munkálat keresése dolgozó alapján
+        /// </summary>
+        /// <param name="workername">dolgozó neve</param>
+        /// <returns>munkálat adatai</returns>
         internal DataTable getSearchWorkByWorkerName(string workername)
         {
             DataTable work = controller.CompleteWorkDataLoad.searchWorkByWorker(workername);
             return work;
         }
-
+        /// <summary>
+        /// munkálat keresése dolgozó és ügyfél alapján
+        /// </summary>
+        /// <param name="workername">dolgozó neve</param>
+        /// <param name="clientname">ügyfél neve</param>
+        /// <returns>munkálat adatai</returns>
         internal object getSearchWorkComplex(string workername, string clientname)
         {
             DataTable work = controller.CompleteWorkDataLoad.searchWorkByWorkerAndClientname(workername,clientname);
             return work;
         }
 
-
+        /// <summary>
+        /// utolsó regisztrált dolgozó azonosítójának lekérése
+        /// </summary>
+        /// <returns>dolgozó azonosítója</returns>
         internal int getSearchLastWorkerId()
         {
             int id = searchLastWorkerid.searchLastWorkerId();
             return id;
         }
+        /// <summary>
+        /// új dolgozó adatainak regisztrálása
+        /// </summary>
+        /// <param name="workerName"></param>
+        /// <param name="workerBirthday"></param>
+        /// <param name="workerPlace"></param>
+        /// <param name="workerTelnumb"></param>
         internal void getInsertNewWorkerData(string workerName, DateTime workerBirthday, string workerPlace, int workerTelnumb)
         {
             registryNewWorkerData.setNewWorkerData(workerName, workerBirthday, workerPlace, workerTelnumb);
         }
-
+        /// <summary>
+        /// új dolgozó felhasználói adatainak regisztrálása
+        /// </summary>
+        /// <param name="newWorkerId"></param>
+        /// <param name="username"></param>
+        /// <param name="password"></param>
+        /// <param name="category"></param>
         internal void getInsertNewWorker(int newWorkerId, string username, string password ,int category)
         {
             registryNewWorkerData.insertNewWorker(newWorkerId,username,password, category);
         }
-
+        /// <summary>
+        /// újonnan beérkezett munkálatok száma
+        /// </summary>
+        /// <returns>újonnan beérkezett munkálatok szám</returns>
         internal int getNumberOfNewWorks()
         {
             int numb = controller.NewWorkDataLoad.countNewWork();
             return numb;
         }
+        /// <summary>
+        /// szolgáltatás nevének lekérése
+        /// </summary>
+        /// <returns>szoláltatás adatai</returns>
         internal DataTable getLoadServiceName()
         {
             DataTable sdata = controller.LoadServices.getServiceData();
             return sdata;
         }
+        /// <summary>
+        /// szolgáltatás adatainak lekérése
+        /// </summary>
         internal void getloadServiceData()
         {
             controller.LoadServices.serviceDataLoad();
         }
+        /// <summary>
+        /// kiválasztott szolgáltatás adatainak lekérése
+        /// </summary>
+        /// <param name="serviceid">szolgáltatás azonosítója</param>
+        /// <returns>szolgáltatás adatai</returns>
         internal DataTable getSelectedService(int serviceid)
         {
             DataTable servicedt = controller.LoadServices.selectedServicenameData(serviceid);
             return servicedt;
         }
+        /// <summary>
+        /// új szolgáltatás felvétele
+        /// </summary>
+        /// <param name="servicename">új szolgáltatás neve</param>
+        /// <param name="servicePrice">új szolgáltatás ára</param>
         internal void addNewService(string servicename, int servicePrice)
         {
             controller.ManageService.getAddNewService(servicename,servicePrice);
         }
-
+        /// <summary>
+        /// szolgáltatás törlése
+        /// </summary>
+        /// <param name="serviceid">szolgáltatás azonosítója</param>
         internal void getDelteService(int serviceid)
         {
             controller.ManageService.getDeleteService(serviceid);
         }
+        /// <summary>
+        /// szolgáltatás adatainak módosítása
+        /// </summary>
+        /// <param name="serviceid">szolgáltatás azonosítója</param>
+        /// <param name="servicename">szolgáltatás neve</param>
+        /// <param name="servicePrice">szolgáltatás ára</param>
         internal void updateServiceData(int serviceid, string servicename, int servicePrice)
         {
             controller.ManageService.getUpdateService(serviceid, servicename, servicePrice);
         }
-
+        /// <summary>
+        /// szolgáltatások listájának ürítése
+        /// </summary>
         internal void getClearServiceList()
         {
             controller.LoadServices.clearServiceList();

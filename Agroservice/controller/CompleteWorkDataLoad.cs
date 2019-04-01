@@ -99,11 +99,18 @@ namespace Agroservice.controller
 
         }
 
+        /// <summary>
+        /// elkészült munkálatok listájának kiürítése
+        /// </summary>
         internal static void clearCompleteWorksList()
         {
             Work.Clear();
         }
-
+        /// <summary>
+        /// munkálat keresése ügyfél neve alapján
+        /// </summary>
+        /// <param name="clientname">ügyfél neve</param>
+        /// <returns>Munkálat adatai</returns>
         internal static DataTable searchWorkByClientName(string clientname)
         {
             DataTable cpWorkDT = new DataTable();
@@ -126,6 +133,11 @@ namespace Agroservice.controller
 
             return cpWorkDT;
         }
+        /// <summary>
+        /// elkészült munkálat keresése dolgozó neve alapján
+        /// </summary>
+        /// <param name="workername">dolgozó neve</param>
+        /// <returns>elkészült munkálat adatai</returns>
         internal static DataTable searchWorkByWorker(string workername)
         {
             DataTable cpWorkDT = new DataTable();
@@ -148,6 +160,12 @@ namespace Agroservice.controller
 
             return cpWorkDT;
         }
+        /// <summary>
+        /// Elkészült munkálat keresése dolgozó és ügyfél alapján
+        /// </summary>
+        /// <param name="workername">dolgozó neve</param>
+        /// <param name="clientname">ügyfél neve</param>
+        /// <returns>elkészült munkálat adatai</returns>
         internal static DataTable searchWorkByWorkerAndClientname(string workername, string clientname)
         {
             DataTable cpWorkDT = new DataTable();

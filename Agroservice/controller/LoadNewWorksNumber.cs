@@ -10,7 +10,11 @@ namespace Agroservice.controller
 {
     class LoadNewWorksNumber
     {
-        
+        /// <summary>
+        /// beérkezett munkálatok számának meghatározása
+        /// </summary>
+        /// <param name="username">felhasználó neve</param>
+        /// <returns>függőben lévő munkálatok száma</returns>
         internal static string newWorksNumberLoad(string username)
         {
             string numb ="";

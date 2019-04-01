@@ -9,6 +9,10 @@ namespace Agroservice.controller
 {
     class DeleteUser
     {
+        /// <summary>
+        /// ügyfél törlése
+        /// </summary>
+        /// <param name="clientid">ügyfél azonosítója</param>
         internal static void deleteUser(int clientid)
         {
             MySqlConnection connection = new MySqlConnection(controller.Connection.connectionString);

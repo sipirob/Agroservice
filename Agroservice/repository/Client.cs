@@ -23,9 +23,7 @@ namespace Agroservice.repository
             this.tel = tel;
         }
 
-        //public Client()
-        //{
-        //}
+       
 
         public void setClientid(int clientid)
         {
