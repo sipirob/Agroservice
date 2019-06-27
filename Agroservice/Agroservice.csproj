@@ -134,8 +134,12 @@
     </Compile>
     <Compile Include="controller\ClientDataLoad.cs" />
     <Compile Include="controller\CompleteWorkDataLoad.cs" />
-    <Compile Include="controller\Connection.cs" />
-    <Compile Include="controller\ConnectToDatabase.cs" />
+    <Compile Include="controller\Connection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="controller\ConnectToDatabase.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="controller\LoadNewWorksNumber.cs" />
     <Compile Include="controller\LoadParcelData.cs" />
     <Compile Include="controller\LoadParcelMap.cs" />
@@ -207,6 +211,15 @@
     <Compile Include="View\UserControlWorkerDoneWorks.Designer.cs">
       <DependentUpon>UserControlWorkerDoneWorks.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="controller\Connection.resx">
+      <DependentUpon>Connection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controller\ConnectToDatabase.resx">
+      <DependentUpon>ConnectToDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controller\LogIn.resx">
+      <DependentUpon>LogIn.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormLeader.resx">
       <DependentUpon>FormLeader.cs</DependentUpon>
     </EmbeddedResource>

@@ -15,7 +15,7 @@ namespace Agroservice.controller
         /// <param name="clientid">ügyfél azonosítója</param>
         internal static void deleteUser(int clientid)
         {
-            MySqlConnection connection = new MySqlConnection(controller.Connection.connectionString);
+            MySqlConnection connection = new MySqlConnection(controller.Connection.connectionString());
             connection.Open();
             MySqlCommand cmdUpdate = new MySqlCommand();
             cmdUpdate.Connection = connection;

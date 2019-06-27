@@ -17,7 +17,7 @@ namespace Agroservice
        public static string password;
        public static bool leader;
        public static bool worker;
-       
+        public static int server;
         public FormSignIn()
         {
            
@@ -32,6 +32,7 @@ namespace Agroservice
             username = TextboxUsername.Text;
             password = TextboxPassword.Text;
             repository.LogIn log = new repository.LogIn();
+           
             
             log.Login();
            
@@ -39,6 +40,14 @@ namespace Agroservice
          
         }
 
-      
+        private void FormSignIn_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroComboBoxServer_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            server = metroComboBoxServer.SelectedIndex;
+        }
     }
 }

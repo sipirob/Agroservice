@@ -11,7 +11,7 @@ namespace Agroservice.controller
     {
         internal static void updateWorkerData(int workerid, string workerName, DateTime workerBirthday, string workerPlace, int workerTelnumb)
         {
-            MySqlConnection connection = new MySqlConnection(controller.Connection.connectionString);
+            MySqlConnection connection = new MySqlConnection(controller.Connection.connectionString());
             connection.Open();
             MySqlCommand cmdUpdate = new MySqlCommand();
             cmdUpdate.Connection = connection;

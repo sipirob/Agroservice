@@ -11,7 +11,7 @@ namespace Agroservice.controller
     {
         internal void setNewWorkerData(string workerName, DateTime workerBirthday, string workerPlace, int workerTelnumb)
         {
-            MySqlConnection connection = new MySqlConnection(controller.Connection.connectionString);
+            MySqlConnection connection = new MySqlConnection(controller.Connection.connectionString());
             connection.Open();
             MySqlCommand cmdUpdate = new MySqlCommand();
             cmdUpdate.Connection = connection;
@@ -27,7 +27,7 @@ namespace Agroservice.controller
 
         internal void insertNewWorker(int newWorkerId, string username, string password, int category)
         {
-            MySqlConnection connection = new MySqlConnection(controller.Connection.connectionString);
+            MySqlConnection connection = new MySqlConnection(controller.Connection.connectionString());
             connection.Open();
             MySqlCommand cmdUpdate = new MySqlCommand();
             cmdUpdate.Connection = connection;

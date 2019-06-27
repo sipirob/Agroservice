@@ -17,7 +17,7 @@ namespace Agroservice.controller
         internal static void getAddNewService(string servicename, int servicePrice)
         {
 
-            MySqlConnection connection = new MySqlConnection(controller.Connection.connectionString);
+            MySqlConnection connection = new MySqlConnection(controller.Connection.connectionString());
             connection.Open();
             MySqlCommand cmdUpdate = new MySqlCommand();
             cmdUpdate.Connection = connection;
@@ -36,7 +36,7 @@ namespace Agroservice.controller
         internal static void getDeleteService(int serviceid)
         {
 
-            MySqlConnection connection = new MySqlConnection(controller.Connection.connectionString);
+            MySqlConnection connection = new MySqlConnection(controller.Connection.connectionString());
             connection.Open();
             MySqlCommand cmdUpdate = new MySqlCommand();
             cmdUpdate.Connection = connection;
@@ -56,7 +56,7 @@ namespace Agroservice.controller
         /// <param name="servicePrice">kiválasztott szolgáltatás ára</param>
         internal static void getUpdateService(int serviceid, string servicename, int servicePrice)
         {
-            MySqlConnection connection = new MySqlConnection(controller.Connection.connectionString);
+            MySqlConnection connection = new MySqlConnection(controller.Connection.connectionString());
             connection.Open();
             MySqlCommand cmdUpdate = new MySqlCommand();
             cmdUpdate.Connection = connection;

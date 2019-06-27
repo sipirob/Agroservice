@@ -16,7 +16,7 @@ namespace Agroservice.controller
         public int searchLastWorkerId()
         {
             int id = 0;
-            MySqlConnection connection = new MySqlConnection(controller.Connection.connectionString);
+            MySqlConnection connection = new MySqlConnection(controller.Connection.connectionString());
             string query;
             query = "SELECT `id` FROM `workerdata` order BY id desc limit 1";
             MySqlCommand cmd = new MySqlCommand(query, connection);

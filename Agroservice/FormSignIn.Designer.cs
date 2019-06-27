@@ -33,6 +33,8 @@
             this.TextboxPassword = new MetroFramework.Controls.MetroTextBox();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.metroComboBoxServer = new MetroFramework.Controls.MetroComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,7 +60,7 @@
             this.TextboxUsername.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.TextboxUsername.Icon = ((System.Drawing.Image)(resources.GetObject("TextboxUsername.Icon")));
             this.TextboxUsername.Lines = new string[0];
-            this.TextboxUsername.Location = new System.Drawing.Point(68, 254);
+            this.TextboxUsername.Location = new System.Drawing.Point(65, 362);
             this.TextboxUsername.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
             this.TextboxUsername.MaxLength = 32767;
             this.TextboxUsername.Name = "TextboxUsername";
@@ -95,11 +97,11 @@
             this.TextboxPassword.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.TextboxPassword.Icon = ((System.Drawing.Image)(resources.GetObject("TextboxPassword.Icon")));
             this.TextboxPassword.Lines = new string[0];
-            this.TextboxPassword.Location = new System.Drawing.Point(68, 305);
+            this.TextboxPassword.Location = new System.Drawing.Point(65, 413);
             this.TextboxPassword.Margin = new System.Windows.Forms.Padding(5);
             this.TextboxPassword.MaxLength = 32767;
             this.TextboxPassword.Name = "TextboxPassword";
-            this.TextboxPassword.PasswordChar = '\0';
+            this.TextboxPassword.PasswordChar = '●';
             this.TextboxPassword.PromptText = "Jelszó";
             this.TextboxPassword.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.TextboxPassword.SelectedText = "";
@@ -110,15 +112,15 @@
             this.TextboxPassword.Style = MetroFramework.MetroColorStyle.Brown;
             this.TextboxPassword.TabIndex = 7;
             this.TextboxPassword.UseSelectable = true;
+            this.TextboxPassword.UseSystemPasswordChar = true;
             this.TextboxPassword.WaterMark = "Jelszó";
             this.TextboxPassword.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.TextboxPassword.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-
             // 
             // metroButton1
             // 
             this.metroButton1.FontSize = MetroFramework.MetroButtonSize.Medium;
-            this.metroButton1.Location = new System.Drawing.Point(114, 369);
+            this.metroButton1.Location = new System.Drawing.Point(111, 477);
             this.metroButton1.Name = "metroButton1";
             this.metroButton1.Size = new System.Drawing.Size(148, 51);
             this.metroButton1.Style = MetroFramework.MetroColorStyle.Lime;
@@ -141,20 +143,48 @@
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             // 
+            // metroComboBoxServer
+            // 
+            this.metroComboBoxServer.FormattingEnabled = true;
+            this.metroComboBoxServer.ItemHeight = 23;
+            this.metroComboBoxServer.Items.AddRange(new object[] {
+            "Otthoni szerver",
+            "Iskolai szerver"});
+            this.metroComboBoxServer.Location = new System.Drawing.Point(65, 300);
+            this.metroComboBoxServer.Name = "metroComboBoxServer";
+            this.metroComboBoxServer.Size = new System.Drawing.Size(236, 29);
+            this.metroComboBoxServer.Style = MetroFramework.MetroColorStyle.Silver;
+            this.metroComboBoxServer.TabIndex = 10;
+            this.metroComboBoxServer.UseSelectable = true;
+            this.metroComboBoxServer.SelectedIndexChanged += new System.EventHandler(this.metroComboBoxServer_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.Location = new System.Drawing.Point(61, 276);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(69, 21);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Szerver:";
+            // 
             // FormSignIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(369, 481);
+            this.ClientSize = new System.Drawing.Size(369, 578);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.metroComboBoxServer);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.metroButton1);
             this.Controls.Add(this.TextboxPassword);
             this.Controls.Add(this.TextboxUsername);
             this.Name = "FormSignIn";
             this.Style = MetroFramework.MetroColorStyle.Yellow;
-            
+            this.Load += new System.EventHandler(this.FormSignIn_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -163,6 +193,8 @@
         public MetroFramework.Controls.MetroTextBox TextboxUsername;
         public MetroFramework.Controls.MetroTextBox TextboxPassword;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private MetroFramework.Controls.MetroComboBox metroComboBoxServer;
+        private System.Windows.Forms.Label label1;
     }
 }
 

@@ -17,12 +17,13 @@ namespace Agroservice.controller
     class LoadParcelMap
     {
         public static string[] latlong;
+       public static Dictionary<double, double> splitlatlong = new Dictionary<double, double>();
         /// <summary>
         /// Kiválasztott parcella koordinátáinak lekérése adatbázisból majd tömbbe történő mentése
         /// </summary>
         /// <param name="parcelnumber">kiválasztott parcella száma</param>
         /// <returns>sarokpontok koordinátáinak tömbje</returns>
-        public static string[] LoadParcelCoordinates(string parcelnumber)
+        public static Dictionary<double,double> LoadParcelCoordinates(string parcelnumber)
         {
           
             UserControlNewWorks ucw = new UserControlNewWorks();
@@ -31,7 +32,7 @@ namespace Agroservice.controller
             ucw.gMapControlParcelMap.MinZoom = 1;
             ucw.gMapControlParcelMap.MaxZoom = 100;
             ucw.gMapControlParcelMap.Zoom = 16;
-            MySqlConnection connection = new MySqlConnection(controller.Connection.connectionString);
+            MySqlConnection connection = new MySqlConnection(controller.Connection.connectionString());
 
             string query = "SELECT `coordinates` FROM `parcels` WHERE parcelnumber = '" + parcelnumber  + "'";
             MySqlCommand cmd = new MySqlCommand(query,connection);
@@ -42,8 +43,17 @@ namespace Agroservice.controller
            
             while (dr.Read())
             {
+                splitlatlong.Clear();
                 GMapOverlay polyOverlay = new GMapOverlay("polygons");
-                latlong = dr[0].ToString().Split(' ');
+                //latlong = dr[0].ToString().Split(' ');
+                latlong = dr[0].ToString().Split(';');
+               // latlong2 = dr[0].ToString().Split(' ');
+               
+                foreach(string s in latlong)
+                {
+                    
+                    splitlatlong.Add(Convert.ToDouble(s.Split(' ')[0]),Convert.ToDouble(s.Split(' ')[1]));
+                }
                 //List<PointLatLng> points = new List<PointLatLng>();
             }
             
@@ -51,8 +61,8 @@ namespace Agroservice.controller
 
             dr.Close();
             connection.Close();
-            return latlong;
-            
+            //return latlong;
+            return splitlatlong;
         }
         
       

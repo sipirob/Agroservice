@@ -28,6 +28,8 @@ namespace Agroservice
         int workId;//kiválasztott munkálat ID-je
         bool existRoute = false;
         string parcelnumber;
+        double lat;
+        double longt;
 
 
         public UserControlNewWorks()
@@ -42,7 +44,7 @@ namespace Agroservice
             
 
         }
-        
+       
         private void listViewNewWork_SelectedIndexChanged(object sender, EventArgs e)
         {
             labelDistance.Text = null;
@@ -64,29 +66,55 @@ namespace Agroservice
                 parcelnumber = item.SubItems[2].Text;
                 workId = Convert.ToInt32(item.SubItems[0].Text);
                 GMapOverlay polyOverlay = new GMapOverlay("polygons");
-                model.getLoadParcelMapCoordinates(parcelnumber);
-                string[] latlong = model.getLoadParcelMapCoordinates(parcelnumber);
+               
+                Dictionary<double, double> latlong = model.getLoadParcelMapCoordinates(parcelnumber);
 
                 List<PointLatLng> points = new List<PointLatLng>();
-                points.Add(new PointLatLng(Convert.ToDouble(latlong[0]), Convert.ToDouble(latlong[1])));
-                points.Add(new PointLatLng(Convert.ToDouble(latlong[2]), Convert.ToDouble(latlong[3])));
-                points.Add(new PointLatLng(Convert.ToDouble(latlong[4]), Convert.ToDouble(latlong[5])));
-                points.Add(new PointLatLng(Convert.ToDouble(latlong[6]), Convert.ToDouble(latlong[7])));
+                foreach(var d in latlong)
+                {
+                    points.Add(new PointLatLng(d.Key, d.Value));
+                    lat = d.Key;
+                    longt = d.Value;
+                }
+                
 
                 polygon = new GMapPolygon(points, "mypolygon");
                 polygon.Fill = new SolidBrush(Color.FromArgb(50, Color.Red));
                 polygon.Stroke = new Pen(Color.Red, 1);
                 polyOverlay.Polygons.Add(polygon);
                 gMapControlParcelMap.Overlays.Add(polyOverlay);
-
-                double lat = Convert.ToDouble(latlong[6]);
-                double longt = Convert.ToDouble(latlong[7]);
+                
+                
                 gMapControlParcelMap.Position = new PointLatLng(lat, longt);
                 openlayer += 1;
 
                 endposition = points[3];
                 startposition = new PointLatLng(46.247612, 20.060842);
+
                 
+                //Parcella középpont meghatározása
+                PointLatLng centerPoint = new PointLatLng();
+                int sum = 0;
+                double latit = 0;
+                double lngit = 0;
+                foreach (var point in points)
+                {
+                    sum += 1;
+                    latit += point.Lat;
+                    lngit += point.Lng;
+                }
+                latit = latit / sum;
+                lngit = lngit / sum;
+                centerPoint.Lat = latit;
+                centerPoint.Lng = lngit;
+                
+                //Középpontra marker helyezése
+                GMapOverlay markers = new GMapOverlay("markers");
+                GMapMarker marker = new GMarkerGoogle(centerPoint, GMarkerGoogleType.red_small);
+                markers.Markers.Add(marker);
+                gMapControlParcelMap.Overlays.Add(markers);
+                gMapControlParcelMap.Position = centerPoint;
+                marker.ToolTipText = "Parcella területe:";
             }
             
         }

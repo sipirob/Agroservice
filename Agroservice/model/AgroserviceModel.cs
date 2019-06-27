@@ -149,9 +149,10 @@ namespace Agroservice.model
         /// </summary>
         /// <param name="parcelnumber"></param>
         /// <returns>parcella koordinátáinak tömbje</returns>
-        internal string[] getLoadParcelMapCoordinates(string parcelnumber)
+        internal Dictionary<double, double> getLoadParcelMapCoordinates(string parcelnumber)
         {
-            string[] coordinates = controller.LoadParcelMap.LoadParcelCoordinates(parcelnumber);
+           // string[] coordinates = controller.LoadParcelMap.LoadParcelCoordinates(parcelnumber);
+            Dictionary<double,double> coordinates = controller.LoadParcelMap.LoadParcelCoordinates(parcelnumber);
             return coordinates;
         }
 
